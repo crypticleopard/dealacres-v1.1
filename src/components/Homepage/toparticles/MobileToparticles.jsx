@@ -68,15 +68,15 @@ Discover various residential projects catering to diverse preferences and needs.
                             className={styles.img}
                         />
                     </div>
-                    <div className={`${styles.texts} ${index < 3 ? styles.withLine : ''}`}>
-                        <h6>{dt.title}</h6>
+                    <div  className='text-[0.8rem] ml-2' >
+                        <h6 className='font-bold'>{dt.title}</h6>
                         <p>{dt.desc}</p>
-                        <h2>{dt.price}</h2>
+                        <h2 className='font-bold'>{dt.price}</h2>
                     </div>
                 </div>
             ))}
         </div>
-        <Link href='#articles'>Know more about reality news, guides and articles <GoLinkExternal style={{display:'inline'}}/> </Link>
+        {/* <Link href='#articles'>Know more about reality news, guides and articles <GoLinkExternal style={{display:'inline'}}/> </Link> */}
     </div>
   )
 }

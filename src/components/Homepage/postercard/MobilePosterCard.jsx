@@ -13,13 +13,13 @@ const MobilePostercard = (props) => {
     <div className="relative flex flex-col gap-2 my-8 px-4">
 
       <div className='font-bold text-xl'>{props.title}</div>
-      <p className=' absolute text-xs right-[4%] top-[7%] px-2 py-1 rounded-md font-bold  bg-blue-700 text-white'>{props.sidecontent1}</p>
+      <p className=' absolute text-[10px] right-[4%] top-[10%] px-2 py-1 rounded-md font-bold  bg-blue-700 text-white'>{props.sidecontent1}</p>
 
       <div  >
         <Image
           src={props.src}
           alt={props.alt}
-          className="object-cover w-full h-full rounded-lg"
+          className="object-cover w-full h-[25vh] rounded-lg"
         />
       </div>
 
@@ -32,8 +32,8 @@ const MobilePostercard = (props) => {
 
         <h6 className='text-xs'>{props.sidecontent3}</h6>
         
-          <div className='w-[155px]'>
-          <div className='flex justify-center mx-auto'>
+          <div className='w-[200px]'>
+          <div className='flex justify-end mx-auto'>
             {showInputField && (
               <div className={styles.inputField}>
                 <input placeholder={props.buttontext} />

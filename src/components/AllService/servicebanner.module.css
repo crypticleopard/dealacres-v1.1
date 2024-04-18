@@ -78,15 +78,21 @@
     }
     .BannerInfo{
         padding: 15px 10px;
-        margin: auto !important;
-        /* margin-right: 0px; */
+        /* margin: auto !important; */
+         margin-right: 0px; 
+         width: 240px;
+         @apply text-sm font-bold
+        
+        
     }
     .Filter select{
         padding: 5px 5px;
         border-radius: 7px;
-        margin: 2px 0px;
+        margin: 3px 0px;
+        @apply text-sm font-thin
     }
     .Info{
         margin-bottom: 7px;
+        @apply text-sm
     }
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { useParams, usePathname } from 'next/navigation'
 import "./navbar.css";
-import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
 import Image from "next/image";
 import FlyoutMenuSections from "./FlyoutMenuSections";
 import { BsFillArrowDownSquareFill } from "react-icons/bs";
@@ -134,8 +134,42 @@ const Navbar = () => {
 
   return (
     <div className={`navbar${isHomePage ? "" : "Page"}${scrolled ? " scrolled" : ""}`}>
+        <div className="navbar-menu">
+        {toggleMenu ? (
+          <RiCloseLine
+            color="#fff"
+            size={45}
+            className='close'
+            onClick={() => {
+              setToggleMenu(false);
+            }}
+          />
+        ) : (
+          <RiMenu2Line 
+            color="#fff"
+            size={27}
+            onClick={() => {
+              setToggleMenu(true);
+            }}
+          />
+        )}
+        {toggleMenu && (
+          <div className="navbar-menu_container">
+            <div className="navabr-menu_container-links">
+              <MenuMobile />
+              <div className="navbar-menu_container-links-sign">
+                <p>Sign In</p>
+                <h5>Post your Property</h5>
+                <h5>Post For Business</h5>
+                <button type="button">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+      
       <div className="navbar-links">
-        <div className="navbar-links__logo">
+        <div className="navbar-links__logo ">
           <Image
             alt="Logo"
             src="/lda.png"
@@ -146,7 +180,7 @@ const Navbar = () => {
           <h3 className="font-[Poppins] text-white">Deal Acres</h3>
         </div>
 
-        <div class="custom-select-container">
+        <div className="custom-select-container ">
           <select
             value={selectedLocation}
             onChange={handleLocationChange}
@@ -156,7 +190,7 @@ const Navbar = () => {
             <option className="text-black bg-white" value="Delhi">Delhi</option>
             <option className="text-black bg-white" value="Mumbai">Mumbai</option>
           </select>
-          <BsFillArrowDownSquareFill color="blue" class="custom-arrow"/>
+          <BsFillArrowDownSquareFill color="blue" className="custom-arrow hidden md:block"/>
         </div>
 
         <div className="navbar-links__container">
@@ -190,39 +224,7 @@ const Navbar = () => {
           <button type="button">Sign Up</button>
         </div>
       </div>
-      <div className="navbar-menu">
-        {toggleMenu ? (
-          <RiCloseLine
-            color="#fff"
-            size={45}
-            className='close'
-            onClick={() => {
-              setToggleMenu(false);
-            }}
-          />
-        ) : (
-          <RiMenu3Line
-            color="#fff"
-            size={27}
-            onClick={() => {
-              setToggleMenu(true);
-            }}
-          />
-        )}
-        {toggleMenu && (
-          <div className="navbar-menu_container">
-            <div className="navabr-menu_container-links">
-              <MenuMobile />
-              <div className="navbar-menu_container-links-sign">
-                <p>Sign In</p>
-                <h5>Post your Property</h5>
-                <h5>Post For Business</h5>
-                <button type="button">Sign Up</button>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+      <div className="md:hidden bg-white p-1 font-semibold text-blue-600 text-xs rounded-lg">Post Property <span className=" text-green-700 ml-1">Free</span></div>
 
       {hoveredMenu && (
         <div

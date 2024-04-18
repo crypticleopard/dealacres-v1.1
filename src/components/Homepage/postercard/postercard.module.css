@@ -109,8 +109,8 @@
     @apply  bg-blue-800
     font-[Poppins];
     font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 11px;
+    line-height: 15px;
     cursor: pointer;
     outline: none;
     border: 0;
@@ -163,8 +163,8 @@
 @media screen and (max-width:800px){
 
     .imgContainer{
-        width: 450px;
-        height: 450px
+        width: 250px;
+        height: 300px
     }
 
     .img{

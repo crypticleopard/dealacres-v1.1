@@ -11,7 +11,7 @@ const Card = ({ imageUrl, yearEstd, projects, description }) => {
     };
 
     return (
-        <div className="w-[250px] px-3 py-2 bg-white rounded-sm overflow-hidden relative border-2 border-l-0 shadow-lg min-h-[15rem]">
+        <div className="w-[250px] px-3 py-2 bg-white rounded-sm overflow-hidden relative border-2 border-l-0 shadow-lg min-h-[15rem] hover:shadow-2xl">
             <div className="flex flex-row items-end">
                 <img src={imageUrl} alt="Card Image" className="w-2/6 h-20 object-cover border-2 border-black" />
                 <div className="ml-3 text-sm flex flex-row items-end gap-3">

@@ -1,8 +1,10 @@
 'use client';
-// MobileOption.js
+
 import React, { useState } from "react";
 import { cardData } from "./mobiledata";
 import Image from 'next/image';
+
+import { IoMdClose } from "react-icons/io";
 
 const MobileOption = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -18,7 +20,7 @@ const MobileOption = () => {
   return (
     <div className="flex flex-col justify-center px-4">
       <div>
-        <h2 className="text-xl font-[Poppins] font-bold pt-3 pb-2">
+        <h2 className="text-lg font-[Poppins] font-bold pt-3 pb-2">
           GET STARTED WITH EXPLORING REAL ESTATE OPTIONS
         </h2>
       </div>
@@ -37,10 +39,16 @@ const MobileOption = () => {
                 {card.title}
               </div>
               {activeCard === card.id && (
-                <div className="bg-blue-300 shadow-md p-2 ">
+                <div className="bg-blue-300 shadow-md p-2 relative">
+                  <button
+                    className="absolute top-1 right-1 text-gray-600"
+                    onClick={() => setActiveCard(null)}
+                  >
+                   <IoMdClose />
+                  </button>
                   <ul>
                     {card.links.map((link, index) => (
-                      <li key={index} className="text-sm">{link}</li>
+                      <li key={index} className="text-sm hover:text-white">{link}</li>
                     ))}
                   </ul>
                 </div>

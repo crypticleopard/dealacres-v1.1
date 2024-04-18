@@ -73,7 +73,7 @@ Discover various residential projects catering to diverse preferences and needs.
                 </div>
             ))}
         </div>
-        <Link href='#articles'>Know more about reality news, guides and articles <GoLinkExternal style={{display:'inline'}}/> </Link>
+        {/* <Link href='#articles'>Know more about reality news, guides and articles <GoLinkExternal style={{display:'inline'}}/> </Link> */}
     </div>
   )
 }

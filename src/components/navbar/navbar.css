@@ -287,4 +287,14 @@
     .navbar-menu_container-links-sign{
         display: block;
     }
+    .custom-select-container{
+        display: none;
+    }
+    .navbar-links__logo IMG{
+    display: none;
+   }
+   .navbar-links__logo{
+    margin-left: 2%;
+    align-items: flex-end;
+   }
 }

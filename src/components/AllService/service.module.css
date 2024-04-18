@@ -47,3 +47,26 @@
     margin-top: 5px;
     margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 500px){
+    .ServiceBlock{
+     
+        width: 83px;
+        height: 92px;
+        padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      flex-grow: unset;
+    }
+    .ServiceBlock img{
+        height: 40px;
+        width: auto;
+        padding: 3px;
+    }
+    .ServiceBlock p{
+        @apply text-xs text-center mx-auto mt-4
+    }
+  
+}

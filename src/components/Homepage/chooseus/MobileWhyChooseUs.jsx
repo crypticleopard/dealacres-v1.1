@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 
 const Card = ({ imageUrl, description ,heading}) => {
   return (
-    <div className="p-3 bg-white rounded-sm overflow-hidden flex flex-row items-center gap-3 shadow-sm  w-full mb-2">
+    <div className="p-3 bg-white rounded-sm overflow-hidden flex flex-row items-center gap-3 shadow-md w-full mb-2">
       <div className="relative overflow-hidden transition-transform duration-300 transform hover:scale-110 cursor-pointer">
         <Image
           src={imageUrl}

@@ -69,11 +69,11 @@ const Registration = () => {
     <div className="flex items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 lg:px-[10rem]">
       {!showOtpVerifier && (
         <div className="bg-[#e7effe] p-6 sm:p-8 md:p-10 lg:p-12 w-full rounded-lg">
-          <h1 className="text-3xl sm:text-4xl lg:text-4xl mb-5">
+          <h1 className="text-lg lg:text-4xl mb-2 md:mb-5">
             List your business with{" "}
             <span className="font-bold">Deal Acres</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-5">
+          <p className="text-base sm:text-xs md:text-xl lg:text-2xl text-gray-600 mb-5">
             Enter Your Details Below
           </p>
 
