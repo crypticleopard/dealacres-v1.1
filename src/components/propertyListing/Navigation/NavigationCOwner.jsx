@@ -32,6 +32,11 @@ const NavigationCOwner = () => {
     flag=0;
   }
 
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+
   const generateLink = (subPath) => `${subPath}`;
 
   const getLinkStyle = (index) => ({
@@ -64,7 +69,7 @@ const NavigationCOwner = () => {
           <React.Fragment key={index}>
             
             <Link href={generateLink(item)} passHref>
-              <div style={getLinkStyle(index)} >{item.replace('-', ' ')}</div>
+              <div style={getLinkStyle(index)} > {capitalizeFirstLetter(item.replace('-', ' '))}</div>
             </Link>
             {index < navigationItems.length - 1 && (
               <div

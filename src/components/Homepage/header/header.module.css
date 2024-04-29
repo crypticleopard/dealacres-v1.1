@@ -2,7 +2,7 @@
 
 .headerContainer{
     display:flex;
-    height: 100vh;
+    height: 85vh;
 }
 
 .IMG{
@@ -26,7 +26,7 @@
 }
 
 .headerContent h1{
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 600;
     margin-bottom: 2rem;
     @apply text-white
@@ -62,7 +62,7 @@
     display: flex;
     width: 80%;
     background-color: white;
-    padding: 8px;
+    padding: 4px;
     border-radius: 10px;
    
 }
@@ -71,7 +71,7 @@
     flex: 3;
     width: 100%;
     min-height:50px;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 27px;
     color:black;
     outline: none;
@@ -90,7 +90,7 @@
     width: 100%;
     min-height:50px;
     cursor:pointer;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     line-height: 27px;
     color:#fff; 
@@ -107,7 +107,7 @@
 .LocationDropdown select {
     width: 100%;
     min-height: 50px;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 27px;
     color: black;
     outline: none;
@@ -117,7 +117,7 @@
 
 .cta{
     position: absolute;
-    bottom: 2%;
+    bottom: 13%;
     left: 50%;
     cursor: pointer;
     z-index: 5;

@@ -12,11 +12,11 @@ const FormGroup = ({
 
   return (
     <div className='flex items-start flex-col py-2 min-w-full'>
-            <label htmlFor={id} className='text-lg'>
+            <label htmlFor={id} className='text-base'>
                 {labelValue}
             </label>
             <input
-            className='bg-[#D8E6FE] py-2 text-lg px-4 rounded shadow hover:outline-blue-500 w-full'
+            className='bg-[#D8E6FE] py-1 text-lg px-4 rounded shadow hover:outline-blue-500 w-full'
              type={type} id={id} {...register(id, {required: requiredMessage})} />
 
              {

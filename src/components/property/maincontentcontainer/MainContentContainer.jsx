@@ -34,7 +34,7 @@ function MainContentContainer(props) {
           <div className={styles.aboutProperty}>
               <h3>About this home</h3>
               <p>{showFull?props.content.about:`${props.content.about.substring(0,600)}`}</p>
-              <h6 onClick={()=>setShowFull(!showFull)}>{showFull? 'Show Less':'Show More'}</h6>
+              {/* <h6 onClick={()=>setShowFull(!showFull)}>{showFull? 'Show Less':'Show More'}</h6> */}
           </div>
           <div className='text-[20px]'>
             <h1>{props.content.title} Overview</h1>

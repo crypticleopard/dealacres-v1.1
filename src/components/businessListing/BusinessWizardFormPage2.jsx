@@ -17,27 +17,27 @@ const labelArray = [
 
 const BusinessWizardFormPage2 = ({ onSaveAndContinue, onPreviousClick }) => {
   return (
-    <div className="p-5 flex flex-col md:flex-row items-center justify-center md:mt-2">
+    <div className="py-5 md:p-5 flex flex-col md:flex-row items-center justify-center md:mt-2">
       <div className="w-full space-y-5 md:pl-[8rem] md:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between w-full space-y-2 md:space-x-4">
-          <p className="whitespace-nowrap text-xl">Contact Person:</p>
-          <div className="w-full flex items-center justify-between max-md:flex-col max-md:space-y-2 max-md:space-x-0 w-full md:w-auto">
+        <div className="flex flex-row items-center justify-between w-full space-y-2 md:space-x-4">
+          <p className="whitespace-nowrap text-base w-[38%] md:w-full md:text-xl">Contact Person:</p>
+          <div className=" flex items-end md:items-center justify-between max-md:flex-row max-md:space-y-2 max-md:space-x-2 w-[62%] md:w-auto">
             <Select
               options={[
                 { value: "Mr", label: "Mr" },
                 { value: "Mrs", label: "Mrs" },
                 { value: "Ms", label: "Ms" },
               ]}
-              className="max-md:w-full"
-              placeholder="Title"
+              className="max-md:w-2/5"
+              placeholder="Mr"
             />
             <input
-              className="w-full md:w-1/3 border-2 border-blue-200 text-gray-600 rounded-md focus:outline-blue-500 py-2 pl-3"
+              className="w-full md:w-1/3 border-2 border-blue-200 text-gray-600 rounded-md focus:outline-blue-500 py-1 md:py-2 pl-3"
               type="text"
               placeholder="Name"
             />
             <input
-              className="w-full md:w-1/3 border-2 border-blue-200 text-gray-600 rounded-md focus:outline-blue-500 py-2 pl-3"
+              className="w-full max-md:hidden md:w-1/3 border-2 border-blue-200 text-gray-600 rounded-md focus:outline-blue-500 py-2 pl-3"
               type="text"
               placeholder="Designation"
             />

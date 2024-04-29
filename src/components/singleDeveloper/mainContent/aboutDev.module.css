@@ -1,8 +1,9 @@
-.aboutDevContent{
+.aboutDevContent {
     width: 100%;
     border: 1px solid black;
     border-radius: 15px;
     padding: 1rem;
+    box-shadow: 0 4px 6px rgba(26, 25, 25, 0.2); 
 }
 
 .aboutDevContent h6{

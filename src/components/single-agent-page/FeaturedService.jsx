@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 const FeaturedService = () => {
     return (
-        <div className={`w-screen relative after:absolute after:content-[''] after:bg-black after:opacity-[0.3] after:inset-0  flex justify-center items-center min-h-[600px]`}>
+        <div className={`w-screen relative after:absolute after:content-[''] after:bg-black after:opacity-[0.3] after:inset-0  flex justify-center items-center min-h-[450px]`}>
             <div className='w-full h-full absolute'>
                 <Image src={housebg} className='w-full h-full object-cover' />
 

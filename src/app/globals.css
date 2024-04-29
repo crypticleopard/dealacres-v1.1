@@ -18,6 +18,10 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+input:focus, select:focus,textarea:focus {
+  outline: none; 
+  border-color: blue; 
+}
 
 .font-normal {
   @apply text-sm md:text-base;

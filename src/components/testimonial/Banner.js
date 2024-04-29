@@ -8,11 +8,10 @@ const Banner = () => {
   return (
     <div >
       <Image 
-      src={testimony}
-      layout='fill'
-      objectFit='cover'
-      className={styles.Banner}
-      />
+  src={testimony}
+
+  className={styles.Banner}
+/>
 
       <h1 className={styles.Title}>TESTIMONIAL</h1>
     </div>

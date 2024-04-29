@@ -14,14 +14,25 @@ const Hero = () => {
     const [isFiveClicked, setIsFiveClicked] = useState(false);
     const [propertyType, setPropertyType] = useState('');
     const [subType, setSubType] = useState('');
+    const [isSellClicked, setIsSellClicked] = useState(false);
+    const [isRentClicked, setIsRentClicked] = useState(false);
 
+    const handleSell = () =>{
+        setIsSellClicked(true)
+        setIsRentClicked(false)
+    }
+    const handleRent = () =>{
+        setIsRentClicked(true)
+        setIsSellClicked(false)
+    }
+ 
     const handleFive = () => {
         setIsFiveClicked(!isFiveClicked);
     }
     const handleResedential = () => {
         setIsResedentialClicked(!isResedentialClicked);
         setCommercialClicked(false)
-        setPropertyType('resedential');
+        setPropertyType('residential');
         setSubType('');
     }
     const handleCommercial = () => {
@@ -41,11 +52,12 @@ const Hero = () => {
         path += '/login';
         return path;
     };
+
     
     return (
-        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 container mx-auto mt-10 overflow-auto'>
-            <div className='h-full md:mt-20 rounded-xl py-4 px-2 custom-border-hero'>
-                <h1 className="font-heading my-2">
+        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 container mx-auto my-8 overflow-auto '>
+            <div className='h-fit md:mt-8 rounded-xl pt-4 px-2 custom-border-hero'>
+                <h1 className="font-medium md:font-bold text-[1.3rem] uppercase my-2">
                     Post Your Property for free
                 </h1>
                 <p>
@@ -55,15 +67,15 @@ const Hero = () => {
                     Looking For..........
                 </p>
                 <div className='flex gap-3 items-center mb-2'>
-                    <Button heading={'Sell'} />
-                    <Button heading={'Rent'} />
+                <Button heading={'Sell'} onClick={handleSell} isActive={isSellClicked} />
+                    <Button heading={'Rent'} onClick={handleRent} isActive={isRentClicked}/>
                 </div>
                 <p className='py-2 font-bold'>
                     Property Type
                 </p>
                 <div className='flex gap-3 items-center mb-2'>
-                    <Button heading={'Residential'} onClick={handleResedential} hashClick={true} />
-                    <Button heading={'Commercial'} onClick={handleCommercial} hashClick={true} />
+                    <Button heading={'Residential'} onClick={handleResedential} hashClick={true} isActive={isResedentialClicked}/>
+                    <Button heading={'Commercial'} onClick={handleCommercial} hashClick={true} isActive={isCommercialClicked} />
                 </div>
                 {isResedentialClicked && (
                     <div className='flex flex-col'>
@@ -112,27 +124,27 @@ const Hero = () => {
                     Add Contact Details
                 </p>
                 
-                <input className='custom-border-2 px-4 py-2 rounded-xl' />
+                <input className='custom-border-2 px-4 py-1 rounded-xl' />
                 <p className='text-xs mt-5 pb-1'>Are you a Registered user?<span className='text-blue-500'>Login</span> </p>
                 <Link href={generateDynamicPath()}>
                     <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white  mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600'>Start Now</button>
                 </Link>
             </div>
-            <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
-                <div className='flex flex-row gap-2 mt-20 mb-10'>
+            <div className='h-full w-[430px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
+                <div className='flex flex-row gap-2 mt-10 mb-5'>
                     <h1 className="text-lg mt-2 font-semibold mb-6">
                         Post property Ad to <br />
                         sell or rent online for</h1>
-                    <h1 className='text-7xl font-bold italic uppercase '>Free</h1>
+                    <h1 className='text-6xl font-bold italic uppercase '>Free</h1>
                 </div>
 
-                <ul className="list-disc pl-5 text-xl">
+                <ul className="list-disc pl-5 text-[1.13rem]">
                     <li className="mb-2">Advertise For FREE</li>
                     <li className="mb-2">Sell 10 X faster</li>
                     <li className="mb-2">Connect with genuine buyers</li>
                     <li className="mb-2">Get unlimited enquiries</li>
                 </ul>
-                <Image src={FREE} alt='free' height={280} width={280} className='mt-20' />
+                <Image src={FREE} alt='free' height={200} width={200} className='mt-10' />
             </div>
         </section>
     )

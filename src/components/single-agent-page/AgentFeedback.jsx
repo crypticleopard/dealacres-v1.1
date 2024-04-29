@@ -38,7 +38,7 @@ const AgentFeedback = () => {
                 <label className='font-bold' htmlFor="email">
                     Email
                 </label>
-                <input id='email' {...register('email', {required: "Email is required."})} className='border border-black outline-none py-2 px-4 rounded shadow' type="text" />
+                <input id='email' {...register('email', {required: "Email is required."})} className='border border-black outline-none py-1 px-4 rounded shadow' type="text" />
             </div>
             <div className='flex flex-col md:flex-row  w-full py-2 gap-4'>
                 <div className='w-full md:w-1/2 flex flex-col'>
@@ -47,7 +47,7 @@ const AgentFeedback = () => {
                 </label>
                     <input type="text" 
                     id='title'
-                    className='border border-black outline-none py-2 px-4 rounded shadow' />
+                    className='border border-black outline-none py-1 px-4 rounded shadow' />
                 </div>
                 <div className='w-full md:w-1/2 flex flex-col '>
                 <label className='font-bold' htmlFor="title">
@@ -97,7 +97,7 @@ const AgentFeedback = () => {
                 <label className='font-bold' htmlFor="email">
                     Review
                 </label>
-                <textarea className='border border-black outline-none py-2 px-4 rounded shadow'  />
+                <textarea className='border border-black outline-none py-1 px-4 rounded shadow'  />
             </div>
 
             <button className='w-full py-2 text-white bg-blue-600 rounded shadow text-base sm:text-xl font-bold'>

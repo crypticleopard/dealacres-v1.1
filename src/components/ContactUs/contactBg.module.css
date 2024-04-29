@@ -1,10 +1,10 @@
 .ContactBg{
-    /* height: 65vh !important; */
+    
     background: url("../../../public/Contact/ContactBg.webp");
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
-    padding: 9% 0%;   
+    padding: 6% 0%;   
 }
 
 .ContactBoxPad{

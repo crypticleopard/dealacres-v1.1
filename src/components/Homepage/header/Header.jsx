@@ -17,7 +17,7 @@ const Header = () => {
                       }
 
   const handleCTAClick = () => {
-    const targetPosition = window.innerHeight - 60; 
+    const targetPosition = window.innerHeight - 160; 
     const scrollDuration = 1500; 
     const startTime = performance.now();
     const startScrollOffset = window.scrollY;

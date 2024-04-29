@@ -136,7 +136,7 @@ const Page = () => {
           </div>
           <Link href={'amenities'}>
             <button
-              className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-2 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-gray-400' : ''
+              className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-2 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-blue-400' : ''
                 }`}
               disabled={isContinueButtonDisabled}
             >
@@ -146,11 +146,11 @@ const Page = () => {
         </div>
 
         <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center mt-5 '>
-          <h1 className="text-xl mb-4 text-center mt-16">Mention the Expected price of<br /> your property with your<br /> Brokerage Charges.</h1>
-          <Image src={'/propertyListing/assets/home_coin.png'} alt='coin' height={250} width={250} className='mt-3 mb-10' />
+          <h1 className="text-xl mb-4 text-center mt-8">Mention the Expected price of<br /> your property with your<br /> Brokerage Charges.</h1>
+          <Image src={'/propertyListing/assets/home_coin.png'} alt='coin' height={250} width={250} className='mt-3 mb-5' />
           <h1 className='font-bold text-xl'>Need Help?</h1>
           <p className='text-lg'>You Can Email Us</p>
-          <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
+          <p className='text-lg text-blue-600 mb-8'>Contact@dealacres.com</p>
         </div>
       </div>
     </section>

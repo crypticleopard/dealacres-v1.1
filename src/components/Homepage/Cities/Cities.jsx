@@ -34,10 +34,9 @@ const Cities = (props) => {
     slidesToShow: 3,
     className: "center",
     slidesToScroll: 3,
-    arrows:true,
     autoplay:true,
     rows: 2,
-    // arrows: false,
+    arrows: false,
 
     responsive: [
       {
@@ -71,8 +70,8 @@ const Cities = (props) => {
   };
 
   return (
-    <div className="bg-white rounded-2xl ml-6 mr-6 sm:mr-0 sm:ml-0  mb-5 justify-center ">
-        {props.title && <div className="my-4 py-4 mt"><h2 className=" pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline"> Explore</span> Real Estate in Popular Indian Cities</h2></div>}
+    <div className="bg-white mb-5">
+        {props.title && <div className="my-4 py-4 "><h2 className=" pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline"> Explore</span> Real Estate in Popular Indian Cities</h2></div>}
       <Slider {...settings} className="" >
         {citiesData.map((city, index) => (
           <Link href='#' key={index} className="mb-4"><Card  title={city.title} content={city.content} /></Link>

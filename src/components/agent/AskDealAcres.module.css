@@ -2,6 +2,7 @@
     background: url('../../../public/Agent/AskDealAcres.webp');
     object-fit: cover;
     position: center;
+    @apply h-[90%]
 }
 
 
@@ -14,12 +15,12 @@
 
 
 .ContactForm form{
-    padding: 20px 50px;
+    padding: 5px 30px;
 }
 
 .ContactForm p{
     color: red;
-    font-size: 11px;
+    font-size: 10px;
     margin-left: 15px;
     margin-bottom: 25px;   
 }
@@ -31,9 +32,9 @@
 
 .ContactForm input, .ContactForm select{
     display: block;
-    padding: 10px;
+    padding: 2.5px;
     /* margin: 0px 10px; */
-    width: 100%;
+    width: 90%;
     border: 1px solid rgb(0, 0, 0, 0.15); 
     /* border-radius: 10px; */
 }
@@ -46,17 +47,17 @@
 .ContactForm button{
     background-color: #0061fd;
     color: white;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     /* border-radius: 10px; */
 }
 
 .TitleInfo h2{
     margin-top: 10px;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 15px;
     color: white;
     text-align: center;

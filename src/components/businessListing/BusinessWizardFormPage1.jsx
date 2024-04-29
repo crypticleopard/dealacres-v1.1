@@ -15,7 +15,7 @@ const firstPageInputLabel = [
 
 const BusinessWizardFormPage1 = ({ onSaveAndContinue }) => {
   return (
-    <div className="p-5 md:flex md:items-center md:justify-center md:mt-2">
+    <div className="py-5 md:flex md:items-center md:justify-center md:mt-2">
       <div className="w-full space-y-5 md:pl-8 md:pr-3">
         {firstPageInputLabel.map((label, index) => (
           <BusinessWizardFormInput key={index} label={label} />

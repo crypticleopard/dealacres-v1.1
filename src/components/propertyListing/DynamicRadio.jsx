@@ -25,8 +25,8 @@ const DynamicRadio = () => {
   };
 
   return (
-    <div>
-      <div className='flex flex-row gap-4 mt-3'>
+    <div className='mt-6'>
+      <div className='flex flex-row gap-4 mt-3 items-center'>
         <label className='text-md font-bold mb-2'>
           Currently Leased Out?
         </label>
@@ -69,7 +69,7 @@ const DynamicRadio = () => {
         </>
       )}
 
-      <div className='flex flex-row gap-4 mt-3'>
+      <div className='flex flex-row gap-4 mt-3 items-center'>
         <label className='text-md font-bold mb-2'>
           Assured Returns
         </label>

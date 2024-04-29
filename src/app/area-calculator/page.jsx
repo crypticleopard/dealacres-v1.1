@@ -293,7 +293,7 @@ const AreaCalculator = () => {
               min="0"
               value={totalUnits}
               onChange={(e) => setTotalUnits(e.target.value)}
-              className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
+              className="w-full py-1 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
             />
 
             <div className="flex flex-row items-center justify-center space-x-2">
@@ -346,11 +346,11 @@ const AreaCalculator = () => {
       </div>
 
       <div className="px-[5rem] mb-3 mt-10 max-sm:px-[2rem]">
-        <h2 className="text-3xl font-bold max-sm:text-xl;">
+        <h2 className="text-2xl font-bold max-sm:text-xl;">
           All About Land Measurment
         </h2>
 
-        <div className="max-md:flex max-md:flex-col-reverse max-md grid grid-cols-2 w-full mt-10 gap-8 text-justify text-lg max-sm:text-sm max-sm:mt-5">
+        <div className="max-md:flex max-md:flex-col-reverse max-md grid grid-cols-2 w-full mt-10 gap-8 text-justify text-base max-sm:text-sm max-sm:mt-5">
           <div className="space-y-3">
             <p>
               Land measurement in India has always been done using various local

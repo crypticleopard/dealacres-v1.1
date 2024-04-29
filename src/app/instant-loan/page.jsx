@@ -45,7 +45,7 @@ const InstantLoan = () => {
     }
   }
   return (
-    <div className="px-4 py-8 max-w-screen-lg mx-auto text-md">
+    <div className="px-4 py-8 max-w-[900px] mx-auto text-md">
 
         {
           otpModal && !isRegistered  && <OtpVerifyModal setRegister={() => setIsRegistered(true)} onClose={handleModalClose}/>

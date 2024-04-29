@@ -19,8 +19,8 @@ function Developerinfo(props) {
       </div>
       <div className={styles.developerInfoContentContainer}>
         <p>
-          {showFull ? props.devData.developerInfo : `${props.devData.developerInfo.substring(0, 300)}`}
-          <span onClick={() => setShowFull(!showFull)}>{showFull ? ' ....less' : ' ....more'}</span>
+          {showFull ? props.devData.developerInfo : `${props.devData.developerInfo.substring(0, 350)}`}
+          {/* <span onClick={() => setShowFull(!showFull)}>{showFull ? ' ....less' : ' ....more'}</span> */}
         </p>
       </div>
     </div>

@@ -7,7 +7,7 @@ const ContactStrip = ({
     isFullScreen
 }) => {
     return (
-        <div className={`${isFullScreen ? 'w-screen': 'w-full'} bg-[#0061df] text-white  grid-cols-1 grid md:grid-cols-3 uppercase text-lg`}>
+        <div className={`${isFullScreen ? 'w-screen': 'w-full'} bg-[#0061df] text-white  grid-cols-1 grid md:grid-cols-3 uppercase text-base`}>
             <div className='border-r border-r-black py-2 font-bold  flex  flex-col  justify-center
             text-center
             md:text-left

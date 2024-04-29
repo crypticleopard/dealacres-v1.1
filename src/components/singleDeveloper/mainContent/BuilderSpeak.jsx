@@ -12,7 +12,7 @@ const builderData={
 function BuilderSpeak() {
 
     const [builderInfo,setBuilderInfo] = useState('Chairman Message')
-    const [showMore,setShowMore] =  useState(false)
+    // const [showMore,setShowMore] =  useState(false)
 
     return (
       <div className={styles.builderSpeakContainer}>
@@ -35,8 +35,8 @@ function BuilderSpeak() {
         </div>
         <div className={styles.subContent}>
             <h2>{builderData['Chairman Name']}</h2>
-            <p>{showMore?builderData[builderInfo]:`${builderData[builderInfo].substring(0,600)}`}</p>
-            <h6 onClick={()=>setShowMore(!showMore)}>{showMore? 'Show Less':'Show More'}</h6>
+            <p>{builderData[builderInfo]}</p>
+            {/* <h6 onClick={()=>setShowMore(!showMore)}>{showMore? 'Show Less':'Show More'}</h6> */}
         </div>
       </div>
     )

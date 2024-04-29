@@ -15,13 +15,13 @@ const Tabularposts = ({
     <div className='my-4 bg-[#edf6f7]'>
 
       {/* <Heading heading='Read More' /> */}
-      <div className='= flex gap-4 flex-nowrap lg:grid lg:grid-cols-3 max-w-screen-2xl mx-auto w-full  max-h-[800px]'>
+      <div className='= flex gap-4 flex-nowrap lg:grid lg:grid-cols-3 max-w-screen-2xl mx-auto w-full  max-h-[700px]'>
         <div className='max-[768px]:min-w-[80%] my-2 px-4 lg:col-span-1 '>
           <div>
 
             <TableHeader header='Popular Posts' />
           </div>
-          <div className='bg-[#edf6f7] lg:max-h-[600px] '>
+          <div className='bg-[#edf6f7] lg:max-h-[400px] '>
             {
               posts.map((post, index) => {
                 return (
@@ -37,7 +37,7 @@ const Tabularposts = ({
           {/* Latest Posts do some validation for grabing latest posts through date. */}
 
           <TableHeader header='Latest Posts' />
-          <div className='bg-[#edf6f7] lg:max-h-[600px]'>
+          <div className='bg-[#edf6f7] lg:max-h-[450px]'>
             {
               posts.map((post, index) => {
                 return (
@@ -53,7 +53,7 @@ const Tabularposts = ({
 
 
           <TableHeader header='Relevant Articles' />
-          <div className={`lg:max-h-[600px] lg:overflow-y-scroll
+          <div className={`lg:max-h-[450px] lg:overflow-y-scroll
           ${styles.articles}
           `}>
 

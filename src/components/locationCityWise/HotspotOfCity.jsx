@@ -59,7 +59,7 @@ const HotspotOfCity = () => {
         <div className="md:col-span-3">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             <div class="rounded-lg bg-blue-50 p-4">
-              <div class="h-[15rem] w-full overflow-hidden rounded-2xl">
+              <div class="h-[10rem] w-full overflow-hidden rounded-2xl">
                 <img
                   src="https://cdn.britannica.com/48/116548-050-3DA31589/India-Gate-New-Delhi.jpg"
                   className="object-cover"
@@ -71,26 +71,26 @@ const HotspotOfCity = () => {
               <p class="text-md text-gray-600">For Sale In Gurgaon</p>
             </div>
             <div class="rounded-lg bg-blue-50 p-4">
-              <div class="h-[15rem] w-full overflow-hidden rounded-2xl">
+              <div class="h-[10rem] w-full overflow-hidden rounded-2xl">
                 <img
                   src="https://cdn.britannica.com/48/116548-050-3DA31589/India-Gate-New-Delhi.jpg"
                   className="object-cover"
                 />
               </div>
               <p class="mt-2 text-xl font-semibold font-mono tracking-widest">
-                Villas
+                Flats
               </p>
               <p class="text-md text-gray-600">For Sale In Gurgaon</p>
             </div>
             <div class="rounded-lg bg-blue-50 p-4">
-              <div class="h-[15rem] w-full overflow-hidden rounded-2xl">
+              <div class="h-[10rem] w-full overflow-hidden rounded-2xl">
                 <img
                   src="https://cdn.britannica.com/48/116548-050-3DA31589/India-Gate-New-Delhi.jpg"
                   className="object-cover"
                 />
               </div>
               <p class="mt-2 text-xl font-semibold font-mono tracking-widest">
-                Villas
+                Pent House
               </p>
               <p class="text-md text-gray-600">For Sale In Gurgaon</p>
             </div>
@@ -108,38 +108,38 @@ const HotspotOfCity = () => {
         <div className="md:col-span-3">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             <div class="rounded-lg bg-blue-50 p-4">
-              <div class="h-[15rem] w-full overflow-hidden rounded-2xl">
+              <div class="h-[10rem] w-full overflow-hidden rounded-2xl">
                 <img
                   src="https://cdn.britannica.com/48/116548-050-3DA31589/India-Gate-New-Delhi.jpg"
                   className="object-cover"
                 />
               </div>
               <p class="mt-2 text-xl font-semibold font-mono tracking-widest">
-                Villas
+                Shop
               </p>
               <p class="text-md text-gray-600">For Sale In Gurgaon</p>
             </div>
             <div class="rounded-lg bg-blue-50 p-4">
-              <div class="h-[15rem] w-full overflow-hidden rounded-2xl">
+              <div class="h-[10rem] w-full overflow-hidden rounded-2xl">
                 <img
                   src="https://cdn.britannica.com/48/116548-050-3DA31589/India-Gate-New-Delhi.jpg"
                   className="object-cover"
                 />
               </div>
               <p class="mt-2 text-xl font-semibold font-mono tracking-widest">
-                Villas
+                Retail Space
               </p>
               <p class="text-md text-gray-600">For Sale In Gurgaon</p>
             </div>
             <div class="rounded-lg bg-blue-50 p-4">
-              <div class="h-[15rem] w-full overflow-hidden rounded-2xl">
+              <div class="h-[10rem] w-full overflow-hidden rounded-2xl">
                 <img
                   src="https://cdn.britannica.com/48/116548-050-3DA31589/India-Gate-New-Delhi.jpg"
                   className="object-cover"
                 />
               </div>
               <p class="mt-2 text-xl font-semibold font-mono tracking-widest">
-                Villas
+                Office Space
               </p>
               <p class="text-md text-gray-600">For Sale In Gurgaon</p>
             </div>

@@ -54,7 +54,7 @@ const IntrestingReading = () => {
   return (
     <div className="space-y-8 py-5">
       <Swiper
-        spaceBetween={46}
+        spaceBetween={36}
         slidesPerView={1}
         modules={[Pagination]}
         pagination={{ clickable: true }}
@@ -67,10 +67,14 @@ const IntrestingReading = () => {
             slidesPerView: 1,
             spaceBetween: 20,
           },
-          1024: {
-            slidesPerView: 3.5,
+          1100: {
+            slidesPerView: 2.7,
             spaceBetween: 20,
           },
+          1300:{
+            slidesPerView: 3.7,
+            spaceBetween: 5,
+          }
         }}
       >
         {newsData.map((newsItem) => (

@@ -11,7 +11,7 @@ const EmiFeatureListItem = ({
       <div className='max-w-[70px] max-h-[70px] w-full  h-full'>
         <Image width={50} height={50} src={`/emi/${img}`} alt={label} className='w-full  h-[70px] max-h-full object-contain'/>
       </div>
-      <div className='text-lg'>
+      <div className='text-base'>
         <h3 className='inline font-bold '>
             {label}{": "}
         </h3>

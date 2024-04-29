@@ -7,6 +7,8 @@ import styles from './locality.module.css'
 function Locality(props) {
 
     const [showFull, setShowFull] = useState(false)
+    const [showFullPros, setShowFullPros] = useState(false)
+    const [showFullCons, setShowFullCons] = useState(false)
 
     return (
         <div className={styles.localityOverviewContainer}>
@@ -28,19 +30,21 @@ function Locality(props) {
                         <h2><FaThumbsUp style={{ display: 'inline', marginRight: '0.5rem' }} color='#33cc33' /> Pro&apos;s</h2>
                         <ul>
                             {props.localityData.Pros.map((dt, index) => (
-                                <li key={index}><PiThumbsUp style={{ marginRight: '0.5rem', display: 'inline' }} color='#33cc33' />{dt}</li>
+                                <li key={index}><PiThumbsUp style={{ marginRight: '0.6rem', display: 'inline' }} color='#33cc33' />{dt}</li>
                             ))}
+                             <h6 onClick={() => setShowFullPros(!showFullPros)} className=' text-blue-700'>{showFullPros ? 'Read Less' : 'Read More'}</h6>
                         </ul>
                     </div>
                     <div className={styles.localityContentDataProCon}>
-                        <h2><FaThumbsDown style={{ display: 'inline', marginRight: '0.5rem', }} color='red' /> Con&apos;s</h2>
+                        <h2><FaThumbsDown style={{ display: 'inline', marginRight: '0.6rem', }} color='red' /> Con&apos;s</h2>
                         <ul>
                             {props.localityData.Cons.map((dt, index) => (
                                 <li key={index} >
-                                    <PiThumbsDown style={{ marginRight: '0.5rem', display: 'inline' }} color='red' />
+                                    <PiThumbsDown style={{ marginRight: '0.6rem', display: 'inline' }} color='red' />
                                     {dt}
                                 </li>
                             ))}
+                            <h6 onClick={() => setShowFullCons(!showFullCons)} className=' text-blue-700'>{showFullCons ? 'Read Less' : 'Read More'}</h6>
                         </ul>
                     </div>
                 </div>

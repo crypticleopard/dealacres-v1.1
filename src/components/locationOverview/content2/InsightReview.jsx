@@ -22,7 +22,7 @@ function InsightReview() {
         <div className={styles.ReviewBox}>
           <h2>Are you finding these Insights helpful?</h2>
           {(feedback == -1) ?
-            <div className="flex justify-end">
+            <div className="flex justify-start">
               <div className="flex gap-1 items-center">
                   <TiThumbsUp size={20} />
                 <button onClick={handleClickYes} >

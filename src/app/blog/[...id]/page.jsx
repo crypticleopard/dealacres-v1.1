@@ -10,6 +10,7 @@ import Tabularposts from "@/components/blog/tabularposts/Tabularposts";
 import Guides from "@/components/blog/guides/Guides";
 import EstateService from "@/components/rentagreement/EstateService";
 import AgentLinks from "@/components/blog/AgentLinks/AgentLinks";
+import NewExploreForBlog from "@/components/blog/NewExploreForBlog";
 
 
 const topicsData = [
@@ -61,11 +62,7 @@ const allPostsData = [
       "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
       "img": "article-thumb-1.jpg"
   }
-  ,
-  {
-      "title": "Why is My House So Dusty? 5 Easy Ways to Eliminate Dust",
-      "img": "article-thumb-2.webp"
-  }
+  
 ]
 
 const articlesData = [
@@ -156,7 +153,8 @@ export default function SingleBlogPage() {
     articles = {articlesData} />
 
     <Guides showHeading guides={guidesData}  align="center"/>
-<EstateService />
+{/* <EstateService /> */}
+<NewExploreForBlog />
  <AgentLinks />
     </div>
   )

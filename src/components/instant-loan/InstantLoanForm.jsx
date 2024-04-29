@@ -101,7 +101,7 @@ export default function InstantLoanForm({
                   helperText={errors.tenure && errors.tenure.messtenure}
 
                   InputProps={{
-                    endAdornment: <InputAdornment position="start">Years</InputAdornment>,
+                    endAdornment: <InputAdornment position="start">Years&nbsp;&nbsp;</InputAdornment>,
                   }}
                 >
                   {
@@ -124,7 +124,7 @@ export default function InstantLoanForm({
                   helperText={errors.age && errors.age.message}
 
                   InputProps={{
-                    endAdornment: <InputAdornment position="start">Years</InputAdornment>,
+                    endAdornment: <InputAdornment position="start">Years&nbsp;&nbsp;</InputAdornment>,
                   }}
                 >
 

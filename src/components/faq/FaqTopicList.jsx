@@ -16,7 +16,7 @@ const FaqTopicList = ({
     <div className={` ${hasBorder && 'border-r border-black'}  ${isGrid && 'px-8' }
     py-4
     lg:py-8`}>
-      { title && <div className='font-bold text-2xl py-8 '>
+      { title && <div className='font-bold text-2xl py-4 '>
         {title}
       </div>}
       <ul className='list-disc font-bold pl-4'>
@@ -25,7 +25,7 @@ const FaqTopicList = ({
 
                 if(index < (Math.floor(lists.length / 2)) || showFull ){
                 return (
-                    <li key={index} className='py-1'>{item}</li>
+                    <li key={index} className='py-1 text-base'>{item}</li>
                 )
                 }
             })

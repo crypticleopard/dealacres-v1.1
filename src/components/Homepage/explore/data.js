@@ -25,7 +25,7 @@ export const cardData = [
       id: 4,
       title: "User guide",
       description: "Delve into comprehensive guides curated by experts to explore new destinations, hobbies, or interests, enriching your experiences and broadening your horizons.",
-      imageUrl: "/2.png",
+      imageUrl: "/Guide.png",
       color:'#f6ca94',
     },
     {

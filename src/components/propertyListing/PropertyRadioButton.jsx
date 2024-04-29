@@ -22,7 +22,7 @@ const PropertyRadioButton = () => {
     return (
         <div className='my-4'>
             <div className='flex flex-row gap-4 '>
-                <p>Corner Shop</p>
+                <p className='font-bold'>Corner Shop</p>
                 <label>
                     <input
                         type="radio"
@@ -30,7 +30,7 @@ const PropertyRadioButton = () => {
                         checked={cornerShop === 'yes'}
                         onChange={handleRadioChange}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     <input
@@ -39,11 +39,11 @@ const PropertyRadioButton = () => {
                         checked={cornerShop === 'no'}
                         onChange={handleRadioChange}
                     />
-                    No
+                    &nbsp;&nbsp;No
                 </label>
             </div>
             <div className='flex flex-row gap-4  mt-3'>
-                <p>Is Main Road Facing</p>
+                <p className='font-bold'>Is Main Road Facing</p>
                 <label>
                     <input
                         type="radio"
@@ -51,7 +51,7 @@ const PropertyRadioButton = () => {
                         checked={isMainRoadFacing === 'yes'}
                         onChange={handleRadioChangeRoad}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     <input
@@ -60,11 +60,11 @@ const PropertyRadioButton = () => {
                         checked={isMainRoadFacing === 'no'}
                         onChange={handleRadioChangeRoad}
                     />
-                    No
+                    &nbsp;&nbsp;No
                 </label>
             </div>
-            <div className='flex flex-row gap-4 mt-3'>
-                <p>Personal Washroom</p>
+            <div className='flex flex-row gap-4 mt-3 items-start'>
+            <p className='font-bold'>Personal Washroom</p>
                 <label>
                     <input
                         type="radio"
@@ -72,7 +72,7 @@ const PropertyRadioButton = () => {
                         checked={washRoom === 'yes'}
                         onChange={handleRadioChangeWash}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     <input
@@ -81,11 +81,11 @@ const PropertyRadioButton = () => {
                         checked={washRoom === 'no'}
                         onChange={handleRadioChangeWash}
                     />
-                    No
+                    &nbsp;&nbsp;No
                 </label>
             </div>
             <div className='flex flex-row gap-4 mt-3'>
-                <p>Pantry/ Cafeteria</p>
+            <p className='font-bold'>Pantry/ Cafeteria</p>
                 <label>
                     <input
                         type="radio"
@@ -93,7 +93,7 @@ const PropertyRadioButton = () => {
                         checked={pantry === 'yes'}
                         onChange={handleRadioChangePantry}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     <input
@@ -102,7 +102,7 @@ const PropertyRadioButton = () => {
                         checked={pantry === 'no'}
                         onChange={handleRadioChangePantry}
                     />
-                    No
+                    &nbsp;&nbsp;No
                 </label>
             </div>
         </div>

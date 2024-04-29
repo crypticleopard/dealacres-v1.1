@@ -71,7 +71,7 @@ const Feedback = () => {
       <Image
         src={feedbackHeaderImage}
         alt="feedback deal acres"
-        className="w-full"
+        className="w-full h-96"
       />
 
       <div className="px-4 py-6 md:px-8 lg:px-12 xl:px-[25rem] mt-10 mb-14 space-y-5">
@@ -123,7 +123,7 @@ const Feedback = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                       fill="currentColor"
-                      className="w-10 h-10 text-yellow-500"
+                      className="w-8 h-8 text-yellow-500"
                       onClick={() => setRating(starValue)}
                     >
                       <path

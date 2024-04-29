@@ -13,16 +13,15 @@ import DoughNut from './DoughNut';
 import { ClipLoader } from 'react-spinners';
 
 const MortgageCalculator = () => {
-  const defaultValues = {
-    amount: 250000, 
-    downpayment: 50000, 
-    insurance: 25000, 
-    pTax: 10000, 
-    roi: 6.0, 
-    tenure: 10, 
-    pmi: 15000 
-};
-
+    const defaultValues = {
+        amount: 3500000,       
+        downpayment: 525000,   
+        insurance: 20000,     
+        pTax: 12000,          
+        roi: 3.5,             
+        tenure: 12,           
+        pmi: 1000          
+    };
     const { register, handleSubmit, watch, formState: { errors } } = useForm({
         defaultValues,
     });
@@ -56,7 +55,7 @@ const MortgageCalculator = () => {
     }, [amount, downpayment, insurance, pTax, roi, tenure, pmi]);
 
     return (
-        <div className='border border-black rounded-xl shadow p-4 relative'>
+        <div className='border border-black rounded-xl  p-4 relative shadow-lg'>
             {isLoading && (
                 <div className="absolute inset-0 bg-black/20 z-10 flex items-center justify-center">
                     <ClipLoader size={100} />

@@ -16,8 +16,8 @@ const BlogSideBar = ({
 
   return (
     <div>
-     
-      <Topics topicList = {topics} />
+{/*      
+      <Topics topicList = {topics} /> */}
       <BrandBanner hasCta img={banner1} url='banner1'/>
       <PostsFeed posts={allPosts}/>
       <BrandBanner img={banner2} url='banner2'/>

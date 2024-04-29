@@ -5,7 +5,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 const SearchCategories = (props) => {
   const categories = Object.keys(props.category);
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   return (
     <div>

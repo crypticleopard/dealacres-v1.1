@@ -29,8 +29,8 @@ const PropertyBuilder = () => {
     const filteredPropertyData = filterPropertyData();
 
     return (
-        <div className="pt-5">
-            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold  pt-2 pb-5">
+        <div >
+            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold  pb-5">
                 Projects by DLF Builders
             </h2>
             <div className="flex space-x-4 pb-4 pl-4">

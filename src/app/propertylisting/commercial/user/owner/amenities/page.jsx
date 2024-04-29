@@ -125,7 +125,7 @@ const Page = () => {
                     </div>
                     <button
                         onClick={openPostModal}
-                        className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 ${!isGDPRChecked || uploadedFiles.length === 0 ? 'cursor-not-allowed bg-gray-400' : ''}`}
+                        className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 ${!isGDPRChecked || uploadedFiles.length === 0 ? 'cursor-not-allowed bg-blue-400' : ''}`}
                         disabled={!isGDPRChecked || uploadedFiles.length === 0}
                     >Post Your Property</button>
                     <PostModal isOpen={isPostModalOpen} onSubmit={handlePostSubmit} />

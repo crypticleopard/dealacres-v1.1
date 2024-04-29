@@ -50,7 +50,7 @@ const AllProperty = () => {
     
    
        
-      <div className="px-[5rem] py-[3rem] w-full rounded-xl max-md:px-[4rem] max-sm:px-5">
+      <div className=" py-[3rem] px-[8rem] md:mx-[4%]  w-full rounded-xl max-md:px-[4rem] max-sm:px-5">
         <div className="flex flex-row w-full">
           <div className="w-[25%] max-xl:w-0">
             <div className="my-4 max-xl:hidden">

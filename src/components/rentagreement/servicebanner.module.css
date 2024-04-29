@@ -32,7 +32,9 @@
     border-radius: 10px;
     flex-grow: 1;
     flex-basis: 200;
+    text-align: right;
 }
+
 
 .BannerBg {
     background: url("/rentagreement/bannerrent.jpg");
@@ -94,7 +96,7 @@
     border-radius: 30px;
     flex-grow: unset;
     flex-basis: unset;
-    text-align: center;
+    text-align: right;
     background: white;
     color: rgba(0,0,0,0.5);
     
@@ -154,7 +156,7 @@
     border-radius: 30px;
     flex-grow: unset;
     flex-basis: unset;
-    text-align: center;
+    text-align: right;
     background: white;
     color: rgba(0,0,0,0.5);
     

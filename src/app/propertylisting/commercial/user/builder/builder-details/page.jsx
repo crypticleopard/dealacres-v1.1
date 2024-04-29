@@ -81,7 +81,7 @@ const Page = () => {
                             <input
                                 placeholder='Company Address 1'
                                 type='text'
-                                className='p-2 rounded-lg w-full mb-2 border'
+                                className='p-2 w-full mb-2 border'
                                 value={companyAddress1}
                                 onChange={(e) => setCompanyAddress1(e.target.value)} />
                             <input placeholder='Company Address 2 (optional)' type='text' className='p-2  w-full mb-2 border' />
@@ -131,7 +131,7 @@ const Page = () => {
                     <p>The data based on a search query on Deal Acres has been made available for information/advertisement purposes. No warranty is implied for its accuracy. Nothing contained herein will be deemed to constitute any sort of legal advice, solicitation, marketing, offer of sale, an invitation to offer, or an invitation to get by the developer/builder or any other entity. You are advised to visit the relevant RERA website. And get more information about the builder and property directly. Before deciding on the project content displayed on dealacres.com. If you have any queries contact Deal Acres at contact@dealacres.com.</p>
                 </div> <button
                     onClick={openPostModal}
-                    className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-gray-400' : ''
+                    className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-blue-400' : ''
                         }`}
                     disabled={isContinueButtonDisabled}
                 >Post Your Property</button>

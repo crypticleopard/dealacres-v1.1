@@ -7,6 +7,8 @@ import RoundedDiv from '@/components/propertyListing/RoundedDiv';
 import { useState } from 'react';
 import PropertyRadioButton from '@/components/propertyListing/PropertyRadioButton';
 import DynamicRadio from '@/components/propertyListing/DynamicRadio';
+import { CiCircleQuestion } from "react-icons/ci";
+
 
 const Page = () => {
 
@@ -23,6 +25,25 @@ const Page = () => {
     const [carpetArea, setCarpetArea] = useState('');
     const [entranceWidth, setEntranceWidth] = useState('');
     const [isContinueDisabled, setIsContinueDisabled] = useState(true);
+    const [selectedFloor, setSelectedFloor] = useState(null);
+    const [showDescription, setShowDescription] = useState(false);
+    const [selectedAge, setSelectedAge] = useState(null);
+
+    const [selectedFurnished, setSelectedFurnished] = useState(null);
+
+    const handleFurnishClick = (option) => {
+        setSelectedFurnished(option === selectedFurnished ? null : option);
+    };
+
+    const handleAgeSelection = (index) => {
+        setSelectedAge(index);
+    };
+
+
+    const handleFloorSelect = (floor) => {
+        setSelectedFloor(floor);
+
+    };
 
     const months = [
         'January', 'February', 'March', 'April', 'May', 'June',
@@ -54,8 +75,8 @@ const Page = () => {
         setIsContinueDisabled(
             !propertyDescription ||
             !carpetArea ||
-            !entranceWidth 
-    
+            !entranceWidth
+
         );
     };
     const handleInputChange = (setter, value) => {
@@ -88,30 +109,68 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Floor Number
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} />
+                    <div className="flex items-center gap-1">
+                        <button
+                            className={`h-full border-x-2 border-y-4 border-blue-200 py-1 px-3 rounded-xl ${selectedFloor === 'Lower Basement' ? 'border-blue-500' : ''}`}
+                            onClick={() => handleFloorSelect('Lower Basement')}
+                        >
+                            Lower Basement
+                        </button>
+                        <button
+                            className={`h-full border-x-2 border-y-4 border-blue-200  py-1 px-3 rounded-xl ${selectedFloor === 'Upper Basement' ? 'border-blue-500' : ''}`}
+                            onClick={() => handleFloorSelect('Upper Basement')}
+                        >
+                            Upper Basement
+                        </button>
+                        <button
+                            className={`h-full border-x-2 border-y-4 border-blue-200  py-1 px-3 rounded-xl ${selectedFloor === 'Ground' ? 'border-blue-500' : ''}`}
+                            onClick={() => handleFloorSelect('Ground')}
+                        >
+                            Ground
+                        </button>
+                    </div>
+                    {selectedFloor && (
+                        <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} />)}
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Number of Floors
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} />
+
+                    <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} />
 
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Furnished
                     </h1>
                     <div className='w-[70%] flex flex-wrap gap-2 my-2'>
-                        <div className='h-full custom-border py-1 px-3 rounded-xl'>
-                            Fully Furnished
-                        </div>
-                        <div className='h-full  custom-border py-1 px-3 rounded-xl'>
-                            Unfurnished
-                        </div>
-                        <div className='h-full  custom-border py-1 px-3 rounded-xl'>
-                            Semifurnished
-                        </div>
-                    </div>
+           
+            <div
+                onClick={() => handleFurnishClick('Fully Furnished')}
+                className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${
+                    selectedFurnished === 'Fully Furnished' ? 'shadow-md' : ''
+                }`}
+            >
+                Fully Furnished
+            </div>
+            <div
+                onClick={() => handleFurnishClick('Unfurnished')}
+                className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${
+                    selectedFurnished === 'Unfurnished' ? 'shadow-md' : ''
+                }`}
+            >
+                Unfurnished
+            </div>
+            <div
+                onClick={() => handleFurnishClick('Semifurnished')}
+                className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${
+                    selectedFurnished === 'Semifurnished' ? 'shadow-md' : ''
+                }`}
+            >
+                Semifurnished
+            </div>
+        </div>
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Wash Room
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} />
+                    <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={15} />
 
                     <PropertyRadioButton />
                     <h1 className="font-medium md:font-bold text-xl mt-2">
@@ -120,7 +179,12 @@ const Page = () => {
 
                     <div className='relative'>
                         <h1 className='text-sm font-bold my-3'>Carpet Area</h1>
-                        <p className='absolute text-[8px] leading-3 font-extralight top-[16%] right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Carpet area is the total usuable area  of your property within the walls</p>
+                        <div className="absolute top-0 right-[50%]">
+                            <span className="text-gray-500 text-xs font-extralight cursor-pointer" onMouseEnter={() => setShowDescription(true)} onMouseLeave={() => setShowDescription(false)}><CiCircleQuestion className='w-4 h-4' /></span>
+                            {showDescription && (
+                                <p className="absolute top-0 left-6 text-gray-500 text-[0.6rem] font-extralight w-52">Carpet area is the total usable area of your property within the walls</p>
+                            )}
+                        </div>
                         <div className="flex items-center space-x-2 mb-2 ">
                             <input
                                 type="text"
@@ -128,7 +192,6 @@ const Page = () => {
                                 value={carpetArea}
                                 onChange={(e) => handleInputChange(setCarpetArea, e.target.value)}
                             />
-
                             <select className="custom-border-2 rounded-xl px-2 py-1">
                                 <option value="+1">Sqft</option>
                                 <option value="+91">Sq-yrd</option>
@@ -138,6 +201,9 @@ const Page = () => {
                             </select>
                         </div>
                     </div>
+
+
+
                     <div className='relative'>
                         <h1 className='text-sm font-bold my-3'>Width of Entrance</h1>
 
@@ -150,11 +216,11 @@ const Page = () => {
                             />
 
                             <select className="custom-border-2 rounded-xl px-2 py-1">
-                                <option value="+1">Sqft</option>
-                                <option value="+91">Sq-yrd</option>
-                                <option value="+91">Sq-m</option>
-                                <option value="+91">Acre</option>
-                                <option value="+91">Hectare</option>
+                                <option value="Sqft">Sqft</option>
+                                <option value="Sq-yrd">Sq-yrd</option>
+                                <option value="Sq-m">Sq-m</option>
+                                <option value="Acre">Acre</option>
+                                <option value="Hectare">Hectare</option>
                             </select>
                         </div>
                     </div>
@@ -176,13 +242,19 @@ const Page = () => {
                             </p>
                             <div className=' mt-2'>
                                 {[0, 1, 2].map((index) => (
-                                    <button key={index} className='custom-border h-full px-2 rounded-lg mr-2 mb-2'>
+                                    <button
+                                        key={index}
+                                        className={`h-full px-2 rounded-lg mr-2 mb-2 ${selectedAge === index ? ' border-x-2 border-y-4 border-blue-700' : 'custom-border '}`}
+                                        onClick={() => handleAgeSelection(index)}
+                                    >
                                         {index === 0 ? 'New Construction' : `${(index - 1) * 5}-${index * 5} years`}
                                     </button>
                                 ))}
 
                                 {isExpanded && [3, 4].map((index) => (
-                                    <button key={index} className='custom-border h-full px-2 rounded-lg mr-2'>
+                                    <button key={index}
+                                        className={` h-full px-2 rounded-lg mr-2 mb-2 ${selectedAge === index ? ' border-x-2 border-y-4 border-blue-700' : 'custom-border '}`}
+                                        onClick={() => handleAgeSelection(index)}>
                                         {`${(index - 1) * 5}-${index * 5} years`}
                                     </button>
                                 ))}
@@ -194,7 +266,7 @@ const Page = () => {
                     )}
                     {isUnderConstructionClicked && (
                         <>
-                            <p className='font-medium text-gray-500  text-md mt-3'>Available Form</p>
+                            <p className='font-medium text-gray-500  text-md mt-4'>Available Form</p>
                             <div className='mt-2 flex flex-row gap-5 '>
                                 <div className='flex flex-row gap-4 border-b-2'>
                                     <label htmlFor="month">Month:</label>
@@ -223,10 +295,10 @@ const Page = () => {
                     <input type="text" className="custom-border-2 px-2 py-3 rounded-xl w-[60%] mt-2" placeholder="Price per Sq.Yd" />
 
                     <Link href={'photos'}>
-                    <button
-                    className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
-                    disabled={isContinueDisabled}
-                >
+                        <button
+                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
+                            disabled={isContinueDisabled}
+                        >
                             Continue
                         </button>
                     </Link>

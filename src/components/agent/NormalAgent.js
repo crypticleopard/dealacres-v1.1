@@ -12,7 +12,7 @@ const NormalAgent = (props) => {
       <div className="flex flex-col justify-center items-center py-2">
         <AgentList featured={false} limit={2} />
         {props.button == true ? (
-          <button className="border-2 px-4 py-2 mb-4 w-fit text-xl rounded-lg border-black">
+          <button className="border-2 px-4 py-2 mb-4 w-fit text-base rounded-lg border-black">
             More agents in Hisar
           </button>
         ) : null}

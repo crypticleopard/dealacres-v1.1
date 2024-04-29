@@ -49,15 +49,15 @@ const HeaderInput = (props) => {
   return (
     <div className={styles.HeaderContentInput}>
       <div className={styles.LocationDropdown}>
-      <select className='text-sm'   value={selectedLocation} onChange={handleLocationChange}>
-        <option className='text-md'  >All Location</option>
+      <select className='text-base'   value={selectedLocation} onChange={handleLocationChange}>
+        <option className='text-base'  >All Location</option>
           <option className='text-md' value="Gurugaon">Gurugaon</option>
           <option className='text-md' value="Delhi">Delhi</option>
           <option className='text-md' value="Mumbai">Mumbai</option>
         </select>
         <div className='w-2 border-r-4'></div>
-        <select className='text-sm'   value={selectedResedential} onChange={handleResedentialChange}>
-        <option className='text-md'  >All Residential</option>
+        <select className='text-base'   value={selectedResedential} onChange={handleResedentialChange}>
+        <option className='text-base'  >All Residential</option>
           <option className='text-md' value="Gurugaon">Gurugaon</option>
           <option className='text-md' value="Delhi">Delhi</option>
           <option className='text-md' value="Mumbai">Mumbai</option>

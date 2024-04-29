@@ -10,8 +10,6 @@ import { BsFillArrowDownSquareFill } from "react-icons/bs";
 import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
 
 const Menu = ({ setMenuPosition, setHoveredMenu }) => {
-
-
   const handleMouseEnter = (menu, event) => {
     setHoveredMenu(menu);
     if (event) {
@@ -60,14 +58,15 @@ const Menu = ({ setMenuPosition, setHoveredMenu }) => {
     </>
   );
 };
+
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(null);
   const [scrolled, setScrolled] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState('Gurugaon');
+  const [selectedLocation, setSelectedLocation] = useState('Gurugram');
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
   const pathname = usePathname();
-  const isHomePage = pathname === '/' || pathname === '/blog'
+  const isHomePage = pathname === '/' || pathname === '/blog';
 
   const MenuMobile = () => (
     <>
@@ -89,7 +88,6 @@ const Navbar = () => {
     </>
   );
 
-
   const getSections = (menu) => {
     switch (menu) {
       case "buyer":
@@ -107,11 +105,6 @@ const Navbar = () => {
     }
   };
 
-
-
-
-
-
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setScrolled(true);
@@ -127,14 +120,13 @@ const Navbar = () => {
     };
   }, []);
 
-
   const handleLocationChange = (e) => {
     setSelectedLocation(e.target.value);
   };
 
   return (
     <div className={`navbar${isHomePage ? "" : "Page"}${scrolled ? " scrolled" : ""}`}>
-        <div className="navbar-menu">
+      <div className="navbar-menu">
         {toggleMenu ? (
           <RiCloseLine
             color="#fff"
@@ -145,7 +137,7 @@ const Navbar = () => {
             }}
           />
         ) : (
-          <RiMenu2Line 
+          <RiMenu2Line
             color="#fff"
             size={27}
             onClick={() => {
@@ -159,7 +151,7 @@ const Navbar = () => {
               <MenuMobile />
               <div className="navbar-menu_container-links-sign">
                 <p>Sign In</p>
-                <h5>Post your Property</h5>
+                <Link href={"/propertylisting"}><h5>Post your Property</h5></Link>
                 <h5>Post For Business</h5>
                 <button type="button">Sign Up</button>
               </div>
@@ -167,7 +159,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      
+
       <div className="navbar-links">
         <div className="navbar-links__logo ">
           <Image
@@ -186,18 +178,20 @@ const Navbar = () => {
             onChange={handleLocationChange}
             className="text-white bg-transparent font-bold hidden md:block nav-drop custom-select"
           >
-            <option className="text-black bg-white" value="Gurugaon">Gurugaon</option>
+            <option className="text-black bg-white" value="Gurugram">Gurugram</option>
             <option className="text-black bg-white" value="Delhi">Delhi</option>
             <option className="text-black bg-white" value="Mumbai">Mumbai</option>
           </select>
-          <BsFillArrowDownSquareFill color="blue" className="custom-arrow hidden md:block"/>
+          <BsFillArrowDownSquareFill
+            color={!isHomePage || scrolled ? "white" : "blue"}
+            className="custom-arrow hidden md:block arrow"
+          />
         </div>
 
         <div className="navbar-links__container">
           <Menu
             setMenuPosition={setMenuPosition}
             setHoveredMenu={setHoveredMenu}
-
           />
         </div>
         <div className="navbar-sign">
@@ -207,8 +201,8 @@ const Navbar = () => {
           >
             Post For Business
           </Link>
-          <Link
-            href="#"
+          <Link 
+            href="/propertylisting"
             className=" text-sm sm:text-base md:text-sm text-center   font-light  text-white sm:font-normal md:font-medium shadow-blue-200 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200"
           >
             Post Your Property{" "}
@@ -224,8 +218,9 @@ const Navbar = () => {
           <button type="button">Sign Up</button>
         </div>
       </div>
-      <div className="md:hidden bg-white p-1 font-semibold text-blue-600 text-xs rounded-lg">Post Property <span className=" text-green-700 ml-1">Free</span></div>
-
+      <Link href="/propertylisting">
+        <div className="md:hidden bg-white p-1 font-semibold text-blue-600 text-xs rounded-lg">Post Property <span className=" text-green-700 ml-1">Free</span></div>
+      </Link>
       {hoveredMenu && (
         <div
           className="flyout-menu-container mt-6"
@@ -234,7 +229,7 @@ const Navbar = () => {
           <FlyoutMenuSections sections={getSections(hoveredMenu)} />
         </div>
       )}
-    </div >
+    </div>
   );
 };
 

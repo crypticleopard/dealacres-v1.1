@@ -69,15 +69,15 @@ const LocationReview = () => {
   };
 
   return (
-    <div className="w-full py-5 px-4 md:px-8 lg:px-[15rem] xl:px-[20rem] mt-10 mb-10">
-      <div className="flex flex-col items-start border-2 border-blue-300 px-4 sm:px-6 py-8">
-        <h2 className="block text-left md:text-center text-2xl sm:text-3xl md:text-4xl font-bold w-full">
+    <div className="w-full py-5 px-4 md:px-8 lg:px-[15rem] xl:px-[23rem] my-10">
+      <div className="flex flex-col items-start border-2 border-blue-300 px-4 sm:px-6 py-4">
+        <h2 className="block text-left md:text-center text-xl sm:text-3xl md:text-4xl font-bold w-full">
           Write Your Reviews <span className="penIcon"></span>
         </h2>
 
         <div className="w-full md:w-auto">
           <div className="space-y-4 md:space-y-2 md:mt-8">
-            <p className="text-lg md:text-xl font-semibold hidden md:block">
+            <p className="text-base md:text-xl font-semibold hidden md:block">
               What describes you the best?
             </p>
             <div className="flex flex-wrap gap-2 sm:gap-4 items-center">
@@ -93,7 +93,7 @@ const LocationReview = () => {
           </div>
 
           <div className="space-y-4 md:space-y-2 mt-8 w-full">
-            <p className="text-lg md:text-xl font-semibold">
+            <p className="text-lg md:text-base font-semibold">
               Select your locality / society to Review
             </p>
             <div className="relative">
@@ -122,27 +122,27 @@ const LocationReview = () => {
           </button>
 
           <div className="space-y-4 md:space-y-2 mt-8 w-full">
-            <p className="text-lg md:text-xl font-semibold">
+            <p className="text-lg md:text-base font-semibold">
               What do you like about the locality?
             </p>
             <textarea
               type="text"
-              className="pl-5 md:pl-2 pt-2 pb-12 md:pb-24 border-2 border-blue-300 w-full rounded-md"
+              className="pl-5 md:pl-2 pt-2 pb-12 md:pb-18 border-2 border-blue-300 w-full rounded-md"
             ></textarea>
           </div>
 
           <div className="space-y-4 md:space-y-2 mt-8 w-full">
-            <p className="text-lg md:text-xl font-semibold">
+            <p className="text-lg md:text-base font-semibold">
               What do you Dislike about the locality?
             </p>
             <textarea
               type="text"
-              className="pl-5 md:pl-2 pt-2 pb-12 md:pb-24 border-2 border-blue-300 w-full rounded-md"
+              className="pl-5 md:pl-2 pt-2 pb-12 md:pb-18 border-2 border-blue-300 w-full rounded-md"
             ></textarea>
           </div>
 
-          <div className="space-y-4 mt-10 w-full">
-            <p className="text-lg md:text-xl font-semibold">
+          <div className="space-y-4 mt-8 w-full">
+            <p className="text-lg md:text-base font-semibold">
               Rate This - What you Thought
             </p>
             <div className="flex flex-col gap-1">

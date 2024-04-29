@@ -8,7 +8,7 @@ import FeatureSlider from "../allBlog/FeatureSlider";
 const Featured = () => {
   return (
     <div className="px-4  flex flex-col gap-16 ">
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-12  h-[26rem] ">
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-6  h-[26rem] ">
         <div className="col-span-1 py-4   ">
           <div className="flex justify-start my-2 ">
             <h2 className="text-4xl border-b border-b-black font-[Poppins]">
@@ -37,7 +37,7 @@ const Featured = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-12 ">
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-6 ">
         <div className="col-span-1 md:col-span-2 max-h-[300px] h-full">
           <div className="max-h-[300px] h-[70%] ">
           <FeatureCard img={background} text={"Top Coworking Space On Rent in Modle Town Hisar"}/>

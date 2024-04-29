@@ -19,8 +19,9 @@ function Header() {
                     <Image
                         src='/singleDeveloper/devLogo.webp'
                         alt='developer Logo'
-                        layout='fill'
-                        style={{objectFit:'cover'}}
+                        width={200}
+                        height={200}
+                        objectFit='cover'
                     />
                 </div>
                 <div className={styles.devInfo}>

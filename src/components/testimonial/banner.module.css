@@ -3,15 +3,17 @@
 .Banner{
     padding: 0rem 12rem;
     position: relative !important;
+    height: 40vh; 
+    overflow: hidden; 
 }
 
 .Title{
-    font-size: 5.5rem;
+    font-size: 4rem;
     font-weight: bold;
     letter-spacing: 5px;
     position: absolute;
     top: 25%;
-    right: 15%;
+    right: 20%;
 }
 
 

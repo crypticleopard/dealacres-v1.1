@@ -27,7 +27,7 @@ const  BlogPost = ({
       <div className="text-justify text-md" dangerouslySetInnerHTML={{ __html: postIntro }}></div>
 
       <div className='py-4'>
-        <Image src={`/blog/${img}`} alt='post cover' width={200} height={100} className='w-full max-w-full' />
+        <Image src={`/blog/${img}`} alt='post cover' width={500} height={180} className='w-full h-96'  />
       </div>
 
 

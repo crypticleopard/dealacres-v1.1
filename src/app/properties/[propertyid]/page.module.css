@@ -1,6 +1,6 @@
 .propertyContainer {
     width: 100%;
-    padding: 5rem 12rem 0rem 12rem;
+    padding: 3rem 12rem 0rem 12rem;
     overflow: hidden;
 }
 
@@ -24,8 +24,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 2rem;
-    padding: 2rem 12rem 2rem 12rem;
+    row-gap: 1.5rem;
+    padding: 1rem 12rem 1rem 12rem;
 }
 
 .bottomContainer h1 {

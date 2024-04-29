@@ -38,6 +38,9 @@
     border-bottom: none;
     padding: 8px 0px;
   }
+  .navbar.scrolled .arrow{
+    color: white;
+  }
 .navbar-links{
     flex: 2;
     display: flex;

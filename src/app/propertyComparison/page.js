@@ -11,8 +11,9 @@ const page = () => {
         <div className={style.Layout}>
         <Comparison />
           <Hotspot />
+          <Explore />
         </div>
-        <Explore />
+    
         <ReadMore />
     </div>
   )

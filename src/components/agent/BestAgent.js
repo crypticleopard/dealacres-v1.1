@@ -7,14 +7,14 @@ import SearchCategories from "../rentagreement/SearchCategories";
 import SideContentContainer from "../property/sidecontentcontainer/SideContentContainer";
 
 const Agent = (props) => {
-  // let [limit, setLimit] = useState(5);
+   let [limit, setLimit] = useState(5);
   const filteredData = data["Experts"];
   return (
     <div className={styles.agentLayout}>
       <div>
         <h2 className={styles.Explore}>Explore our Rent Agreement Experts</h2>
         <div>
-          <AgentList featured={true} limit={-1} />
+          <AgentList featured={true} limit={limit} />
         </div>
       </div>
 

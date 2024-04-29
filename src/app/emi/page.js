@@ -18,14 +18,14 @@ const page = () => {
                     About EMI Calculator
                 </h2>
                 
-                <p className='text-lg text-justify pb-2'>
+                <p className='text-base text-justify pb-2'>
                 A home loan EMI calculator helps compute the monthly installments that a borrower needs to pay against the total amount availed. Such a tool assists you in making an informed decision about the outflow towards the home loan every month.
                 </p>
-                    <p className='py-2 text-lg'>
+                    <p className='py-2 text-base'>
                     To identify your home loan EMI, you need to fill in the following 
                     </p>
 
-                <ul className='list-disc text-lg px-8 flex flex-col gap-1 text-justify'>
+                <ul className='list-disc text-base px-8 flex flex-col gap-1 text-justify'>
 
                     {
                         ["Loan Amount: The total amount that you need to avail for your property.",
@@ -38,7 +38,7 @@ const page = () => {
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4  '>
                 <div className='py-4'>
-                    <h2 className='font-bold text-4xl py-2 '>
+                    <h2 className='font-bold text-3xl py-2 '>
                         Benefits of Using a Home Loan Affordability Calculator
                     </h2>
                     <h4 className=''>
@@ -61,10 +61,10 @@ const page = () => {
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4 flex flex-col gap-4 '>
                 <div className='py-4'>
-                    <h2 className='font-bold text-4xl py-2 '>
+                    <h2 className='font-bold text-3xl py-2 '>
                         Factors that Affect Home Loan Affordability
                     </h2>
-                    <h4 className='font-bold text-lg py-2'>
+                    <h4 className='font-bold text-base py-2'>
                         There is a specific reason why affordability calculators ask for information related to your finances. It is simply because all those things impact your affordability.
                     </h4>
                 </div>

@@ -1,6 +1,6 @@
 .ContactDetails{
     margin: 6rem auto;
-    width: 72%;
+    width: 70%;
     display: flex;
 }
 
@@ -22,15 +22,25 @@
     justify-content: center;
 }
 
-.ContactForm{
+/* .ContactForm{
     padding: 50px;
     width: 71%;
     margin: auto;
-    border: 5px solid rgb(0, 0, 0, 0.1); 
+    /* border: 5px solid rgb(0, 0, 0, 0.1);  
     padding: 10px;
     background-color: white;
-    /* margin-bottom: 20px; */
+    /* margin-bottom: 20px; 
     border-radius: 15px;
+    box-shadow: rgba(9, 9, 9, 0.07);
+} */
+.ContactForm {
+    padding: 50px;
+    width: 71%;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adjust box shadow */
 }
 
 .contactHead{
@@ -45,14 +55,14 @@
 
 .ContactForm p{
     color: red;
-    font-size: 11px;
+    font-size: 10px;
     margin-left: 15px;
     margin-bottom: 25px;   
 }
 
 .ContactForm input, .ContactForm select{
     display: block;
-    padding: 10px;
+    padding: 7px;
     margin: 0px 10px;
     width: 100%;
     border: 1px solid rgb(0, 0, 0, 0.15); 

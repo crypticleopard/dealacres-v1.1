@@ -48,12 +48,12 @@ const SingleAgentPage = () => {
         <FeaturedService />
       </div>
      
-      <div className='max-w-screen-md  px-2 sm:px-6 flex gap-8 mx-2 mx-auto   overflow-hidden  py-4 my-4 rounded-[2rem] border-[3px] border-black'>
+      <div className='max-w-screen-md  px-2 sm:px-6 flex gap-8 mx-auto   overflow-hidden  py-4 my-4 rounded-[2rem] border-[3px] border-black'>
         
         <div className='w-1/2'>
           <AgentContactForm />
         </div>
-        <div className='order-2 w-1/2  my-auto rounded-[2rem]  inline-flex items-center overflow-hidden shadow h-[400px] '>
+        <div className='order-2 w-1/2  my-auto rounded-[2rem]  inline-flex items-center overflow-hidden shadow h-[320px] '>
           <Image src={`/about-us/${img}`} alt='abot-agent' className='rounded-[2rem] w-full h-auto object-cover sm:self-start ' width={300} height={300} />
         </div>
      

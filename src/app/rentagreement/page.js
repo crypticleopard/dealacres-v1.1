@@ -112,14 +112,15 @@ const Page = () => {
       </div>
       <DownloadMaterial />
 
-      <div>
+      <div className='px-[12rem] py-[3rem] max-md:px-[1rem] max-md:py-[2rem]'>
         <RentalManual />
 
       </div>
 
 
-
+      <div className='max-w-screen-lg mx-auto'>
       <InsightReview />
+      </div>
       <div className=" mt-10 mb-3 px-[12rem] py-[1rem] max-md:px-[1rem] max-md:py-[2rem]">
         <EstateService />
       </div>

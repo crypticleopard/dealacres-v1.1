@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from "./page.module.css"
-import ReadMore from '@/components/propertyListing/ReadMore/ReadMore'
 import ExploreBuilder from '@/components/AllDevelopers/ExploreBuilder'
 import SideContentContainer from '@/components/property/sidecontentcontainer/SideContentContainer'
 import Sidebar from '@/components/AllDevelopers/Sidebar'
 import Explore from '@/components/Homepage/explore/Explore'
 import Link from 'next/link'
+import ReadMoree from '@/components/developer/ReadMoree'
 
 const page = () => {
   return (
@@ -26,8 +26,8 @@ const page = () => {
       </div>
 
 
-      <div >
-        <ReadMore />
+      <div className='mx-[8rem] mb-10' >
+        <ReadMoree />
 
         <Explore />
       </div>

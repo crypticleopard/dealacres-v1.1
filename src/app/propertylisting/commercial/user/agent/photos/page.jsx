@@ -32,15 +32,15 @@ const Page = () => {
 
                 <div className='h-full w-[400px] rounded-xl bg-[#c9e2f3] p-4 flex flex-col items-center'>
 
-                    <h1 className="text-xl text-center mt-20">
+                    <h1 className="text-xl text-center mt-10">
                         Click Perfact picture of your property so the renter or buyer see the best image of your property.</h1>
 
-                    <Image src={'/propertyListing/assets/camera.png'} alt='camera' height={150} width={150} className='my-16' />
+                    <Image src={'/propertyListing/assets/camera.png'} alt='camera' height={150} width={150} className='my-8' />
                     <h1 className='font-bold text-xl'>Need Help?</h1>
                     <p className='text-lg'>You Can Email Us</p>
-                    <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
+                    <p className='text-lg text-blue-600 mb-10'>Contact@dealacres.com</p>
                 </div>
-                <div className='h-full md:w-[400px] md:mt-20 rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4'>
+                <div className='h-full md:w-[400px] md:mt-14 rounded-xl px-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4'>
                     <h1 className="font-medium md:font-bold md:text-2xl text-xl  my-2">
                         Add Media</h1>
                     <div className='flex flex-row justify-between mb-2'>

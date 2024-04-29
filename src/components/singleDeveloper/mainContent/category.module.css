@@ -10,7 +10,7 @@
 }
 
 .categoryContainer h1{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .categoryImgContainer{
-    height: 300px;
+    height: 250px;
     position: relative;
     overflow: hidden;
     border: 4px solid #FFBA00;

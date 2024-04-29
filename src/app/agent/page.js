@@ -27,7 +27,7 @@ const AgentPage = () => {
   }, [scrollCount]);
 
   useEffect(() => {
-    if (scrollCount == 5) {
+    if (scrollCount == 20) {
       setShowPopup(true);
     }
   }, [scrollCount]);

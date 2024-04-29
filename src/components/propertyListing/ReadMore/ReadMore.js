@@ -93,7 +93,7 @@ const ReadMore = ({
             navigation: false
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 3.5,
             spaceBetween: 15,
           },
         }}

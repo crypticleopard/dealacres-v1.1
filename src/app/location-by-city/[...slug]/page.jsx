@@ -50,7 +50,7 @@ const LocationByCity = () => {
 
 
   return (
-    <div className="px-[10%] py-[2rem] max-lg:px-[5%] relative">
+    <div className="px-[15%] py-[2rem] max-lg:px-[5%] relative">
       <CityStateSelector />
       <CityInformation />
       <AboutCity />
