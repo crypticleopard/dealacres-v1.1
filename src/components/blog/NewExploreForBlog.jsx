@@ -3,10 +3,8 @@ import Image from 'next/image'
 
 
 const Card = ({ index, imageUrl, heading, bgColor }) => {
-
-
     return (
-        <div key={index} className={`h-[7.5rem] w-[95%] border flex flex-col items-center justify-center gap-3 p-2 rounded-xl text-black bg-${bgColor}`}>
+        <div key={index} style={{ background: bgColor }} className="h-[7.5rem] w-[95%] border flex flex-col items-center justify-center gap-3 p-2 rounded-xl text-black">
             <p className='font-bold text-center text-xs xl:text-[0.82rem]'>{heading}</p>
             <Image src={imageUrl} width={40} height={60} alt={heading} />
         </div>
@@ -20,72 +18,70 @@ const NewExploreForBlog = () => {
         {
             imageUrl: 'https://media-public.canva.com/N3bz0/MAFi_QN3bz0/1/t.png',
             heading: 'Rent Agreement',
-            bgColor: "[#b6eafa]"
+            bgColor: "rgb(182, 234, 250, 0.12)"
         },
         {
             imageUrl: 'https://media-public.canva.com/nB8Ek/MAFfqznB8Ek/1/t.png',
             heading: 'Home Loan',
-            bgColor: "[#1a42de]"
+            bgColor: "rgb(255, 145, 77, 0.12)"
         },
         {
             imageUrl: 'https://media-public.canva.com/FX_B4/MAFaqXFX_B4/1/t.png',
             heading: 'Property Valuer',
-            bgColor: "[#CB6CE6]"
+            bgColor: "rgb(203, 108, 230, 0.12)"
         },
         {
             imageUrl: 'https://media-public.canva.com/zLeFA/MAFKtnzLeFA/1/t.png',
             heading: 'Legal Services',
-            bgColor: "[#4682a9]"
+            bgColor: "rgb(0, 151, 178, 0.12)"
         },
         {
             imageUrl: 'https://media-public.canva.com/iA9GI/MAERBHiA9GI/1/t.png',
             heading: 'Chartered Accountant',
-            bgColor: "rgb(49, 132, 62, 0.10)"
+            bgColor: "rgb(255, 105, 105, 0.12)"
         },
         {
             imageUrl: '/homePage/homeDecor.webp',
             heading: 'Home Decor',
-            bgColor: "rgb(49, 132, 62, 0.10)"
+            bgColor: "rgb(255, 189, 89,0.12)"
         },
         {
             imageUrl: '/homePage/homeInterior.webp',
             heading: 'Home Interior',
-            bgColor: "rgb(49, 132, 62, 0.10)"
+            bgColor: "rgb(0, 191, 99,0.12)"
         },
         {
             imageUrl: '/homePage/vastu_sastra.png',
             heading: 'Vastu Sartar',
-            bgColor: "rgb(49, 132, 62, 0.10)"
+            bgColor: "rgb(70, 130, 169,0.12)"
         },
         {
             imageUrl: '/homePage/construction.webp',
             heading: 'Construction Contractor',
-            bgColor: "[#e1ae60]"
+            bgColor: "rgb(225, 174, 96,0.12)"
         },
         {
             imageUrl: '/homePage/modular.webp',
             heading: 'Modular Kitchen',
-            bgColor: "rgb(49, 132, 62, 0.10)"
+            bgColor: "rgb(203, 108, 230,0.12)"
         },
         {
            
             heading: "Carpentar",
             imageUrl: "/ServiceIcons/Carpenter.png",
-            color:"rgb(49, 132, 62)",
-            bgColor: "rgb(49, 132, 62, 0.10)"
+            bgColor: "rgb(123, 255, 144,0.12)"
         },
         {
             heading: "Painting Service",
             imageUrl: "/ServiceIcons/PaintingService.png",
-            color:"rgb(137, 129, 33)",
-            bgColor: "rgb(137, 129, 33, 0.10)"
+            bgColor: "rgb(241, 181, 112,0.12)"
         },
         {
             
             heading: "Electrician",
             imageUrl: "/ServiceIcons/Electrician.png",
             color:"rgb(186, 112, 79)",
-            bgColor: "rgb(186, 112, 79, 0.10)"
+            bgColor: "rgb(186, 112, 79, 0.12)"
         },
         
         {
@@ -93,28 +89,28 @@ const NewExploreForBlog = () => {
             heading: "Security System",
             imageUrl: "/ServiceIcons/SecuritySystem.png",
             color:"rgb(7, 214, 46)",
-            bgColor: "rgb(7, 214, 46, 0.10)"
+            bgColor: "rgb(7, 214, 46, 0.12)"
         },
         {
           
             heading: "Packer & Movers",
             imageUrl: "/ServiceIcons/PackerMover.png",
             color:"rgb(206, 206, 90)",
-            bgColor: "rgb(206, 206, 90, 0.10)"
+            bgColor: "rgb(206, 206, 90, 0.12)"
         },
         {
        
             heading: "Pest Control",
             imageUrl: "/ServiceIcons/PestControl.png",
             color:"rgb(255, 105, 105)",
-            bgColor: "rgb(255, 105, 105, 0.10)"
+            bgColor: "rgb(255, 105, 105, 0.12)"
         },
         {
     
             heading: "Solar Product Dealer",
             imageUrl: "/ServiceIcons/Solar.svg",
             color:"rgb(225, 174, 96)",
-            bgColor: "rgb(225, 174, 96, 0.10)"
+            bgColor: "rgb(225, 174, 96, 0.12)"
         },
        
         {
@@ -122,20 +118,20 @@ const NewExploreForBlog = () => {
             heading: "Plumbing Contractor",
             imageUrl: "/ServiceIcons/Plumbing.png",
             color:"rgb(70, 130, 169)",
-            bgColor: "rgb(70, 130, 169, 0.10)"
+            bgColor: "rgb(70, 130, 169, 0.12)"
         },
         {
            
             heading: "Sanitary Dealer",
             imageUrl: "/ServiceIcons/SanitaryDealer.svg",
-            bgColor: "#0061fd"
+            bgColor: "rgb(0, 97, 253,0.12)"
         },
        
         {
       
             heading: "Flooring & Marble Dealer",
             imageUrl: "/ServiceIcons/Flooring.png",
-            bgColor: "rgb(70, 69, 140, 0.10)"
+            bgColor: "rgb(70, 69, 140, 0.12)"
         },
     ];
   return (
