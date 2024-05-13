@@ -31,7 +31,7 @@ const Page = () => {
 
       <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
 
-        <div className='h-full w-[400px] rounded-xl bg-[#c9e2f3] p-4 flex flex-col items-center'>
+        <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
 
           <h1 className="text-xl text-center mt-10">
             An Accurate Location is the most essential as it helps you to connect the perfect buyer or tenant</h1>

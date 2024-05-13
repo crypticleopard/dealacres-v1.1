@@ -45,8 +45,8 @@ const Hotspot = () => {
             <Image 
             src={dt.img}
             alt={dt.img}
-            width={100}
-            height={100}
+            width={80}
+            height={80}
             />
             <p>{dt.label}</p>
         </div>

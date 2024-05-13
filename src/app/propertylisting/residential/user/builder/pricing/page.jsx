@@ -147,12 +147,12 @@ const Page = () => {
           </Link>
         </div>
 
-        <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center mt-5 '>
-          <h1 className="text-xl mb-4 text-center mt-16">Mention the Expected price of<br /> your property with your<br /> Brokerage Charges.</h1>
-          <Image src={'/propertyListing/assets/home_coin.png'} alt='coin' height={250} width={250} className='mt-3 mb-10' />
+        <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5 '>
+          <h1 className="text-xl mb-4 text-center mt-8">Mention the Expected price of<br /> your property with your<br /> Brokerage Charges.</h1>
+          <Image src={'/propertyListing/assets/home_coin.png'} alt='coin' height={180} width={180} className='mt-3 mb-10' />
           <h1 className='font-bold text-xl'>Need Help?</h1>
           <p className='text-lg'>You Can Email Us</p>
-          <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
+          <p className='text-lg text-blue-600 mb-10'>Contact@dealacres.com</p>
         </div>
       </div>
     </section>

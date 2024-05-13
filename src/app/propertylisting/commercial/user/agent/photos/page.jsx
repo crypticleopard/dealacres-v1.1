@@ -30,7 +30,7 @@ const Page = () => {
 
             <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
 
-                <div className='h-full w-[400px] rounded-xl bg-[#c9e2f3] p-4 flex flex-col items-center'>
+                <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
 
                     <h1 className="text-xl text-center mt-10">
                         Click Perfact picture of your property so the renter or buyer see the best image of your property.</h1>
@@ -53,11 +53,13 @@ const Page = () => {
                     <FileDropzone onFilesDrop={handleFilesDrop} description={'Uploaded photo is maximum is of 2MB'} />
                     <p className='text-sm mt-2 mb-5'>At least add 5 images of your property for good visibility and high response.</p>
                     <Link href={'pricing'}>
-                        <button
-                            className={`w-full bg-blue-600 rounded-md px-8 py-3 font-bold text-white my-3 hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 ${!isFilesDropped() ? 'cursor-not-allowed bg-gray-400' : ''
-                                }`}
+                       
+                         <button
+                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${!isFilesDropped() ? 'cursor-not-allowed opacity-50' : ''}`}
                             disabled={!isFilesDropped()}
-                        >Continue</button>
+                        >
+                            Continue
+                        </button>
                     </Link>
                 </div>
             </div>

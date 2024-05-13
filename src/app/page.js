@@ -87,7 +87,7 @@ export default function Home() {
         <hr />
             <MobileToparticles />
           </>}
-        <div className="mt-10 lg:mt-[20rem] w-full">
+        <div className="mt-8 lg:mt-[20rem] w-full">
         {isLargeScreen ? <NewOption /> : <MobileOption />}
         </div>
       </div>

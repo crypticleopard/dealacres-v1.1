@@ -213,7 +213,7 @@ export default function InstantLoanForm({
             </Grid>
             <Grid item md={4} xs={12} sm={6} lg={3}>
             <FormControl fullWidth>
-              <InputLabel htmlFor="outlined-adornment-curEmi">Current Total EMI</InputLabel>
+              <InputLabel htmlFor="outlined-adornment-curEmi">Current EMI</InputLabel>
 
 
         

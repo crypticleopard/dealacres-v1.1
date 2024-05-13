@@ -44,7 +44,7 @@ const Info = () => {
       </Link>
     </div>
 
-            <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>   
+            <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>   
                     <h1 className="text-xl mb-4 text-center mt-10">
                     This information creates a transparency and build trust with buyers/tenants</h1>
                 <Image src={'/propertyListing/assets/agent.png'} alt='authentication' height={180} width={180} className='mt-3 mb-10' />

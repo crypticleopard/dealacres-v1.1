@@ -14,10 +14,10 @@ const InvestmentGuideCard = ({
       hover:scale-[1.3] transition-all w-[100px] border border-blue-300 shadow' />
 
         </div>
-      <div className='font-bold text-lg text-center peer py-4 hover:cursor-pointer'>
+      <div className='font-bold text-base text-center peer py-4 hover:cursor-pointer'>
         {title}
       </div>
-      <p className='md:hidden md:opacity-0 transition-opacity delay-100 ease-in-out duration-500 content-shown peer-hover:block peer-hover:opacity-100 text-center'>
+      <p className='md:hidden md:opacity-0 text-sm transition-opacity delay-100 ease-in-out duration-500 content-shown peer-hover:block peer-hover:opacity-100 text-center'>
         {content}
       </p>
     </div>

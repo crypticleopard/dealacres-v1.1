@@ -7,6 +7,13 @@ import HeadingBorder from './HeadingBorder'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useCallback } from 'react'
+import { FaFacebook } from "react-icons/fa6";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { FaSquareYoutube } from "react-icons/fa6";
+import { IoLogoLinkedin } from "react-icons/io5";
+import { IoIosGlobe } from "react-icons/io";
+
 
 const AgentHeroSection = ({
   img,
@@ -30,7 +37,7 @@ const AgentHeroSection = ({
   }
 
   return (
-    <div className='w-full h-[28rem] md:w-[85%] mx-auto grid grid-cols-4 md:grid-cols-3 bg-[#334257] rounded-3xl shadow '>
+    <div className='w-full h-[30rem] md:w-[85%] mx-auto grid grid-cols-4 md:grid-cols-3 bg-[#334257] rounded-3xl shadow '>
 
       <div className='text-white  col-span-2'>
         <div className='py-8 px-2 md:px-6 flex flex-col md:justify-between h-full gap-2 md:gap-8'>
@@ -77,7 +84,17 @@ const AgentHeroSection = ({
             <span className='w-full sm:w-auto py-2 px-4 bg-blue-600 text-white text-center font-bold text-base sm:text-lg md:text-xl cursor-pointer sm:inline-flex ' onClick={() => handleGetIntoTouch()}>
               Get In Touch
             </span>
-          
+            <div className='flex flex-row gap-2 items-center mb-1'>
+          <p className='font-bold text-lg'>Follow us {`-`}</p>
+          <div className='flex flex-row gap-2 items-center'>
+          <FaFacebook className='w-5 h-5'/>
+          <FaTwitterSquare className='w-5 h-5'/> 
+           <FaSquareInstagram className='w-5 h-5'/> 
+            <FaSquareYoutube className='w-5 h-5'/> 
+          <IoLogoLinkedin className='w-5 h-5'/>  
+          <IoIosGlobe className='w-5 h-5'/>
+          </div>
+          </div>
           </div>
       
         </div>

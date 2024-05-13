@@ -16,7 +16,7 @@ const FormGroup = ({
                 {labelValue}
             </label>
             <input
-            className='bg-[#D8E6FE] py-1 text-lg px-4 rounded shadow hover:outline-blue-500 w-full'
+            className='bg-[#D8E6FE] text-lg px-4 rounded shadow hover:outline-blue-500 w-full'
              type={type} id={id} {...register(id, {required: requiredMessage})} />
 
              {

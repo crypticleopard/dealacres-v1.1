@@ -1,23 +1,30 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import styles from './postercard.module.css';
 import Image from 'next/image';
 import Modal from './Modal'; 
 
+
+
 const Postercard = (props) => {
-    const [showInputField, setShowInputField] = useState(false);
+   
+   
+
+    // const [showInputField, setShowInputField] = useState(false);
     const [showModal, setShowModal] = useState(false);
+    
 
     const openPopup = () => {
         if (props.buttontext === "Find a Home") {
             setShowModal(true);
-        } else {
-            setShowInputField(true);
+        }else {
+            window.location.href = '/propertylisting';
         }
     };
 
+
     const closePopup = () => {
-        setShowInputField(false);
+        // setShowInputField(false);
         setShowModal(false);
     };
 
@@ -40,15 +47,15 @@ const Postercard = (props) => {
                     <Modal onClose={closePopup} />
                        
                 )}
-                {showInputField && (
+                {/* {showInputField && (
                     <div className={styles.inputField}>
                         <input placeholder={props.buttontext} />
                         <button className={styles.btn2}>Submit</button>
                     </div>
-                )}
-                {!showInputField && (
+                )} */}
+              
                     <button className={styles.btn1} onClick={openPopup}>{props.buttontext}</button>
-                )}
+               
             </div>
         </div>
     );

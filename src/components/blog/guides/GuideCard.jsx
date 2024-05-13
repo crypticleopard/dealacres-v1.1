@@ -21,7 +21,7 @@ const GuideCard = ({
 
 
     return (
-        <div className={`${!variableWidth ? styles.guideCard : 'w-full h-full min-[1520px]:justify-center' } col-span-1 flex flex-col gap-8 items-center shadow-lg bg-${bgColor} border-l-[14px] border-l-${borderColor} py-2 px-3`}
+        <div className={`${!variableWidth ? styles.guideCard : 'w-full h-full min-[1520px]:justify-center' } col-span-1 flex flex-col gap-6 items-center shadow-lg bg-${bgColor} border-l-[10px] border-l-${borderColor} py-2 px-3`}
             style={{
                 backgroundColor: bgColor,
                 borderLeftColor: borderColor
@@ -48,7 +48,7 @@ const GuideCard = ({
                 </span>
             </div>
 
-            <Image src={`/guides/${img}`} alt={title} width={80} height={50} className='w-[100px] ' />
+            <Image src={`/guides/${img}`} alt={title} width={80} height={50} className='w-[80px] ' />
         </div>
     )
 }

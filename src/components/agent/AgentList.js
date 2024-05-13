@@ -5,7 +5,7 @@ import AgentLayout from "./AgentLayout";
 import styles from "./agent.module.css";
 
 const Agent = (props) => {
-  const filteredData = data["Experts"].slice(0, -2);
+  const filteredData = data["Experts"];
   return (
     <div className={styles.MainLayout}>
       <div>

@@ -145,7 +145,7 @@ const Page = () => {
           </Link>
         </div>
 
-        <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center mt-5 '>
+        <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5 '>
           <h1 className="text-xl mb-4 text-center mt-8">Mention the Expected price of<br /> your property with your<br /> Brokerage Charges.</h1>
           <Image src={'/propertyListing/assets/home_coin.png'} alt='coin' height={250} width={250} className='mt-3 mb-5' />
           <h1 className='font-bold text-xl'>Need Help?</h1>

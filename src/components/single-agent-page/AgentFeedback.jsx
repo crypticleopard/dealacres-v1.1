@@ -34,13 +34,13 @@ const AgentFeedback = () => {
                 Leave a Feedback - As your words matter to us
             </h2>
 
-            <div className='flex flex-col w-full py-2'>
+            <div className='flex flex-col w-full py-1'>
                 <label className='font-bold' htmlFor="email">
                     Email
                 </label>
                 <input id='email' {...register('email', {required: "Email is required."})} className='border border-black outline-none py-1 px-4 rounded shadow' type="text" />
             </div>
-            <div className='flex flex-col md:flex-row  w-full py-2 gap-4'>
+            <div className='flex flex-col md:flex-row  w-full py-1 gap-4'>
                 <div className='w-full md:w-1/2 flex flex-col'>
                 <label className='font-bold' htmlFor="title">
                     Title

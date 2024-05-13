@@ -1,23 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const RoundedDiv = ({ size, width, height, onClick, dropdown, dropdownLength }) => {
-  const [selectedButton, setSelectedButton] = useState(null);
-  const [selectedOption, setSelectedOption] = useState(null);
+const RoundedDiv = ({ size, width, height, onClick, dropdown, dropdownLength, selectedFloor }) => {
+  const [selectedOptions, setSelectedOptions] = useState({});
   const [showDropdown, setShowDropdown] = useState(false);
 
+  useEffect(() => {
+    setSelectedOptions(prevOptions => {
+      if (!prevOptions[selectedFloor]) {
+        return { ...prevOptions, [selectedFloor]: null };
+      }
+      return prevOptions;
+    });
+  }, [selectedFloor]);
+
   const handleButtonClick = (index) => {
-    setSelectedButton(index);
+    setSelectedOptions(prevOptions => ({
+      ...prevOptions,
+      [selectedFloor]: index + 1
+    }));
     if (onClick) {
       onClick(index + 1);
     }
   };
 
   const handleOptionSelect = (option) => {
-    setSelectedOption(option);
+    setSelectedOptions(prevOptions => ({
+      ...prevOptions,
+      [selectedFloor]: option
+    }));
     setShowDropdown(false);
   };
 
-  
   const dropdownOptions = Array.from({ length: dropdownLength }, (_, index) => index + size + 1);
 
   return (
@@ -29,8 +42,8 @@ const RoundedDiv = ({ size, width, height, onClick, dropdown, dropdownLength }) 
             style={{
               width: `${width}px`,
               height: `${height}px`,
-              backgroundColor: selectedButton === index ? '#3498db' : 'white',
-              color: selectedButton === index ? 'white' : '#3498db',
+              backgroundColor: selectedOptions[selectedFloor] === index + 1 ? '#3498db' : 'white',
+              color: selectedOptions[selectedFloor] === index + 1 ? 'white' : '#3498db',
             }}
             className="rounded-full flex items-center justify-center font-bold border border-blue-700"
             onClick={() => handleButtonClick(index)}
@@ -64,7 +77,7 @@ const RoundedDiv = ({ size, width, height, onClick, dropdown, dropdownLength }) 
               {dropdownOptions.map((option, index) => (
                 <button
                   key={index}
-                  className="block w-full py-2 px-4 text-left text-gray-800 hover:bg-gray-200"
+                  className={`block w-full py-2 px-4 text-left text-gray-800 hover:bg-gray-200 ${option === selectedOptions[selectedFloor] ? 'bg-gray-200' : ''}`}
                   onClick={() => handleOptionSelect(option)}
                 >
                   {option}

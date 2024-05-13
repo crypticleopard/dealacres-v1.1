@@ -17,7 +17,18 @@ const Page = () => {
     const [city, setCity] = useState('');
     const [companyDescription, setCompanyDescription] = useState('')
     const [contactNumber, setContactNumber] = useState('');
-    
+
+
+    const [selectedOption, setSelectedOption] = useState(null);
+    const [selectedLicenseType, setSelectedLicenseType] = useState(null);
+
+    const handleLicenseTypeSelection = (type) => {
+        setSelectedLicenseType(type === selectedLicenseType ? null : type);
+    };
+
+    const handleOptionSelection = (option) => {
+        setSelectedOption(option === selectedOption ? null : option);
+    };
 
     const openPostModal = () => {
         setIsPostModalOpen(true);
@@ -42,8 +53,8 @@ const Page = () => {
         e.preventDefault();
 
     };
-    const isContinueButtonDisabled = !isGDPRChecked || companyName.trim() === '' || companyAddress1.trim() === ''|| companyDescription.trim() === '' ||
-    contactNumber.trim() === '';;
+    const isContinueButtonDisabled = !isGDPRChecked || companyName.trim() === '' || companyAddress1.trim() === '' || companyDescription.trim() === '' ||
+        contactNumber.trim() === '';;
 
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
@@ -54,19 +65,43 @@ const Page = () => {
                     <div className='h-full md:w-[400px] rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4'>
                         <h1 className='text-xl text-gray-500 font-semibold'>Before you post... let buyers know who you are</h1>
                         <p className='text-xs text-gray-400 font-extralight'>This Details will seriously help buyers to connect with you</p>
-                        <p className='text-md font-semibold text-gray-500 my-2'>Are You RERA registered? </p>
-                        <div className='flex flex-row items-center gap-2 mb-2'>
-                            <button className='h-full rounded-full border hover:border hover:border-gray-800  px-3 py-1 text-gray-500 text-md'>yes</button>
-                            <button className='h-full rounded-full border hover:border hover:border-gray-800 px-3 py-1 text-gray-500 text-md'>I have applied</button>
-                            <button className='h-full rounded-full border hover:border hover:border-gray-800 px-3 py-1 text-gray-500 text-md'>Not Applicable</button>
+                        <p className="text-md font-semibold text-gray-500 my-2">Are You RERA registered? </p>
+                        <div className="flex flex-row items-center gap-2 mb-2">
+                            <button
+                                className={`h-full rounded-full border px-3 py-1 text-md ${selectedOption === 'yes' ? 'border-gray-800' : 'hover:border hover:border-gray-800'} ${selectedOption === 'yes' ? 'text-gray-800' : 'text-gray-500'}`}
+                                onClick={() => handleOptionSelection('yes')}
+                            >
+                                yes
+                            </button>
+                            <button
+                                className={`h-full rounded-full border px-3 py-1 text-md ${selectedOption === 'I have applied' ? 'border-gray-800' : 'hover:border hover:border-gray-800'} ${selectedOption === 'I have applied' ? 'text-gray-800' : 'text-gray-500'}`}
+                                onClick={() => handleOptionSelection('I have applied')}
+                            >
+                                I have applied
+                            </button>
+                            <button
+                                className={`h-full rounded-full border px-3 py-1 text-md ${selectedOption === 'Not Applicable' ? 'border-gray-800' : 'hover:border hover:border-gray-800'} ${selectedOption === 'Not Applicable' ? 'text-gray-800' : 'text-gray-500'}`}
+                                onClick={() => handleOptionSelection('Not Applicable')}
+                            >
+                                Not Applicable
+                            </button>
                         </div>
                         <p className='text-sm font-semibold text-gray-500'>RERA Number</p>
                         <input type='text' className='border p-2 mb-2' />
                         <p className='text-sm font-semibold text-gray-500 mb-1'>License Type</p>
                         <div className='flex flex-row items-center gap-2 mb-4'>
-                            <button className='h-full rounded-2xl border-r-2 border-l-2 border-t border-b border-gray-800 hover:border hover:border-gray-800  px-3  text-gray-500 text-sm py-1'>Individual</button>
-                            <button className='h-full rounded-2xl border-r-2 border-l-2 border-t border-b border-gray-800 border hover:border hover:border-gray-800 px-3  text-gray-500 text-sm py-1'>Firm</button>
-
+                            <button
+                                className={`h-full rounded-2xl border-r-2 border-l-2 border-t border-b ${selectedLicenseType === 'Individual' ? 'border-gray-800' : 'border-gray-500 hover:border-gray-800'} px-3 text-gray-500 text-sm py-1`}
+                                onClick={() => handleLicenseTypeSelection('Individual')}
+                            >
+                                Individual
+                            </button>
+                            <button
+                                className={`h-full rounded-2xl border-r-2 border-l-2 border-t border-b ${selectedLicenseType === 'Firm' ? 'border-gray-800' : 'border-gray-500 hover:border-gray-800'} px-3 text-gray-500 text-sm py-1`}
+                                onClick={() => handleLicenseTypeSelection('Firm')}
+                            >
+                                Firm
+                            </button>
                         </div>
                         <p className='text-md font-semibold text-gray-500 my-2'>Company Details </p>
                         <div className='md:w-[80%]'>
@@ -81,39 +116,39 @@ const Page = () => {
                             <input
                                 placeholder='Company Address 1'
                                 type='text'
-                                className='p-2 w-full mb-2 border'
+                                className='p-2 rounded-lg w-full mb-2 border'
                                 value={companyAddress1}
                                 onChange={(e) => setCompanyAddress1(e.target.value)} />
                             <input placeholder='Company Address 2 (optional)' type='text' className='p-2  w-full mb-2 border' />
-                            <input 
-                                placeholder='City' 
-                                type='text' 
+                            <input
+                                placeholder='City'
+                                type='text'
                                 className='p-2  w-full mb-2 border'
-                                value={city} 
-                                onChange={(e) => setCity(e.target.value)}/>
+                                value={city}
+                                onChange={(e) => setCity(e.target.value)} />
                         </div>
                         <p className='text-md font-semibold text-gray-500 mb-2'>Describe Your Company</p>
-                        <textarea 
-                            className='border' 
-                            placeholder={'What makes your company unique?'} 
-                            cols={30} 
+                        <textarea
+                            className='border'
+                            placeholder={'What makes your company unique?'}
+                            cols={30}
                             value={companyDescription}
-                            onChange={(e) => setCompanyDescription(e.target.value)}/>
+                            onChange={(e) => setCompanyDescription(e.target.value)} />
                         <p className='text-md font-semibold text-gray-500 mb-2'>Contact Details</p>
-                        <ContactNumber onContactNumberChange={setContactNumber}/>
+                        <ContactNumber onContactNumberChange={setContactNumber} />
 
 
                     </div>
                 </div>
-                <div className='h-full w-[400px] rounded-xl bg-[#c9e2f3] p-4 flex flex-col items-center'>
+                <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
 
                     <h1 className="text-xl text-center mt-20">
                         This information helps buyer to connect with you easily</h1>
 
-                    <Image src={'/propertyListing/assets/broker.png'} alt='broker' height={200} width={200} className='my-20' />
+                    <Image src={'/propertyListing/assets/broker.png'} alt='broker' height={200} width={200} className='my-10' />
                     <h1 className='font-bold text-xl'>Need Help?</h1>
                     <p className='text-lg'>You Can Email Us</p>
-                    <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
+                    <p className='text-lg text-blue-600 mb-10'>Contact@dealacres.com</p>
                 </div>
             </div>
             <div className="md:px-24">
@@ -131,7 +166,7 @@ const Page = () => {
                     <p>The data based on a search query on Deal Acres has been made available for information/advertisement purposes. No warranty is implied for its accuracy. Nothing contained herein will be deemed to constitute any sort of legal advice, solicitation, marketing, offer of sale, an invitation to offer, or an invitation to get by the developer/builder or any other entity. You are advised to visit the relevant RERA website. And get more information about the builder and property directly. Before deciding on the project content displayed on dealacres.com. If you have any queries contact Deal Acres at contact@dealacres.com.</p>
                 </div> <button
                     onClick={openPostModal}
-                    className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-blue-400' : ''
+                    className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-blue-300' : ''
                         }`}
                     disabled={isContinueButtonDisabled}
                 >Post Your Property</button>

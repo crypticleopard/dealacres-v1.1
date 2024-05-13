@@ -230,9 +230,9 @@ const AreaCalculator = () => {
           alt="area calculator"
         />
 
-        <div className="p-4 absolute top-[8rem] left-20 w-1/3 bg-white border-4 rounded-lg border-blue-400 h-auto max-xl:top-[5rem] max-lg:top-1">
+        <div className="p-4 absolute top-[8rem] left-20 w-1/4 bg-white border-4 rounded-lg border-blue-400 h-fit max-xl:top-[5rem] max-lg:top-1">
           <h2 className="text-2xl font-bold">Area Converter</h2>
-          <div className="space-y-4 mt-5">
+          <div className="space-y-3 mt-3">
             <Select
               options={indianStates}
               placeholder="State"
@@ -246,7 +246,7 @@ const AreaCalculator = () => {
               min="0"
               value={totalUnits}
               onChange={(e) => setTotalUnits(e.target.value)}
-              className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
+              className="w-full py-1.5 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
             />
 
             {inputError && <p className="text-red-600">{inputError}</p>}
@@ -270,7 +270,7 @@ const AreaCalculator = () => {
             <input
               disabled={isLastInputDisabled}
               value={result}
-              className="w-full py-2 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
+              className="w-full py-1.5 border-2 border-blue-300 pl-2 focus:outline-blue-600 rounded-md text-gray-500"
             />
           </div>
         </div>

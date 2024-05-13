@@ -13,7 +13,7 @@ const ArticleCard = ({
    
    }, [])
   return (
-    <div className=' relative  w-[320px] h-full self-stretch min-h-[250px]'>
+    <div className=' relative  w-[300px] h-full self-stretch min-h-[250px]'>
       <Image src={img} alt='artcle cover' className='w-full'/>
       <div className='py-2'>
       <p className='font-semibold text-black'>{title}</p>

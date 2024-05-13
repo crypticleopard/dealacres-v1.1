@@ -18,6 +18,7 @@ function Topdev() {
       <Devcard imgSrc="/property/developerLogo.webp"/>
       <Devcard imgSrc="/property/developerLogo.webp"/>
       <Devcard imgSrc="/property/developerLogo.webp"/>
+      <Devcard imgSrc="/property/developerLogo.webp"/>
     </div>
   )
 }

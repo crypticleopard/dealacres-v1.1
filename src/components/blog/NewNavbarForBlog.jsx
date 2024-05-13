@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { FaBars, FaUser } from 'react-icons/fa';
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const NewNavbarForBlog = () => {
   return (
@@ -10,10 +11,22 @@ const NewNavbarForBlog = () => {
       </div>
       <div>
         <ul className="lg:flex list-none cursor-pointer hidden">
-          <li className="mr-6">Property Trends</li>
-          <li className="mr-6">Lifestyle</li>
-          <li className="mr-6">Must Know</li>
-          <li className="mr-6">Resources</li>
+          <li className='flex flex-row items-center mr-6'>
+          <p>Property Trends </p>
+          <RiArrowDropDownLine className='w-6 h-6' />
+          </li>
+          <li className='flex flex-row items-center mr-6'>
+          <p>Lifestyle</p>
+          <RiArrowDropDownLine className='w-6 h-6' />
+          </li>
+          <li className='flex flex-row items-center mr-6'>
+          <p>Must Know</p>
+          <RiArrowDropDownLine className='w-6 h-6' />
+          </li>
+          <li className='flex flex-row items-center mr-6'>
+          <p>Resources</p>
+          <RiArrowDropDownLine className='w-6 h-6' />
+          </li>
         </ul>
       </div>
       <div className='flex items-start justify-center gap-6 '>

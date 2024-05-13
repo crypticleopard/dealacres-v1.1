@@ -68,9 +68,12 @@ const data={
             tag2: "Property Dealer in Hisar",
             tag3: "Property Dealer in Hisar",
         }, availableTime: "8:00 PM", contactNo: "+919999999999" },
-        {
-            
-        }
+        {id:12, src: source, name:'Harvey Long',
+        rating: 4, location:'Dabra Chowk Hissar HO', featured: true, tags: {
+            tag1: "Property Dealer in Hisar",
+            tag2: "Property Dealer in Hisar",
+            tag3: "Property Dealer in Hisar",
+        }, availableTime: "8:00 PM", contactNo: "+919999999999" },
     ],
 
     "MostSearched": [

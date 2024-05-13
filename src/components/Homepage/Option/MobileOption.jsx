@@ -18,7 +18,7 @@ const MobileOption = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center px-4">
+    <div className="flex flex-col justify-center px-4 bg-[#e2f3f5]">
       <div>
         <h2 className="text-lg font-[Poppins] font-bold pt-3 pb-2">
           GET STARTED WITH EXPLORING REAL ESTATE OPTIONS

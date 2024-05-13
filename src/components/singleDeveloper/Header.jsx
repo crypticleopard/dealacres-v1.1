@@ -20,7 +20,7 @@ function Header() {
                         src='/singleDeveloper/devLogo.webp'
                         alt='developer Logo'
                         width={200}
-                        height={200}
+                        height={100}
                         objectFit='cover'
                     />
                 </div>

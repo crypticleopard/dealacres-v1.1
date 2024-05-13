@@ -8,7 +8,8 @@ const popularProjectContentStyle = {
   flexWrap:'wrap',
   gap: '20px',
   alignItems:'center',
- margin:''
+ margin:'',
+
   
   
 }

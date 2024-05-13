@@ -136,7 +136,7 @@ export default function SingleBlogPage() {
     <div className="max-w-screen-xl mx-auto ">
       <div className='flex flex-col min-h-screen min-[960px]:grid min-[960px]:grid-cols-6'>
 
-        <div className="min-[960px]:col-span-4 px-2 py-2">
+        <div className="min-[960px]:col-span-4 px-2 ">
           {/* Post Section */}
           <BlogPost postData={postData} />
         </div>

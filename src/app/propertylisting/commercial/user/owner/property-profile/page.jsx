@@ -129,8 +129,8 @@ const Page = () => {
                             Ground
                         </button>
                     </div>
-                    {selectedFloor && (
-                        <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} />)}
+                    {selectedFloor && <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} selectedFloor={selectedFloor} />}
+
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Number of Floors
                     </h1>
@@ -141,32 +141,29 @@ const Page = () => {
                         Furnished
                     </h1>
                     <div className='w-[70%] flex flex-wrap gap-2 my-2'>
-           
-            <div
-                onClick={() => handleFurnishClick('Fully Furnished')}
-                className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${
-                    selectedFurnished === 'Fully Furnished' ? 'shadow-md' : ''
-                }`}
-            >
-                Fully Furnished
-            </div>
-            <div
-                onClick={() => handleFurnishClick('Unfurnished')}
-                className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${
-                    selectedFurnished === 'Unfurnished' ? 'shadow-md' : ''
-                }`}
-            >
-                Unfurnished
-            </div>
-            <div
-                onClick={() => handleFurnishClick('Semifurnished')}
-                className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${
-                    selectedFurnished === 'Semifurnished' ? 'shadow-md' : ''
-                }`}
-            >
-                Semifurnished
-            </div>
-        </div>
+
+                        <div
+                            onClick={() => handleFurnishClick('Fully Furnished')}
+                            className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Fully Furnished' ? 'shadow-md' : ''
+                                }`}
+                        >
+                            Fully Furnished
+                        </div>
+                        <div
+                            onClick={() => handleFurnishClick('Unfurnished')}
+                            className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Unfurnished' ? 'shadow-md' : ''
+                                }`}
+                        >
+                            Unfurnished
+                        </div>
+                        <div
+                            onClick={() => handleFurnishClick('Semifurnished')}
+                            className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Semifurnished' ? 'shadow-md' : ''
+                                }`}
+                        >
+                            Semifurnished
+                        </div>
+                    </div>
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Wash Room
                     </h1>
@@ -304,7 +301,7 @@ const Page = () => {
                     </Link>
                 </div>
                 <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#cee8f8] p-4 flex flex-col items-center'>
+                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
                         <h1 className="text-xl mb-4 text-center px-4 mt-20">
                             Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.</h1>
                         <Image src={'/propertyListing/assets/store.png'} alt='home' height={150} width={150} className='mt-6 mb-10' />

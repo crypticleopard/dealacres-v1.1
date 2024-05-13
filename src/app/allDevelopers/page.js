@@ -6,6 +6,7 @@ import Sidebar from '@/components/AllDevelopers/Sidebar'
 import Explore from '@/components/Homepage/explore/Explore'
 import Link from 'next/link'
 import ReadMoree from '@/components/developer/ReadMoree'
+import Insights from '@/components/AllDevelopers/Insights'
 
 const page = () => {
   return (
@@ -26,11 +27,17 @@ const page = () => {
       </div>
 
 
-      <div className='mx-[8rem] mb-10' >
+      <div className='mx-[8rem] mt-5 ' >
         <ReadMoree />
 
-        <Explore />
+
       </div>
+      <div className='mx-[8rem] mb-[10rem]' >
+      <Insights />
+
+
+      </div>
+    
 
     </div>
   )

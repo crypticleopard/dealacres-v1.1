@@ -38,13 +38,13 @@ const Featured = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-6 gap-6 ">
-        <div className="col-span-1 md:col-span-2 max-h-[300px] h-full">
+        <div className="col-span-1 md:col-span-2 max-h-[300px] h-full mt-3">
           <div className="max-h-[300px] h-[70%] ">
           <FeatureCard img={background} text={"Top Coworking Space On Rent in Modle Town Hisar"}/>
 
           </div>
         </div>
-        <div className="col-span-1 md:col-span-4 max-h-[300px] h-full ">
+        <div className="col-span-1 md:col-span-4 max-h-[300px] h-full mt-3 ">
             
           {/* <FeatureCard img={background} text={"Top Coworking Space On Rent in Modle Town Hisar"}/> */}
           <div className="w-full h-[70%]">

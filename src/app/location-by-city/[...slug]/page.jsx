@@ -50,7 +50,7 @@ const LocationByCity = () => {
 
 
   return (
-    <div className="px-[15%] py-[2rem] max-lg:px-[5%] relative">
+    <div className="px-[15%] py-[3rem] max-lg:px-[5%] relative">
       <CityStateSelector />
       <CityInformation />
       <AboutCity />
@@ -59,10 +59,10 @@ const LocationByCity = () => {
       <TopPropertyOfCity />
       <Faq />
 
-      <div>
-        <h2 className="text-3xl font-bold mt-5 max-lg:text-2xl">Start with these guides </h2>
+      <div className='mt-4'>
+        <h2 className="text-3xl font-bold  max-lg:text-2xl">Start with these guides </h2>
         <p className="mt-2 text-gray-600">Know all that you need to know before you start</p>
-        <div className="max-w-screen-xl mx-auto px-[5%] py-8 my-4">
+        <div className="max-w-screen-xl mx-auto py-8 my-3">
           <GuidesSlider allGuides={allGuidesData} />
         </div>
       </div>

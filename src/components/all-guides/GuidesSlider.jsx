@@ -11,7 +11,7 @@ import GuideCard from '../blog/guides/GuideCard';
 import GuidesCustomArrow from './GuidesCustomArrow';
 import { AiOutlineRight } from 'react-icons/ai';
 
-const GuidesSlider = ({
+const  GuidesSlider = ({
     allGuides,
     handleTabChange
 }) => {
@@ -21,10 +21,11 @@ const GuidesSlider = ({
         className: "slider variable-width",
         dots: false,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 6,
         slidesToScroll: 1,
         variableWidth: true,
         nextArrow: <GuidesCustomArrow icon={AiOutlineRight} isNext/>,
+        prevArrow: <></>,
         responsive: [
             {
               breakpoint: 768,
@@ -49,7 +50,7 @@ const GuidesSlider = ({
                 {
                     allGuides.map((guide, index) => {
                         return (
-                            <div key={index} className='mr-[2.3rem] ' onClick={() => handleTabChange(index)}>
+                            <div key={index} className='mr-[2rem] ' onClick={() => handleTabChange(index)}>
 
 
                                 <GuideCard  title={guide.title} bgColor={guide.bgColor} textColor={guide.textColor} borderColor={guide.borderColor} img={guide.img} />

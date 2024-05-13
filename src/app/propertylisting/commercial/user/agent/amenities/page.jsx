@@ -97,7 +97,7 @@ const Page = () => {
                         <FileDropzone onFilesDrop={handleFilesDrop} description={'Uploaded photo is maximum is of 5MB'} />
                     </div>
 
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center mt-5'>
+                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5'>
                         <ul className="list-disc pl-12 text-xl mt-16">
                             <li className="mb-2">Mention attractive amenities and appealing details of your property.</li>
                             <li className="mb-2">Add property proximity to transit Shopping, Market Areas, and more...</li>
@@ -125,7 +125,7 @@ const Page = () => {
                     </div>
                     <button
                         onClick={openPostModal}
-                        className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 ${!isGDPRChecked || uploadedFiles.length === 0 ? 'cursor-not-allowed bg-gray-400' : ''}`}
+                        className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 ${!isGDPRChecked || uploadedFiles.length === 0 ? 'cursor-not-allowed opacity-80' : ''}`}
                         disabled={!isGDPRChecked || uploadedFiles.length === 0}
                     >Post Your Property</button>
                     <PostModal isOpen={isPostModalOpen} onSubmit={handlePostSubmit} />

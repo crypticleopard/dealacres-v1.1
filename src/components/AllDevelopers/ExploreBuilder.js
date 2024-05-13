@@ -123,7 +123,7 @@ const ExploreBuilder = () => {
 
       <div className={styles.pagination}>
 
-        <span onClick={prevPage}> {"<"} Previous</span>
+        <span onClick={prevPage}> {"<"} Previous Page</span>
 
         {pageNumbers.map((number) => (
           <span
@@ -134,12 +134,12 @@ const ExploreBuilder = () => {
               fontWeight: currentPage === number ? "bold" : "normal",
               border: "1px solid #0061fd",
               borderRadius: "50%",
-              padding: "1% 0.5%",  
+              padding: "0.5% 0.2%",  
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              width: "5%",  
-              height: "4%", 
+              width: "4%",  
+              height: "3%", 
               
             }}
           >
@@ -147,7 +147,7 @@ const ExploreBuilder = () => {
           </span>
         ))}
 
-        <span onClick={nextPage}>Next {">"}</span>
+        <span onClick={nextPage}>Next Page {">"}</span>
       </div>
     </div>
   )

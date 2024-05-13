@@ -1,6 +1,6 @@
-export const allGuidesData = [
+ export const allGuidesData = [
   {
-    "title": "Buyer's Guide",
+    "title": "Buyer's Manual",
     "img": "buyers-guide.png",
     "bgColor": "#FADDC6",
     "borderColor": "#F6C094",
@@ -26,7 +26,7 @@ export const allGuidesData = [
     ]
   },
   {
-    "title": "Seller's Guide",
+    "title": "Seller's Manual",
     "img": "sellers-guide.png",
     "bgColor": "#FFF5D8",
     "borderColor": "#FFEBB0",
@@ -43,7 +43,7 @@ export const allGuidesData = [
     ]
   },
   {
-    "title": "Rental Guide",
+    "title": "Rental Manual",
     "img": "rental-guide.png",
     "bgColor": "#F1F8D7",
     "borderColor": "#D3E1A0",

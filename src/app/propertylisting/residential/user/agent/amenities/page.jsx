@@ -95,7 +95,7 @@ const Page = () => {
                     <FileDropzone onFilesDrop={handleFilesDrop} description={'Uploaded photo is maximum is of 5MB'} />
                 </div>
 
-                <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center mt-5'>
+                <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5'>
                     <ul className="list-disc pl-12 text-xl mt-16">
                         <li className="mb-2">Mention attractive amenities and appealing details of your property.</li>
                         <li className="mb-2">Add property proximity to transit Shopping, Market Areas, and more...</li>

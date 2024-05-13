@@ -66,11 +66,11 @@ const FNQ = () => {
   };
 
   return (
-    <div className="px-4 sm:px-8 py-4 sm:py-8">
+    <div className="px-20 py-4 sm:py-8">
       <h1 className="text-2xl sm:text-3xl font-semibold">
         Frequently Asked Questions
       </h1>
-      <div className="mt-6 sm:mt-10 px-2 sm:px-4 py-2 sm:py-4 border-1 border-gray-300 rounded-lg">
+      <div className="mt-6 sm:mt-10 sm:px-4 py-2 sm:py-4 border-1 border-gray-300 rounded-lg">
         {faqData.map((faq, index) => (
           <div key={index} className="mb-3 sm:mb-4 border-b-1 border-gray-300">
             <div

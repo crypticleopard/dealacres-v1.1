@@ -25,10 +25,10 @@ function SideContentContainer(props) {
   return (
     <div
       style={lato.style}
-      className={`${styles.sideContainer} border-2 rounded-xl border-black p-4`}
+      className={`${styles.sideContainer}  rounded-xl  p-4`}
     >
       <form
-        className="my-8 md:my-0 flex flex-col gap-2"
+        className="my-8 md:my-0 flex flex-col gap-1"
         onSubmit={handleSubmit(onSubmit)}
       >
         <h4> Looking for a Property in {props.title}</h4>
@@ -77,7 +77,7 @@ function SideContentContainer(props) {
           fullWidth
           margin="dense"
           label="Comments(Optional)"
-          rows={4}
+          rows={2}
           {...register("Comments")}
         />
 

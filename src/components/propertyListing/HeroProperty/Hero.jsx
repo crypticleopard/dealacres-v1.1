@@ -30,13 +30,13 @@ const Hero = () => {
         setIsFiveClicked(!isFiveClicked);
     }
     const handleResedential = () => {
-        setIsResedentialClicked(!isResedentialClicked);
+        setIsResedentialClicked(true);
         setCommercialClicked(false)
         setPropertyType('residential');
         setSubType('');
     }
     const handleCommercial = () => {
-        setCommercialClicked(!isCommercialClicked);
+        setCommercialClicked(true);
         setIsResedentialClicked(false)
         setPropertyType('commercial');
         setSubType('');
@@ -56,7 +56,7 @@ const Hero = () => {
     
     return (
         <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 container mx-auto my-8 overflow-auto '>
-            <div className='h-fit md:mt-8 rounded-xl pt-4 px-2 custom-border-hero'>
+            <div className='h-fit md:mt-8 rounded-xl pt-4 px-2 custom-border-hero text-start'>
                 <h1 className="font-medium md:font-bold text-[1.3rem] uppercase my-2">
                     Post Your Property for free
                 </h1>
@@ -67,8 +67,8 @@ const Hero = () => {
                     Looking For..........
                 </p>
                 <div className='flex gap-3 items-center mb-2'>
-                <Button heading={'Sell'} onClick={handleSell} isActive={isSellClicked} />
-                    <Button heading={'Rent'} onClick={handleRent} isActive={isRentClicked}/>
+                <Button heading={'Sell'} onClick={handleSell} isActive={isSellClicked} hashClick={true}/>
+                    <Button heading={'Rent'} onClick={handleRent} isActive={isRentClicked} hashClick={true}/>
                 </div>
                 <p className='py-2 font-bold'>
                     Property Type

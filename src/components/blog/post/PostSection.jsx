@@ -17,7 +17,7 @@ const PostSection = ({
 
 
   return (
-    <div className='py-4'>
+    <div className='py-1'>
         { img && <div className={`relative ${styles.imgContainer}`}>
     
 

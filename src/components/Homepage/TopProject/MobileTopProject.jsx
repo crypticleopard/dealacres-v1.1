@@ -9,11 +9,11 @@ const Card = ({ index, selectedCity }) => {
   return (
     <div key={index} className="relative">
       <div
-        className="relative bg-cover bg-center w-full h-[8rem] rounded-lg hover:bg-blue-300"
+        className="relative bg-cover bg-center w-full h-[10rem] rounded-lg hover:bg-blue-300"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
         
-        <div className="absolute inset-11 bottom-0 left-0 text-left text-xs px-2 text-black bg-white/70  w-full">
+        <div className="absolute h-[6.5rem] bottom-0 left-0 text-left text-xs px-2 text-black bg-white/70  w-full">
           <p className='font-bold text-xs'>DLF The Arbour</p>
           <p className="text-[10px]">3/4 BHK Apartment, Sector 57,{selectedCity}</p>
           <p className="font-bold">1.46 Cr *</p>

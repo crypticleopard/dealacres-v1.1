@@ -59,7 +59,7 @@ const ReadMoree =() => {
   return (
     <div className="relative" >
       <h2 className="text-2xl sm:text-4xl lg:text-3xl font-bold py-4">
-         'Interesting Readings'
+         Interesting Readings
       </h2>
       <Swiper
         wrapperClass="pb-1 sm:pb-2 md:pb-8 relative "
@@ -90,8 +90,8 @@ const ReadMoree =() => {
             navigation: false
           },
           1024: {
-            slidesPerView: 3.5,
-            spaceBetween: 15,
+            slidesPerView: 4,
+            spaceBetween: 4,
           },
         }}
       >

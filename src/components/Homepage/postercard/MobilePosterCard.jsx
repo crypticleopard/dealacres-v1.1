@@ -13,7 +13,7 @@ const MobilePostercard = (props) => {
     <div className="relative flex flex-col gap-2 my-8 px-4">
 
       <div className='font-bold text-xl'>{props.title}</div>
-      <p className=' absolute text-[10px] right-[4%] top-[10%] px-2 py-1 rounded-md font-bold  bg-blue-700 text-white'>{props.sidecontent1}</p>
+      <p className=' absolute text-[10px] right-[4%] top-[9%] px-2 py-1 rounded-md font-bold  bg-blue-700 text-white'>{props.sidecontent1}</p>
 
       <div  >
         <Image

@@ -4,7 +4,7 @@ import Image from 'next/image'
 function Category() {
   return (
     <div className={styles.categoryContainer}>
-        <h1>Explore Magnificent Project By <span> M3M India Pvt. Ltd</span></h1>
+        <h1>Explore Magnificent Project By <span className='text-7xl'> M3M</span> India Pvt. Ltd</h1>
         <div className={styles.categoryContentContainer}>
             <div className={styles.categoryImgContainer}>
                 <Image

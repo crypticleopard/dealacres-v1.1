@@ -1,5 +1,5 @@
 'use client'
-import NavigationBroker from '@/components/propertyListing/Navigation/NavigationBroker';
+import NavigationCOwner from '@/components/propertyListing/Navigation/NavigationCOwner';
 import Image from 'next/image';
 
 import Link from 'next/link';
@@ -8,6 +8,7 @@ import { useState } from 'react';
 import PropertyRadioButton from '@/components/propertyListing/PropertyRadioButton';
 import DynamicRadio from '@/components/propertyListing/DynamicRadio';
 import { CiCircleQuestion } from "react-icons/ci";
+
 
 const Page = () => {
 
@@ -27,6 +28,7 @@ const Page = () => {
     const [selectedFloor, setSelectedFloor] = useState(null);
     const [showDescription, setShowDescription] = useState(false);
     const [selectedAge, setSelectedAge] = useState(null);
+
     const [selectedFurnished, setSelectedFurnished] = useState(null);
 
     const handleFurnishClick = (option) => {
@@ -85,7 +87,7 @@ const Page = () => {
 
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
-            <NavigationBroker />
+            <NavigationCOwner />
             <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
 
                 <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
@@ -127,17 +129,19 @@ const Page = () => {
                             Ground
                         </button>
                     </div>
-                    {selectedFloor && (
-                        <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} />)}
+                    {selectedFloor && <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} selectedFloor={selectedFloor} />}
+
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Number of Floors
                     </h1>
+
                     <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} />
 
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Furnished
                     </h1>
                     <div className='w-[70%] flex flex-wrap gap-2 my-2'>
+
                         <div
                             onClick={() => handleFurnishClick('Fully Furnished')}
                             className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Fully Furnished' ? 'shadow-md' : ''
@@ -163,7 +167,7 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Wash Room
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={20} />
+                    <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={15} />
 
                     <PropertyRadioButton />
                     <h1 className="font-medium md:font-bold text-xl mt-2">
@@ -175,7 +179,7 @@ const Page = () => {
                         <div className="absolute top-0 right-[50%]">
                             <span className="text-gray-500 text-xs font-extralight cursor-pointer" onMouseEnter={() => setShowDescription(true)} onMouseLeave={() => setShowDescription(false)}><CiCircleQuestion className='w-4 h-4' /></span>
                             {showDescription && (
-                                <p className="absolute top-0 left-6 text-gray-500 text-xs font-extralight w-52">Carpet area is the total usable area of your property within the walls</p>
+                                <p className="absolute top-0 left-6 text-gray-500 text-[0.6rem] font-extralight w-52">Carpet area is the total usable area of your property within the walls</p>
                             )}
                         </div>
                         <div className="flex items-center space-x-2 mb-2 ">
@@ -194,6 +198,9 @@ const Page = () => {
                             </select>
                         </div>
                     </div>
+
+
+
                     <div className='relative'>
                         <h1 className='text-sm font-bold my-3'>Width of Entrance</h1>
 
@@ -206,11 +213,11 @@ const Page = () => {
                             />
 
                             <select className="custom-border-2 rounded-xl px-2 py-1">
-                                <option value="+1">Sqft</option>
-                                <option value="+91">Sq-yrd</option>
-                                <option value="+91">Sq-m</option>
-                                <option value="+91">Acre</option>
-                                <option value="+91">Hectare</option>
+                                <option value="Sqft">Sqft</option>
+                                <option value="Sq-yrd">Sq-yrd</option>
+                                <option value="Sq-m">Sq-m</option>
+                                <option value="Acre">Acre</option>
+                                <option value="Hectare">Hectare</option>
                             </select>
                         </div>
                     </div>
@@ -256,7 +263,7 @@ const Page = () => {
                     )}
                     {isUnderConstructionClicked && (
                         <>
-                            <p className='font-medium text-gray-500  text-md mt-3'>Available Form</p>
+                            <p className='font-medium text-gray-500  text-md mt-4'>Available Form</p>
                             <div className='mt-2 flex flex-row gap-5 '>
                                 <div className='flex flex-row gap-4 border-b-2'>
                                     <label htmlFor="month">Month:</label>
@@ -294,17 +301,17 @@ const Page = () => {
                     </Link>
                 </div>
                 <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#cee8f8] p-4 flex flex-col items-center'>
-                        <h1 className="text-lg mb-4 text-center px-4 mt-10">
+                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
+                        <h1 className="text-xl mb-4 text-center px-4 mt-20">
                             Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.</h1>
-                        <Image src={'/propertyListing/assets/store.png'} alt='home' height={150} width={150} className='mt-6 mb-6' />
+                        <Image src={'/propertyListing/assets/store.png'} alt='home' height={150} width={150} className='mt-6 mb-10' />
                         <h1 className='font-bold text-xl'>Need Help?</h1>
                         <p className='text-lg'>You Can Email Us</p>
-                        <p className='text-lg text-blue-600 mb-10'>Contact@dealacres.com</p>
+                        <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
                     </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] px-4 py-2 flex flex-col items-center'>
-                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={80} width={80} className='mt-3 mb-2' />
-                        <h1 className='text-xl'>You are Almost There</h1>
+                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
+                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={100} width={100} className='mt-3 mb-2' />
+                        <h1 className='text-2xl'>You are Almost There</h1>
                     </div>
                 </div>
             </div>

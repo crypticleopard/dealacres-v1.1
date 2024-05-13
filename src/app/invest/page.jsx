@@ -33,7 +33,7 @@ const InvestWithDealAcres = () => {
 
       {/* choose investment options */}
       <div>
-        <h3 className='py-4 font-bold text-2xl md:text-4xl'>
+        <h3 className='py-4 font-bold text-xl md:text-3xl'>
           Choose Investment Options
         </h3>
         <div className='flex gap-8 pb-12 flex-wrap md:flex-nowrap'>
@@ -56,10 +56,10 @@ const InvestWithDealAcres = () => {
 
       {/* dive into this ... */}
       <div>
-        <h3 className='py-2 font-bold text-2xl md:text-4xl'>
+        <h3 className='py-2 font-bold text-xl md:text-3xl'>
           Dive into this Investment Guide: And Start Investing
         </h3>
-        <p className='text-xl md:text-2xl '>
+        <p className='text-lg md:text-xl '>
           Know what is right for you from experts
         </p>
 
@@ -74,21 +74,21 @@ const InvestWithDealAcres = () => {
       </div>
 
       <div className='md:max-w-[80%] min-[1000px]:max-w-full md:mx-auto '>
-        <h3 className='text-2xl md:text-4xl font-bold py-4'>
+        <h3 className='text-2=xl md:text-3xl font-bold py-4'>
           Explore Real Estate in Popular Indian Top Cities
         </h3>
 
         <Cities />
       </div>
       <div className='py-4'>
-        <h3 className='text-2xl md:text-4xl font-bold py-4'>
+        <h3 className='text-xl md:text-3xl font-bold py-4'>
           Frequently Asked Questions
         </h3>
         <CategoryFaq />
       </div>
 
       <div className="my-8">
-        <h3 className='font-bold text-2xl md:text-4xl py-4 px-6'>
+        <h3 className='font-bold text-xl md:text-3xl py-4 '>
           Interesting Reads
         </h3>
         {/* <IntrestingReading/> */}

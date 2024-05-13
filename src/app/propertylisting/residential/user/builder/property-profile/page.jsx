@@ -13,37 +13,31 @@ const Page = () => {
     const [totalFloor, setTotalFloor] = useState('');
     const [property, setProperty] = useState('');
     const [isExpanded, setIsExpanded] = useState(false);
-    const [bedroomCount, setBedroomCount] = useState(null);
-    const [bathroomCount, setBathroomCount] = useState(null);
-    const [balconieCount, setBalconieCount] = useState(null);
+
     const [selectedAge, setSelectedAge] = useState(null);
+
     const [fullyFurnished, setFullyFurnished] = useState(false);
     const [unfurnished, setUnfurnished] = useState(false);
+    const [selectedRoom, setSelectedRoom] = useState(null);
+    const [selectedStatus, setSelectedStatus] = useState(null);
+
+
+    const handleStatusSelection = (status) => {
+        setSelectedStatus(status === selectedStatus ? null : status);
+    };
+
+    const handleRoomSelection = (room) => {
+        setSelectedRoom(room === selectedRoom ? null : room);
+    };
 
     const handleAgeSelection = (index) => {
         setSelectedAge(index);
     };
 
-
     const toggleVisibility = () => {
         setIsExpanded((prevIsExpanded) => !prevIsExpanded);
     };
-    const handleBedroomButtonClick = (count) => {
-        setBedroomCount((prevCount) => (prevCount === count ? null : count));
-    };
-    const handleBathroomButtonClick = (count) => {
-        setBathroomCount((prevCount) => (prevCount === count ? null : count));
-    };
-    const handleBalconieButtonClick = (count) => {
-        setBalconieCount((prevCount) => (prevCount === count ? null : count));
-    };
-
-    const isContinueButtonDisabled =
-        totalFloor.trim() === '' ||
-        property.trim() === '' ||
-        (bedroomCount === null && bathroomCount === null && balconieCount === null);
-
-
+    const isContinueButtonDisabled = totalFloor.trim() === '' || property.trim() === '';
 
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
@@ -67,67 +61,30 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Add Room Details
                     </h1>
-                    <RoundedDiv width={35} height={35} size={8} onClick={handleBedroomButtonClick} />
-                    {bedroomCount !== null && <RoomInfo roomCount={bedroomCount} roomtype={'BedRoom'} />}
-
+                    <RoundedDiv width={35} height={35} size={8} />
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Bathrooms
                     </h1>
-                    <RoundedDiv width={35} height={35} size={8} onClick={handleBathroomButtonClick} />
-                    {bathroomCount !== null && <RoomInfo roomCount={bathroomCount} roomtype={'BathRoom'} />}
-
+                    <RoundedDiv width={35} height={35} size={8} />
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Balconies
                     </h1>
-                    <RoundedDiv width={35} height={35} size={8} onClick={handleBalconieButtonClick} />
-                    {balconieCount !== null && <RoomInfo roomCount={balconieCount} roomtype={'Balconie'} />}
-                    <h1 className="font-medium md:font-bold text-xl mt-3">
-                        Other Rooms
-                    </h1>
-                    <div className='w-full md:w-[85%] mt-2 mb-4'>
-                        <OtherRoomButton />
-                    </div>
-
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
-                        Area
-                    </h1>
-                    <p className='text-md'>Provide either Carpet Area or Super Area</p>
-                    <div className='relative'>
-                        <h1 className='text-sm font-bold my-3'>Carpet Area</h1>
-                        <p className='absolute text-[8px] leading-3 font-extralight top-[10%] right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Carpet area is the total usuable area  of your property within the walls</p>
-                        <div className="flex items-center space-x-2 mb-2 ">
-                            <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]" />
-
-                            <select className="custom-border-2 rounded-xl px-2 py-1">
-                                <option value="+1">Sqft</option>
-                                <option value="+91">Sq-yrd</option>
-                                <option value="+91">Sq-m</option>
-                                <option value="+91">Acre</option>
-                                <option value="+91">Hectare</option>
-                            </select>
+                    <RoundedDiv width={35} height={35} size={8} />
+                    <h1 className="font-medium md:font-bold text-xl mt-2">Other Rooms</h1>
+                    <div className='w-[70%] grid grid-cols-2 gap-2 my-2'>
+                        <div className={`h-full bg-[#c9e0ee] py-2 px-2 rounded-md cursor-pointer   ${selectedRoom === 'Pooja Room' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleRoomSelection('Pooja Room')}>
+                            Pooja Room
+                        </div>
+                        <div className={`h-full  bg-[#c9e0ee] py-2 px-2 rounded-md cursor-pointer   ${selectedRoom === 'Study Room' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleRoomSelection('Study Room')}>
+                            Study Room
+                        </div>
+                        <div className={`h-full bg-[#c9e0ee] py-2 px-2 rounded-md cursor-pointer  ${selectedRoom === 'Servant Room' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleRoomSelection('Servant Room')}>
+                            Servant Room
+                        </div>
+                        <div className={`h-full bg-[#c9e0ee] py-2 px-2 rounded-md cursor-pointer   ${selectedRoom === 'Store Room' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleRoomSelection('Store Room')}>
+                            Store Room
                         </div>
                     </div>
-                    <div className='relative'>
-                        <h1 className='text-sm font-bold my-3'>Super Area</h1>
-                        <p className='absolute text-[8px] leading-3 font-extralight top-[7%] right-0 transform -translate-y-1/2 text-gray-500 w-[50%]'> Super area is the total usuable area  of your property under the roof</p>
-                        <div className="flex items-center space-x-2 mb-2">
-                            <input type="text" className="custom-border-2 rounded-xl px-2 py-1 w-[40%]" />
-
-                            <select className="custom-border-2 rounded-xl px-2 py-1">
-                                <option value="+1">Sqft</option>
-                                <option value="+91">Sq-yrd</option>
-                                <option value="+91">Sq-m</option>
-                                <option value="+91">Acre</option>
-                                <option value="+91">Hectare</option>
-                            </select>
-                        </div>
-                    </div>
-
-
-
-
-
-
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Furnished
                     </h1>
@@ -199,10 +156,10 @@ const Page = () => {
                         Availability Status
                     </h1>
                     <div className='w-[80%] flex flex-row gap-2 my-2'>
-                        <div className='h-full bg-[#c9e0ee] py-2 px-2 rounded-lg'>
+                        <div className={`h-full bg-[#c9e0ee] py-2 px-2 rounded-lg cursor-pointer ${selectedStatus === 'Ready To Move' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleStatusSelection('Ready To Move')}>
                             Ready To Move
                         </div>
-                        <div className='h-full  bg-[#c9e0ee] py-2 px-2 rounded-lg'>
+                        <div className={`h-full bg-[#c9e0ee] py-2 px-2 rounded-lg cursor-pointer ${selectedStatus === 'Under Construction' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleStatusSelection('Under Construction')}>
                             Under Construction
                         </div>
                     </div>
@@ -220,17 +177,22 @@ const Page = () => {
                             </button>
                         ))}
 
-                        {isExpanded && [3, 4].map((index) => (
-                            <button key={index}
-                                className={` h-full px-2 rounded-lg mr-2 mb-2 ${selectedAge === index ? ' border-x-2 border-y-4 border-blue-700' : 'custom-border '}`}
-                                onClick={() => handleAgeSelection(index)}>
-                                {`${(index - 1) * 5}-${index * 5} years`}
-                            </button>
-                        ))}
+
                         <button className=' h-full rounded-lg' onClick={toggleVisibility}>
                             {isExpanded ? '▲' : '▼'}
                         </button>
+
+                        {isExpanded && [3, 4].map((index) => (
+                            <button
+                                key={index}
+                                className={`h-full px-2 rounded-lg mr-2 mb-2 ${selectedAge === index ? ' border-x-2 border-y-4 border-blue-700' : 'custom-border '}`}
+                                onClick={() => handleAgeSelection(index)}
+                            >
+                                {`${(index - 1) * 5}-${index * 5} years`}
+                            </button>
+                        ))}
                     </div>
+
 
                     <Link href={'photos'}>
                         <button
@@ -243,7 +205,7 @@ const Page = () => {
                     </Link>
                 </div>
                 <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
+                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
                         <h1 className="text-xl mb-4 text-center mt-20">
                             Describe your property in brief so the buyer or renter can easily get to know how your property is what makes your property different from others.</h1>
                         <Image src={'/propertyListing/assets/house.png'} alt='home' height={200} width={200} className='mt-3 mb-10' />

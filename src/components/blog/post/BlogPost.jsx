@@ -19,7 +19,7 @@ const  BlogPost = ({
 
   return (
 
-    <div className='px-4 py-2 flex flex-col font-light  '>
+    <div className='px-4  flex flex-col font-light  '>
       <PostHeader heading={heading} align='left' size='large' />
 
       <PublishedOn date={publishedOn} align='left' />

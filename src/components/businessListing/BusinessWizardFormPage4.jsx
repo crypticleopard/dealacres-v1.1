@@ -17,15 +17,15 @@ const BusinessWizardFormPage4 = ({ onPreviousClick }) => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full p-4 sm:p-6 md:p-10">
       <div>
-        <h1 className="text-lg md:text-2xl font-semibold md:text-center mb-2 sm:text-lg">
+        <h1 className="text-lg md:text-2xl font-semibold mb-2 sm:text-lg">
           Add Media
         </h1>
-        <div className="flex flex-row items-center justify-start md:justify-center space-x-4 sm:space-x-6 text-blue-600 mb-2">
+        <div className="flex flex-row items-center justify-start space-x-4 sm:space-x-6 text-blue-600 mb-2">
           <p>Logo</p>
           <p>Image</p>
           <p>Video</p>
         </div>
-        <div className="h-[2px] w-[60%] bg-gray-700 mb-2"></div>
+        <div className="h-[2px] w-[40%] bg-gray-700 mb-2"></div>
         <div className="flex flex-col items-center justify-center bg-blue-100 w-auto h-auto p-4 sm:p-8 rounded-lg shadow-lg">
           <Image
             src={uploadImage}

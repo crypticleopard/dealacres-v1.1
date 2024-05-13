@@ -23,7 +23,7 @@ const dummyCheckList = [
   "Real Estate Technology",
 ];
 
-const CheckList = ({ tab, data, DropIcon }) => {
+const  CheckList = ({ tab, data, DropIcon }) => {
   const [selectedGuide, setSelectedGuide] = useState(tab);
   const [selectedTopic, setSelectedTopic] = useState(-1);
 
@@ -44,12 +44,12 @@ const CheckList = ({ tab, data, DropIcon }) => {
           <div key={index}>
             <li
 
-              className={`font-bold text-lg min-[920px]:text-2xl min-[920px]:py-4 flex items-center gap-2 cursor-pointer`}
+              className={`font-bold text-lg  py-1 flex items-center gap-2 cursor-pointer`}
               style={{ color: selectedGuide === index ? 'blue' : 'black' }}
               onClick={() => handleGuideClick(index)}
             >
               <span className='w-[50px] inline-flex'>{index + 1} </span>
-              <div className={`ml-2 py-2 min-[920px]:py-4 flex justify-between w-full`}  onClick={() => {
+              <div className={`ml-2 py-2 flex justify-between w-full`}  onClick={() => {
                   if(selectedTopic === index){
                     setSelectedTopic(-1)
                   }else{

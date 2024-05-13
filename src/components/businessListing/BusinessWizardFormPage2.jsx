@@ -20,8 +20,8 @@ const BusinessWizardFormPage2 = ({ onSaveAndContinue, onPreviousClick }) => {
     <div className="py-5 md:p-5 flex flex-col md:flex-row items-center justify-center md:mt-2">
       <div className="w-full space-y-5 md:pl-[8rem] md:px-8">
         <div className="flex flex-row items-center justify-between w-full space-y-2 md:space-x-4">
-          <p className="whitespace-nowrap text-base w-[38%] md:w-full md:text-xl">Contact Person:</p>
-          <div className=" flex items-end md:items-center justify-between max-md:flex-row max-md:space-y-2 max-md:space-x-2 w-[62%] md:w-auto">
+          <p className="whitespace-nowrap text-base w-[38%] md:w-1/3 md:text-xl">Contact Person:</p>
+          <div className=" flex items-start md:items-center justify-between max-md:flex-row max-md:space-y-2 max-md:space-x-2 w-[62%]  md:w-4/5">
             <Select
               options={[
                 { value: "Mr", label: "Mr" },

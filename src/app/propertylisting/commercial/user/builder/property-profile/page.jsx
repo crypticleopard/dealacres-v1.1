@@ -1,5 +1,5 @@
 'use client'
-import NavigationBroker from '@/components/propertyListing/Navigation/NavigationBroker';
+import NavigationCOwner from '@/components/propertyListing/Navigation/NavigationCOwner';
 import Image from 'next/image';
 
 import Link from 'next/link';
@@ -8,6 +8,7 @@ import { useState } from 'react';
 import PropertyRadioButton from '@/components/propertyListing/PropertyRadioButton';
 import DynamicRadio from '@/components/propertyListing/DynamicRadio';
 import { CiCircleQuestion } from "react-icons/ci";
+
 
 const Page = () => {
 
@@ -86,7 +87,7 @@ const Page = () => {
 
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
-            <NavigationBroker />
+            <NavigationCOwner />
             <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
 
                 <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
@@ -128,8 +129,8 @@ const Page = () => {
                             Ground
                         </button>
                     </div>
-                    {selectedFloor && (
-                        <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} />)}
+                    {selectedFloor && <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} selectedFloor={selectedFloor} />}
+
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Number of Floors
                     </h1>
@@ -140,32 +141,29 @@ const Page = () => {
                         Furnished
                     </h1>
                     <div className='w-[70%] flex flex-wrap gap-2 my-2'>
-           
-            <div
-                onClick={() => handleFurnishClick('Fully Furnished')}
-                className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${
-                    selectedFurnished === 'Fully Furnished' ? 'shadow-md' : ''
-                }`}
-            >
-                Fully Furnished
-            </div>
-            <div
-                onClick={() => handleFurnishClick('Unfurnished')}
-                className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${
-                    selectedFurnished === 'Unfurnished' ? 'shadow-md' : ''
-                }`}
-            >
-                Unfurnished
-            </div>
-            <div
-                onClick={() => handleFurnishClick('Semifurnished')}
-                className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${
-                    selectedFurnished === 'Semifurnished' ? 'shadow-md' : ''
-                }`}
-            >
-                Semifurnished
-            </div>
-        </div>
+
+                        <div
+                            onClick={() => handleFurnishClick('Fully Furnished')}
+                            className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Fully Furnished' ? 'shadow-md' : ''
+                                }`}
+                        >
+                            Fully Furnished
+                        </div>
+                        <div
+                            onClick={() => handleFurnishClick('Unfurnished')}
+                            className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Unfurnished' ? 'shadow-md' : ''
+                                }`}
+                        >
+                            Unfurnished
+                        </div>
+                        <div
+                            onClick={() => handleFurnishClick('Semifurnished')}
+                            className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Semifurnished' ? 'shadow-md' : ''
+                                }`}
+                        >
+                            Semifurnished
+                        </div>
+                    </div>
                     <h1 className="font-medium md:font-bold text-xl mt-2">
                         Wash Room
                     </h1>
@@ -301,18 +299,18 @@ const Page = () => {
                             Continue
                         </button>
                     </Link>
-                    </div>
+                </div>
                 <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#cee8f8] p-4 flex flex-col items-center'>
-                        <h1 className="text-xl mb-4 text-center px-4 mt-8">
+                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
+                        <h1 className="text-xl mb-4 text-center px-4 mt-20">
                             Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.</h1>
                         <Image src={'/propertyListing/assets/store.png'} alt='home' height={150} width={150} className='mt-6 mb-10' />
                         <h1 className='font-bold text-xl'>Need Help?</h1>
                         <p className='text-lg'>You Can Email Us</p>
-                        <p className='text-lg text-blue-600 mb-8'>Contact@dealacres.com</p>
+                        <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
                     </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] px-4 flex flex-col items-center'>
-                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={80} width={80} className='mt-3 mb-2' />
+                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
+                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={100} width={100} className='mt-3 mb-2' />
                         <h1 className='text-2xl'>You are Almost There</h1>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ import Guides from '@/components/blog/guides/Guides'
 
 const guidesData = [
   {
-    "title": "Buyer's Guide",
+    "title": "Buyer's Manual",
     "img": "buyers-guide.png",
     "bgColor": "#FADDC6",
     "borderColor": "#F6C094",
@@ -17,7 +17,7 @@ const guidesData = [
     "content": "Are you looking to buy your first home? Our Buyer's Guide will help you make informed decisions. Whether you prefer a luxurious apartment or a cozy villa, this guide covers it all. Explore financing options, understand the home buying process, and gain valuable insights into property inspections and negotiations."
   },
   {
-    "title": "Seller's Guide",
+    "title": "Seller's Manual",
     "img": "sellers-guide.png",
     "bgColor": "#FFF5D8",
     "borderColor": "#FFEBB0",
@@ -25,7 +25,7 @@ const guidesData = [
     "content": "Ready to sell your property? Our Seller's Guide provides valuable insights and tips to maximize your property's value. Get started with confidence. Learn about pricing strategies, home staging, and marketing techniques to attract potential buyers. Navigate the selling process with ease."
   },
   {
-    "title": "Rental Guide",
+    "title": "Rental Manual",
     "img": "rental-guide.png",
     "bgColor": "#F1F8D7",
     "borderColor": "#D3E1A0",
@@ -47,7 +47,17 @@ const guidesData = [
     "bgColor": "#E4FAFA",
     "borderColor": "#38B6FF",
     "content": "Enhance the harmony of your home with Vastu principles. Our Home Vastu Guide offers insights for a balanced and positive living environment. Learn about the significance of directions, Vastu dos and don'ts, and practical tips for a Vastu-compliant home."
+  },
+  {
+    "title": "Rera Manual",
+    "img": "rera.png",
+    "textColor": "#EC104D",
+    "bgColor": "#FFE6E6",
+    "borderColor": "#FF6969",
+    "content": "Stay informed about real estate regulations with our Rera Manual. Navigate the legal landscape confidently with this comprehensive guide. Understand the Real Estate Regulatory Authority (RERA) laws, registration process, and compliance requirements. Ensure transparency and trust in your real estate transactions.",
+  
   }
+
 ]
 
 const SafetyGuide = () => {

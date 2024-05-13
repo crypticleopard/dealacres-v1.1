@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import React, { useState } from "react";
 import { FaSearch, FaTimes } from "react-icons/fa";
@@ -73,8 +73,10 @@ const BusinessCategory = () => {
   const secondaryOptionsForSelectedPrimary =
     primaryCategory && secondaryOptions[primaryCategory.value];
 
+  const isSaveEnabled = primaryCategory && selectedSecondaryCategories.length > 0;
+
   return (
-    <div className="flex items-center justify-center py-10 max-md:py-10 max-md:px-4">
+    <div className="flex items-center justify-center py-8 max-md:py-8 max-md:px-4">
       <div className="p-5 w-fit border-2 rounded-lg border-blue-300 pr-10 max-md:pr-0">
         <h1 className="font-semibold text-3xl mb-3 max-md:text-xl">
           First Choose your Real Estate <br className="max-md:hidden" />
@@ -86,7 +88,7 @@ const BusinessCategory = () => {
         </p>
 
         <div className="flex items-end justify-start space-x-3 w-full mb-4 max-md:space-x-2">
-        <FaSearch className="h-6 w-6 mb-2" color="#747264" />
+          <FaSearch className="h-6 w-6 mb-2" color="#747264" />
           <div className="w-full">
             <label className="text-lg max-md:text-md">
               Primary Business Category
@@ -139,6 +141,12 @@ const BusinessCategory = () => {
             </div>
           ))}
         </div>
+        <button
+          className={`bg-blue-600 text-white font-semibold rounded-md p-2 mt-2 ${isSaveEnabled ? "" : "opacity-50 cursor-not-allowed"}`}
+          disabled={!isSaveEnabled}
+        >
+          Save and Continue
+        </button>
       </div>
     </div>
   );

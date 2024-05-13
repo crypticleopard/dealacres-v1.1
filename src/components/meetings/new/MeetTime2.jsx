@@ -8,7 +8,7 @@ const MeetTime2 = ({
     let availStart = 9;
     let availEnd = 17;
 
-    const [showFull, setShowFull] = useState(false);
+    // const [showFull, setShowFull] = useState(false);
     const [selectedTime, setSelectedTime] = useState(null);
 
     const handleTimeChange = (index) => {
@@ -28,11 +28,9 @@ const MeetTime2 = ({
             <div className='font-bold text-lg'>
                 {selectedDate}
             </div>
-            <div className='py-2 flex flex-col gap-4'>
+            <div className='py-2 flex flex-col gap-4 overflow-y-auto h-[400px]'>
                 {[...Array(24)].map((_, time) => {
-                    if (count === 4 && !showFull) {
-                        return null;
-                    }
+                   
                     if (time + 1 >= availStart && time + 1 <= availEnd) {
                         count += 1;
                         const index = time * 2;
@@ -65,11 +63,11 @@ const MeetTime2 = ({
                     }
                     return null;
                 })}
-                <div className='w-full text-center '>
+                {/* <div className='w-full text-center '>
                     <span className='font-bold text-blue-500 text-lg cursor-pointer' onClick={() => setShowFull(prev => !prev)}>
                         View {showFull ? 'Less' : 'More'} Timings
                     </span>
-                </div>
+                </div> */}
             </div>
         </div>
     );

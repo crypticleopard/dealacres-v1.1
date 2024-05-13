@@ -66,9 +66,9 @@ const BusinessWizardFormPage3 = ({ onSaveAndContinue, onPreviousClick }) => {
             >
               <p className="w-[80px]">{day}:</p>
               <div className="flex flex-row items-center ml-[5rem]">
-                <TimePicker className="ml-2" />
+                <TimePicker className="ml-2" openClockOnFocus={false} />
                 <p className="ml-[2rem]">To</p>
-                <TimePicker className="ml-2" />
+                <TimePicker className="ml-2"  openClockOnFocus={false} />
                 <div className="flex items-center ml-[2rem]">
                   <p className="flex items-center space-x-1">
                     <input
@@ -83,7 +83,7 @@ const BusinessWizardFormPage3 = ({ onSaveAndContinue, onPreviousClick }) => {
           ))}
         </div>
 
-        <p class="text-lg  text-blue-600 mt-5">Display hours of operation</p>
+        <p class="text-lg  text-blue-600 mt-5">Copy time from Monday to Saturday </p>
         <p class="text-lg  text-blue-600 mt-5">Click Here For Dual Timings</p>
 
         <h2 className="text-lg font-bold mt-5 mb-5">

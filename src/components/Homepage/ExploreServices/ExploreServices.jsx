@@ -7,8 +7,8 @@ import React, { useState } from 'react';
 const Card = ({ index, imageUrl, heading }) => {
     return (
         <div key={index} className=" min-w-[102px] max-w-[112px]  flex flex-col items-center justify-center gap-3 p-2 rounded-xl bg-white text-black">
-            <p className='font-bold text-center text-xs xl:text-base'>{heading}</p>
-            <Image src={imageUrl} width={40} height={60} alt={heading} />
+            <p className='font-bold text-center text-xs xl:text-base h-8 md:h-12 '>{heading}</p>
+            <Image src={imageUrl} width={40} height={60} alt={heading} className='w-9 h-10' />
         </div>
     );
 };
@@ -63,7 +63,7 @@ const ExploreServices = () => {
    
 
     return (
-        <div className='bg-[#dff0f0] p-5 md:p-10 '>
+        <div className='bg-[#e2f3f5] p-5 md:p-10 '>
             <h2 className='md:text-center font-semibold text-base md:text-2xl mb-6 md:mb-10 mt-8 md:mt-0'>LET'S START WITH EXPLORING REAL ESTATE OPTIONS</h2>
             <div className='flex justify-center'>
                 <div className='flex flex-row overflow-x-auto  gap-6  cursor-pointer'>

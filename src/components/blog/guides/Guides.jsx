@@ -26,7 +26,7 @@ const Guides = ({
                 </div>
             </div>}
 
-            <div className={`${styles.guidesContainer} flex  flex-wrap  md:grid  md:grid-cols-5 gap-8 justify-center items-center place-content-center`}>
+            <div className={`${styles.guidesContainer} flex  flex-row  md:grid  md:grid-cols-6 gap-8 justify-center items-center place-content-center mt-2`}>
 
                 {
                     guides.map((guide, index) => {

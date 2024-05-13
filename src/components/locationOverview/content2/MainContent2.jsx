@@ -99,7 +99,7 @@ function MainContent2() {
             <GuidesSlider allGuides={allGuidesData} handleTabChange={(value) => value}/>
            
         </div>
-        <div className='my-4'>
+        <div >
             <h5>Interesting Readings</h5>
             {/* <IntrestingReading /> */}
             <ArticleSlider/>

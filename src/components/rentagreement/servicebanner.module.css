@@ -32,7 +32,7 @@
     border-radius: 10px;
     flex-grow: 1;
     flex-basis: 200;
-    text-align: right;
+    text-align: left;
 }
 
 
@@ -96,7 +96,6 @@
     border-radius: 30px;
     flex-grow: unset;
     flex-basis: unset;
-    text-align: right;
     background: white;
     color: rgba(0,0,0,0.5);
     
@@ -156,7 +155,7 @@
     border-radius: 30px;
     flex-grow: unset;
     flex-basis: unset;
-    text-align: right;
+    
     background: white;
     color: rgba(0,0,0,0.5);
     

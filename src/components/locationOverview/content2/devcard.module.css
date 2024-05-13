@@ -3,7 +3,7 @@
     border-radius: 30px;
     border: 1px solid black;
     cursor: pointer;
-    width: calc(100% / 4 - 8px);
+    width: calc(100% / 6 - 8px);
     min-width: 150px;
     max-width: 200px;
  
