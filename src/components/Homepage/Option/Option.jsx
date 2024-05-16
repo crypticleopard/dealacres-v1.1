@@ -22,7 +22,7 @@ const NewOption = () => {
   return (
     <div className="cards-wrapper">
       <div>
-        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-3 ">
+        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center  ">
           GET STARTED WITH EXPLORING REAL ESTATE OPTIONS
         </h2>
       </div>

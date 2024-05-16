@@ -88,7 +88,7 @@ const Testimonial = () => {
   
 
   return (
-    <div className="relative py-10 bg-indigo-50 mb-16 md:mb-24">
+    <div className="relative py-10 md:pt-10 md:pb-5 bg-indigo-50 mb-16 ">
       <div className="max-w-full mx-auto px-10 testimonial-container">
         <div className="flex flex-col items-start justify-center">
           <h2 className="text-3xl heading font-bold font-[Poppins] mb-4 uppercase text-blue-900">

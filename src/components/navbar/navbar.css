@@ -100,8 +100,8 @@
 .navbar-links__container p,
 .navbar-sign p,
 .navbar-menu_container p{
-    @apply font-[Poppins] hover:text-yellow-500  text-gray-100 font-bold hover:underline underline-offset-[10px] ;
-    transition: width 0.3s ease;
+    @apply font-[Poppins] hover:text-yellow-500  text-gray-100 font-bold  ;
+
     font-size: 15px;
     text-transform: capitalize;
     margin: 0 0.5rem;

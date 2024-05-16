@@ -87,7 +87,7 @@ export default function Home() {
         <hr />
             <MobileToparticles />
           </>}
-        <div className="mt-8 lg:mt-[20rem] w-full">
+        <div className="mt-8 lg:mt-[18rem] w-full">
         {isLargeScreen ? <NewOption /> : <MobileOption />}
         </div>
       </div>
@@ -130,7 +130,7 @@ export default function Home() {
 
       </div>
 
-      <div className="mt-5 lg:mt-[20rem] ">  {isLargeScreen ? <TopProject /> : <MobileTopProject />}</div>
+      <div className="mt-5 lg:mt-[17rem] ">  {isLargeScreen ? <TopProject /> : <MobileTopProject />}</div>
       <div className="md:max-w-[1100px] sm:max-w-xs mx-auto">
         {isLargeScreen ? <PopularBuilder /> : <MobilePopularBuilder />}
         {isLargeScreen ? <WhyChooseUs /> : <MobileWhyChooseUs />}

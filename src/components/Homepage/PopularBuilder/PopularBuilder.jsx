@@ -43,7 +43,7 @@ const Card = ({ imageUrl, yearEstd, projects, description }) => {
 
 const PopularBuilder = () => {
     return (
-        <div className='py-8 sm:py-10 mx-4 sm:mx-0'>
+        <div className='py-6  mx-4 sm:mx-0'>
             <h2 className='text-center text-xl md:text-3xl font-semibold mt-2'>Popular Builders in India</h2>
             <p className='text-center text-md md:text-xl mt-2'>Best Developers in India</p>
             <div className='flex justify-center mt-8 px-2'>

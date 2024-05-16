@@ -6,9 +6,9 @@ import React, { useState } from 'react';
 
 const Card = ({ index, imageUrl, heading }) => {
     return (
-        <div key={index} className=" min-w-[80px] md:min-w-[102px] md:max-w-[112px]  flex flex-col items-center justify-center gap-3 p-2 rounded-xl bg-white text-black">
-            <p className='font-bold text-center text-xs xl:text-base h-8 md:h-12 '>{heading}</p>
-            <Image src={imageUrl} width={40} height={60} alt={heading} className='w-9 h-10' />
+        <div key={index} className="min-w-[80px] md:min-w-[88px] md:max-w-[90px]  flex flex-col items-center justify-center gap-2 p-2 rounded-xl bg-white text-black">
+            <p className='font-bold text-center text-[0.7rem] leading-3 xl:text-[0.8rem] xl:leading-4 h-7 md:h-10 '>{heading}</p>
+            <Image src={imageUrl} width={40} height={60} alt={heading} className='w-7 h-7' />
         </div>
     );
 };
@@ -24,7 +24,7 @@ const ExploreServices = () => {
         },
         {
             imageUrl: 'https://media-public.canva.com/nB8Ek/MAFfqznB8Ek/1/t.png',
-            heading: 'Home Loan'
+            heading: 'Home  Loans'
         },
         {
             imageUrl: 'https://media-public.canva.com/FX_B4/MAFaqXFX_B4/1/t.png',
@@ -47,7 +47,7 @@ const ExploreServices = () => {
             heading: 'Home Interior'
         },
         {
-            imageUrl: '/vaastusastra.webp',
+            imageUrl: '/vaastusastra.jpg',
             heading: 'Vastu Sartar'
         },
         {
@@ -63,10 +63,10 @@ const ExploreServices = () => {
    
 
     return (
-        <div className='bg-[#c5dff8] p-4 md:p-10 '>
+        <div className='bg-[#c5dff8] p-4 md:p-8 '>
             <h2 className='md:text-center font-semibold text-[0.73rem] md:text-2xl mb-3 md:mb-10 mt-4 md:mt-0'>LET'S START WITH EXPLORING REAL ESTATE OPTIONS</h2>
             <div className='flex justify-center'>
-                <div className='flex flex-row overflow-x-auto gap-4 md:gap-6  cursor-pointer'>
+                <div className='flex flex-row overflow-x-auto gap-4 md:gap-5  cursor-pointer xl:max-w-[1100px] xl:mx-auto '>
                     {cardData.map((card, index) => (
                         <Card key={index} imageUrl={card.imageUrl} heading={card.heading} />
                     ))}

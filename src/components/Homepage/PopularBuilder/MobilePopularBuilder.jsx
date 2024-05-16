@@ -43,7 +43,7 @@ const Card = ({ imageUrl, yearEstd, projects, description }) => {
 
 const MobilePopularBuilder = () => {
     return (
-        <div className='p-4'>
+        <div className='px-4'>
             <h2 className='text-[1.1rem] md:text-3xl font-semibold mt-2'>Popular Builders in India</h2>
             <p className=' text-sm md:text-xl mt-1'>Best Developers in India</p>
      

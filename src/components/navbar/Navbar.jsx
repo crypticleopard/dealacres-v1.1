@@ -9,55 +9,59 @@ import FlyoutMenuSections from "./FlyoutMenuSections";
 import { BsFillArrowDownSquareFill } from "react-icons/bs";
 import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
 
-const Menu = ({ setMenuPosition, setHoveredMenu }) => {
+const Menu = ({ setMenuPosition, setHoveredMenu, hoveredMenu }) => {
   const handleMouseEnter = (menu, event) => {
-    setHoveredMenu(menu);
-    if (event) {
-      const rect = event.target.getBoundingClientRect();
-      setMenuPosition({ top: rect.bottom, left: rect.left });
+    
+    if (hoveredMenu === menu) {
+      setHoveredMenu(null);
+      setMenuPosition(null);
+    } else {
+      setHoveredMenu(menu);
+      if (event) {
+        const rect = event.currentTarget.getBoundingClientRect();
+        setMenuPosition({ top: rect.bottom, left: rect.left });
+      }
     }
   };
 
-  const handleMouseLeave = () => {
-    setHoveredMenu(null);
-    setMenuPosition(null);
-  };
 
   return (
     <>
       <p
         onMouseEnter={(e) => handleMouseEnter("buyer", e)}
-        onMouseLeave={handleMouseLeave}
+    
       >
         <a href="#">Buyer</a>
       </p>
       <p
         onMouseEnter={(e) => handleMouseEnter("seller", e)}
-        onMouseLeave={handleMouseLeave}
+       
       >
         <a href="#">Seller</a>
       </p>
       <p
         onMouseEnter={(e) => handleMouseEnter("tenant", e)}
-        onMouseLeave={handleMouseLeave}
+     
       >
         <a href="#">Tenant</a>
       </p>
       <p
         onMouseEnter={(e) => handleMouseEnter("blog", e)}
-        onMouseLeave={handleMouseLeave}
+       
       >
         <a href="#">Blog</a>
       </p>
       <p
         onMouseEnter={(e) => handleMouseEnter("services", e)}
-        onMouseLeave={handleMouseLeave}
+       
       >
         <a href="#">Services</a>
       </p>
     </>
   );
 };
+
+
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -192,18 +196,19 @@ const Navbar = () => {
           <Menu
             setMenuPosition={setMenuPosition}
             setHoveredMenu={setHoveredMenu}
+            hoveredMenu={hoveredMenu}
           />
         </div>
         <div className="navbar-sign">
           <Link
             href="#"
-            className=" text-sm sm:text-base md:text-sm text-center mr-5   font-light  text-white sm:font-normal md:font-medium shadow-blue-200 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200"
+            className=" text-sm sm:text-base md:text-sm text-center mr-5   font-light  text-white sm:font-normal md:font-medium shadow-blue-100 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-md hover:shadow-blue-100"
           >
             Post For Business
           </Link>
           <Link 
             href="/propertylisting"
-            className=" text-sm sm:text-base md:text-sm text-center   font-light  text-white sm:font-normal md:font-medium shadow-blue-200 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-200"
+            className=" text-sm sm:text-base md:text-sm text-center   font-light  text-white sm:font-normal md:font-medium shadow-blue-100 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-md hover:shadow-blue-100"
           >
             Post Your Property{" "}
             <span className="text-yellow-500  sm:text-sm font-bold">Free</span>
