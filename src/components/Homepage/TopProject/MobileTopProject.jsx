@@ -9,13 +9,13 @@ const Card = ({ index, selectedCity }) => {
   return (
     <div key={index} className="relative">
       <div
-        className="relative bg-cover bg-center w-full h-[10rem] rounded-lg hover:bg-blue-300"
+        className="relative bg-cover bg-center w-full h-[6.8rem] rounded-lg hover:bg-blue-300"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
         
-        <div className="absolute h-[6.5rem] bottom-0 left-0 text-left text-xs px-2 text-black bg-white/70  w-full">
-          <p className='font-bold text-xs'>DLF The Arbour</p>
-          <p className="text-[10px]">3/4 BHK Apartment, Sector 57,{selectedCity}</p>
+        <div className="absolute h-[5rem] bottom-0 left-0 text-left text-xs px-2 text-black bg-white/70  w-full hover:inset-0 hover:h-full">
+          <p className='font-bold text-[0.7rem]'>DLF The Arbour</p>
+          <p className="text-[8px]">3/4 BHK Apartment, Sector 57,{selectedCity}</p>
           <p className="font-bold">1.46 Cr *</p>
         </div>
       </div>
@@ -45,14 +45,14 @@ const MobileTopProject = () => {
 
   return (
     <div className='px-4'>
-        <h2 className="font-bold mb-1 text-xl ">Top Projects</h2>
-        <p className=' text-base mb-4 '>Explore the top projects in top cities</p>
-    <div className='flex flex-row gap-4 overflow-auto mb-4 '>
+        <h2 className="font-bold mb-1 text-[1.1rem] ">Top Projects</h2>
+        <p className=' text-sm mb-2 '>Explore the top projects in top cities</p>
+    <div className='flex flex-row gap-4 overflow-auto mb-2 '>
          
               {cities.map((city) => (
                 <div 
                   key={city}
-                  className={`cursor-pointer mb-2 min-w-[150px] text-center py-1 font-semibold px-4 rounded-lg ${selectedCity === city
+                  className={`cursor-pointer mb-2 min-w-[100px] text-center py-0.5 text-[0.75rem] font-semibold px-4 rounded-lg ${selectedCity === city
                       ? 'bg-blue-700 text-white'
                       : ' text-white bg-blue-300'
                     }`}

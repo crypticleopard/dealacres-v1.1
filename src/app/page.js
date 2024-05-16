@@ -83,7 +83,7 @@ export default function Home() {
             sidecontent1="BUY A HOME"
             sidecontent4="Search, Buy & Own Your Dream Home"
             sidecontent3="Explore from apartments, land, builders, floor, villas and more"
-            buttontext="  Find a Home" />
+            buttontext="Find a Home" />
         <hr />
             <MobileToparticles />
           </>}
@@ -119,7 +119,7 @@ export default function Home() {
             title="Sell or Rent your property faster with DealAcres"
             src={src2}
             alt="src2"
-            sidecontent1="POST YOUR PROPERTY"
+            sidecontent1="POST PROPERTY"
             sidecontent4="Register to post your property for "
             s2spantext="FREE"
             sidecontent3="Sell or rent your residential /commercial property"
@@ -130,7 +130,7 @@ export default function Home() {
 
       </div>
 
-      <div className="mt-10 lg:mt-[20rem] ">  {isLargeScreen ? <TopProject /> : <MobileTopProject />}</div>
+      <div className="mt-5 lg:mt-[20rem] ">  {isLargeScreen ? <TopProject /> : <MobileTopProject />}</div>
       <div className="md:max-w-[1100px] sm:max-w-xs mx-auto">
         {isLargeScreen ? <PopularBuilder /> : <MobilePopularBuilder />}
         {isLargeScreen ? <WhyChooseUs /> : <MobileWhyChooseUs />}

@@ -17,7 +17,7 @@ const Budgetslider = ({ heading, minValue, maxValue,unit }) => {
   return (
     <div>
       <div className="flex flex-row items-center justify-between cursor-pointer">
-        <p className="text-gray-900 text-md">{heading}</p>
+        <p className="text-gray-900 text-sm md:text-md">{heading}</p>
         <p className="text-sm">{unit !== 'Years' ? '₹ ' : ''}{valuetext(value)}</p>
       </div>
 
@@ -31,12 +31,13 @@ const Budgetslider = ({ heading, minValue, maxValue,unit }) => {
           valueLabelDisplay="auto"
           valueLabelFormat={valuetext}
           getAriaValueText={valuetext}
+          className="p-0"
         />
       </div>
 
-      <div className="flex justify-between -mb-4">
-        <p className="text-sm text-gray-600">{minValue} </p>
-        <p className="text-sm text-gray-600">{unit !== 'Years' ? '₹ ' : ''}{maxDisplayedValue} {unit}</p>
+      <div className="flex justify-between ">
+        <p className="text-xs md:text-sm text-gray-600">{minValue} </p>
+        <p className="text-xs md:text-sm text-gray-600">{unit !== 'Years' ? '₹ ' : ''}{maxDisplayedValue} {unit}</p>
       </div>
     </div>
   );

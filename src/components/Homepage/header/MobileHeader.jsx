@@ -6,14 +6,14 @@ import background from '../../../../public/background header.jpg';
 const MobileHeader = () => {
     return (
         <div className="flex flex-col relative">
-            <div className="flex h-[43vh]">
+            <div className="flex h-[35vh]">
                 <Image
                     alt="background-img"
                     src={background}
                     className="w-full h-full object-cover"
                 />
             </div>
-            <div className="flex justify-center w-3/4 mx-auto absolute top-[40vh] left-[12.5%] bg-white border-2 rounded-lg">
+            <div className="flex justify-center w-3/4 mx-auto absolute top-[32vh] left-[12.5%] bg-white border-2 rounded-lg shadow-md">
               
                 
                 <input

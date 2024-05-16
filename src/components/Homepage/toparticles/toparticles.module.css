@@ -150,7 +150,7 @@
         margin-top: 15px
     }
     .toparticlesContainer h3{
-    @apply  text-lg font-bold text-left px-0 mx-0;
+    @apply  text-base font-bold text-left px-0 mx-0;
   
     
     }
@@ -163,19 +163,20 @@
         align-items: start;
         justify-content: flex-start;
         margin-top: 10px;
-        gap:15px
+        gap:15px;
+        font-size:12px
     }
 
     .contentBlock{
-        min-width: 350px;
+        min-width: 280px;
     }
 
 
-    .content h6{
+    .contentBlock h6{
         font-size: 12px;
     }
 
-    .content p{
+    .contentBlock p{
         font-size: 10px;
     }
    

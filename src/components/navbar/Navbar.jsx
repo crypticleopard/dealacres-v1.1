@@ -219,7 +219,7 @@ const Navbar = () => {
         </div>
       </div>
       <Link href="/propertylisting">
-        <div className="md:hidden bg-white p-1 font-semibold text-blue-600 text-xs rounded-lg">Post Property <span className=" text-green-700 ml-1">Free</span></div>
+        <div className="md:hidden bg-white p-1 font-semibold text-blue-600 text-xs rounded-lg">Post Property <span className=" text-green-700 ">Free</span></div>
       </Link>
       {hoveredMenu && (
         <div

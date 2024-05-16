@@ -2,19 +2,35 @@
 import React, { useState } from 'react'
 import styles from './postercard.module.css'
 import Image from 'next/image'
+import Modal from './Modal'; 
 
 
 const MobilePostercard = (props) => {
 
 
-  const [showInputField, setShowInputField] = useState(false)
+  const [showModal, setShowModal] = useState(false);
+    
+
+  const openPopup = () => {
+      if (props.buttontext === "Find a Home") {
+          setShowModal(true);
+      }else {
+          window.location.href = '/propertylisting';
+      }
+  };
+
+
+  const closePopup = () => {
+      // setShowInputField(false);
+      setShowModal(false);
+  };
 
   return (
-    <div className="relative flex flex-col gap-2 my-8 px-4">
-
-      <div className='font-bold text-xl'>{props.title}</div>
-      <p className=' absolute text-[10px] right-[4%] top-[9%] px-2 py-1 rounded-md font-bold  bg-blue-700 text-white'>{props.sidecontent1}</p>
-
+    <div className="relative flex flex-col gap-2 my-5 px-4">
+<div className='flex flex-row items-end'>
+      <div className='font-bold text-[0.9rem] w-[70%] leading-5'>{props.title}</div>
+      <p className=' p-1 text-[0.55rem]  font-bold  bg-blue-700 text-white w-[30%] text-center'>{props.sidecontent1}</p>
+      </div>
       <div  >
         <Image
           src={props.src}
@@ -34,15 +50,19 @@ const MobilePostercard = (props) => {
         
           <div className='w-[200px]'>
           <div className='flex justify-end mx-auto'>
-            {showInputField && (
+          {showModal && (
+                    <Modal onClose={closePopup} />
+                       
+                )}
+            {/* {showInputField && (
               <div className={styles.inputField}>
                 <input placeholder={props.buttontext} />
                 <button className={styles.btn2}>Submit</button>
               </div>
-            )}
-            {!showInputField && (
-              <button className={styles.mobilebtn1} onClick={() => setShowInputField(true)}>{props.buttontext}</button>
-            )}
+            )} */}
+           
+              <button className={styles.mobilebtn1} onClick={openPopup}>{props.buttontext}</button>
+          
           </div>
         </div>
 

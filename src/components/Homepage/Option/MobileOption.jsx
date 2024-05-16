@@ -18,9 +18,9 @@ const MobileOption = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center px-4 bg-[#e2f3f5]">
+    <div className="flex flex-col justify-center px-4 ">
       <div>
-        <h2 className="text-lg font-[Poppins] font-bold pt-3 pb-2">
+        <h2 className="text-[0.9rem] font-[Poppins] font-bold pb-2">
           GET STARTED WITH EXPLORING REAL ESTATE OPTIONS
         </h2>
       </div>
@@ -33,7 +33,7 @@ const MobileOption = () => {
           >
             <div className="flex flex-col w-[250px] rounded-md ">
               <div className="rounded-md">
-                <Image src={card.imageUrl} alt="house image" width={250} height={250} />
+                <Image src={card.imageUrl} alt="house image" width={250} height={180} className="h-[130px] rounded-lg" />
               </div>
               <div className={`text-md py-2 text-center  ${activeCard === card.id ? 'bg-blue-300' : ''}`}>
                 {card.title}

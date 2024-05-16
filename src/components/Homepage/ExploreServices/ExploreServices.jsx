@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 const Card = ({ index, imageUrl, heading }) => {
     return (
-        <div key={index} className=" min-w-[102px] max-w-[112px]  flex flex-col items-center justify-center gap-3 p-2 rounded-xl bg-white text-black">
+        <div key={index} className=" min-w-[80px] md:min-w-[102px] md:max-w-[112px]  flex flex-col items-center justify-center gap-3 p-2 rounded-xl bg-white text-black">
             <p className='font-bold text-center text-xs xl:text-base h-8 md:h-12 '>{heading}</p>
             <Image src={imageUrl} width={40} height={60} alt={heading} className='w-9 h-10' />
         </div>
@@ -47,7 +47,7 @@ const ExploreServices = () => {
             heading: 'Home Interior'
         },
         {
-            imageUrl: '/homePage/vastu_sastra.png',
+            imageUrl: '/vaastusastra.webp',
             heading: 'Vastu Sartar'
         },
         {
@@ -63,18 +63,18 @@ const ExploreServices = () => {
    
 
     return (
-        <div className='bg-[#e2f3f5] p-5 md:p-10 '>
-            <h2 className='md:text-center font-semibold text-base md:text-2xl mb-6 md:mb-10 mt-8 md:mt-0'>LET'S START WITH EXPLORING REAL ESTATE OPTIONS</h2>
+        <div className='bg-[#c5dff8] p-4 md:p-10 '>
+            <h2 className='md:text-center font-semibold text-[0.73rem] md:text-2xl mb-3 md:mb-10 mt-4 md:mt-0'>LET'S START WITH EXPLORING REAL ESTATE OPTIONS</h2>
             <div className='flex justify-center'>
-                <div className='flex flex-row overflow-x-auto  gap-6  cursor-pointer'>
+                <div className='flex flex-row overflow-x-auto gap-4 md:gap-6  cursor-pointer'>
                     {cardData.map((card, index) => (
                         <Card key={index} imageUrl={card.imageUrl} heading={card.heading} />
                     ))}
                 </div>
             </div>
         
-                <div className="flex justify-center mt-6">
-                    <button  className="px-2 py-1 md:px-4 md:py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">View All</button>
+                <div className="flex justify-center mt-3 md:mt-6">
+                    <button  className="px-2 py-0.5 md:px-4 md:py-2 bg-blue-500 text-white text-[0.73rem] md:text-base rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">View All</button>
                 </div>
           
         </div>

@@ -29,9 +29,9 @@ const MobileWhyChooseUs = () => {
   
 
   return (
-    <div className="flex justify-center mt-4 mb-6">
+    <div className="flex justify-center mt-1 mb-4">
       <div className="w-full px-4">
-        <h2 className="font-semibold text-xl md:text-2xl  text-[#0e4690e5]  sm:mb-3 md:mb-5">Why Choose Deal Acres for Property Search?</h2>
+        <h2 className="font-semibold text-[1.1rem] md:text-2xl  text-[#0e4690e5]  sm:mb-3 md:mb-5">Why Choose Deal Acres for Property Search?</h2>
         <p className="subheading">
           We provide top-notch services that make us stand out from the rest.
         </p>

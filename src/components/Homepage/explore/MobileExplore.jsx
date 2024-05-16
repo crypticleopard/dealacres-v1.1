@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./explore.css";
-import BudgetCalculation from "@/components/budgetCalculation/BudgetCalculation";
+import MobileBudgetCalculation from "@/components/budgetCalculation/MobileBudgetCalculation";
 import { cardData, carddata } from "./data";
 
 const MobileExplore = () => {
@@ -23,9 +23,9 @@ const MobileExplore = () => {
   };
 
   return (
-    <div className="cards-wrapper">
+    <div className="cards-wrapper mt-1">
       <div>
-        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-6">
+        <h2 className="text-sm font-[Poppins] font-bold p-3">
           {" "}
           Explore! <span className="text-blue-500">Insights and tools</span>
         </h2>
@@ -66,7 +66,7 @@ const MobileExplore = () => {
           </div>
         ))}
       </div>
-      {showBudgetCalculation && <BudgetCalculation onClose={handleBudgetCalculationClose} />}
+      {showBudgetCalculation && <MobileBudgetCalculation onClose={handleBudgetCalculationClose} />}
     </div>
   );
 };

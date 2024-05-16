@@ -104,12 +104,12 @@
 }
 .mobilebtn1{
     margin-top: 2px;
-    padding: 0.5rem ;
+    padding: 0.4rem ;
     color: #fff;
     @apply  bg-blue-800
     font-[Poppins];
     font-weight: 600;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 15px;
     cursor: pointer;
     outline: none;
@@ -182,5 +182,6 @@
     .sideContent h4{
         font-size: 26px;
     }
+    
 }
 

@@ -145,7 +145,7 @@
         margin-top: 15px
     }
     .toparticlesContainer h3{
-    @apply  text-lg font-bold text-left px-0 mx-0;
+    @apply  text-base font-bold text-left px-0 mx-0;
   
     
     }
@@ -154,7 +154,7 @@
     }
     .subtopics{
         width: 100%;
-
+        font-size: 12px;
         font-weight: bold;
         align-items: start;
         justify-content: flex-start;
@@ -166,15 +166,15 @@
    }
 
     .contentBlock{
-        min-width: 350px;
+        min-width: 250px;
     }
 
 
-    .content h6{
-        font-size: 12px;
+    .contentBlock h6{
+        font-size: 14px;
     }
 
-    .content p{
+    .contentBlock p{
         font-size: 10px;
     }
    
