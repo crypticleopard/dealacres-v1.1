@@ -39,10 +39,10 @@ const PropertytypeCommercial = () => {
   return (
     <div>
       <div
-        className="flex items-center justify-between cursor-pointer mt-6"
+        className="flex items-center justify-between cursor-pointer mt-4"
         onClick={toggleMainVisible}
       >
-        <p className="text-gray-900 text-lg">Type of Property</p>
+        <p className="text-gray-900 text-base font-medium">Type of Property</p>
         {isMainVisible ? <FaChevronUp /> : <FaChevronDown />}
       </div>
 
@@ -54,7 +54,7 @@ const PropertytypeCommercial = () => {
               <div
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`cursor-pointer px-4 py-1 border rounded-full w-fit ${
+                className={`cursor-pointer px-4 py-0.5 text-sm border rounded-full w-fit ${
                   selectedTags.includes(tag)
                     ? "bg-blue-500 text-white"
                     : "text-gray-600 border-[1px] border-gray-600"
@@ -65,7 +65,7 @@ const PropertytypeCommercial = () => {
             ))}
           {tags.length > maxVisibleTags && (
             <div
-              className="cursor-pointer py-1 text-blue-600"
+              className="cursor-pointer  text-blue-600"
               onClick={toggleShowAllTags}
             >
               {showAllTags

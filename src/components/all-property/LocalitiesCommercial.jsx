@@ -31,10 +31,10 @@ const LocalitiesCommercial = () => {
   return (
     <div>
       <div
-        className="flex items-center justify-between cursor-pointer mt-6"
+        className="flex items-center justify-between cursor-pointer mt-4"
         onClick={toggleMainVisible}
       >
-        <p className="text-gray-900 text-lg">Localities</p>
+        <p className="text-gray-900 text-base font-medium">Localities</p>
         {isMainVisible ? <FaChevronUp /> : <FaChevronDown />}
       </div>
 

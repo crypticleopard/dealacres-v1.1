@@ -17,10 +17,10 @@ function Header() {
             <div className={styles.devCredentials}>
                 <div className={styles.headerImgContainer}>
                     <Image
-                        src='/singleDeveloper/devLogo.webp'
+                        src='/singleDeveloper/m3m logo.png'
                         alt='developer Logo'
-                        width={200}
-                        height={100}
+                        width={280}
+                        height={200}
                         objectFit='cover'
                     />
                 </div>

@@ -106,7 +106,7 @@
     margin-top: 2px;
     padding: 0.4rem ;
     color: #fff;
-    @apply  bg-blue-800
+    @apply  bg-[#0061DF]
     font-[Poppins];
     font-weight: 600;
     font-size: 10px;

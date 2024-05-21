@@ -13,8 +13,9 @@ function Category() {
                     layout='fill'
                     style={{objectFit:'cover'}}
                 />
+                      <h6>Commercial Projects</h6>
             </div>
-            <h6>Commercial Projects</h6>
+      
         </div>
         <div className={styles.categoryContentContainer}>
             <div className={styles.categoryImgContainer}>
@@ -24,8 +25,9 @@ function Category() {
                     layout='fill'
                     style={{objectFit:'cover'}}
                 />
+                      <h6>Residential Projects</h6>
             </div>
-        <h6>Residential Projects</h6>
+  
         </div>
     </div>
   )

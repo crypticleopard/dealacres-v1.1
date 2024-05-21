@@ -17,9 +17,6 @@ const Navbar03 = () => {
             <a href="#SimilarLocalities">Similar Localities</a>
           </p>
           <p>
-            <a href="#PhotoVideo">Photos & Videos</a>
-          </p>
-          <p>
             <a href="Developer">Developer</a>
           </p>
           <p>

@@ -48,12 +48,12 @@ const TopProject = () => {
     <div >
       <div
         className="bg-cover bg-center p-2 relative"
-        style={{ background: 'linear-gradient(90deg, rgba(76, 106, 250, 1) 0%, rgba(255, 255, 255, 1) 100%)' }}
+        style={{ background: 'linear-gradient(90deg, rgba(76, 106, 250, 1) 0%, rgb(197 223 248 ) 100%)' }}
       >
 
 
 
-        <div className='xl:ml-60 lg:ml-40 ml-10 mt-5 mb-5 relative '> 
+        <div className='xl:ml-60 lg:ml-40 ml-10 my-5 relative '> 
           <h2 className="font-bold mb-4 text-yellow-300 text-4xl">Top Projects</h2>
           <p className='text-xl text-white'>Explore the top projects in top cities</p>
         </div>
@@ -74,7 +74,7 @@ const TopProject = () => {
               ))}
             </ul>
           </div>
-          <div className="lg:w-3/5 w-3/4 grid grid-cols-3 gap-4 ">
+          <div className="lg:w-3/5 w-3/4 grid grid-cols-3 gap-4 mb-3">
             {[...Array(9)].map((_, index) => (
               <Card key={index} index={index + 1} selectedCity={selectedCity} />
             ))}

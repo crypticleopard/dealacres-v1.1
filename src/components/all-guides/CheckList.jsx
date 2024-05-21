@@ -44,12 +44,12 @@ const  CheckList = ({ tab, data, DropIcon }) => {
           <div key={index}>
             <li
 
-              className={`font-bold text-lg  py-1 flex items-center gap-2 cursor-pointer`}
+              className={`font-bold text-[0.92rem] py-2 flex items-center gap-1 cursor-pointer`}
               style={{ color: selectedGuide === index ? 'blue' : 'black' }}
               onClick={() => handleGuideClick(index)}
             >
               <span className='w-[50px] inline-flex'>{index + 1} </span>
-              <div className={`ml-2 py-2 flex justify-between w-full`}  onClick={() => {
+              <div className={`ml-2 flex justify-between w-full`}  onClick={() => {
                   if(selectedTopic === index){
                     setSelectedTopic(-1)
                   }else{

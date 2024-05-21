@@ -32,8 +32,8 @@ const page = () => {
 
 
       </div>
-      <div className='mx-[8rem] mb-[10rem]' >
-      <Insights />
+      <div className='mx-[10rem] mb-[2rem]' >
+    <Explore />
 
 
       </div>

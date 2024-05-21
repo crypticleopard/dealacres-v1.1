@@ -11,32 +11,20 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const AgentPage = () => {
-  const [scrollCount, setScrollCount] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollCount(scrollCount + 1);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollCount]);
-
-  useEffect(() => {
-    if (scrollCount == 20) {
+    const timer = setTimeout(() => {
       setShowPopup(true);
-    }
-  }, [scrollCount]);
+    }, 20000); 
+
+    return () => clearTimeout(timer); // Cleanup timer on component unmount
+  }, []);
 
   const closePopup = () => {
     setShowPopup(false);
   };
  
-
   return (
     <div>
       {/* <ImgSlider /> */}

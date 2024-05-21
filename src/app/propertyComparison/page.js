@@ -7,14 +7,16 @@ import Hotspot from '@/components/PropertyComparison/Hotspot'
 
 const page = () => {
   return (
-    <div>
+    <div className='m-0'>
         <div className={style.Layout}>
         <Comparison />
           <Hotspot />
           <Explore />
+        
         </div>
-    
+    <div className='max-w-[1320px] mx-auto'>
         <ReadMore />
+        </div>
     </div>
   )
 }

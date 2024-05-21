@@ -36,6 +36,10 @@ const allPostsData = [
   {
     "title": "Why is My House So Dusty? 5 Easy Ways to Eliminate Dust",
     "img": "article-thumb-2.webp"
+  },
+  {
+    "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
+    "img": "article-thumb-1.jpg"
   }
   
 ]
@@ -69,8 +73,8 @@ const AllGuidesPage = () => {
   const scrollToCardContainer = () => {
     if (cardsContRef.current) {
       cardsContRef.current.scrollIntoView({
-        behavior: 'smooth', // Add smooth scrolling behavior
-        block: 'start',     // Scroll to the start of the container
+        behavior: 'smooth',
+        block: 'start',     
       });
     }
   };
@@ -127,7 +131,7 @@ const AllGuidesPage = () => {
           <div className='flex gap-4 items-center justify-center'>
             <button
               disabled={cardsToShow == 10}
-              className=' bg-blue-500 text-white text-lg p-4 flex justify-center items-center
+              className=' bg-blue-500 text-white text-lg px-4 py-2 flex justify-center items-center
             rounded-lg shadow disabled:opacity-50
             disabled:pointer-events-none
             peer'

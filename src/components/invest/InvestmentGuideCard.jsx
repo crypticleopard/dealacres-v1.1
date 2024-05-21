@@ -8,7 +8,7 @@ const InvestmentGuideCard = ({
     content
 }) => {
   return (
-    <div className={`${styles.investmentGuideCard} shadow-md flex flex-col items-center justify-center  min-[510px]:w-[230px] md:h-[300px] px-2 py-4 rounded-2xl border-r-2 border-r-black border-b gap-4 border-b-black hover:border-l-2 hover:border-l-black  bg-white`}>
+    <div className={`${styles.investmentGuideCard} shadow-md flex flex-col items-center justify-center  min-[510px]:w-[230px] md:h-[250px] px-2 py-4 rounded-2xl border-r-2 border-r-black border-b-2 border-l-2 border-l-black gap-4 border-b-black hover:border-l-2 hover:border-l-black  bg-white`}>
         <div className='overflow-hidden rounded-full transition-all'>
       <Image src={src} alt={title} className='rounded-full h-[100px] 
       hover:scale-[1.3] transition-all w-[100px] border border-blue-300 shadow' />

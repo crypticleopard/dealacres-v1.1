@@ -43,7 +43,7 @@ const AmenitiesCommercial = () => {
         className="flex items-center justify-between cursor-pointer mt-6"
         onClick={toggleMainVisible}
       >
-        <p className="text-gray-900 text-lg">Amenities</p>
+        <p className="text-gray-900 text-base font-medium">Amenities</p>
         {isMainVisible ? <FaChevronUp /> : <FaChevronDown />}
       </div>
 
@@ -58,7 +58,7 @@ const AmenitiesCommercial = () => {
               <div
                 key={amenity}
                 onClick={() => toggleAmenity(amenity)}
-                className={`cursor-pointer px-4 py-1 border rounded-full w-fit ${
+                className={`cursor-pointer px-4 py-0.5 text-sm border rounded-full w-fit ${
                   selectedAmenities.includes(amenity)
                     ? "bg-blue-500 text-white"
                     : "text-gray-600 border-[1px] border-gray-600"
@@ -70,7 +70,7 @@ const AmenitiesCommercial = () => {
 
           {amenityOptions.length > maxVisibleAmenities && (
             <div
-              className="cursor-pointer py-1 text-blue-600"
+              className="cursor-pointer text-blue-600"
               onClick={toggleShowAllAmenities}
             >
               {showAllAmenities

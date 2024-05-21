@@ -13,7 +13,7 @@ const SafetySection = ({
     order
 }) => {
 
-    const [showFull, setShowFull] = useState(false);
+    // const [showFull, setShowFull] = useState(false);
     return (
         <div>
             <div className='py-2 font-bold text-3xl'>
@@ -39,21 +39,21 @@ const SafetySection = ({
                                     {
                                     lists.map((list, index) => {
 
-                                        return (<li className={`transition-all duration-700 ease-in-out  list-disc ${showFull || index < 3 ? 'opacity-100': 'opacity-0 hidden'}`} key={index}>{list}</li>)
+                                        return (<li className="transition-all duration-700 ease-in-out  list-disc" key={index}>{list}</li>)
 
                                         
                                     })
                                     
                                     }
                                 </ul>
-                                <button 
+                                {/* <button 
                                 onClick={() => setShowFull((prev) => !prev)}
                                 className='
                                 transition-all
                                 text-blue-600
                                 hover:text-blue-400 font-medium text-lg px-8 py-4'>
                                     {showFull ? 'Read Less' : 'Read More'}
-                                </button>
+                                </button> */}
                             </div>
                         )}
                     </div>

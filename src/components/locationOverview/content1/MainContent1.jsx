@@ -28,12 +28,12 @@ function MainContent1() {
         <h6>Pin Code: 122505</h6>
       </div>
       <div className = {styles.mainContainerLine}></div>
-      <div className={styles.mainContainerContent}>
+      <div className={styles.mainContainerContent} id='About'>
         <h5>About Locality</h5>
         <p className="text-justify">{about }</p>
         {/* <h6 onClick={()=>setShowFull(prev => !prev)}>{showFull? 'Show Less':'Show More'}</h6> */}
       </div>
-      <div>
+      <div  id='Explore'>
          <h5> Explore Neighbourhood </h5>
         <ExploreNeighbour/> 
       </div>
@@ -41,7 +41,7 @@ function MainContent1() {
         <h5> Key Highlights of sector 37D, Gurgaon </h5>
         <Locality desc = {false} localityData={locality}/>
       </div>
-      <div>
+      <div id='Projects'>
         <h5>Popular Projects in Sector 37D</h5>
         <PopularProjects/>
       </div>

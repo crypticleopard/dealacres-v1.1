@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { throttle } from 'lodash';
 import { allGuidesData } from '@/app/all-guides/allGuidesData';
 import GuidesSlider from '@/components/all-guides/GuidesSlider';
 import CityStateSelector from '@/components/locationCityWise/CityStateSelector';
@@ -15,32 +14,25 @@ import InterestingReads from '@/components/exploreLocality/ViewAllComponents/Int
 import Popup from '@/components/locationCityWise/Popup';
 
 const LocationByCity = () => {
-  const [scrollCount, setScrollCount] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
   const [popupClosed, setPopupClosed] = useState(false);
 
   useEffect(() => {
-    const handleScroll = throttle(() => {
-      setScrollCount((prevCount) => prevCount + 1);
-    }, 200);
-
-    window.addEventListener('scroll', handleScroll);
+    const timer = setTimeout(() => {
+      if (!popupClosed) {
+        setShowPopup(true);
+        
+        setTimeout(() => {
+          setPopupClosed(true);
+          setShowPopup(false);
+        }, 5000);
+      }
+    }, 10000); 
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
     };
-  }, []);
-
-  useEffect(() => {
-    if (scrollCount > 5 && !showPopup && !popupClosed) {
-      setShowPopup(true);
-
-      setTimeout(() => {
-        setPopupClosed(true);
-        setShowPopup(false);
-      }, 5000);
-    }
-  }, [scrollCount, showPopup, popupClosed]);
+  }, [popupClosed]);
 
   const handleClosePopup = () => {
     console.log('Closing popup...');
@@ -50,7 +42,7 @@ const LocationByCity = () => {
 
 
   return (
-    <div className="px-[15%] py-[3rem] max-lg:px-[5%] relative">
+    <div className="px-[15%] py-[1.5rem] max-lg:px-[5%] relative">
       <CityStateSelector />
       <CityInformation />
       <AboutCity />
@@ -59,10 +51,10 @@ const LocationByCity = () => {
       <TopPropertyOfCity />
       <Faq />
 
-      <div className='mt-4'>
+      <div className='mt-10'>
         <h2 className="text-3xl font-bold  max-lg:text-2xl">Start with these guides </h2>
         <p className="mt-2 text-gray-600">Know all that you need to know before you start</p>
-        <div className="max-w-screen-xl mx-auto py-8 my-3">
+        <div className="max-w-screen-xl mx-auto my-3">
           <GuidesSlider allGuides={allGuidesData} />
         </div>
       </div>

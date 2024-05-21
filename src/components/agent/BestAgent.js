@@ -11,11 +11,11 @@ const Agent = (props) => {
   const filteredData = data["Experts"];
   return (
     <div className={styles.agentLayout}>
-      <div>
+      <div className="w-[65%]">
         <h2 className={styles.Explore}>Explore our Rent Agreement Experts</h2>
-        <div>
+       
           <AgentList featured={true} limit={limit} />
-        </div>
+       
       </div>
 
       <div className={styles.sidebar}>
@@ -33,7 +33,8 @@ const Agent = (props) => {
         </div>
         </div>
       </div>
-    </div>
+      </div>
+   
   );
 };
 

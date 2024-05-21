@@ -28,11 +28,13 @@
   border-radius: 20px;
   margin: 0px 10px;
   flex-grow: 1;
-  flex-basis: 200;
+  flex-basis: 400;
 }
 
 .parentLayout {
   display: inline-block;
+  width: 100%;
+
 }
 
 .ExpertLayout {
@@ -42,12 +44,12 @@
   margin: 4px;
   padding: 10px 2px 0px 2px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 8px rgba(80, 78, 78, 0.2); 
 }
 
 .ExpertInfo {
   flex-grow: 1;
-  flex-basis: 200;
+  flex-basis: 400;
 }
 
 .ExpertName {

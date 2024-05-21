@@ -21,7 +21,7 @@ const DownloadMaterial = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 py-4">
+      <div className="grid grid-cols-1  gap-x-4 gap-y-2 py-4">
         <span>
           <BsFilePdfFill size={20} color="red" style={{ display: "inline-block" }} />
           <a href="https://cyberleninka.org/article/n/203.pdf"> Residential Rent Agreement Format </a>

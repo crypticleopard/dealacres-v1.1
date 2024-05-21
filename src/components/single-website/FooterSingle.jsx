@@ -18,7 +18,7 @@ const FooterSingle = () => {
 
             <hr />
 
-            <div className='flex  justify-end items-center p-10'>
+            <div className='flex  justify-center items-center p-10'>
                 <Socialicons />
               
             </div>

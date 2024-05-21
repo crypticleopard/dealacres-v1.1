@@ -30,7 +30,7 @@ const AgentFeedback = () => {
         formState: { errors } } = useForm()
     return (
         <div className='w-full' >
-            <h2 className='font-bold text-xl py-2'>
+            <h2 className='font-bold text-lg py-2'>
                 Leave a Feedback - As your words matter to us
             </h2>
 
@@ -40,17 +40,17 @@ const AgentFeedback = () => {
                 </label>
                 <input id='email' {...register('email', {required: "Email is required."})} className='border border-black outline-none py-1 px-4 rounded shadow' type="text" />
             </div>
-            <div className='flex flex-col md:flex-row  w-full py-1 gap-4'>
+            <div className='flex flex-col md:flex-row  w-full py-0.5 gap-4'>
                 <div className='w-full md:w-1/2 flex flex-col'>
                 <label className='font-bold' htmlFor="title">
                     Title
                 </label>
                     <input type="text" 
                     id='title'
-                    className='border border-black outline-none py-1 px-4 rounded shadow' />
+                    className='border border-black outline-none py-0.5 px-4 rounded shadow' />
                 </div>
                 <div className='w-full md:w-1/2 flex flex-col '>
-                <label className='font-bold' htmlFor="title">
+                <label className='font-bold text-base' htmlFor="title">
                     Rating
                 </label>
                 <div className="flex gap-2  ">
@@ -94,13 +94,13 @@ const AgentFeedback = () => {
                 </div>
             </div>
             <div className='flex flex-col w-full py-2'>
-                <label className='font-bold' htmlFor="email">
+                <label className='font-bold text-base' htmlFor="email">
                     Review
                 </label>
-                <textarea className='border border-black outline-none py-1 px-4 rounded shadow'  />
+                <textarea rows={1} className='border border-black outline-none py-2 px-4 rounded shadow'  />
             </div>
 
-            <button className='w-full py-2 text-white bg-blue-600 rounded shadow text-base sm:text-xl font-bold'>
+            <button className='w-full py-1 text-white bg-blue-600 rounded shadow text-base sm:text-xl font-bold'>
                 Submit
             </button>
 

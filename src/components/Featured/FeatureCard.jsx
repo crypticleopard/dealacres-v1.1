@@ -6,17 +6,17 @@ const FeatureCard = ({
     text
 }) => {
   return (
-    <div className="border-1 shadow-lg transition-all overflow-hidden  hover:bg-neutral-200 cursor-pointer    h-full max-h-full flex flex-col">
+    <div className="border-1 shadow-lg transition-all overflow-hidden  hover:bg-neutral-200 cursor-pointer flex flex-col">
             <div className="flex-grow overflow-clip max-w-full    ">
               <Image
                 src={img}
                 alt="card"
                 className="w-full h-full scale-100 transition-all object-cover hover:scale-[1.3]"
                 width={600}
-                height={1800}
+                height={800}
               />
             </div>
-            <div className="flex  justify-center text-center text-base  font-bold   py-2 px-1 shadow border border-t-0 border-gray-400 ">
+            <div className="flex  justify-center text-center text-base  font-bold px-2 py-1 shadow border border-t-0 border-gray-400 ">
               {text}
             </div>
           </div>

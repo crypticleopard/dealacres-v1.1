@@ -1,5 +1,7 @@
 .sideContainer{
     width: 100%;
+    @apply shadow-md h-fit
+
    
 }
 
@@ -19,11 +21,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .formTermsCond label{
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .formTermsCond label a{
@@ -32,10 +34,10 @@
 
 .sideContainer form button{
     margin: 10px 0 10px 0;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     width: 100%;
-    min-height: 35px;
+    min-height: 30px;
     color: #fff;
     background-color: #0061df;
     border-radius: 30px;

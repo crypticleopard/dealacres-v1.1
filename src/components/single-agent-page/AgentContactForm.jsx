@@ -41,7 +41,7 @@ const AgentContactForm = () => {
                     <ClipLoader color={'#D8E6FE'} size={100} />
                 </div>
             }
-            <h2 className='font-bold text-xl md:text-2xl uppercase'>
+            <h2 className='font-bold text-xl uppercase'>
                 Ask sanya a question
             </h2>
 
@@ -75,11 +75,11 @@ const AgentContactForm = () => {
                     />
                 </div>
             </div>
-            <div className='w-full'>
-                <label htmlFor='contactMessage' className='text-lg'>
+            <div className='w-full mt-1'>
+                <label htmlFor='contactMessage' className='text-base'>
                     What can we do for you?
                 </label>
-                <textarea
+                <textarea rows={1}
 
                     {...register('contactMessage', { required: "Please Enter your message" })} id="contactMessage" className='py-2 w-full px-4 bg-[#D8E6FE] hover:outline-blue-600' />
 
@@ -92,7 +92,7 @@ const AgentContactForm = () => {
             </div>
             <button
                 disabled={isLoading}
-                onClick={handleSubmit(onSubmit)} className='py-2 rounded shadow my-4 flex justify-center items-center bg-blue-600 text-white font-bold text-base md:text-lg w-full disabled:bg-blue-500 disabled:pointer-events-none' >
+                onClick={handleSubmit(onSubmit)} className='py-1 rounded shadow my-3 flex justify-center items-center bg-blue-600 text-white font-bold text-base md:text-lg w-full disabled:bg-blue-500 disabled:pointer-events-none' >
 
                 Send Message
             </button>

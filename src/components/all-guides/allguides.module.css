@@ -36,9 +36,8 @@
 .checkListContainer{
 
     border-radius: 1rem;
-    box-shadow: 15px 0px 0px 0px #E4E4E4, 6px -6px 0px 0px #E4E4E4, -6px -6px 0px 0px #E4E4E4,6px 6px 0px 0px #E4E4E4,
-    -6px 6px 0px 0px #E4E4E4;
     z-index: 2;
+    @apply shadow-xl border-2
 }
 
 .checkList{

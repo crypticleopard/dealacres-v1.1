@@ -1,7 +1,7 @@
 .content2DevcardContainer{
     /* width: 23%; */
     border-radius: 30px;
-    border: 1px solid black;
+    border: 2px solid rgba(0, 0, 10, 0.25); 
     cursor: pointer;
     width: calc(100% / 6 - 8px);
     min-width: 150px;

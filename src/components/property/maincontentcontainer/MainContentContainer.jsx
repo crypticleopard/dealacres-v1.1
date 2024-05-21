@@ -36,7 +36,7 @@ function MainContentContainer(props) {
               <p>{showFull?props.content.about:`${props.content.about.substring(0,600)}`}</p>
               {/* <h6 onClick={()=>setShowFull(!showFull)}>{showFull? 'Show Less':'Show More'}</h6> */}
           </div>
-          <div className='text-[20px]'>
+          <div className='text-[20px]' id='#Overview'>
             <h1>{props.content.title} Overview</h1>
             <Mainoverview overviewData = {props.content.overview} />
           </div>
@@ -47,20 +47,20 @@ function MainContentContainer(props) {
             <h1>Specification: {props.content.title}</h1>
             <Specification specificationData = {props.content.specification}/>
           </div>
-          <div>
+          <div id="#Amenities">
             <h1>Amenities</h1>
             <Amenities ameData={props.content.Amenities}/>
           </div>
-          <div>
+          <div id='#MortgageCalculator'>
             <h1>Mortgage Calculator</h1>
             <MortgageCalculator/>
           </div>
-          <div>
+          <div id='#About Builder'>
             <h1> About Developer</h1>
             <Developerinfo devData = {props.content.aboutDeveloper}/>
           </div>
           <div className = {styles.mainContainerLine}></div>
-          <div>
+          <div id='#Locality Overview'>
             <h1 className=''>Locality Overview</h1>
             <Locality localityData = {props.content.localityOverview} desc={true}/>
           </div>

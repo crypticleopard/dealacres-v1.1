@@ -25,7 +25,7 @@ const Explore = () => {
   return (
     <div className="cards-wrapper">
       <div>
-        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-6">
+        <h2 className="text-xl sm:text-2xl font-[Poppins] font-bold text-center py-4">
           {" "}
           Explore! <span className="text-blue-500">Insights and tools</span>
         </h2>

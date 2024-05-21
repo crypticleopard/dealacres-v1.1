@@ -276,7 +276,7 @@ const AreaCalculator = () => {
         </div>
       </div>
 
-      <div className="p-5 mb-10 flex items-center justify-center bg-pink-50 lg:hidden max-lg:px-[10rem] max-lg:py-[4rem] max-md:px-[1rem] max-md:py-[1rem] max-md:mb-5">
+      <div className="p-5 flex items-center justify-center bg-pink-50 lg:hidden max-lg:px-[10rem] max-lg:py-[4rem] max-md:px-[1rem] max-md:py-[1rem]">
         <div className="p-4 w-full border-4 rounded-lg border-blue-400 bg-white">
           <h2 className="text-2xl font-bold">Area Converter</h2>
           <div className="space-y-4 mt-5">

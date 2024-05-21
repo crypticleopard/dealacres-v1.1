@@ -11,9 +11,9 @@ const Header = () => {
   const [category,setCategory] = useState('Buy')
   const headerTitles = {
                         'Buy':'Making your dream home a reality',
-                        'Sell':'Get best deals on your properties',
-                        'Rent':'Rentals at your fingertips',
-                        'Mortgage':'Get access to a vast lender base'
+                        'Rent':'Rent Properties in your Area',
+                        'Residential':'Explore Residential Properties in your Area',
+                        'Commercial':'Explore Commercial Properties in your Area'
                       }
 
   const handleCTAClick = () => {
@@ -56,20 +56,20 @@ const Header = () => {
                   Buy
               </p>
               <p 
-                onClick={()=>setCategory('Sell')}
-                className={category==='Sell'?styles.selected:''}>
-                  Sell
-              </p>
-              <p 
                 onClick={()=>setCategory('Rent')}
                 className={category==='Rent'?styles.selected:''}>
                   Rent
               </p>
+              <p 
+                onClick={()=>setCategory('Residential')}
+                className={category==='Residential'?styles.selected:''}>
+                  Residential
+              </p>
 
               <p 
-                onClick={()=>setCategory('Mortgage')}
-                className={category==='Mortgage'?styles.selected:''}>
-                  Mortgage
+                onClick={()=>setCategory('Commercial')}
+                className={category==='Commercial'?styles.selected:''}>
+                 Commercial
               </p>
           </div>
           <HeaderInput type = {category}/>

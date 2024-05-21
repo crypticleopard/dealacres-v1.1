@@ -5,7 +5,7 @@ import { gurugaon, hariyana } from './Menu';
 const AgentLinks = () => {
   return (
     <div className='flex flex-col gap-5'>
-      <div className='py-2'>
+      <div className=''>
         <h2 className='font-bold text-xl py-3'>REAL ESTATE AGENT IN HARYANA </h2>
         <LinkSection data={hariyana} />
       </div>
@@ -15,7 +15,7 @@ const AgentLinks = () => {
       </div>
 
   
-      <div className='flex items-center justify-center'>
+      <div className='flex items-center justify-center mb-3'>
         <button
           className='bg-blue-500 text-white px-4 py-2 rounded-xl'
           onClick={() => {

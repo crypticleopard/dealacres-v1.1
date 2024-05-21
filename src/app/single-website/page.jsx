@@ -24,13 +24,13 @@ const SingleWebsite = () => {
         <HeroSection />
       </div>
 
-      <div className='max-w-screen-lg mx-auto px-4 pt-12 pb-16'>
+      <div className='max-w-screen-lg mx-auto px-4 py-8'>
         <WelcomeSection />
       </div>
 
       <FindHome img={src1} />
       <div className='bg-[#1A4789]'>
-        <div className="max-w-screen-lg mx-auto text-white font-bold text-xl md:text-2xl flex justify-around py-10 ">
+        <div className="max-w-screen-lg mx-auto text-white font-bold text-xl md:text-2xl flex justify-around py-5 ">
 
           <div className='flex flex-col gap-4  items-center'>
             <span className="rounded-full flex justify-center items-center p-4 border-2 border-white ">
@@ -82,9 +82,9 @@ const SingleWebsite = () => {
 
       </div>
 
-      <div className='max-w-screen-lg mx-auto px-4 py-4'>
-        <div className='text-center py-16'>
-          <h2 className='font-bold text-4xl md:text-6xl p-4'>
+      <div className='max-w-screen-lg mx-auto px-4 py-2'>
+        <div className='text-center pb-8 pt-7'>
+          <h2 className='font-bold text-4xl md:text-5xl px-4'>
             Recommended Project
           </h2>
           <p className='text-lg'>

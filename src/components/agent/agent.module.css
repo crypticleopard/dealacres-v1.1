@@ -2,7 +2,7 @@
   display: flex;
   width: 75%;
   margin: auto;
-  gap: 30px;
+  gap: 10px;
   flex-wrap: wrap;
  
 }
@@ -22,9 +22,7 @@
 
 .sidebar {
   margin-top: 80px;
-  width: 300px;
-  flex-grow: 1;
-  flex-basis: 200;
+  width: 350px;
 }
 
 .MainLayout {
@@ -32,7 +30,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 20px 0px;
-  justify-content: center;
+ 
   gap: 20px;
 }
 .Explore {
@@ -63,8 +61,7 @@
 }
 
 .parentLayout {
-  margin: auto;
-  display: inline-block;
+  width: 100%;
 }
 
 .ExpertLayout {
@@ -78,6 +75,7 @@
 
 .ExpertInfo {
   padding: 0px 10px;
+
   /* flex-grow: 1;
     flex-basis: 200; */
 }

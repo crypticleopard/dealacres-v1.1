@@ -23,26 +23,26 @@ const PropertyCard = ({
   };
 
   return (
-    <div className="p-4 border border-blue-600 rounded-2xl bg-white max-sm:w-full max-md:w-[calc(50%-1rem)] shadow-md">
-      <div className="md:flex md:grid md:grid-cols-3 md:gap-4">
+    <div className="px-2 py-1 border border-blue-600 rounded-2xl bg-white max-sm:w-full max-md:w-[calc(50%-1rem)] shadow-md h-[150px]">
+      <div className="md:grid md:grid-cols-4 md:gap-2">
         <div className="md:col-span-1">
           <div className="rounded-2xl overflow-hidden w-full h-full">
             <img
               src={imageUrl}
               alt="Property Image"
-              className="object-cover rounded-2xl w-full h-full md:h-full"
+              className="object-cover rounded-2xl w-full h-full "
             />
           </div>
         </div>
-        <div className="md:col-span-2 py-2">
-          <p className="text-blue-600 text-md font-semibold">{price}</p>
-          <p className="text-black text-lg font-bold">{name}</p>
+        <div className="md:col-span-3 ">
+          <p className="text-blue-600 text-sm font-semibold">{price}</p>
+          <p className="text-black text-base font-bold">{name}</p>
           <p className="text-gray-600 text-xs mt-3 md:mt-0">{location}</p>
-          <p className="text-gray-600 text-sm mt-1">{size} Sq.ft</p>
-          <p className="text-gray-600 text-sm mt-1">{details}</p>
+          <p className="text-gray-600 text-[0.7rem] mt-1">{size} Sq.ft</p>
+          <p className="text-gray-600 text-[0.7rem]  mt-1">{details}</p>
 
-          <div className="mt-3 flex flex-row items-center justify-between w-full">
-            <button className="bg-blue-700 hover:bg-blue-800 text-white py-1 px-4 rounded">
+          <div className="mt-1 flex flex-row items-center justify-between w-full">
+            <button className="bg-blue-700 hover:bg-blue-800 text-white py-0.5 px-4 rounded text-sm">
               Details
             </button>
 

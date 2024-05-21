@@ -13,7 +13,7 @@ const FindHome = ({
     img
 }) => {
     return (
-        <div className={`max-w-screen min-w-screen relative  flex justify-center items-end min-h-[350px] !overflow-x-hidden`}>
+        <div className={`max-w-screen min-w-screen relative  flex justify-center items-end min-h-[350px] !overflow-x-hidden `}>
          
                 <Image src={img} className='max-w-full min-w-full h-full object-cover  absolute' alt='House / Interior Image.' />
 

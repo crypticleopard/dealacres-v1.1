@@ -11,7 +11,7 @@ const SimilarProject = () => {
 
     return (
         <div>
-            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold pt-2 pb-5 ">
+            <h2 className="text-xl sm:text-3xl lg:text-2xl font-bold  pb-5 ">
                 Similar Project
             </h2>
            

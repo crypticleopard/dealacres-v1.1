@@ -59,12 +59,12 @@ const InvestWithDealAcres = () => {
         <h3 className='py-2 font-bold text-xl md:text-3xl'>
           Dive into this Investment Guide: And Start Investing
         </h3>
-        <p className='text-lg md:text-xl '>
+        <p className='text-lg md:text-xl mb-2'>
           Know what is right for you from experts
         </p>
 
 
-        <div className='flex flex-wrap justify-center md:flex-row md:flex-nowrap gap-8 md:gap-4 items-stretch md:items-start md:justify-start py-8'>
+        <div className='flex flex-wrap justify-center md:flex-row md:flex-nowrap gap-8 md:gap-6 items-stretch md:items-start md:justify-start py-8'>
           <InvestmentGuideCard src={pic1} title={"Why to invest in commercial  Real Estate ?"} content={"Investing in a pre-leased asset may also be a good option as it can start generating revenue instantly."} />
           <InvestmentGuideCard src={pic2} title={"Why to invest in pre-lease property?"} content={"Investing in a pre-leased asset may also be a good option as it can start generating revenue instantly."} />
           <InvestmentGuideCard src={pic3} title={"How to grow wealth with commercial investment ?"} content={"Investing in a pre-leased asset may also be a good option as it can start generating revenue instantly."} />
@@ -80,20 +80,20 @@ const InvestWithDealAcres = () => {
 
         <Cities />
       </div>
-      <div className='py-4'>
+      <div className='py-2'>
         <h3 className='text-xl md:text-3xl font-bold py-4'>
           Frequently Asked Questions
         </h3>
         <CategoryFaq />
       </div>
 
-      <div className="my-8">
+
         <h3 className='font-bold text-xl md:text-3xl py-4 '>
           Interesting Reads
         </h3>
         {/* <IntrestingReading/> */}
         <ArticleSlider />
-      </div>
+  
       </div>
     </div>
   )

@@ -30,7 +30,6 @@
 
 .navbar.scrolled {
     background-color: #0061DF; 
-    opacity: 90%;
     max-height: 30px;
   }
   .navbar.scrolled .navbar-links{
@@ -177,7 +176,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 
@@ -283,13 +282,23 @@
     .navbarPage{
         padding:  0.5rem;
     }
+    .navbar-menu_container h5{
+        font-size: 12px;
+        margin-bottom: 0.5rem;
+    }
+    .navbar-menu_container button{
+        font-size: 12px;
+    }
+    .close{
+        z-index: 20;
+        width: 100%;
+        position: fixed;
+        top: 85%;
+        left: 0;
+    }
     
     .navbar-sign{
         display: none;
-    }
-
-    .navbar-menu_container{
-        top: 20px;
     }
     .navbar-menu_container-links-sign{
         display: block;

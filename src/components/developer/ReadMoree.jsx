@@ -62,7 +62,7 @@ const ReadMoree =() => {
          Interesting Readings
       </h2>
       <Swiper
-        wrapperClass="pb-1 sm:pb-2 md:pb-8 relative "
+        wrapperClass="pb-1 sm:pb-2 md:pb-4 relative "
         spaceBetween={46}
         slidesPerView={1}
         modules={[Pagination, Navigation]}

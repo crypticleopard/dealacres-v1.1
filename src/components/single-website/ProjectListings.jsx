@@ -4,7 +4,7 @@ import imgSrc from '../../../public/single-website/bunglow.webp'
 import src2 from '../../../public/single-website/living-area.jpg'
 const ProjectListings = () => {
     return (
-        <div className='bg-[##F6F6F6]'>
+        <div className='bg-[##F6F6F6] mb-12'>
 
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {[...Array(6)].map(

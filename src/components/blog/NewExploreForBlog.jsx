@@ -5,8 +5,8 @@ import Image from 'next/image'
 const Card = ({ index, imageUrl, heading, bgColor }) => {
     return (
         <div key={index} style={{ background: bgColor }} className="h-[7.5rem] w-[95%] border flex flex-col items-center justify-center gap-3 p-2 rounded-xl text-black">
-            <p className='font-bold text-center text-xs xl:text-[0.82rem]'>{heading}</p>
-            <Image src={imageUrl} width={40} height={60} alt={heading} />
+            <p className='font-bold text-center text-xs xl:text-[0.82rem] h-[2rem]'>{heading}</p>
+            <Image src={imageUrl} width={40} height={60} alt={heading} className='h-9 w-8' />
         </div>
     );
 };

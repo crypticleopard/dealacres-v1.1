@@ -29,12 +29,12 @@ const BudgetRangeSelector = () => {
         className="flex flex-row items-center justify-between cursor-pointer"
         onClick={toggleBudgetVisibility}
       >
-        <p className="text-gray-900 text-lg">Budget</p>
+        <p className="text-gray-900 text-base font-medium">Budget</p>
         {isBudgetVisible ? <FaChevronUp /> : <FaChevronDown />}
       </div>
 
       {isBudgetVisible && (
-        <div className="mt-6">
+        <div className="mt-2">
           <Slider
             value={value}
             onChange={handleChange}
@@ -46,7 +46,7 @@ const BudgetRangeSelector = () => {
             getAriaValueText={valuetext}
           />
 
-          <div className="flex flex-row items-center justify-between mt-6">
+          <div className="flex flex-row items-center justify-between mt-1">
             <Select  placeholder="Min"
               
              />

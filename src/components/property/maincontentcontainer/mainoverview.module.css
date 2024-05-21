@@ -1,9 +1,9 @@
 .mainOverviewContainer {
     width: 100%;
-    border: 1px solid rgba(63, 62, 62, 0.5); 
+    border: 2px solid rgba(0, 0, 10, 0.25); 
     border-radius: 20px;
     padding: 1.5rem 1rem 1.5rem 1rem;
-    box-shadow: 1.5px 1.5px;
+  @apply shadow-lg
 }
 
 .overviewContent{

@@ -72,17 +72,19 @@ function MainContent2() {
         <h5>Popular Projects in Sector 37D</h5>
         <PopularProjects/>
       </div> */}
-        <div className='w-[80%]'>
+       <div id='SimilarLocalities'>
             <h5>Explore nearby localities</h5>
             <Cities/>
-        </div>
-        <div className='w-[80%]'>
+            </div>
+    
         <InsightReview/>
-        </div>
-        <div className='w-[80%]'>
-            <h5>Hotspots in Gurgaon</h5>
+     
+      <div>
+      <h5>Hotspots in Gurgaon</h5>
             <Hotspots/>
-        </div>
+      </div>
+           
+       
         {/* <div className='w-[80%]'>
             <h5>Photos</h5>
             <Photos/>
@@ -91,7 +93,7 @@ function MainContent2() {
             <h5>Top Developers in Sector 37D</h5>
             <Topdev/>
         </div>
-        <div className='py-4 w-[80%]'>
+        <div id='Guides'>
             <h5 className='!mb-0'>Start with these guides</h5>
             <p className='text-gray-400 text-lg py-2'>Know all that you need to know before you start.</p>
             {/* <LocationGuides guides={guidesData}/> */}

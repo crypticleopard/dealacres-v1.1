@@ -70,11 +70,11 @@ const Navbar = () => {
   const [selectedLocation, setSelectedLocation] = useState('Gurugram');
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
   const pathname = usePathname();
-  const isHomePage = pathname === '/' || pathname === '/blog';
+  const isHomePage = pathname === '/' ;
 
   const MenuMobile = () => (
     <>
-      <p>
+      <p className="text-[12px]">
         <a href="#buyer">Buyer</a>
       </p>
       <p>

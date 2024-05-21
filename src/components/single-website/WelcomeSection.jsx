@@ -48,7 +48,7 @@ const WelcomeSection = ({
 
                 
           
-                    <div className={` mx-auto  w-full   md:w-1/2 -order-1  `}>
+                    <div className={` mx-auto  w-full h-[25rem]   md:w-1/2 -order-1  `}>
                         <Image
                             src={houseInHand}
                             className='object-cover w-full h-full'

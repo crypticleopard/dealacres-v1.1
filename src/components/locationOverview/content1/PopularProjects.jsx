@@ -6,7 +6,7 @@ const popularProjectContentStyle = {
   width:'100%',
   display:'flex',
   flexWrap:'wrap',
-  gap: '20px',
+  gap: '10px',
   alignItems:'center',
  margin:'',
 
@@ -18,6 +18,7 @@ function PopularProjects() {
   return (
     <div style={{width:'100%',marginBottom:'1rem'}}>
       <div className="justify-center md:justify-normal" style={popularProjectContentStyle}>
+        <PopularProjectCard/>
         <PopularProjectCard/>
         <PopularProjectCard/>
         <PopularProjectCard/>

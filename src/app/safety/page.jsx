@@ -97,12 +97,12 @@ const SafetyGuide = () => {
         <ContactStrip />
       </div>
 
-      <div className='max-w-screen-xl mx-auto py-4'>
+      <div className='max-w-screen-xl mx-auto '>
         {/* <div className='px-4 md:pl-12 '>
         <p className='font-bold text-3xl'></p>
         <p className='font-light text-xl'></p>
       </div> */}
-        <Guides showHeading guides={guidesData} heading="Explore Our More Guides" subheading="Know all that you need to know before you start." />
+        <Guides showHeading guides={guidesData} heading="Explore Our More Manuals" subheading="Know all that you need to know before you start." />
       </div>
     </div>
   )

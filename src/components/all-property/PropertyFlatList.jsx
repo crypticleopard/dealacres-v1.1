@@ -31,6 +31,16 @@ const properties = [
     size: "730 - 1530",
     details: "3BHK, FLATS, RESIDENTIAL PROPERTIES",
   },
+  {
+    id: 3,
+    imageUrl:
+      "https://media.istockphoto.com/id/1194529868/photo/gurugram-cyber-hub.jpg?s=612x612&w=0&k=20&c=5wt2JdYpRVBhebHxd0EssmnaK8eLWwuKabUqlDwpvAA=",
+    price: "Rs 70.6 L to 2.36 Cr",
+    name: "Signature Global City 93",
+    location: "Sector 93 Gurgaon",
+    size: "730 - 1530",
+    details: "3BHK, FLATS, RESIDENTIAL PROPERTIES",
+  },
 ];
 
 const PropertyFlatList = () => {

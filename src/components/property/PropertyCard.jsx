@@ -3,7 +3,7 @@ import React from 'react';
 
 const PropertyCard = ({ title, description, price, imageSrc }) => {
   return (
-    <div className=" bg-white rounded-[12px]   mb-4 grid grid-rows-[12] ">
+    <div className=" bg-white rounded-[12px]  grid grid-rows-[12] ">
       <img src={imageSrc} alt={title} className=" w-full h-40 object-cover rounded-md mb-4 row-span-8" />
       <div className="row-span-4">
         <h3 className="text-lg md:first-line:text-xl font-bold ">{title}</h3>

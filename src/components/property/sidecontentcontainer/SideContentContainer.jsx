@@ -23,6 +23,7 @@ function SideContentContainer(props) {
   };
 
   return (
+    <div div className="flex flex-col gap-5">
     <div
       style={lato.style}
       className={`${styles.sideContainer}  rounded-xl  p-4`}
@@ -37,6 +38,7 @@ function SideContentContainer(props) {
           margin="dense"
           error={errors.Name !== undefined}
           helperText={errors.Name?.message}
+          rows={1}
           label="Name"
           size="small"
           {...register("Name", {
@@ -77,7 +79,7 @@ function SideContentContainer(props) {
           fullWidth
           margin="dense"
           label="Comments(Optional)"
-          rows={2}
+          rows={1}
           {...register("Comments")}
         />
 
@@ -100,6 +102,8 @@ function SideContentContainer(props) {
         </p>
         <button>Send Message</button>
       </form>
+    
+    </div>
       {props.Addbox ? (
         ""
       ) : (
@@ -107,7 +111,7 @@ function SideContentContainer(props) {
           <Addbox />
         </div>
       )}
-    </div>
+      </div>
   );
 }
 

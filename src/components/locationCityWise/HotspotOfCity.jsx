@@ -49,7 +49,7 @@ const HotspotOfCity = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 py-10 border-b-[1px] border-black">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 py-7 border-b-[1px] border-black">
         <div className="md:col-span-1 bg-blue-50 w-full h-full py-10 px-3 rounded-lg flex flex-col items-start justify-center">
         <h2 className="text-3xl text-blue-700" style={{ fontFamily: "'YAFcfsBCryc 0', _fb_, auto" }}>Residential Properties</h2>
           <p className="text-lg font-semibold mt-2">for Sale in Gurgaon</p>
@@ -106,7 +106,7 @@ const HotspotOfCity = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6 py-7">
         <div className="md:col-span-1 bg-blue-50 w-full h-full py-10 px-3 rounded-lg flex flex-col items-start justify-center">
           <h2 className="text-3xl text-blue-700" style={{ fontFamily: "'YAFcfsBCryc 0', _fb_, auto" }}>
             Commercial Properties

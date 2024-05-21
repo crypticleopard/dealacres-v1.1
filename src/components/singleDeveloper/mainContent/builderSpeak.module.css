@@ -1,8 +1,9 @@
 .builderSpeakContainer{
     width: 100%;
-    border: 1px solid black;
+    border: 2px solid rgba(0, 0, 10, 0.25); 
     border-radius: 20px;
     margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(26, 25, 25, 0.2); 
 }
 
 .subCategories{

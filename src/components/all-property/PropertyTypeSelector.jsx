@@ -38,10 +38,10 @@ const PropertyTypeSelector = () => {
   return (
     <div>
       <div
-        className="flex items-center justify-between cursor-pointer mt-6"
+        className="flex items-center justify-between cursor-pointer mt-4"
         onClick={toggleMainVisible}
       >
-        <p className="text-gray-900 text-lg">Property Type</p>
+        <p className="text-gray-900 text-base font-medium">Property Type</p>
         {isMainVisible ? <FaChevronUp /> : <FaChevronDown />}
       </div>
 
@@ -53,7 +53,7 @@ const PropertyTypeSelector = () => {
               <div
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`cursor-pointer px-4 py-1 border rounded-full w-fit ${
+                className={`cursor-pointer px-4 py-0.5 border rounded-full w-fit text-sm ${
                   selectedTags.includes(tag)
                     ? "bg-blue-500 text-white"
                     : "text-gray-600 border-[1px] border-gray-600"

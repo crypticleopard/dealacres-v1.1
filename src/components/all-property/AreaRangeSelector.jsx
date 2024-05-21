@@ -34,15 +34,15 @@ const AreaRangeSelector = () => {
   return (
     <div>
       <div
-        className="flex flex-row items-center justify-between cursor-pointer mt-6"
+        className="flex flex-row items-center justify-between cursor-pointer mt-4"
         onClick={toggleAreaVisibility}
       >
-        <p className="text-gray-900 text-lg">Area Range</p>
+        <p className="text-gray-900 text-base font-medium">Area Range</p>
         {isAreaVisible ? <FaChevronUp /> : <FaChevronDown />}
       </div>
 
       {isAreaVisible && (
-        <div className="mt-6">
+        <div className="mt-2">
           <Slider
             value={value}
             onChange={handleChange}
@@ -54,7 +54,7 @@ const AreaRangeSelector = () => {
             getAriaValueText={valuetext}
           />
 
-          <div className="flex flex-row items-center justify-between mt-6">
+          <div className="flex flex-row items-center justify-between mt-2">
           <Select  placeholder="Min"
               options={minOptions}
              />

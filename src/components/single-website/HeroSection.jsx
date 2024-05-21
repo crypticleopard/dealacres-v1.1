@@ -11,9 +11,9 @@ const HeroSection = () => {
             </div>
             <div className={`
             z-10 text-white font-bold text-3xl 
-            absolute bg-transparent min-h-[50%] max-w-sm p-4 
+            absolute bg-transparent min-h-[40%] max-w-sm p-4 
 
-            h-[200px] top-[50%] -translate-y-[50%] right-[50%] translate-x-[50%] md:translate-x-[10%] md:right-[10%]
+            h-[150px] top-[50%] -translate-y-[50%] right-[50%] translate-x-[50%] md:translate-x-[10%] md:right-[10%]
             after:absolute after:inset-0 after:bg-black
              after:opacity-[0.7] after:-z-10 text-center after:rounded after:shadow
             flex items-center md:items-start

@@ -80,8 +80,10 @@ const Page = () => {
   return (
     <div>
       <ServiceBanner />
+      <div className='max-w-screen-xl mx-auto'>
       <Experts />
       <AboutRentAgreement />
+      </div>
       <div className="bg-[#EDE4FF] mt-10 mb-3 px-[12rem] py-[3rem] max-md:px-[1rem] max-md:py-[2rem]">
         <div className="grid grid-cols-2 items-center max-lg:grid-cols-1">
           <div>
@@ -112,16 +114,16 @@ const Page = () => {
       </div>
       <DownloadMaterial />
 
-      <div className='px-[12rem] py-[3rem] max-md:px-[1rem] max-md:py-[2rem]'>
+      <div className='px-[12rem] py-[1rem] max-md:px-[1rem] max-md:py-[2rem]'>
         <RentalManual />
 
       </div>
 
 
-      <div className='max-w-screen-lg mx-auto'>
+      <div className='max-w-screen-lg mx-auto mt-4'>
       <InsightReview />
       </div>
-      <div className=" mt-10 mb-3 px-[12rem] py-[1rem] max-md:px-[1rem] max-md:py-[2rem]">
+      <div className="px-[12rem] pt-[1rem] max-md:px-[1rem] max-md:py-[2rem]">
         <EstateService />
       </div>
 

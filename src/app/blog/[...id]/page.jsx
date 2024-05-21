@@ -59,9 +59,9 @@ const allPostsData = [
   }
   ,
   {
-      "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
-      "img": "article-thumb-1.jpg"
-  }
+    "title": "Preparing Your Home for a Loved One with Alzheimer’s: A Caregiver’s Guide",
+    "img": "article-thumb-1.jpg"
+}
   
 ]
 
@@ -124,7 +124,14 @@ const guidesData = [
     "bgColor": "#E4FAFA",
     "borderColor": "#38B6FF",
     "content": "Enhance the harmony of your home with Vastu principles. Our Home Vastu Guide offers insights for a balanced and positive living environment. Learn about the significance of directions, Vastu dos and don'ts, and practical tips for a Vastu-compliant home."
-  }
+  }, {
+    "title": "NRI Guide",
+    "img": "nri.png",
+    "bgColor": "#EDF5FB",
+    "textColor": "#1D8DD6",
+    "borderColor": "#93C6E7",
+    "content": "For NRIs interested in Indian real estate, our NRI Manual provides essential information and guidance. Invest wisely with our expertise. Understand NRI investment options, repatriation rules, and taxation implications. Make sound real estate decisions from abroad.",
+}
 ]
 export default function SingleBlogPage() {
 
@@ -150,7 +157,8 @@ export default function SingleBlogPage() {
 
     <Tabularposts 
     posts={allPostsData} 
-    articles = {articlesData} />
+    articles = {articlesData}
+    articlesHeight="lg:max-h-[420px]" />
 
     <Guides showHeading guides={guidesData}  align="center"/>
 {/* <EstateService /> */}

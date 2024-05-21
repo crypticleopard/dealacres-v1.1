@@ -93,10 +93,12 @@ const DayTimeSelector = ({ day }) => {
           >
             <TimePicker
               value={timing.open}
+              openClockOnFocus={false}
               onChange={(newTime) => handleTimeChange(index, "open", newTime)}
             />
             <TimePicker
               value={timing.close}
+              openClockOnFocus={false}
               onChange={(newTime) => handleTimeChange(index, "close", newTime)}
             />
             <FaTimes

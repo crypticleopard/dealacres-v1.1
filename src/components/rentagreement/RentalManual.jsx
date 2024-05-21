@@ -6,7 +6,7 @@ import styles from "./rentalManual.module.css"
 
 const RentalManual = () => {
   return (
-    <div className='px-4 py-8 bg-[#FAF7F3]'>
+    <div className='p-4 bg-[#FAF7F3]'>
       <div className={styles.RentalManual}>
         <div className={styles.ManualImg}>
             <h3>Explore <br /> Rental Manual</h3>

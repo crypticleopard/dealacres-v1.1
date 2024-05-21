@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ['latin'], weight: ['300','400','500','700','900'
 export default function RootLayout({ children }) {
   const pathname = usePathname();
   const isSingleWebsitePage = pathname === '/single-website';
-  const isSingleBlogPage = /^\/blog\/.+/.test(pathname);
+  const isBlogPage = /^\/blog(\/.+)?$/.test(pathname);
   return (
     <html lang="en">
       <head>
@@ -27,8 +27,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
     
         {isSingleWebsitePage && <NavbarSingle />}
-        {isSingleBlogPage && <NewNavbarForBlog />}
-        {!isSingleWebsitePage && !isSingleBlogPage && <Navbar />}
+        {isBlogPage && <NewNavbarForBlog />}
+        {!isSingleWebsitePage && !isBlogPage && <Navbar />}
         {children}
         {isSingleWebsitePage ? <FooterSingle /> : <Footer />} 
        

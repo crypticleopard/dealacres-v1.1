@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import styles from "./explorebuilder.module.css"
 import Image from 'next/image'
-
+import BasicPagination from '../all-property/Pagination'
 import data from "./dummyData.js"
 
 const ExploreBuilder = () => {
@@ -10,13 +10,13 @@ const ExploreBuilder = () => {
 
 
   const [project, setProject] = useState("Residential");
-  const [projectLimit, setProjectLimit] = useState(4);
+  const [projectLimit, setProjectLimit] = useState(8);
 
   let toggleProjects = () => {
-    if (projectLimit >= 6) {
-      setProjectLimit(4);
-    } else {
+    if (projectLimit >= 8) {
       setProjectLimit(6);
+    } else {
+      setProjectLimit(8);
     }
   };
 
@@ -26,37 +26,39 @@ const ExploreBuilder = () => {
     setIsTruncated(!isTruncated);
   };
 
-  const maxLength = -1;
+  // const maxLength = -1;
 
 
-  // Pagination -->
+  // // Pagination -->
 
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 5;
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const filteredData = data["Property"].slice(indexOfFirstCard, indexOfLastCard);
-  const pageNumbers = Array.from({ length: 10 }, (_, index) => index + 1);
+  // // const pageNumbers = Array.from({ length: 10 }, (_, index) => index + 1);
 
 
-  const nextPage = () => {
-    if (currentPage < Math.ceil(data["Property"].length / cardsPerPage)) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
+  // // const nextPage = () => {
+  // //   if (currentPage < Math.ceil(data["Property"].length / cardsPerPage)) {
+  // //     setCurrentPage(currentPage + 1);
+  // //   }
+  // // };
 
-  const prevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
+  // // const prevPage = () => {
+  // //   if (currentPage > 1) {
+  // //     setCurrentPage(currentPage - 1);
+  // //   }
+  // // };
 
 
 
   return (
     <div className={styles.ExploreBuilder}>
       {filteredData.map((dt, index) => (
-        <div className="mt-12" key={index}>
+       
+        <div className="mt-[1.5rem] " key={index}>
+       
           <div className={styles.TopBuilders}>
             <div className={styles.Logo}>
               <Image
@@ -75,6 +77,7 @@ const ExploreBuilder = () => {
 
             </div>
           </div>
+        
 
           <div className={styles.ProjectCategory}>
             <div className={styles.Category}>
@@ -87,7 +90,7 @@ const ExploreBuilder = () => {
               }}><strong>Commercial Projects</strong></span>
             </div>
             <hr />
-            <br />
+
             <div className={styles.projectLine}>
               {/* Featured start */}
               {dt[project].slice(0, projectLimit).map((property, index) => (
@@ -108,20 +111,21 @@ const ExploreBuilder = () => {
                 </div>
 
               ))}
-              <div className={styles.ViewAll}>
-                <button onClick={toggleProjects}> {(projectLimit <= 4) ? " View All " + project + " Projects" : "View Less"}</button></div>
+             
+          </div>
+          <div className={styles.ViewAll}>
+                <button onClick={toggleProjects}> {(projectLimit <= 8) ? " View All " + project + " Projects" : "View Less"}</button></div>
 
               {/* featured close */}
 
             </div>
-          </div>
 
 
         </div>
 
       ))}
 
-      <div className={styles.pagination}>
+      {/* <div className={styles.pagination}>
 
         <span onClick={prevPage}> {"<"} Previous Page</span>
 
@@ -148,7 +152,8 @@ const ExploreBuilder = () => {
         ))}
 
         <span onClick={nextPage}>Next Page {">"}</span>
-      </div>
+      </div> */}
+      <BasicPagination />
     </div>
   )
 }

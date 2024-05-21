@@ -23,7 +23,7 @@ const BlogsAndNews = () => {
 
                    
                     if(index < 3 || showFull){
-                    return <div key={index} className='col-span-1 h-full max-h-full '> 
+                    return <div key={index} className='col-span-1 h-[18rem] '> 
                             <SingleBlogCard img={index % 2 === 0 ? src2 : src1}
                         title={dummyBlogData.title}
                         tags={dummyBlogData.tags}
@@ -39,7 +39,7 @@ const BlogsAndNews = () => {
 
         </div>
         <div className='text-center'>
-            <button className='bg-black p-4 text-white text-xl shadow rounded'
+            <button className='bg-black px-4 py-2 text-white text-xl shadow rounded mb-2'
             onClick={() => setShowFull(prev => !prev)}
             >
                 View {showFull ? 'Less': 'More'}
