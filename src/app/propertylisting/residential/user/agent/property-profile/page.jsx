@@ -55,6 +55,14 @@ const Page = () => {
                         cols={40}
                         className='my-3 custom-border-2 rounded-md'
                     />
+                      <h1 className="font-medium md:font-bold text-xl">
+                       Property Tile
+                    </h1>
+                    <input
+                                type="text"
+                                className="custom-border-2 rounded-xl px-2 py-1 w-[75%]"
+                               
+                            />
                     <h1 className="font-medium md:font-bold text-xl">
                         Add Room Details
                     </h1>

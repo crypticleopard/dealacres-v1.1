@@ -15,7 +15,7 @@ import AmenitiesSelector from "./AmenitiesSelector";
 
 const PropertyFilter = () => {
   return (
-    <div className="max-xl:hidden w-full h-fit p-4 border-[1px] border-gray-500 bg-white">
+    <div className="max-xl:hidden h-fit p-4 border-[1px] border-gray-500 bg-white">
       <BudgetRangeSelector />
       <PropertyTypeSelector />
       <BHKSelector />

@@ -39,7 +39,7 @@ const Page = () => {
               Add Media
             </h1>
             <FileDropzone onFilesDrop={handleFilesDrop} description={'Uploaded photo is a maximum of 2MB'} />
-            <p className='text-sm mb-5'>At least add 3 images of your property for good visibility and a high response.</p>
+            <p className='text-sm mb-3 mt-1'>At least add 3 images of your property for good visibility and a high response.</p>
             <Link href={isFilesDropped() ? 'pricing' : '#'}>
               
               <button

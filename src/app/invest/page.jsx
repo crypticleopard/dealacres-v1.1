@@ -28,22 +28,22 @@ const InvestWithDealAcres = () => {
 
         {/* choose investment options */}
         <div>
-          <h3 className='py-4 font-bold text-xl md:text-3xl'>
+          <h3 className='py-4 font-bold text-xl md:text-3xl mb-1'>
             Choose Investment Options
           </h3>
-          <div className='flex gap-8 pb-12 flex-wrap md:flex-nowrap'>
+          <div className='flex gap-8 pb-8 flex-wrap md:flex-nowrap'>
             <InvestmentOptionsCard title={"Commercial Projects"} src={src1} bgColor={'bg-[#f1fbec]'} />
             <InvestmentOptionsCard title={"New Launch Projects"} src={src2} bgColor={'bg-[#f1fbec]'} />
             <InvestmentOptionsCard title={"Shop Cum Office"} src={src3} bgColor={'bg-[#f1fbec]'} />
           </div>
 
-          <div className='flex gap-8 pb-12 flex-wrap md:flex-nowrap'>
+          <div className='flex gap-8 pb-8 flex-wrap md:flex-nowrap'>
             <InvestmentOptionsCard title={"Rental Shops"} src={src4} bgColor={'bg-[#addcef]'} />
             <InvestmentOptionsCard title={"Office Space"} src={src5} bgColor={'bg-[#addcef]'} />
             <InvestmentOptionsCard title={"Invest in Plot"} src={src6} bgColor={'bg-[#addcef]'} />
           </div>
 
-          <div className='flex gap-8 pb-12 flex-wrap md:flex-nowrap'>
+          <div className='flex gap-8 pb-8 flex-wrap md:flex-nowrap'>
             <InvestmentOptionsCard title={"Trusted Builders"} src={src7} bgColor={'bg-[#ffd7ca]'} />
           </div>
         </div>
@@ -66,13 +66,13 @@ const InvestWithDealAcres = () => {
         </div>
 
         <div className='md:max-w-[80%] min-[1000px]:max-w-full md:mx-auto '>
-          <h3 className='text-2xl md:text-3xl font-bold py-4'>
+          <h3 className='text-2xl md:text-3xl font-bold py-4 mb-1'>
             Explore Real Estate in Popular Indian Top Cities
           </h3>
           <Cities />
         </div>
         <div className='py-2'>
-          <h3 className='text-xl md:text-3xl font-bold py-4'>
+          <h3 className='text-xl md:text-3xl font-bold py-4 mb-1'>
             Frequently Asked Questions
           </h3>
           <CategoryFaq />
@@ -82,7 +82,8 @@ const InvestWithDealAcres = () => {
           Interesting Reads
         </h3>
         {/* <IntrestingReading/> */}
-        <ArticleSlider />
+        <div className='mb-10'> <ArticleSlider /></div>
+       
       </div>
     </div>
   )

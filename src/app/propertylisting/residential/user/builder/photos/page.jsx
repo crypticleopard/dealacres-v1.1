@@ -37,7 +37,7 @@ const Page = () => {
                     <div className='h-full md:w-[400px] md:mt-12 rounded-xl px-5 border-2 border-blue-200 shadow-md'>
                         <h1 className="font-medium md:font-bold  text-xl  mt-2">
                             Add Media</h1>
-                        <p className='text-xs mb-2'>
+                        <p className='text-xs mb-2 mt-1'>
                             <span
                                 className={` cursor-pointer ${selectedOption === 'Exterior View' ? 'text-blue-600' : ''}`}
                                 onClick={() => setSelectedOption('Exterior View')}

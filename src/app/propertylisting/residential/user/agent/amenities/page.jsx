@@ -7,7 +7,7 @@ import AmenitiesList from "@/components/propertyListing/Amenities";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import FileDropzone from "@/components/propertyListing/FileDropZone";
 import { propertyFacing } from "@/components/propertyListing/constants";
-import Button from "@/components/propertyListing/Button/Button";
+import PropertyFacingButton from "@/components/propertyListing/Button/propertyFacingButton";
 import PostModal from "@/components/propertyListing/PostModal";
 import FeedbackModal from "@/components/propertyListing/FeedbackModal";
 import { DndProvider } from 'react-dnd';
@@ -28,16 +28,9 @@ const Page = () => {
         setIsGDPRChecked((prevChecked) => !prevChecked);
     };
     const handlePropertyFacingChange = (face) => {
-        setSelectedPropertyFacing((prevFacing) => {
-            const updatedFacing = new Set(prevFacing);
-            if (updatedFacing.has(face)) {
-                updatedFacing.delete(face);
-            } else {
-                updatedFacing.add(face);
-            }
-            return [...updatedFacing];
-        });
+        setSelectedPropertyFacing(face);
     };
+    
 
     const openPostModal = () => {
         setIsPostModalOpen(true);
@@ -82,13 +75,13 @@ const Page = () => {
                             Property Facing
                         </h1>
                         {propertyFacing.map((face, idx) => (
-                            <Button
-                                key={idx}
-                                heading={face}
-                                onClick={() => handlePropertyFacingChange(face)}
-                                selected={selectedPropertyFacing.includes(face)}
-                            />
-                        ))}
+                <PropertyFacingButton
+                  key={idx}
+                  heading={face}
+                  onClick={() => handlePropertyFacingChange(face)}
+                  isActive={selectedPropertyFacing === face}
+                />
+              ))}
                         <h1 className="font-medium md:font-bold  text-xl my-2">
                             Upload Floor Plan
                         </h1>

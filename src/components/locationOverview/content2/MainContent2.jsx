@@ -66,7 +66,7 @@ const guidesData = [
     }
   ]
 function MainContent2() {
-  const dynamicSlidesToShow = 3.02;
+  const dynamicSlidesToShow = 3;
   return (
     <div className={styles.mainContainer2} style={lato.style}>
         {/* <div className='md:max-w-[68%]'>  

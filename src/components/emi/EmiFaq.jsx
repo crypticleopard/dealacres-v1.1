@@ -7,32 +7,42 @@ const EmiFaq = () => {
     {
       question: "What is an EMI?",
       answer:
-        "Gurgaon is often considered a good place to live due to its modern infrastructure, job opportunities, and proximity to Delhi. However, the experience may vary depending on individual preferences and needs.",
+        "An EMI, or Equated Monthly Installment, is a fixed monthly payment made by a borrower to a lender on a specified date each month. It comprises both principal and interest components, ensuring the loan is paid off in full over a predetermined period. EMIs provide a structured and predictable repayment schedule for loans.",
     },
     {
       question: "What is a Home-Loan EMI?",
       answer:
-        "Yes, Gurgaon is home to several well-equipped hospitals and healthcare facilities, including Medanta - The Medicity, Fortis Memorial Research Institute, and Artemis Hospital, among others.",
+        "A home loan EMI is a monthly installment paid by a borrower to repay a home loan. It includes both the principal amount and the interest charged on the loan. The EMI amount remains constant throughout the loan tenure, helping borrowers manage their finances effectively by ensuring a steady repayment plan.",
     },
     {
       question: "What is a Pre-EMI?",
       answer:
-        "Gurgaon offers a variety of attractions, including Cyber Hub, Kingdom of Dreams, Damdama Lake, and Ambience Mall, where residents and visitors can enjoy entertainment, dining, and shopping.",
+        "Pre-EMI refers to the interest paid on a home loan during the construction period of a property. During this period, only the interest component is paid, and the actual EMI payments (including both principal and interest) start after the full loan amount is disbursed and the construction is completed.",
     },
     {
       question: "Should I opt for EMI?",
       answer:
-        "Gurgaon is generally considered safe for families. It has a relatively low crime rate compared to some other Indian cities. However, it's always advisable to take necessary precautions and stay informed about the local safety situation.",
+        "Opting for pre-EMI can be beneficial if you expect the construction to be completed soon or if you want lower initial outflows. However, it can lead to a longer overall repayment period and potentially higher total interest costs. Consider your financial stability, loan terms, and construction timeline before deciding.",
     },
     {
-      question: "How is Home Loan EMI calcuated?",
+      question: "Can I pay EMI after the due date?",
       answer:
-        "The cost of living in Gurgaon can vary widely depending on your lifestyle and housing choices. It is generally considered to be higher than many other Indian cities, especially in terms of housing and dining out.",
+        "Paying EMI after the due date is generally possible but may attract late payment fees and negatively impact your credit score. Most lenders offer a grace period, but it's important to communicate with your lender if you anticipate a delay. Consistent late payments can lead to more severe financial repercussions."
     },
     {
-      question: "How is the public transportation system in Gurgaon?",
+      question: "How is home loan EMI calculated?",
       answer:
-        "Gurgaon has a developing public transportation system, including a metro network, public buses, and auto-rickshaws. The availability and convenience of public transport may depend on your location within the city.",
+        'Home loan EMI is calculated using the formula:EMI=𝑃×𝑟×(1+𝑟)𝑛(1+𝑟)𝑛−1EMI=(1+r)n−1P×r×(1+r)n​ where 𝑃P is the principal loan amount, 𝑟r is the monthly interest rate (annual rate divided by 12), and 𝑛n is the total number of EMIs (loan tenure in months). This formula accounts for both principal repayment and interest charges.',
+    },
+    {
+      question: "Which is a better loan or EMI?",
+      answer:
+        'Choosing between a loan and EMI depends on the individual financial situation. EMIs provide a structured repayment schedule, making large loans more manageable. Opt for a loan with EMIs if you need significant funds upfront and prefer predictable monthly payments. Evaluate the interest rates, loan tenure, and total repayment amount when making a decision.'
+    },
+    {
+      question: "Can I repay my EMI at once?",
+      answer:
+        'Yes, you can repay your EMI at once through a process called prepayment or foreclosure. This helps in reducing the loan tenure and total interest paid. However, some lenders might charge prepayment penalties. Review your loan agreement for terms and conditions related to prepayment before proceeding.'
     },
   ];
 
@@ -72,7 +82,7 @@ const EmiFaq = () => {
             <hr/>
             </>
             {openIndex === index && (
-              <div className="mt-2 text-gray-600">{faq.answer}</div>
+              <div className="mt-2 text-gray-600 p-2">{faq.answer}</div>
             )}
           </div>
         ))}

@@ -25,7 +25,6 @@ const AllProperty = () => {
     console.info("You clicked a breadcrumb.");
   }
 
-
   const breadcrumbs = [
     <Link
       underline="hover"
@@ -42,17 +41,14 @@ const AllProperty = () => {
     </Typography>,
   ];
 
-
   const { compareProperties } = useCompareProperty();
-
+  const hasCompareProperties = compareProperties.length > 0;
 
   return (
-    
-   
-       
-      <div className=" py-[3rem] px-[8rem] md:mx-[4%]  w-full rounded-xl max-md:px-[4rem] max-sm:px-5">
-        <div className="flex flex-row w-full">
-          <div className="w-[25%] max-xl:w-0">
+    <div className="p-[3rem] w-full rounded-xl max-md:px-[4rem] max-sm:px-5">
+      <div className={`flex  w-full mx-auto ${hasCompareProperties ? 'max-w-screen-xl ' : 'max-w-[1000px]'}`}>
+        <div className={`flex flex-col md:flex-row items-center md:items-start`}>
+          <div className={`${hasCompareProperties ? 'w-[25%]':'w-[70%]'} my-4 text-center md:text-left`}>
             <div className="my-4 max-xl:hidden">
               <Stack spacing={2}>
                 <Breadcrumbs
@@ -67,20 +63,24 @@ const AllProperty = () => {
             <ConnectWithTopAgents />
           </div>
 
-    
-          <PropertyFlatList />
+     <div className={`${hasCompareProperties ? 'w-[50%]':'w-full'}`}>
+     <PropertyFlatList />
+     </div>
+          
 
-         
-          {compareProperties.length > 0 
-        && (
-            <ProjectCompareSidebar />
+
+          {hasCompareProperties && (
+            
+              <ProjectCompareSidebar />
           )}
         </div>
+      </div>
+      <div className="mt-8">
         <Insights />
         <InterestingReads />
         <FNQ />
       </div>
-
+    </div>
   );
 };
 

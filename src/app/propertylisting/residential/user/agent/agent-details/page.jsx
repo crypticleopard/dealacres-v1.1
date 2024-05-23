@@ -35,19 +35,19 @@ const Page = () => {
                         <p className="text-md font-semibold text-gray-500 my-2">Are You RERA registered? </p>
                         <div className="flex flex-row items-center gap-2 mb-2">
                             <button
-                                className={`h-full rounded-full border px-3 py-1 text-md ${selectedOption === 'yes' ? 'border-gray-800' : 'hover:border hover:border-gray-800'} ${selectedOption === 'yes' ? 'text-gray-800' : 'text-gray-500'}`}
+                                className={`h-full rounded-full border border-blue-400 px-3 py-1 text-md ${selectedOption === 'yes' ? 'bg-blue-200' : 'hover:border hover:border-blue-800'} ${selectedOption === 'yes' ? 'text-gray-800' : 'text-gray-500'}`}
                                 onClick={() => handleOptionSelection('yes')}
                             >
                                 yes
                             </button>
                             <button
-                                className={`h-full rounded-full border px-3 py-1 text-md ${selectedOption === 'I have applied' ? 'border-gray-800' : 'hover:border hover:border-gray-800'} ${selectedOption === 'I have applied' ? 'text-gray-800' : 'text-gray-500'}`}
+                                className={`h-full rounded-full border border-blue-400 px-3 py-1 text-md ${selectedOption === 'I have applied' ? 'bg-blue-200' : 'hover:border hover:border-blue-800'} ${selectedOption === 'I have applied' ? 'text-gray-800' : 'text-gray-500'}`}
                                 onClick={() => handleOptionSelection('I have applied')}
                             >
                                 I have applied
                             </button>
                             <button
-                                className={`h-full rounded-full border px-3 py-1 text-md ${selectedOption === 'Not Applicable' ? 'border-gray-800' : 'hover:border hover:border-gray-800'} ${selectedOption === 'Not Applicable' ? 'text-gray-800' : 'text-gray-500'}`}
+                                className={`h-full rounded-full border border-blue-400 px-3 py-1 text-md ${selectedOption === 'Not Applicable' ? 'bg-blue-200' : 'hover:border hover:border-blue-800'} ${selectedOption === 'Not Applicable' ? 'text-gray-800' : 'text-gray-500'}`}
                                 onClick={() => handleOptionSelection('Not Applicable')}
                             >
                                 Not Applicable
@@ -59,19 +59,19 @@ const Page = () => {
                         <p className="text-sm font-semibold text-gray-500 mb-1">Type of Firm</p>
                         <div className="flex flex-row items-center gap-2 mb-4">
                             <button
-                                className={`h-full rounded-md border-r-2 border-l-2 border-t border-b border-blue-800 px-3 text-gray-500 text-sm py-1 ${selectedType === 'Partnership' ? 'border-gray-800' : 'hover:border hover:border-gray-800'}`}
+                                className={`h-full rounded-md border-r-2 border-l-2 border-t border-b border-blue-400 px-3 text-gray-500 text-sm py-1 ${selectedType === 'Partnership' ? 'bg-blue-200' : 'hover:border hover:border-blue-800'}`}
                                 onClick={() => handleSelect('Partnership')}
                             >
                                 Partnership
                             </button>
                             <button
-                                className={`h-full rounded-md border-r-2 border-l-2 border-t border-b border-blue-800 px-3 text-gray-500 text-sm py-1 ${selectedType === 'Proprietor' ? 'border-gray-800' : 'hover:border hover:border-gray-800'}`}
+                                className={`h-full rounded-md border-r-2 border-l-2 border-t border-b border-blue-400 px-3 text-gray-500 text-sm py-1 ${selectedType === 'Proprietor' ? 'bg-blue-200' : 'hover:border hover:border-blue-800'}`}
                                 onClick={() => handleSelect('Proprietor')}
                             >
                                 Proprietor
                             </button>
                             <button
-                                className={`h-full rounded-md border-r-2 border-l-2 border-t border-b border-blue-800 px-3 text-gray-500 text-sm py-1 ${selectedType === 'Company' ? 'border-gray-800' : 'hover:border hover:border-gray-800'}`}
+                                className={`h-full rounded-md border-r-2 border-l-2 border-t border-b border-blue-400 px-3 text-gray-500 text-sm py-1 ${selectedType === 'Company' ? 'bg-blue-200' : 'hover:border hover:border-blue-800'}`}
                                 onClick={() => handleSelect('Company')}
                             >
                                 Company

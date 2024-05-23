@@ -117,11 +117,11 @@ const Page = () => {
           <div className="relative ">
             <input
               type="text"
-              className='custom-border-2 px-4 py-4 rounded-lg'
+              className='custom-border-2 px-4 pt-5 pb-3 rounded-lg'
               value={brokenCharge}
               onChange={(e) => setBrokenCharge(e.target.value)} />
             <label className='absolute text-xs top-[20%] left-2 transform -translate-y-1/2'>Enter Brokrage Charges</label>
-            <FaRupeeSign className='absolute top-[60%] left-1 transform -translate-y-1/2 text-lg ' />
+            <FaRupeeSign className='absolute top-[60%] left-1 transform -translate-y-1/2 text-base ' />
           </div>
           <div className='my-6'>
             <div className='flex flex-row items-center gap-2'>

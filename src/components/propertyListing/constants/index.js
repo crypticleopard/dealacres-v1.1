@@ -105,9 +105,9 @@ export const faqData = [
     'South',
     'East',
     'West',
-    'North - East',
-    'North - West',
-    'South - East',
-    'South - West',
+    'North-East',
+    'North-West',
+    'South-East',
+    'South-West',
   ];
   

@@ -1,4 +1,4 @@
-// FeedbackModal.js
+
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
@@ -19,7 +19,7 @@ const FeedbackModal = ({ isOpen, onClose }) => {
               <h1 className="text-xl font-bold">How was your Experience?</h1>
               <Image src={'/propertyListing/assets/feedback.png'} alt='feedback' width={200} height={100} />
               <Link href={'/propertylisting'} >
-                <button
+                <button 
                
                   type="submit"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 px-4 rounded text-base "

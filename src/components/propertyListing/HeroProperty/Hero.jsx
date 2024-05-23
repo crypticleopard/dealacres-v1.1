@@ -126,7 +126,10 @@ const Hero = () => {
                 </p>
                 
                 <input className='custom-border-2 px-4 py-1 rounded-xl' />
-                <p className='text-xs mt-5 pb-1'>Are you a Registered user?<span className='text-blue-500'>Login</span> </p>
+                <p className='text-xs mt-5 pb-1'>Are you a Registered user?<span className='text-blue-500 ml-1'>
+                <Link href={generateDynamicPath()}>
+                    Login</Link>
+                    </span> </p>
                 <Link href={generateDynamicPath()}>
                     <button className='w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mb-6 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600'>Start Now</button>
                 </Link>

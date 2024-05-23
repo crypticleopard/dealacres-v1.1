@@ -12,16 +12,16 @@ const NewBlogHead = () => {
   ];
 
   return (
-    <div className='h-[787.5px] overflow-hidden md:h-[675px] lg:max-h-[88vh] w-screen max-w-full relative after:absolute after:bg-black/50 after:w-full after:h-full after:left-0 text-white after:z-[7]'>
+    <div className='h-[750px] overflow-hidden md:h-[675px] lg:max-h-[88vh] w-screen max-w-full relative after:absolute after:bg-black/50 after:w-full after:h-full after:left-0 text-white after:z-[7]'>
       <div className='absolute w-full h-full z-[5] '>
         <Image src={img} alt={'Luxurious House'} className='w-full h-full object-cover' />
         <div className='absolute top-0 left-0 w-full h-full bg-black opacity-40'></div>
       </div>
       
 
-      <div className=' absolute top-[80px] z-[8] w-full h-full px-4 py-8 flex flex-col gap-4  items-center'>
-        <div className='text-xl py-4 inline font-bold self-start'>
-          Information {' '} <span className='bg-white p-2 text-black text-2xl'> HUB</span>
+      <div className=' absolute top-[20px] z-[8] w-full h-full px-4 py-8 flex flex-col gap-4  items-center'>
+        <div className='text-3xl py-4 inline font-bold self-start ml-20'>
+          Information {' '} <span className='bg-white p-2 text-black text-3xl'> HUB</span>
         </div>
 
         {/* <div className='flex justify-center self-stretch w-full'>

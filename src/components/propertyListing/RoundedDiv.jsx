@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const RoundedDiv = ({ size, width, height, onClick, dropdown, dropdownLength, selectedFloor }) => {
+const RoundedDiv = ({ size, width, height, onClick, dropdown, dropdownLength, selectedFloor, onSelectionChange }) => {
   const [selectedOptions, setSelectedOptions] = useState({});
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -14,12 +14,16 @@ const RoundedDiv = ({ size, width, height, onClick, dropdown, dropdownLength, se
   }, [selectedFloor]);
 
   const handleButtonClick = (index) => {
+    const selectedValue = index + 1;
     setSelectedOptions(prevOptions => ({
       ...prevOptions,
-      [selectedFloor]: index + 1
+      [selectedFloor]: selectedValue
     }));
     if (onClick) {
-      onClick(index + 1);
+      onClick(selectedValue);
+    }
+    if (onSelectionChange) {
+      onSelectionChange(selectedValue);
     }
   };
 
@@ -29,6 +33,9 @@ const RoundedDiv = ({ size, width, height, onClick, dropdown, dropdownLength, se
       [selectedFloor]: option
     }));
     setShowDropdown(false);
+    if (onSelectionChange) {
+      onSelectionChange(option);
+    }
   };
 
   const dropdownOptions = Array.from({ length: dropdownLength }, (_, index) => index + size + 1);
@@ -56,7 +63,7 @@ const RoundedDiv = ({ size, width, height, onClick, dropdown, dropdownLength, se
         <div className="relative ml-4 ">
           <button
             onClick={() => setShowDropdown(!showDropdown)}
-            className={`flex items-center justify-center rounded-full w-[35px] h-[35px] border  border-blue-700 bg-${showDropdown ? 'gray-200' : 'white'}`}
+            className={`flex items-center justify-center rounded-full w-[30px] h-[30px] border  border-blue-700 bg-${showDropdown ? 'gray-200' : 'white'}`}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

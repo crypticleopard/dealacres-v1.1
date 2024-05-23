@@ -47,7 +47,7 @@ const PropertyFlatList = () => {
   const { compareProperties } = useCompareProperty();
 
   return (
-    <div className="w-[50%] px-[2rem] max-xl:w-full max-md:px-0">
+    <div className="px-[2rem] max-xl:w-full max-md:px-0">
       <div className="flex items-center justify-between space-x-4">
         <h2 className="text-3xl font-bold max-md:text-xl">
           All Properties in Gurgaon

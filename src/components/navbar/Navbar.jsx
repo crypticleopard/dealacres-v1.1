@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { useParams, usePathname } from 'next/navigation'
 import "./navbar.css";
 import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
@@ -9,19 +9,16 @@ import FlyoutMenuSections from "./FlyoutMenuSections";
 import { BsFillArrowDownSquareFill } from "react-icons/bs";
 import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
 
-const Menu = ({ setMenuPosition, setHoveredMenu, hoveredMenu }) => {
+const Menu = ({ setMenuPosition, setHoveredMenu }) => {
   const handleMouseEnter = (menu, event) => {
     
-    if (hoveredMenu === menu) {
-      setHoveredMenu(null);
-      setMenuPosition(null);
-    } else {
+    
       setHoveredMenu(menu);
       if (event) {
         const rect = event.currentTarget.getBoundingClientRect();
         setMenuPosition({ top: rect.bottom, left: rect.left });
       }
-    }
+   
   };
 
 
@@ -69,6 +66,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState('Gurugram');
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
+  const menuRef = useRef(null);
   const pathname = usePathname();
   const isHomePage = pathname === '/' ;
 
@@ -121,6 +119,18 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setHoveredMenu(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
 
@@ -196,7 +206,7 @@ const Navbar = () => {
           <Menu
             setMenuPosition={setMenuPosition}
             setHoveredMenu={setHoveredMenu}
-            hoveredMenu={hoveredMenu}
+           
           />
         </div>
         <div className="navbar-sign">
@@ -228,6 +238,7 @@ const Navbar = () => {
       </Link>
       {hoveredMenu && (
         <div
+          ref={menuRef}
           className="flyout-menu-container mt-6"
           style={{ top: menuPosition.top, left: menuPosition.left }}
         >

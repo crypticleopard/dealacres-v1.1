@@ -62,25 +62,25 @@ const Page = () => {
                 <div className='flex flex-col'>
                     <h1 className="font-semi-bold md:text-3xl text-xl  mb-4">
                         Before listing your property<br /> buyer should know about you?</h1>
-                    <div className='h-full md:w-[400px] rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4'>
+                    <div className='h-full md:w-[400px] rounded-xl p-5 border-2 border-blue-200 shadow-md'>
                         <h1 className='text-xl text-gray-500 font-semibold'>Before you post... let buyers know who you are</h1>
                         <p className='text-xs text-gray-400 font-extralight'>This Details will seriously help buyers to connect with you</p>
                         <p className="text-md font-semibold text-gray-500 my-2">Are You RERA registered? </p>
                         <div className="flex flex-row items-center gap-2 mb-2">
                             <button
-                                className={`h-full rounded-full border px-3 py-1 text-md ${selectedOption === 'yes' ? 'border-gray-800' : 'hover:border hover:border-gray-800'} ${selectedOption === 'yes' ? 'text-gray-800' : 'text-gray-500'}`}
+                                className={`h-full rounded-full border border-blue-400 px-3 py-1 text-md ${selectedOption === 'yes' ? ' bg-blue-200' : 'hover:border hover:border-blue-800'} ${selectedOption === 'yes' ? 'text-gray-800' : 'text-gray-500'}`}
                                 onClick={() => handleOptionSelection('yes')}
                             >
                                 yes
                             </button>
                             <button
-                                className={`h-full rounded-full border px-3 py-1 text-md ${selectedOption === 'I have applied' ? 'border-gray-800' : 'hover:border hover:border-gray-800'} ${selectedOption === 'I have applied' ? 'text-gray-800' : 'text-gray-500'}`}
+                                className={`h-full rounded-full border border-blue-400 px-3 py-1 text-md ${selectedOption === 'I have applied' ? ' bg-blue-200' : 'hover:border hover:border-blue-800'} ${selectedOption === 'I have applied' ? 'text-gray-800' : 'text-gray-500'}`}
                                 onClick={() => handleOptionSelection('I have applied')}
                             >
                                 I have applied
                             </button>
                             <button
-                                className={`h-full rounded-full border px-3 py-1 text-md ${selectedOption === 'Not Applicable' ? 'border-gray-800' : 'hover:border hover:border-gray-800'} ${selectedOption === 'Not Applicable' ? 'text-gray-800' : 'text-gray-500'}`}
+                                className={`h-full rounded-full border border-blue-400 px-3 py-1 text-md ${selectedOption === 'Not Applicable' ? ' bg-blue-200' : 'hover:border hover:border-blue-800'} ${selectedOption === 'Not Applicable' ? 'text-gray-800' : 'text-gray-500'}`}
                                 onClick={() => handleOptionSelection('Not Applicable')}
                             >
                                 Not Applicable
@@ -91,13 +91,13 @@ const Page = () => {
                         <p className='text-sm font-semibold text-gray-500 mb-1'>License Type</p>
                         <div className='flex flex-row items-center gap-2 mb-4'>
                             <button
-                                className={`h-full rounded-2xl border-r-2 border-l-2 border-t border-b ${selectedLicenseType === 'Individual' ? 'border-gray-800' : 'border-gray-500 hover:border-gray-800'} px-3 text-gray-500 text-sm py-1`}
+                                className={`h-full rounded-2xl border-r-2 border-l-2 border-t  border-blue-400 border-b ${selectedLicenseType === 'Individual' ? ' bg-blue-200' : 'hover:border hover:border-blue-800'} px-3 text-gray-500 text-sm py-1`}
                                 onClick={() => handleLicenseTypeSelection('Individual')}
                             >
                                 Individual
                             </button>
                             <button
-                                className={`h-full rounded-2xl border-r-2 border-l-2 border-t border-b ${selectedLicenseType === 'Firm' ? 'border-gray-800' : 'border-gray-500 hover:border-gray-800'} px-3 text-gray-500 text-sm py-1`}
+                                className={`h-full rounded-2xl border-r-2 border-l-2 border-t  border-blue-400 border-b ${selectedLicenseType === 'Firm' ? ' bg-blue-200' : 'hover:border hover:border-blue-800'} px-3 text-gray-500 text-sm py-1`}
                                 onClick={() => handleLicenseTypeSelection('Firm')}
                             >
                                 Firm

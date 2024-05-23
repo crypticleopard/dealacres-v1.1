@@ -66,7 +66,15 @@ const Page = () => {
                         className='my-3 custom-border-2 rounded-md'
                         onChange={handleInputChange}
                     />
-                    <h1 className="font-medium md:font-bold text-xl">
+                       <h1 className="font-medium md:font-bold text-xl">
+                       Property Tile
+                    </h1>
+                    <input
+                                type="text"
+                                className="custom-border-2 rounded-xl px-2 py-1 w-[75%]"
+                               
+                            />
+                    <h1 className="font-medium md:font-bold text-xl mt-3">
                         Add Room Details
                     </h1>
                     <RoundedDiv width={30} height={30} size={8} />
@@ -74,11 +82,11 @@ const Page = () => {
                         Number of Bathrooms
                     </h1>
                     <RoundedDiv width={30} height={30} size={8} />
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
+                    <h1 className="font-medium md:font-bold text-xl mt-3">
                         Number of Balconies
                     </h1>
                     <RoundedDiv width={30} height={30} size={8} />
-                    <h1 className="font-medium md:font-bold text-xl mt-2">Other Rooms</h1>
+                    <h1 className="font-medium md:font-bold text-xl mt-3">Other Rooms</h1>
                     <div className='w-[70%] grid grid-cols-2 gap-2 my-2'>
                         <div className={`h-full bg-[#c9e0ee] py-2 px-2 rounded-md cursor-pointer ${selectedRoom === 'Pooja Room' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleRoomSelection('Pooja Room')}>
                             Pooja Room
