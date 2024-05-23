@@ -8,6 +8,7 @@ import BottomNav from "@/components/localities/BottomNav";
 import ViewAll from "@/components/localities/ViewAll";
 
 import headerMapImage from "../../../../public/localities/small-header-map-icon.png";
+import Insights from "@/components/localities/Insights";
 
 const SingleLocality = () => {
   const { id: stateId } = useParams();
@@ -34,15 +35,13 @@ const SingleLocality = () => {
       );
     } else if (currentActiveDashboard === "Insights") {
       return (
-        <div className="text-6xl flex items-center justify-center p-[10rem]">
-          Insights Content
-        </div>
+       
+          <Insights />
+       
       );
     } else {
       return (
-        <div className="text-6xl flex items-center justify-center p-[10rem]">
-          Insights Content
-        </div>
+        <Insights />
       );
     }
   };

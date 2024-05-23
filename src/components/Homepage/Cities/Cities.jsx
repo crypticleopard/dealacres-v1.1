@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -7,7 +6,7 @@ import "./Cities.css";
 import Card from './Card'
 import Link from 'next/link'
 
-const Cities = (props) => {
+const Cities = ({ title, slidesToShow = 4 }) => {
   
   const citiesData = [
     { title: "Mumbai", content: "This is the content of City 1" },
@@ -31,10 +30,10 @@ const Cities = (props) => {
     infinite: true,
     speed: 150,
     centerPadding: "60px",
-    slidesToShow: 4,
+    slidesToShow: slidesToShow,
     className: "center",
     slidesToScroll: 2,
-    autoplay:true,
+    autoplay: true,
     rows: 2,
     arrows: false,
 
@@ -42,20 +41,20 @@ const Cities = (props) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: Math.min(slidesToShow, 2),
           slidesToScroll: 2,
           infinite: true,
           dots: true,
-          arrows:false
+          arrows: false
         }
       },
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: Math.min(slidesToShow, 2),
           slidesToScroll: 2,
-          rows:1,
-          arrows:false
+          rows: 1,
+          arrows: false
         }
       },
       {
@@ -63,7 +62,7 @@ const Cities = (props) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows:false
+          arrows: false
         }
       }
     ],
@@ -71,10 +70,18 @@ const Cities = (props) => {
 
   return (
     <div className="bg-white mb-5">
-        {props.title && <div className="my-4 py-4 "><h2 className=" pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700"><span className="text-blue-600 block sm:inline"> Explore</span> Real Estate in Popular Indian Cities</h2></div>}
-      <Slider {...settings} className="" >
+      {title && (
+        <div className="my-4 py-4">
+          <h2 className="pb-4 text-sm sm:text-lg md:text-2xl lg:text-3xl text-center font-semibold font-[Poppins] text-gray-700">
+            <span className="text-blue-600 block sm:inline"> Explore</span> Real Estate in Popular Indian Cities
+          </h2>
+        </div>
+      )}
+      <Slider {...settings}>
         {citiesData.map((city, index) => (
-          <Link href='#' key={index} className="mb-4"><Card  title={city.title} content={city.content} /></Link>
+          <Link href='#' key={index} className="mb-4">
+            <Card title={city.title} content={city.content} />
+          </Link>
         ))}
       </Slider>
     </div>

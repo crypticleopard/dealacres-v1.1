@@ -135,23 +135,30 @@ const NewExploreForBlog = () => {
         },
     ];
   return (
-    <div className='flex flex-row w-full items-center gap-4 mb-10'>
-        <div className='p-4 bg-red-100 w-[45%] rounded-md '>
-        <h2 className='text-3xl'><span className=' text-amber-500 text-5xl'>Explore</span> Our Services</h2>
-        <p className='text-base mt-2 text-gray-700'>Make your life easier with our services</p>
-        <Image src="/estateblog.webp"  alt='estate blog'  width={280} height={280} className='my-3' />
-        <h2 className='text-2xl font-bold'>Get assistance in selling faster</h2>
-        <p className='text-base mt-2 text-gray-700'>Dedicated Relationship manager to<br/> help you business faster.</p>
-        <p className='text-2xl font-bold text-blue-600 mt-4'>List Your Business</p>
-        </div>
-        <div className='grid grid-cols-5 w-[55%] gap-2'>
-               
-                {cardData.map((card, index) => (
-                    <Card key={index} imageUrl={card.imageUrl} heading={card.heading} bgColor={card.bgColor} />
-                ))}
-            </div>
-
+    <div className='flex flex-row w-full items-center gap-4 mb-6'>
+    <div className='p-4 bg-red-100 w-full md:w-[45%] rounded-md'>
+        <h2 className='text-lg md:text-3xl'>
+            <span className=' text-amber-500 text-3xl md:text-5xl'>Explore</span> Our Services
+        </h2>
+        <p className='text-xs md:text-base mt-2 text-gray-700'>Make your life easier with our services</p>
+        <Image 
+            src="/estateblog.webp" 
+            alt='estate blog' 
+            width={280} 
+            height={280} 
+            className='my-3 w-32 h-32 md:w-40 md:h-40 lg:w-64 lg:h-[15rem]' 
+        />
+        <h2 className='text-lg md:text-2xl font-bold'>Get assistance in selling faster</h2>
+        <p className='text-sm md:text-base mt-2 text-gray-700'>Dedicated Relationship manager to<br/> help you business faster.</p>
+        <p className='text-lg md:text-2xl font-bold text-blue-600 mt-4'>List Your Business</p>
     </div>
+    <div className='hidden md:grid md:grid-cols-5 w-[55%] gap-2'>
+        {cardData.map((card, index) => (
+            <Card key={index} imageUrl={card.imageUrl} heading={card.heading} bgColor={card.bgColor} />
+        ))}
+    </div>
+</div>
+
   )
 }
 

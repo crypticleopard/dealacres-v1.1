@@ -11,7 +11,7 @@ const Comparison = () => {
     <div>
       <div className={styles.Comparison}>
         <h2>Compare Projects</h2>
-        <p>Shubharambh in Uttam Nagar Vs Neelkantd Plots in Sector 34 Rohini</p>
+        <p className='pl-[5px]'>Shubharambh in Uttam Nagar Vs Neelkantd Plots in Sector 34 Rohini</p>
 
         <table>
 

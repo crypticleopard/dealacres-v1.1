@@ -57,7 +57,7 @@ const  CheckList = ({ tab, data, DropIcon }) => {
                   }
                 }}>
                 {item}
-                <DropIcon size={30} />
+                <DropIcon size={30} className="md:hidden" />
               </div>
 
               

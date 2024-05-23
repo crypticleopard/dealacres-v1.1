@@ -1,6 +1,7 @@
 .localityOverviewContainer{
     width: 100%;
 
+
 }
 
 .localityHead{
@@ -41,7 +42,7 @@
 
 .localityContentHead{
     width: 100%;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     text-align: justify;
     
 }
@@ -58,9 +59,8 @@
 
 .localityContentData{
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 2rem;
+    display: flex;
+    gap:10px;
     justify-content: space-between;
     align-items: center;
 }

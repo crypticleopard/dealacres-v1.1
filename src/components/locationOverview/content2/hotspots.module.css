@@ -23,8 +23,8 @@
 
 .hotspotsImageContainer{
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     overflow: hidden;
     border-radius: 50%;
     margin-bottom: 0.75rem;

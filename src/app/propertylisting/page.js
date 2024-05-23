@@ -14,7 +14,7 @@ const page = () => {
     <Hero />
       <Guide />
       <About />
-      <div className='px-4 sm:px-8 md:px-16 lg:px-32 space-y-8  py-5'>
+      <div className='px-4 sm:px-8 md:px-16 lg:px-32 space-y-8 pb-6'>
         <h2 class="text-3xl font-bold">Frequently Asked Questions</h2><br/>
       <FAQ  faqdata = {data.mainContent.FaqData} />
       </div>

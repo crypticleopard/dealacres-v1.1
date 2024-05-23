@@ -4,8 +4,8 @@
     border: 2px solid rgba(0, 0, 10, 0.25); 
     cursor: pointer;
     width: calc(100% / 6 - 8px);
-    min-width: 150px;
-    max-width: 200px;
+    min-width: 180px;
+    max-width: 220px;
  
 }
 @media screen and (min-width: 600px) and (max-width: 768px){

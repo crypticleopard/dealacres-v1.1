@@ -40,7 +40,7 @@ const About = () => {
         />
       </div>
       <div className=" bg-white w-full max-w-screen-xl text-center why-choose-us">
-      <div className="p-5 space-y-10 border-4 border-blue-200">
+      <div className="p-5 space-y-10 border-4 border-blue-200 shadow-md shadow-blue-200">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
           Why Choose Deal Acres?
         </h2>

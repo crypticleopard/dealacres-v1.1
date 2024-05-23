@@ -9,7 +9,9 @@ import MainContent2 from '@/components/locationOverview/content2/MainContent2'
 const page = () => {
   return (
     <>
-        <Navbar03/>
+
+        <Navbar03 />
+     
         <div className={styles.locationOverviewContainer}>
             <div className={styles.locationOverviewTopContainer}>
                 <ImageContainer imageData = {data.imageContainer} floorPlan = {false} imageButtonPosition = "imageButtonClass2"/>

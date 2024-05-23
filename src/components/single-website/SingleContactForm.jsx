@@ -60,7 +60,7 @@ const SingleContactForm = () => {
             }
       <div className='max-w-screen-lg mx-auto  px-4 flex flex-col items-start gap-8 py-8'>
             <div className='self-center'>
-                <h2 className='text-6xl font-bold text-white py-6 '>
+                <h2 className='text-5xl font-bold text-white py-3 '>
                     Contact Us
                 </h2>
             </div>

@@ -66,20 +66,23 @@ const guidesData = [
     }
   ]
 function MainContent2() {
+  const dynamicSlidesToShow = 3.02;
   return (
     <div className={styles.mainContainer2} style={lato.style}>
         {/* <div className='md:max-w-[68%]'>  
         <h5>Popular Projects in Sector 37D</h5>
         <PopularProjects/>
       </div> */}
-       <div id='SimilarLocalities'>
-            <h5>Explore nearby localities</h5>
-            <Cities/>
+       <div id='SimilarLocalities' className='w-[83%]'>
+            <h5 className='pb-2'>Explore nearby localities</h5>
+            <Cities slidesToShow={dynamicSlidesToShow} />
             </div>
-    
-        <InsightReview/>
+    <div className='w-[83%]'>
+    <InsightReview/>
+    </div>
+ 
      
-      <div>
+      <div className='w-[83%]'>
       <h5>Hotspots in Gurgaon</h5>
             <Hotspots/>
       </div>
@@ -89,12 +92,12 @@ function MainContent2() {
             <h5>Photos</h5>
             <Photos/>
         </div> */}
-        <div>
-            <h5>Top Developers in Sector 37D</h5>
-            <Topdev/>
-        </div>
-        <div id='Guides'>
-            <h5 className='!mb-0'>Start with these guides</h5>
+      <div id='Developer'>
+            <h5 className='pb-2'>Top Developers in Sector 37D</h5>
+            <Topdev numberOfCards={5} gap='10px'/>
+            </div>
+        <div id='Guides' className='w-[83%]'>
+            <h5 className='!mb-0'>Start with these manuals</h5>
             <p className='text-gray-400 text-lg py-2'>Know all that you need to know before you start.</p>
             {/* <LocationGuides guides={guidesData}/> */}
 

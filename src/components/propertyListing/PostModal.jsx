@@ -15,7 +15,7 @@ const PostModal = ({ isOpen, onSubmit }) => {
                 &times;
               </button>
               <div className="flex flex-col items-center gap-5">
-                <Image src={'/propertyListing/assets/checkicon.png'} alt="post" width={100} height={100} />
+                <Image src={'/propertyListing/assets/checkicon.png'} alt="post" width={70} height={70} />
               <h1 className="text-4xl font-bold mb-4 uppercase italic">submitted</h1>
               </div>
             </div>

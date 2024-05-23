@@ -54,7 +54,7 @@ const FileDropzone = ({ onFilesDrop, description }) => {
   return (
     <div>
       <div ref={drop} className='bg-[#e6f1f8] px-16 flex flex-col items-center justify-center'>
-        <Image src={'/propertyListing/assets/upload.png'} alt='upload' width={60} height={60} className='mt-10' />
+        <Image src={'/propertyListing/assets/upload.png'} alt='upload' width={60} height={60} className='mt-5' />
         <p className='font-bold'>{isOver && canDrop ? 'Drop the images here' : 'Drag & drop Image here'}</p>
         <p className='text-xs'>{description}</p>
         <button onClick={handleUploadButtonClick} className='bg-blue-600 rounded-md px-6 py-1 font-bold text-white mt-4 mb-8'>Upload</button>

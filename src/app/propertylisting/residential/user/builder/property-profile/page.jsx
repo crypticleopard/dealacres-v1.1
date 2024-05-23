@@ -5,9 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import RoundedDiv from '@/components/propertyListing/RoundedDiv';
 import { useState } from 'react';
-import RoomInfo from '@/components/propertyListing/RoomInfo';
-import OtherRoomButton from '@/components/propertyListing/Button/OtherRoomButton';
-
 const Page = () => {
 
     const [totalFloor, setTotalFloor] = useState('');
@@ -42,34 +39,34 @@ const Page = () => {
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
             <NavigationBroker />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
+            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 '>
 
-                <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
-                    <h1 className="font-medium md:font-bold md:text-2xl text-xl mt-2">
+                <div className='h-full md:w-[450px]  rounded-xl p-5 border-2 border-blue-200 shadow-md'>
+                <h1 className="font-medium md:font-bold text-xl">
                         Now, tell us about your property
                     </h1>
-                    <p className='font-medium md:text-lg text-md ' >Describe Your Property</p>
-                    <p className='w-[85%]'>Write Several Thing which can describe your propety appropriately </p>
+                    <p className='font-medium text-base'>Describe Your Property</p>
+                    <p className='text-sm my-0.5'>Write Several Things which can describe your property appropriately</p>
 
                     <textarea
                         id="myTextArea"
                         name="myTextArea"
-                        rows={10}
+                        rows={6}
                         cols={40}
-                        className='my-6 custom-border-2 rounded-md'
+                        className='my-3 custom-border-2 rounded-md'
                     />
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
+                    <h1 className="font-medium md:font-bold text-xl">
                         Add Room Details
                     </h1>
-                    <RoundedDiv width={35} height={35} size={8} />
+                    <RoundedDiv width={30} height={30} size={8} />
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Bathrooms
                     </h1>
-                    <RoundedDiv width={35} height={35} size={8} />
+                    <RoundedDiv width={30} height={30} size={8} />
                     <h1 className="font-medium md:font-bold  text-xl mt-2">
                         Number of Balconies
                     </h1>
-                    <RoundedDiv width={35} height={35} size={8} />
+                    <RoundedDiv width={30} height={30} size={8} />
                     <h1 className="font-medium md:font-bold text-xl mt-2">Other Rooms</h1>
                     <div className='w-[70%] grid grid-cols-2 gap-2 my-2'>
                         <div className={`h-full bg-[#c9e0ee] py-2 px-2 rounded-md cursor-pointer   ${selectedRoom === 'Pooja Room' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleRoomSelection('Pooja Room')}>
@@ -118,13 +115,13 @@ const Page = () => {
                             <p className='text-md'>Covered Parking</p>
                             <RoundedDiv width={25} height={25} size={2} />
                         </div>
-                        <div className='flex flex-row items-center gap-14'>
+                        <div className='flex flex-row items-center gap-[3.9rem]'>
                             <p className='text-md'>Open Parking</p>
                             <RoundedDiv width={25} height={25} size={2} />
                         </div>
 
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+                    <h1 className="font-medium md:font-bold text-xl mt-3">
                         Flooring Details
                     </h1>
                     <p className='text-md'>Total No of Floor</p>
@@ -132,7 +129,7 @@ const Page = () => {
                         <select
                             value={totalFloor}
                             onChange={(e) => setTotalFloor(e.target.value)}
-                            className='custom-border py-4 px-2 my-2 rounded-xl'>
+                            className='custom-border py-2 px-2 my-2 rounded-xl'>
                             <option value={""} disabled hidden className='text-xs'>Total Floors</option>
                             <option>Lower Basement</option>
                             <option>Upper Basement</option>
@@ -141,7 +138,7 @@ const Page = () => {
                         <select
                             value={property}
                             onChange={(e) => setProperty(e.target.value)}
-                            className='custom-border py-4 px-2 mb-2 rounded-xl' >
+                            className='custom-border py-2 px-2 mb-2 rounded-xl' >
                             <option value="" disabled hidden className='text-xs'>
                                 Property on Floor
                             </option>
@@ -152,7 +149,7 @@ const Page = () => {
                             ))}
                         </select>
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-4">
+                    <h1 className="font-medium md:font-bold text-xl mt-3">
                         Availability Status
                     </h1>
                     <div className='w-[80%] flex flex-row gap-2 my-2'>
@@ -163,7 +160,7 @@ const Page = () => {
                             Under Construction
                         </div>
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-3">
+                    <h1 className="font-medium md:font-bold text-xl mt-4">
                         Age of Property
                     </h1>
                     <div className=' mt-2'>
@@ -196,7 +193,7 @@ const Page = () => {
 
                     <Link href={'photos'}>
                         <button
-                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-blue-400' : ''
+                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-2 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed opacity-50' : ''
                                 }`}
                             disabled={isContinueButtonDisabled}
                         >
@@ -204,20 +201,23 @@ const Page = () => {
                         </button>
                     </Link>
                 </div>
-                <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
-                        <h1 className="text-xl mb-4 text-center mt-20">
-                            Describe your property in brief so the buyer or renter can easily get to know how your property is what makes your property different from others.</h1>
-                        <Image src={'/propertyListing/assets/house.png'} alt='home' height={200} width={200} className='mt-3 mb-10' />
-                        <h1 className='font-bold text-xl'>Need Help?</h1>
-                        <p className='text-lg'>You Can Email Us</p>
-                        <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
+                <div className='h-fit sticky top-20 flex flex-col'>
+
+                    <div className=' w-[400px] rounded-xl bg-[#e9f6fe] px-4 py-2 flex flex-col items-center'>
+                        <h1 className="text-base mb-4 text-center mt-3">
+                            Describe your property in brief so the buyer or renter can easily get to know how your property is and what makes your property different from others.
+                        </h1>
+                        <Image src={'/propertyListing/assets/house.png'} alt='home' height={120} width={120} className='mb-5' />
+                        <h1 className='font-bold text-lg'>Need Help?</h1>
+                        <p className='text-base'>You Can Email Us</p>
+                        <p className='text-base text-blue-600 mb-3'>Contact@dealacres.com</p>
                     </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
-                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={100} width={100} className='mt-3 mb-2' />
-                        <h1 className='text-2xl'>You are Almost There</h1>
+                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] px-4 flex flex-col items-center mt-4'>
+                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={60} width={60} className='mt-3 mb-2' />
+                        <h1 className='text-lg mb-2'>You are Almost There</h1>
                     </div>
                 </div>
+
             </div>
         </section>
     );

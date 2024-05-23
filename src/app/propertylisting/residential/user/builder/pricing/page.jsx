@@ -1,11 +1,10 @@
-'use client'
+'use client';
 
-import React from 'react'
+import { useState } from 'react';
 import NavigationBroker from '@/components/propertyListing/Navigation/NavigationBroker';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaRupeeSign } from "react-icons/fa";
-import { useState } from 'react';
 
 const Page = () => {
 
@@ -14,16 +13,16 @@ const Page = () => {
   const [brokenCharge, setBrokenCharge] = useState('');
 
   const isContinueButtonDisabled =
-        expectedPrice.trim() === '' ||
-        pricePerSqYd.trim() === '' ||
-        brokenCharge.trim() === '';
+    expectedPrice.trim() === '' ||
+    pricePerSqYd.trim() === '' ||
+    brokenCharge.trim() === '';
 
   return (
     <section className='mt-12 container mx-auto lg:w-4/5'>
       <NavigationBroker />
-      <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
+      <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem] container mx-auto my-10 '>
 
-        <div className='h-full md:w-[450px] rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4'>
+        <div className='h-full md:w-[450px] rounded-xl p-5 border-2 border-blue-200 shadow-md'>
           <h1 className="font-medium md:font-bold md:text-2xl text-xl">
             Price Details
           </h1>
@@ -71,7 +70,7 @@ const Page = () => {
             </div>
           </div>
           <h1 className='text-lg font-bold'>Do You Charge Brokerage</h1>
-          <div className='flex flex-col gap-4 my-6'>
+          <div className='flex flex-col gap-4 my-4'>
             <div className='flex flex-row gap-8'>
               <div className='flex flex-row items-center gap-2'>
                 <input
@@ -121,7 +120,6 @@ const Page = () => {
               className='custom-border-2 px-4 py-4 rounded-lg'
               value={brokenCharge}
               onChange={(e) => setBrokenCharge(e.target.value)} />
-
             <label className='absolute text-xs top-[20%] left-2 transform -translate-y-1/2'>Enter Brokrage Charges</label>
             <FaRupeeSign className='absolute top-[60%] left-1 transform -translate-y-1/2 text-lg ' />
           </div>
@@ -138,7 +136,7 @@ const Page = () => {
           </div>
           <Link href={'amenities'}>
             <button
-              className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-2 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-blue-400' : ''
+              className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-2 mb-2 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed opacity-50' : ''
                 }`}
               disabled={isContinueButtonDisabled}
             >
@@ -147,9 +145,9 @@ const Page = () => {
           </Link>
         </div>
 
-        <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5 '>
-          <h1 className="text-xl mb-4 text-center mt-8">Mention the Expected price of<br /> your property with your<br /> Brokerage Charges.</h1>
-          <Image src={'/propertyListing/assets/home_coin.png'} alt='coin' height={180} width={180} className='mt-3 mb-10' />
+        <div className='h-fit sticky top-20 w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5 '>
+          <h1 className="text-lg mb-4 text-center mt-8">Mention the Expected price of<br /> your property with your<br /> Brokerage Charges.</h1>
+          <Image src={'/propertyListing/assets/home_coin.png'} alt='coin' height={120} width={120} className='mt-3 mb-5' />
           <h1 className='font-bold text-xl'>Need Help?</h1>
           <p className='text-lg'>You Can Email Us</p>
           <p className='text-lg text-blue-600 mb-10'>Contact@dealacres.com</p>

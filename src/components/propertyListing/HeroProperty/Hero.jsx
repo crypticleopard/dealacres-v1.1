@@ -56,7 +56,7 @@ const Hero = () => {
     
     return (
         <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-8 container mx-auto my-8  '>
-            <div className=' md:mt-8 rounded-xl pt-2 px-2 border-2 border-blue-300 text-start'>
+            <div className=' md:mt-8 rounded-xl pt-2 px-3 border-4 border-blue-200 text-start shadow-md shadow-blue-200'>
                 <div className='h-fit'>
                 <h1 className="font-medium md:font-bold text-[1.3rem] uppercase mt-2">
                     Post Your Property for free
@@ -81,27 +81,27 @@ const Hero = () => {
                 {isResedentialClicked && (
                     <div className='flex flex-col'>
                         <div className='flex flex-row w-[50%]'>
-                            <Button heading={'Flat/Apartment'} />
-                            <Button heading={'villa'} />
-                            <Button heading={'plot'} onClick={() => handleSubType('Plot')} hashClick={true} />
+                            <Button heading={'Flat/Apartment'}  px="3" textBase="sm" />
+                            <Button heading={'villa'}  px="3" textBase="sm" />
+                            <Button heading={'plot'} onClick={() => handleSubType('Plot')} hashClick={true}  px="3" textBase="sm"  />
 
                         </div>
                         <div>
-                            <Button heading={'Independent House'} />
-                            <Button heading={'Builder Floor'} />
+                            <Button heading={'Independent House'}  px="3" textBase="sm"  />
+                            <Button heading={'Builder Floor'}  px="3" textBase="sm" />
                         </div>
                     </div>
                 )}
                 {isCommercialClicked && (
                     <div className='flex flex-col'>
                         <div className='flex flex-row'>
-                            <Button heading={'Commercial Shop'} />
-                            <Button heading={'Commercial Office Space'} />
+                            <Button heading={'Commercial Shop'} px="3" textBase="sm"  />
+                            <Button heading={'Commercial Office Space'} px="3" textBase="sm"  />
 
                         </div>
                         <div className='flex flex-row items-center'>
-                            <Button heading={'Commercial Showroom'} />
-                            <Button heading={'Commercial Land'} />
+                            <Button heading={'Commercial Showroom'} px="3" textBase="sm"  />
+                            <Button heading={'Commercial Land'} px="3" textBase="sm"  />
                             <p className='font-bold text-blue-600 cursor-pointer' onClick={handleFive}>+5</p>
                         </div>
                     </div>
@@ -109,15 +109,15 @@ const Hero = () => {
                 {isFiveClicked && (
                     <div className='flex flex-col'>
                         <div className='flex flex-row'>
-                            <Button heading={'Warehouse/ Godown'} />
-                            <Button heading={'Industrial Land'} />
+                            <Button heading={'Warehouse/ Godown'} px="3" textBase="sm" />
+                            <Button heading={'Industrial Land'} px="3" textBase="sm" />
 
 
                         </div>
                         <div className='flex flex-row items-center'>
-                            <Button heading={'Industrial Building'} />
-                            <Button heading={'Industrial Shed'} />
-                            <Button heading={'Office in IT Park/ SEZ'} />
+                            <Button heading={'Industrial Building'} px="3" textBase="sm" />
+                            <Button heading={'Industrial Shed'} px="3" textBase="sm"  />
+                            <Button heading={'Office in IT Park/ SEZ'} px="3" textBase="sm" />
                         </div>
                     </div>
                 )}
@@ -146,7 +146,7 @@ const Hero = () => {
                     <li className="mb-2">Connect with genuine buyers</li>
                     <li className="mb-2">Get unlimited enquiries</li>
                 </ul>
-                <Image src={FREE} alt='free' height={200} width={200} className='mt-10' />
+                <Image src={FREE} alt='free' height={200} width={200} className='mt-10 mb-5' />
             </div>
         </section>
     )

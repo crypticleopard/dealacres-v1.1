@@ -58,7 +58,7 @@ const Page = () => {
 
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
+            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem] container mx-auto my-10 '>
                 <div className='flex flex-col'>
                     <h1 className="font-semi-bold md:text-3xl text-xl  mb-4">
                         Before listing your property<br /> buyer should know about you?</h1>
@@ -140,15 +140,12 @@ const Page = () => {
 
                     </div>
                 </div>
-                <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
-
-                    <h1 className="text-xl text-center mt-20">
-                        This information helps buyer to connect with you easily</h1>
-
-                    <Image src={'/propertyListing/assets/broker.png'} alt='broker' height={200} width={200} className='my-10' />
-                    <h1 className='font-bold text-xl'>Need Help?</h1>
-                    <p className='text-lg'>You Can Email Us</p>
-                    <p className='text-lg text-blue-600 mb-10'>Contact@dealacres.com</p>
+                <div className="w-[400px] sticky top-20 h-fit rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center">
+                    <h1 className="text-lg text-center mt-10">This information helps buyer to connect with you easily</h1>
+                    <Image src="/propertyListing/assets/broker.png" alt="location" height={120} width={120} className="my-10" />
+                    <h1 className="font-bold text-xl">Need Help?</h1>
+                    <p className="text-lg">You Can Email Us</p>
+                    <p className="text-lg text-blue-600 mb-10">Contact@dealacres.com</p>
                 </div>
             </div>
             <div className="md:px-24">
@@ -162,11 +159,11 @@ const Page = () => {
                     />
                     <p className="text-xl">I agree to this website &quot;Deal Acres&quot; storing my submitted information; see more details below.</p>
                 </div>
-                <div className="bg-[#e1dff8] p-2 rounded-lg mb-8">
+                <div className="bg-[#e1dff8] p-2 rounded-lg mb-4">
                     <p>The data based on a search query on Deal Acres has been made available for information/advertisement purposes. No warranty is implied for its accuracy. Nothing contained herein will be deemed to constitute any sort of legal advice, solicitation, marketing, offer of sale, an invitation to offer, or an invitation to get by the developer/builder or any other entity. You are advised to visit the relevant RERA website. And get more information about the builder and property directly. Before deciding on the project content displayed on dealacres.com. If you have any queries contact Deal Acres at contact@dealacres.com.</p>
                 </div> <button
                     onClick={openPostModal}
-                    className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed bg-blue-300' : ''
+                    className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueButtonDisabled ? 'cursor-not-allowed opacity-50' : ''
                         }`}
                     disabled={isContinueButtonDisabled}
                 >Post Your Property</button>

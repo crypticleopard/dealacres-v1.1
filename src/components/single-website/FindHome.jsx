@@ -22,7 +22,7 @@ const FindHome = ({
             flex text-center gap-4 flex-col  items-center justify-center
             `}>
 
-                <h3 className='flex justify-center  font-bold text-5xl pb-2 text-center'>
+                <h3 className='flex justify-center  font-bold text-4xl pb-2 text-center'>
                     Find Your Perfect Home
                 </h3>
                 <p className=''>

@@ -16,13 +16,13 @@ const FeedbackModal = ({ isOpen, onClose }) => {
                 &times;
               </button>
               <div className='flex flex-col items-center gap-2 '>
-              <h1 className="text-2xl font-bold">How was your Experience?</h1>
-              <Image src={'/propertyListing/assets/feedback.png'} alt='feedback' width={250} height={150} />
+              <h1 className="text-xl font-bold">How was your Experience?</h1>
+              <Image src={'/propertyListing/assets/feedback.png'} alt='feedback' width={200} height={100} />
               <Link href={'/propertylisting'} >
                 <button
                
                   type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 px-4 rounded text-base "
                 >
                   Submit
                 </button>

@@ -1,27 +1,36 @@
-import styles from './topdev.module.css'
-import Devcard from './Devcard'
+import React from 'react';
+import styles from './topdev.module.css';
+import Devcard from './Devcard';
 
-const topdevStyle={
-  width:'100%',
-  display:'flex',
-  flexWrap:'wrap',
-  justifyContent:'center',
-  alignItems:'center',
-  marginTop:'1rem',
-  gap: '8px'
-}
+function Topdev({ numberOfCards = 6, gap = '8px' }) {
+  const topdevStyle = {
+    width: '100%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '1rem',
+    gap: gap
+  };
 
-function Topdev() {
+  const imgSrcArray = [
+    "/property/developerLogo.webp",
+    "/property/developerLogo.webp",
+    "/property/developerLogo.webp",
+    "/property/developerLogo.webp",
+    "/property/developerLogo.webp",
+    "/property/developerLogo.webp",
+    "/property/developerLogo.webp",
+    "/property/developerLogo.webp"
+  ];
+
   return (
-    <div  style={topdevStyle} className='md:!justify-normal'>
-      <Devcard imgSrc="/property/developerLogo.webp"/>
-      <Devcard imgSrc="/property/developerLogo.webp"/>
-      <Devcard imgSrc="/property/developerLogo.webp"/>
-      <Devcard imgSrc="/property/developerLogo.webp"/>
-      <Devcard imgSrc="/property/developerLogo.webp"/>
-      <Devcard imgSrc="/property/developerLogo.webp"/>
+    <div style={topdevStyle} className='md:!justify-normal'>
+      {imgSrcArray.slice(0, numberOfCards).map((imgSrc, index) => (
+        <Devcard key={index} imgSrc={imgSrc} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default Topdev
+export default Topdev;

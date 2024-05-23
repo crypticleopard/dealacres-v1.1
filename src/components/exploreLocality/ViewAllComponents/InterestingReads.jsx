@@ -42,7 +42,7 @@ const fakeBlog = [
 
 const InterestingReads = () => {
   return (
-    <div className="mt-10  mb-10 max-sm:px-[1rem]">
+    <div className="mt-10 mb-8 max-sm:px-[1rem]">
       <div className="flex flex-col items-star justify-start w-fit">
         <p className="text-3xl font-bold max-sm:text-lg">Interesting Reads</p>
         <div className="h-1 w-[50%] bg-yellow-500 mt-1"></div>
@@ -82,7 +82,7 @@ const InterestingReads = () => {
               </SwiperSlide>
             );
           })}
-          <div className="pt-10">
+          <div className="pt-8">
             <div class="swiper-pagination"></div>
           </div>
         </Swiper>
