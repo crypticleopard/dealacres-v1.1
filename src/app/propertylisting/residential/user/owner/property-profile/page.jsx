@@ -50,8 +50,8 @@ const Page = () => {
     return (
         <section className='mt-8 container mx-auto lg:w-4/5'>
             <Navigation />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem] container mx-auto my-8'>
-                <div className='h-fit md:w-[450px] rounded-xl p-5 border-2 border-blue-200 shadow-md'>
+            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[3rem] container mx-auto my-8'>
+                <div className='h-fit max-xl:w-[440px] lg:w-[450px] rounded-xl p-5 border-2 border-blue-200 shadow-md'>
                     <h1 className="font-medium md:font-bold text-xl">
                         Now, tell us about your property
                     </h1>
@@ -218,17 +218,17 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Age of Property
                     </h1>
-                    <div className='flex flex-row gap-2 mt-2'>
-                        <button className={`custom-border h-full px-2 rounded-lg cursor-pointer ${selectedAge === '0-1 years' ? 'custom-border-select' : ''}`} onClick={() => handleAgeSelection('0-1 years')}>
+                    <div className='flex flex-row gap-1 mt-2'>
+                        <button className={`custom-border h-full  px-2 rounded-lg cursor-pointer ${selectedAge === '0-1 years' ? 'custom-border-select' : ''}`} onClick={() => handleAgeSelection('0-1 years')}>
                             0-1 years
                         </button>
-                        <button className={`custom-border h-full px-2 rounded-lg cursor-pointer ${selectedAge === '1-5 years' ? 'custom-border-select ' : ''}`} onClick={() => handleAgeSelection('1-5 years')}>
+                        <button className={`custom-border h-full  px-2 rounded-lg cursor-pointer ${selectedAge === '1-5 years' ? 'custom-border-select ' : ''}`} onClick={() => handleAgeSelection('1-5 years')}>
                             1-5 years
                         </button>
-                        <button className={`custom-border h-full px-2 rounded-lg cursor-pointer ${selectedAge === '5-10 years' ? 'custom-border-select' : ''}`} onClick={() => handleAgeSelection('5-10 years')}>
+                        <button className={`custom-border h-full  px-2 rounded-lg cursor-pointer ${selectedAge === '5-10 years' ? 'custom-border-select' : ''}`} onClick={() => handleAgeSelection('5-10 years')}>
                             5-10 years
                         </button>
-                        <button className={`custom-border h-full px-2 rounded-lg cursor-pointer ${selectedAge === '10+ years' ? 'custom-border-select' : ''}`} onClick={() => handleAgeSelection('10+ years')}>
+                        <button className={`custom-border h-full  px-2 rounded-lg cursor-pointer ${selectedAge === '10+ years' ? 'custom-border-select' : ''}`} onClick={() => handleAgeSelection('10+ years')}>
                             10+ years
                         </button>
                     </div>
@@ -243,7 +243,7 @@ const Page = () => {
                 </div>
                 <div className='h-fit sticky top-20 flex flex-col'>
 
-                    <div className=' w-[400px] rounded-xl bg-[#e9f6fe] px-4 py-2 flex flex-col items-center'>
+                    <div className='lg:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] px-4 py-2 flex flex-col items-center'>
                         <h1 className="text-base mb-4 text-center mt-3">
                             Describe your property in brief so the buyer or renter can easily get to know how your property is and what makes your property different from others.
                         </h1>
@@ -252,7 +252,7 @@ const Page = () => {
                         <p className='text-base'>You Can Email Us</p>
                         <p className='text-base text-blue-600 mb-3'>Contact@dealacres.com</p>
                     </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] px-4 flex flex-col items-center mt-4'>
+                    <div className='h-full lg:w-[350px] xl:w-[400px]  rounded-xl bg-[#e9f6fe] px-4 flex flex-col items-center mt-4'>
                         <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={60} width={60} className='mt-3 mb-2' />
                         <h1 className='text-lg mb-2'>You are Almost There</h1>
                     </div>

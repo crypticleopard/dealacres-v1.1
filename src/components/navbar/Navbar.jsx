@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect,useRef } from "react";
-import { useParams, usePathname } from 'next/navigation'
+import React, { useState, useEffect, useRef } from "react";
+import { usePathname } from 'next/navigation';
 import "./navbar.css";
 import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
 import Image from "next/image";
@@ -10,47 +10,38 @@ import { BsFillArrowDownSquareFill } from "react-icons/bs";
 import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
 
 const Menu = ({ setMenuPosition, setHoveredMenu }) => {
-  const handleMouseEnter = (menu, event) => {
-    
-    
-      setHoveredMenu(menu);
-      if (event) {
-        const rect = event.currentTarget.getBoundingClientRect();
-        setMenuPosition({ top: rect.bottom, left: rect.left });
-      }
-   
+  const handleClick = (menu, event) => {
+    setHoveredMenu(menu);
+    if (event) {
+      const rect = event.currentTarget.getBoundingClientRect();
+      setMenuPosition({ top: rect.bottom, left: rect.left });
+    }
   };
-
 
   return (
     <>
       <p
-        onMouseEnter={(e) => handleMouseEnter("buyer", e)}
-    
+        onClick={(e) => handleClick("buyer", e)}
       >
         <a href="#">Buyer</a>
       </p>
       <p
-        onMouseEnter={(e) => handleMouseEnter("seller", e)}
-       
+        onClick={(e) => handleClick("seller", e)}
       >
         <a href="#">Seller</a>
       </p>
       <p
-        onMouseEnter={(e) => handleMouseEnter("tenant", e)}
-     
+        onClick={(e) => handleClick("tenant", e)}
       >
         <a href="#">Tenant</a>
       </p>
       <p
-        onMouseEnter={(e) => handleMouseEnter("blog", e)}
-       
+        onClick={(e) => handleClick("blog", e)}
       >
         <a href="#">Blog</a>
       </p>
       <p
-        onMouseEnter={(e) => handleMouseEnter("services", e)}
-       
+        onClick={(e) => handleClick("services", e)}
       >
         <a href="#">Services</a>
       </p>
@@ -58,17 +49,16 @@ const Menu = ({ setMenuPosition, setHoveredMenu }) => {
   );
 };
 
-
-
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState('Gurugram');
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
-  const menuRef = useRef(null);
   const pathname = usePathname();
-  const isHomePage = pathname === '/' ;
+  const isHomePage = pathname === '/';
+
+  const flyoutRef = useRef(null);
 
   const MenuMobile = () => (
     <>
@@ -121,18 +111,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
-        setHoveredMenu(null);
-      }
-    };
 
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, []);
 
   const handleLocationChange = (e) => {
     setSelectedLocation(e.target.value);
@@ -161,7 +140,7 @@ const Navbar = () => {
         )}
         {toggleMenu && (
           <div className="navbar-menu_container">
-            <div className="navabr-menu_container-links">
+            <div className="navbar-menu_container-links">
               <MenuMobile />
               <div className="navbar-menu_container-links-sign">
                 <p>Sign In</p>
@@ -206,7 +185,6 @@ const Navbar = () => {
           <Menu
             setMenuPosition={setMenuPosition}
             setHoveredMenu={setHoveredMenu}
-           
           />
         </div>
         <div className="navbar-sign">
@@ -238,11 +216,14 @@ const Navbar = () => {
       </Link>
       {hoveredMenu && (
         <div
-          ref={menuRef}
+        onMouseLeave={() => setHoveredMenu(null)}
           className="flyout-menu-container mt-6"
           style={{ top: menuPosition.top, left: menuPosition.left }}
+         
         >
+ 
           <FlyoutMenuSections sections={getSections(hoveredMenu)} />
+
         </div>
       )}
     </div>

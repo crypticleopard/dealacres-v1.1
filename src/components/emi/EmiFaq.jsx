@@ -61,16 +61,16 @@ const EmiFaq = () => {
       <h1 className="text-2xl sm:text-3xl font-semibold">
       Frequently asked questions about EMI Calculator
       </h1>
-      <div className="md:mt-4 sm:mt-10 sm:px-4 py-2 sm:py-4 border-1 border-gray-300 rounded-lg">
+      <div className="md:mt-4 sm:mt-10 sm:px-4  border-1 border-gray-300 rounded-lg">
         {faqData.map((faq, index) => (
-          <div key={index} className="mb-3 sm:mb-4 border-b-1 border-gray-300">
+          <div key={index} className="mb-2 border-b-1 border-gray-300">
             <>
             <div
               className="flex justify-between items-center cursor-pointer p-2"
               onClick={() => toggleAccordion(index)}
             >
 
-              <div className="text-base sm:text-lg font-medium">
+              <div className="text-base font-medium">
                  {faq.question}
               </div>
       
@@ -82,7 +82,7 @@ const EmiFaq = () => {
             <hr/>
             </>
             {openIndex === index && (
-              <div className="mt-2 text-gray-600 p-2">{faq.answer}</div>
+              <div className="mt-2 text-gray-600 p-2 text-sm">{faq.answer}</div>
             )}
           </div>
         ))}

@@ -92,7 +92,9 @@
     left: 0; */
     width: 100%;
     animation: down 0.3s ease;
-    display: block;
+    display: block; 
+    padding-left: 3.5%;
+    @apply text-gray-600
 
 }
 

@@ -9,7 +9,7 @@ const page = () => {
     return (
         <div>
             <EmiBanner/>
-            <div className='max-w-screen-lg mx-auto py-4 px-4  '>
+            <div className='max-w-screen-lg mx-auto pb-3 px-4  '>
                <EmiCalculator/>
               
             </div>
@@ -37,7 +37,7 @@ const page = () => {
               
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4  '>
-                <div className='py-4'>
+                <div className='pb-4'>
                     <h2 className='font-bold text-3xl py-2 '>
                         Benefits of Using a Home Loan Affordability Calculator
                     </h2>
@@ -60,7 +60,7 @@ const page = () => {
 
             </div>
             <div className='max-w-screen-lg mx-auto py-4 px-4 flex flex-col gap-4 '>
-                <div className='py-4'>
+                <div className='pb-4'>
                     <h2 className='font-bold text-3xl py-2 '>
                         Factors that Affect Home Loan Affordability
                     </h2>
@@ -102,14 +102,14 @@ const page = () => {
 
 
             </div>
-            <div className='max-w-screen-lg mx-auto py-4  '>
+            <div className='max-w-screen-lg mx-auto py-4 '>
 
                  <EmiFaq/> 
-                <h2 className='font-bold py-4 text-4xl'>
+                <h2 className='font-bold py-4 text-3xl mt-4'>
                     EMI Calculator related Articles
                 </h2>
-               
-                        <ArticleSlider/>
+               <div className='mb-8'><ArticleSlider/></div>
+                        
 
 
 

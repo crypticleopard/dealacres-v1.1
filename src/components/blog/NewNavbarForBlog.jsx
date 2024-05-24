@@ -1,23 +1,10 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const NewNavbarForBlog = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const dropdownRef = useRef(null);
 
-  useEffect(() => {
-    const handleOutsideClick = (e) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setOpenDropdown(null);
-      }
-    };
-
-    document.addEventListener('mousedown', handleOutsideClick);
-    return () => {
-      document.removeEventListener('mousedown', handleOutsideClick);
-    };
-  }, []);
 
   const handleDropdownOpen = (dropdown) => {
     setOpenDropdown(dropdown);
@@ -42,11 +29,11 @@ const NewNavbarForBlog = () => {
               <p onClick={() => handleDropdownOpen(key)}>{key}</p>
               <RiArrowDropDownLine className='w-6 h-6' />
               {openDropdown === key && (
-                <ul ref={dropdownRef} className="absolute bg-black text-white shadow-lg top-[95%] z-10">
-                  {dropdownOptions[key].map((option, index) => (
-                    <li key={index} className="px-4 py-2 hover:bg-gray-200 hover:text-black w-[160px] text-sm">{option}</li>
-                  ))}
-                </ul>
+               <ul onMouseLeave={() => setOpenDropdown(null)} className="absolute bg-black text-white shadow-lg top-[95%] z-10">
+               {dropdownOptions[key].map((option, index) => (
+                 <li key={index} className="px-4 py-2 hover:bg-gray-200 hover:text-black w-[160px] text-sm">{option}</li>
+               ))}
+             </ul>
               )}
             </li>
           ))}
