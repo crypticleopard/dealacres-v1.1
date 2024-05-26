@@ -26,7 +26,7 @@ const Page = () => {
 
     return (
         <section className="mt-12 container mx-auto lg:w-4/5">
-            <div className="flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem] container mx-auto my-10">
+            <div className="flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[2rem] container mx-auto my-10">
                 <div className="flex flex-col">
                     <h1 className="font-semi-bold md:text-3xl text-xl  mb-4">
                         Before listing your property<br /> buyer should know about you?

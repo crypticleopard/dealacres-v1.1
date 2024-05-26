@@ -75,7 +75,7 @@ const FAQlocalities = () => {
         {faqData.map((faq, index) => (
           <div key={index} className="mb-3 sm:mb-4 border-b-1 border-gray-300">
             <div
-              className="flex justify-between items-center cursor-pointer p-2"
+              className="flex justify-between items-center cursor-pointer p-0.5"
               onClick={() => toggleAccordion(index)}
             >
               <div className="text-base sm:text-lg font-medium">

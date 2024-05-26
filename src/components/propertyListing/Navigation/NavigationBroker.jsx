@@ -56,7 +56,7 @@ const NavigationBroker = () => {
 
   return (
     <section className='container mx-auto mt-12'>
-      <div className="flex flex-col md:flex-row items-center justify-center px-4 py-2 w-full lg:w-4/5 mx-auto rounded-3xl bg-[#c6e8fd]">
+      <div className="flex flex-col md:flex-row items-center justify-center px-4 py-2 w-full lg:w-[93%] mx-auto rounded-3xl bg-[#c6e8fd]">
 
         
         <div className='font-bold text-[#40A2E3]'>Basic Details</div>

@@ -45,7 +45,7 @@ const Navigation = () => {
 
   return (
     <section className='container mx-auto'>
-      <div className="flex flex-col md:flex-row items-center justify-center px-4 py-2 w-full lg:w-full max-xl:w-4/5 mx-auto rounded-3xl bg-[#c6e8fd]">
+      <div className="flex flex-col md:flex-row items-center justify-center px-4 py-2 w-full lg:w-[93%] max-xl:w-4/5 mx-auto rounded-3xl bg-[#c6e8fd]">
         <div className='font-bold text-[#40A2E3]'>Basic Details</div>
         <div className="grow border-b border-black"></div>
 

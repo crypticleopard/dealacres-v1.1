@@ -88,9 +88,9 @@ const Page = () => {
     return (
         <section className='mt-8 container mx-auto lg:w-4/5'>
             <NavigationCOwner />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem] container mx-auto my-8'>
+            <div className='flex flex-col md:flex-row px-2 items-start justify-center gap-10 md:gap-[2rem] container mx-auto my-8'>
 
-                <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
+                <div className='h-full lg:w-[430px] rounded-xl p-4 custom-border'>
                     <h1 className="font-medium md:font-bold text-xl">
                         Now, tell us about your property
                     </h1>
@@ -121,19 +121,19 @@ const Page = () => {
                     </h1>
                     <div className="flex items-center gap-1 mt-1">
                         <button
-                            className={`h-full border-x-2 border-y-4 border-blue-200 py-1 px-3 rounded-xl ${selectedFloor === 'Lower Basement' ? 'border-blue-500' : ''}`}
+                            className={`h-full border-x-2 border-y-4 border-blue-200 py-1 px-2 rounded-xl ${selectedFloor === 'Lower Basement' ? 'border-blue-500' : ''}`}
                             onClick={() => handleFloorSelect('Lower Basement')}
                         >
                             Lower Basement
                         </button>
                         <button
-                            className={`h-full border-x-2 border-y-4 border-blue-200  py-1 px-3 rounded-xl ${selectedFloor === 'Upper Basement' ? 'border-blue-500' : ''}`}
+                            className={`h-full border-x-2 border-y-4 border-blue-200  py-1 px-2 rounded-xl ${selectedFloor === 'Upper Basement' ? 'border-blue-500' : ''}`}
                             onClick={() => handleFloorSelect('Upper Basement')}
                         >
                             Upper Basement
                         </button>
                         <button
-                            className={`h-full border-x-2 border-y-4 border-blue-200  py-1 px-3 rounded-xl ${selectedFloor === 'Ground' ? 'border-blue-500' : ''}`}
+                            className={`h-full border-x-2 border-y-4 border-blue-200  py-1 px-2 rounded-xl ${selectedFloor === 'Ground' ? 'border-blue-500' : ''}`}
                             onClick={() => handleFloorSelect('Ground')}
                         >
                             Ground
@@ -154,21 +154,21 @@ const Page = () => {
 
                         <div
                             onClick={() => handleFurnishClick('Fully Furnished')}
-                            className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Fully Furnished' ? 'shadow-md' : ''
+                            className={`h-full custom-border py-1 px-2 rounded-xl cursor-pointer ${selectedFurnished === 'Fully Furnished' ? 'shadow-md' : ''
                                 }`}
                         >
                             Fully Furnished
                         </div>
                         <div
                             onClick={() => handleFurnishClick('Unfurnished')}
-                            className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Unfurnished' ? 'shadow-md' : ''
+                            className={`h-full custom-border py-1 px-2 rounded-xl cursor-pointer ${selectedFurnished === 'Unfurnished' ? 'shadow-md' : ''
                                 }`}
                         >
                             Unfurnished
                         </div>
                         <div
                             onClick={() => handleFurnishClick('Semifurnished')}
-                            className={`h-full custom-border py-1 px-3 rounded-xl cursor-pointer ${selectedFurnished === 'Semifurnished' ? 'shadow-md' : ''
+                            className={`h-full custom-border py-1 px-2 rounded-xl cursor-pointer ${selectedFurnished === 'Semifurnished' ? 'shadow-md' : ''
                                 }`}
                         >
                             Semifurnished
@@ -234,7 +234,7 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Availability Status
                     </h1>
-                    <div className='w-[80%] flex flex-row gap-2 my-2'>
+                    <div className='w-[90%] flex flex-row gap-2 my-2'>
                         <button className='h-full custom-border-2 py-1 px-2 rounded-xl hover:custom-border-2 hover:border-blue-600' onClick={() => handleReadyToMoveClick(false)}>
                             Ready To Move
                         </button>
@@ -311,7 +311,7 @@ const Page = () => {
                     </Link>
                 </div>
                 <div className='flex flex-col h-fit sticky top-20 '>
-                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] px-4 py-2 flex flex-col items-center'>
+                    <div className='h-full md:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] px-4 py-2 flex flex-col items-center'>
                         <h1 className="text-base mb-4 text-center px-4 mt-3">
                             Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.</h1>
                         <Image src={'/propertyListing/assets/store.png'} alt='home' height={120} width={120} className='mb-5 mt-2' />
@@ -319,7 +319,7 @@ const Page = () => {
                         <p className='text-base'>You Can Email Us</p>
                         <p className='text-base text-blue-600 mb-3'>Contact@dealacres.com</p>
                     </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] px-4 flex flex-col items-center mt-4'>
+                    <div className='h-full md:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] px-4 flex flex-col items-center mt-4'>
                         <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={60} width={60} className='mt-3 mb-2' />
                         <h1 className='text-lg mb-2'>You are Almost There</h1>
                     </div>

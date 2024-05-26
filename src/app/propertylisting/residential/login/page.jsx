@@ -1,15 +1,16 @@
 'use client';
-import { useState } from 'react'
-import Image from 'next/image'
-
-
+import { useState } from 'react';
+import Image from 'next/image';
 import { TiPencil } from "react-icons/ti";
+import { FaSave } from "react-icons/fa";
 import Link from 'next/link';
-
 
 const Login = () => {
     const [otp, setOtp] = useState(['', '', '', '']);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+    const [isEditing, setIsEditing] = useState(false);
+    const [phoneNumber, setPhoneNumber] = useState('xxxxxxxxxx');
+    const [editedPhoneNumber, setEditedPhoneNumber] = useState(phoneNumber);
 
     const handleChange = (index, value) => {
         const newOtp = [...otp];
@@ -19,6 +20,15 @@ const Login = () => {
         }
         setOtp(newOtp);
         setIsButtonDisabled(newOtp.some(digit => digit === ''));
+    };
+
+    const handleEditPhoneNumber = () => {
+        setIsEditing(true);
+    };
+
+    const handleSavePhoneNumber = () => {
+        setPhoneNumber(editedPhoneNumber);
+        setIsEditing(false);
     };
 
     return (
@@ -34,8 +44,8 @@ const Login = () => {
                 <p className='text-lg'>You Can Email Us</p>
                 <p className='text-lg text-blue-600 mb-10'>Contact@dealacres.com</p>
             </div>
-            <div className='h-full md:w-[400px] md:mt-10 rounded-xl p-4 border-2  border-blue-200 shadow-md'>
-                <h1 className="font-medium md:font-bold  text-xl  mt-2">
+            <div className='h-full md:w-[400px] md:mt-10 rounded-xl p-4 border-2 border-blue-200 shadow-md'>
+                <h1 className="font-medium md:font-bold text-xl mt-2">
                     Welcome back,</h1>
                 <p className='text-lg font-medium '>
                     your number is registered with us.
@@ -44,13 +54,26 @@ const Login = () => {
                     Please login to continue
                 </p>
                 <div className='flex gap-3 items-center mb-2'>
-                    <p>+91-xxxxxxxxxx</p>
-                    <TiPencil size={30} color='blue' />
+                    {isEditing ? (
+                        <input
+                            type="text"
+                            value={editedPhoneNumber}
+                            onChange={(e) => setEditedPhoneNumber(e.target.value)}
+                            className='text-lg border-2 border-blue-500 rounded-md p-1'
+                        />
+                    ) : (
+                        <p>+91-{phoneNumber}</p>
+                    )}
+                    {isEditing ? (
+                        <FaSave size={30} color='green' onClick={handleSavePhoneNumber} />
+                    ) : (
+                        <TiPencil size={30} color='blue' onClick={handleEditPhoneNumber} />
+                    )}
                 </div>
                 <p className='text-2xl font-light pb-2'>
                     Enter Your OTP
                 </p>
-                <div className="flex ">
+                <div className="flex">
                     {otp.map((digit, index) => (
                         <input
                             key={index}
@@ -69,11 +92,11 @@ const Login = () => {
                         className={`w-full bg-blue-600 rounded-md px-8 py-2 font-bold text-white mb-3 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-700 ${isButtonDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
                         disabled={isButtonDisabled}
                     >Verify & Login</button>
-                    <button className='w-full bg-white rounded-xl px-8 py-2 font-bold border-4 border-blue-600 text-blue-600 mb-1  hover:border-none'>Login via - E-mail</button>
+                    <button className='w-full bg-white rounded-xl px-8 py-2 font-bold border-4 border-blue-600 text-blue-600 mb-1 hover:border-none'>Login via - E-mail</button>
                 </Link>
             </div>
         </section>
     )
 }
 
-export default Login
+export default Login;

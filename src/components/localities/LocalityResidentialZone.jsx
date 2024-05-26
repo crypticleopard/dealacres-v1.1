@@ -26,7 +26,7 @@ const delhiCities = [
 const LocalityResidentialZone = () => {
   return (
     <Fragment>
-      <div className="mt-5 mb-5 px-[6rem] max-lg:hidden">
+      <div className="mt-6 px-[6rem] max-lg:hidden">
         <h2 className="text-4xl">Leading Residential Zones</h2>
         <p className="text-gray-500">In Delhi</p>
 
@@ -43,16 +43,16 @@ const LocalityResidentialZone = () => {
               </h3>
             </div>
           </div>
-          <div className="col-span-2 grid grid-cols-2 grid-rows-2 gap-6">
+          <div className="col-span-2 grid grid-cols-2 grid-rows-2 gap-4 h-[35rem]">
             {delhiCities.map((town, index) => (
               <div
                 key={index}
-                className="rounded-lg overflow-hidden flex-1 items-center flex flex-col justify-between"
+                className="rounded-lg overflow-hidden flex-1 items-center flex flex-col justify-between h-[17rem]"
               >
                 <img
                   src={town.imageUrl}
                   alt="Qutub Minar"
-                  className="rounded-lg object-cover h-[100%]"
+                  className="rounded-lg object-cover h-[80%] w-[90%]"
                 />
                 <div className="p-2 text-center">
                   <h3 className="text-md font-semibold underline">
@@ -92,12 +92,12 @@ const LocalityResidentialZone = () => {
           {delhiCities.map((town, index) => (
             <div
               key={index}
-              className="rounded-lg overflow-hidden flex flex-col justify-between"
+              className="rounded-lg overflow-hidden flex flex-col justify-between h-[18rem]"
             >
               <img
                 src={town.imageUrl}
                 alt="Qutub Minar"
-                className="rounded-lg object-cover h-auto sm:h-full"
+                className="rounded-lg object-cover w-full h-auto sm:h-full"
               />
               <div className="p-2 text-center">
                 <h3 className="text-md font-semibold underline">{town.name}</h3>

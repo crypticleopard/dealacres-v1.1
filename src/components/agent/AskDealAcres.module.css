@@ -2,7 +2,7 @@
     background: url('../../../public/Agent/AskDealAcres.webp');
     object-fit: cover;
     position: center;
-    @apply h-[90%]
+    @apply h-[80%]
 }
 
 
@@ -22,7 +22,7 @@
     color: red;
     font-size: 10px;
     margin-left: 15px;
-    margin-bottom: 25px;   
+    margin-bottom: 16px;   
 }
 
 .ContactForm label{
@@ -57,7 +57,7 @@
 .TitleInfo h2{
     margin-top: 10px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 15px;
     color: white;
     text-align: center;
@@ -65,7 +65,7 @@
 
 .TitleInfo p{
     /* font-weight: bold; */
-    font-size: 18px;
+    font-size: 16px;
     color: white;
     text-align: center;
 }

@@ -24,8 +24,8 @@ const Page = () => {
     <DndProvider backend={HTML5Backend}>
       <section className='mt-12 container mx-auto lg:w-4/5'>
         <Navigation />
-        <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem]  container mx-auto my-10 overflow-auto'>
-          <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
+        <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[2rem]  container mx-auto my-10 overflow-auto'>
+          <div className='h-full  md:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
             <h1 className="text-lg text-center mt-8">
               Click Perfect pictures of your property so the renter or buyer can see the best images of your property.
             </h1>
@@ -34,7 +34,7 @@ const Page = () => {
             <p className='text-lg'>You Can Email Us</p>
             <p className='text-lg text-blue-600 mb-8'>Contact@dealacres.com</p>
           </div>
-          <div className='h-full md:w-[400px] md:mt-8 rounded-xl p-5 border-2 border-blue-200 shadow-md'>
+          <div className='h-full md:w-[350px] xl:w-[400px] md:mt-8 rounded-xl p-5 border-2 border-blue-200 shadow-md'>
             <h1 className="font-medium md:font-bold  text-xl mb-2">
               Add Media
             </h1>

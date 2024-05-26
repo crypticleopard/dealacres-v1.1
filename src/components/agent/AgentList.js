@@ -8,7 +8,7 @@ const Agent = (props) => {
   const filteredData = data["Experts"];
   return (
     <div className={styles.MainLayout}>
-      <div>
+        <div className="w-full">
         {filteredData.map((dt, index) => (
           <AgentLayout
             key={index}

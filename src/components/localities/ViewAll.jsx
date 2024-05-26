@@ -58,9 +58,9 @@ const ViewAll = () => {
       )}
 
 
-  <div className="px-5 mb-10 md:pl-12 flex items-start justify-between w-full space-x-14 max-md:space-x-0 mx-auto">
+  <div className="max-w-[1200px] flex items-start justify-between w-full space-x-10 max-md:space-x-0 mx-auto mb-4 md:mb-7">
     <SideFilter />
-    <div className=" max-xl:pr-[5rem] max-md:pr-0 w-full md:w-4/5">
+    <div className=" max-xl:pr-[4.5rem] max-md:pr-0 w-full md:w-4/5">
       <LocalityCard />
 
       <StarRateLocality />
@@ -82,7 +82,7 @@ const ViewAll = () => {
   </div>
 
 
-      <div className="max-w-[1100px] mx-auto mb-14"><Explore />
+      <div className="max-w-[1100px] mx-auto mb-10"><Explore />
 </div>
       
       <LocalityResidentialZone />

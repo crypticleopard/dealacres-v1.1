@@ -61,9 +61,9 @@ const Page = () => {
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
             <NavigationBroker />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10'>
+            <div className='flex flex-col md:flex-row px-2 items-start justify-center gap-10 md:gap-[2rem] container mx-auto my-10'>
 
-                <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
+                <div className='h-full lg:w-[420px]  rounded-xl p-3 custom-border'>
                 <h1 className="font-medium md:font-bold text-xl">
                         Now, tell us about your property
                     </h1>
@@ -219,7 +219,7 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-3">
                         Availability Status
                     </h1>
-                    <div className='w-[80%] flex flex-row gap-2 my-2'>
+                    <div className='w-[90%] flex flex-row gap-2 my-2'>
                         <div className={`h-full bg-[#c9e0ee] py-2 px-2 rounded-lg cursor-pointer ${selectedStatus === 'Ready To Move' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleStatusSelection('Ready To Move')}>
                             Ready To Move
                         </div>
@@ -269,7 +269,7 @@ const Page = () => {
                 </div>
                 <div className='h-fit sticky top-20 flex flex-col'>
 
-                    <div className=' w-[400px] rounded-xl bg-[#e9f6fe] px-4 py-2 flex flex-col items-center'>
+                    <div className=' lg:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] px-4 py-2 flex flex-col items-center'>
                         <h1 className="text-base mb-4 text-center mt-3">
                             Describe your property in brief so the buyer or renter can easily get to know how your property is and what makes your property different from others.
                         </h1>
@@ -278,7 +278,7 @@ const Page = () => {
                         <p className='text-base'>You Can Email Us</p>
                         <p className='text-base text-blue-600 mb-3'>Contact@dealacres.com</p>
                     </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] px-4 flex flex-col items-center mt-4'>
+                    <div className='h-full lg:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] px-4 flex flex-col items-center mt-4'>
                         <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={60} width={60} className='mt-3 mb-2' />
                         <h1 className='text-lg mb-2'>You are Almost There</h1>
                     </div>

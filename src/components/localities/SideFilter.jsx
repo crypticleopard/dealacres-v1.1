@@ -2,7 +2,7 @@ import React from "react";
 
 const SideFilter = () => {
   return (
-    <div className="w-1/3 mx-auto border-4 border-blue-300 rounded-lg p-3 bg-slate-100 sticky max-xl:w-1/3 max-lg:w-1/2 max-lg:hidden">
+    <div className="w-1/3 mx-auto border-4 border-blue-300 rounded-2xl p-3 bg-slate-100 sticky max-xl:w-1/3 max-lg:w-1/2 max-lg:hidden">
       <div className="flex flex-col items-start p-2">
         <p className="text-lg font-bold text-gray-500">Choose Segment</p>
         <div className="flex flex-wrap gap-4 mt-3 items-start">

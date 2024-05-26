@@ -47,14 +47,16 @@ const PropertyCard = ({
             </button>
 
             <div className="flex items-center">
-              <div className="h-4 w-4 border-2 border-gray-600 mr-2 flex items-center justify-center">
+              <div className="h-4 w-4 border-2 border-gray-600 mr-2 flex items-center justify-center cursor-pointer"  onClick={handleAddToCompare}>
                 {isAddedToCompare({ id }) && (
-                  <FaCheck className="text-green-500 text-xs" />
+                  <div   onClick={handleAddToCompare}> 
+                  <FaCheck className="text-green-500 text-xs cursor-pointer" />
+                  </div>
                 )}
               </div>
               <span
                 className="text-gray-600 py-1 rounded cursor-pointer"
-                onClick={handleAddToCompare}
+               
               >
                 {isAddedToCompare({ id })
                   ? "Added to Compare"

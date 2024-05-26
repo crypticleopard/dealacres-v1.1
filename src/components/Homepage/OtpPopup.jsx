@@ -1,16 +1,15 @@
-'use client';
-import { useState } from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
 import { TiPencil } from "react-icons/ti";
 import { FaSave } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 import Link from 'next/link';
 
-const Login = () => {
+const OtpPopup = ({ onClose }) => {
     const [otp, setOtp] = useState(['', '', '', '']);
-    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const [isEditing, setIsEditing] = useState(false);
     const [phoneNumber, setPhoneNumber] = useState('xxxxxxxxxx');
     const [editedPhoneNumber, setEditedPhoneNumber] = useState(phoneNumber);
+    const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
     const handleChange = (index, value) => {
         const newOtp = [...otp];
@@ -32,27 +31,14 @@ const Login = () => {
     };
 
     return (
-        <section className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-18 mx-auto my-12 overflow-auto'>
-            <div className='h-fit w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
-                <div className='flex flex-row items-center gap-2 mt-8 mb-2'>
-                    <Image src={'/propertyListing/assets/thumbsup.png'} alt='authentication' height={40} width={40} className='mt-3 mb-10' />
-                    <h1 className="text-lg mb-4">
-                        Your Phone number gives<br /> access to your account.</h1>
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="relative md:w-[400px] md:mt-10 rounded-xl p-4 border-2 border-blue-200 shadow-md bg-white">
+                <div className="absolute top-2 right-2 text-gray-600" onClick={onClose}>
+                    <IoClose size={24} />
                 </div>
-                <Image src={'/propertyListing/assets/authentication.png'} alt='authentication' height={120} width={120} className='mt-3 mb-10' />
-                <h1 className='font-bold text-xl'>Need Help?</h1>
-                <p className='text-lg'>You Can Email Us</p>
-                <p className='text-lg text-blue-600 mb-10'>Contact@dealacres.com</p>
-            </div>
-            <div className='h-full md:w-[400px] md:mt-10 rounded-xl p-4 border-2 border-blue-200 shadow-md'>
-                <h1 className="font-medium md:font-bold text-xl mt-2">
-                    Welcome back,</h1>
-                <p className='text-lg font-medium '>
-                    your number is registered with us.
-                </p>
-                <p className='pb-2 text-lg font-medium'>
-                    Please login to continue
-                </p>
+                <div className="font-medium md:font-bold text-xl mt-2">Welcome back,</div>
+                <div className='text-lg font-medium'>your number is registered with us.</div>
+                <div className='pb-2 text-lg font-medium'>Please login to continue</div>
                 <div className='flex gap-3 items-center mb-2'>
                     {isEditing ? (
                         <input
@@ -62,7 +48,7 @@ const Login = () => {
                             className='text-lg border-2 border-blue-500 rounded-md p-1'
                         />
                     ) : (
-                        <p>+91-{phoneNumber}</p>
+                        <div>+91-{phoneNumber}</div>
                     )}
                     {isEditing ? (
                         <FaSave size={30} color='green' onClick={handleSavePhoneNumber} />
@@ -70,9 +56,7 @@ const Login = () => {
                         <TiPencil size={30} color='blue' onClick={handleEditPhoneNumber} />
                     )}
                 </div>
-                <p className='text-2xl font-light pb-2'>
-                    Enter Your OTP
-                </p>
+                <div className='text-2xl font-light pb-2'>Enter Your OTP</div>
                 <div className="flex">
                     {otp.map((digit, index) => (
                         <input
@@ -86,17 +70,16 @@ const Login = () => {
                         />
                     ))}
                 </div>
-                <p className='text-sm text-blue-400 mt-1 pb-6'>Resend OTP</p>
-                <Link href={'user/choose-info'}>
+                <div className='text-sm text-blue-400 mt-1 pb-6'>Resend OTP</div>
+                <Link href={'/'}>
                     <button
                         className={`w-full bg-blue-600 rounded-md px-8 py-2 font-bold text-white mb-3 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-700 ${isButtonDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
-                        disabled={isButtonDisabled}
+                        disabled={isButtonDisabled} onClick={onClose}
                     >Verify & Login</button>
-                    <button className='w-full bg-white rounded-xl px-8 py-2 font-bold border-4 border-blue-600 text-blue-600 mb-1 hover:border-none'>Login via - E-mail</button>
                 </Link>
             </div>
-        </section>
-    )
-}
+        </div>
+    );
+};
 
-export default Login;
+export default OtpPopup;

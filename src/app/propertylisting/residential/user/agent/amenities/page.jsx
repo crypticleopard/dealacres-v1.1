@@ -61,9 +61,9 @@ const Page = () => {
             <section className='mt-12 container mx-auto lg:w-4/5'>
 
                 <NavigationBroker />
-                <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem] container mx-auto my-10'>
+                <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[2rem] container mx-auto my-10'>
 
-                    <div className='h-full md:w-[450px] rounded-xl p-5 border-t-4 border-r-2 border-l-2 border-[#dcf0fd] border-b-4'>
+                    <div className='h-full lg:w-[420px] rounded-xl p-5 border-2 border-[#dcf0fd] shadow-md'>
 
                         <h1 className="font-medium md:font-bold  text-xl mb-4">Add Amenties and Features</h1>
                         <AmenitiesList />
@@ -88,7 +88,7 @@ const Page = () => {
                         <FileDropzone onFilesDrop={handleFilesDrop} description={'Uploaded photo is maximum is of 5MB'} />
                     </div>
 
-                    <div className='  sticky top-20 h-fit w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5'>
+                    <div className='  sticky top-20 h-fit lg:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5'>
                         <ul className="list-disc pl-6 text-xl mt-5">
                             <li className="mb-2 text-lg">Mention attractive amenities and appealing details of your property.</li>
                             <li className="mb-2 text-lg">Add property proximity to transit Shopping, Market Areas, and more...</li>
@@ -114,7 +114,7 @@ const Page = () => {
                 <div className="bg-[#e1dff8] p-2 rounded-lg mb-4">
                     <p>The data based on a search query on Deal Acres has been made available for information/advertisement purposes. No warranty is implied for its accuracy. Nothing contained herein will be deemed to constitute any sort of legal advice, solicitation, marketing, offer of sale, an invitation to offer, or an invitation to get by the developer/builder or any other entity. You are advised to visit the relevant RERA website. And get more information about the builder and property directly. Before deciding on the project content displayed on dealacres.com. If you have any queries contact Deal Acres at contact@dealacres.com.</p>
                 </div>
-                <button
+                 <button
                     onClick={openPostModal}
                     className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10  hover:bg-white hover:border-2 hover:border-blue-600 hover:text-blue-600 ${!isGDPRChecked || uploadedFiles.length === 0 ? 'cursor-not-allowed bg-blue-400' : ''}`}
                     disabled={!isGDPRChecked || uploadedFiles.length === 0}

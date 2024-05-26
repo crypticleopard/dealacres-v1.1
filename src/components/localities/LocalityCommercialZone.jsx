@@ -37,11 +37,11 @@ const LocalityCommercialZone = () => {
   return (
     <Fragment>
       {/* Large Screen Layout */}
-      <div className="mt-5 mb-5 px-[6rem] max-lg:hidden">
+      <div className=" mb-5 px-[6rem] max-lg:hidden">
         <h2 className="text-4xl">Leading Commercial Zones</h2>
         <p className="text-gray-500">In Delhi</p>
 
-        <div className="grid grid-cols-3 gap-6 mt-3">
+        <div className="grid grid-cols-3 gap-4 mt-3 h-[35rem]">
           {delhiCities.map((town, index) => (
             <div
               key={index}
@@ -52,7 +52,7 @@ const LocalityCommercialZone = () => {
               <img
                 src={town.imageUrl}
                 alt={town.name}
-                className="rounded-lg object-cover h-[100%]"
+                className="rounded-lg object-cover h-[85%] w-[95%]"
               />
               <div className="p-2 text-center">
                 <h3 className="text-md font-semibold underline">{town.name}</h3>

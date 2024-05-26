@@ -26,8 +26,8 @@ const Page = () => {
   return (
     <section className='mt-8 container mx-auto lg:w-4/5'>
       <NavigationCOwner />
-      <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem]  container mx-auto my-8 overflow-auto'>
-        <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
+      <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[2rem]  container mx-auto my-8 overflow-auto'>
+        <div className='h-full md:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
           <h1 className="text-lg text-center mt-8">
             An Accurate Location is the most essential as it helps you to connect the perfect buyer or tenant
           </h1>
@@ -36,7 +36,7 @@ const Page = () => {
           <p className='text-lg'>You Can Email Us</p>
           <p className='text-lg text-blue-600 mb-8'>Contact@dealacres.com</p>
         </div>
-        <div className='h-fit md:w-[400px] md:mt-10 rounded-xl px-5 py-4 border-2 border-[#dcf0fd] shadow-md '>
+        <div className='h-fit md:w-[350px] xl:w-[400px] md:mt-10 rounded-xl px-5 py-4 border-2 border-[#dcf0fd] shadow-md '>
           <h1 className="font-medium md:font-bold text-xl  mb-4">Your Property Location?</h1>
           {['state', 'city', 'projectName', 'area'].map((fieldName) => (
             <input

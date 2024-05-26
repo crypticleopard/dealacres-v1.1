@@ -13,13 +13,13 @@ import PropertyFlatList from "@/components/all-property/PropertyFlatList";
 import ProjectCompareSidebar from "@/components/all-property/ProjectCompareSidebar";
 import ConnectWithTopAgents from "@/components/all-property/ConnectWithTopAgents";
 import InterestingReads from "@/components/all-property/InterestingReads";
-import FNQ from "@/components/localities/FNQ";
+import FAQ from "@/components/localities/FAQ";
 import { ComparePropertyProvider } from "@/context/ComparePropertyContext";
 import Insights from "@/components/all-property/Insights";
 import { useCompareProperty } from "@/context/ComparePropertyContext";
 
 const AllProperty = () => {
-  
+
   function handleClick(event) {
     event.preventDefault();
     console.info("You clicked a breadcrumb.");
@@ -48,7 +48,7 @@ const AllProperty = () => {
     <div className="p-[3rem] w-full rounded-xl max-md:px-[4rem] max-sm:px-5">
       <div className={`flex  w-full mx-auto ${hasCompareProperties ? 'max-w-screen-xl ' : 'max-w-[1000px]'}`}>
         <div className={`flex flex-col md:flex-row items-center md:items-start`}>
-          <div className={`${hasCompareProperties ? 'w-[25%]':'w-[70%]'} my-4 text-center md:text-left`}>
+          <div className={`${hasCompareProperties ? 'w-[25%]' : 'w-[70%]'} my-4 text-center md:text-left`}>
             <div className="my-4 max-xl:hidden">
               <Stack spacing={2}>
                 <Breadcrumbs
@@ -63,23 +63,22 @@ const AllProperty = () => {
             <ConnectWithTopAgents />
           </div>
 
-     <div className={`${hasCompareProperties ? 'w-[50%]':'w-full'}`}>
-     <PropertyFlatList />
-     </div>
-          
-
+          <div className={`${hasCompareProperties ? 'w-[50%]' : 'w-full'}`}>
+            <PropertyFlatList />
+          </div>
 
           {hasCompareProperties && (
-            
-              <ProjectCompareSidebar />
+
+            <ProjectCompareSidebar />
           )}
         </div>
       </div>
       <div className="mt-8">
         <Insights />
-        <InterestingReads />
-        <FNQ />
+
       </div>
+      <InterestingReads />
+      <FAQ />
     </div>
   );
 };

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
-const FNQ = () => {
+const FAQ = () => {
   const faqData = [
     {
       question: "Is Gurgaon a good place to live?",
@@ -67,7 +67,7 @@ const FNQ = () => {
   };
 
   return (
-    <div className="px-20 py-4 sm:py-8">
+    <div className="px-20">
       <h1 className="text-2xl sm:text-3xl font-semibold">
         Frequently Asked Questions
       </h1>
@@ -95,4 +95,4 @@ const FNQ = () => {
   );
 };
 
-export default FNQ;
+export default FAQ;

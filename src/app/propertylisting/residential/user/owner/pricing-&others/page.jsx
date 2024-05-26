@@ -69,8 +69,8 @@ const Page = () => {
     <DndProvider backend={HTML5Backend}>
       <section className='mt-12 container mx-auto lg:w-4/5'>
         <Navigation />
-        <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem] container mx-auto my-10'>
-          <div className='h-full md:w-[450px] rounded-xl p-5 border-2 border-blue-200 shadow-md '>
+        <div className='flex flex-col md:flex-row px-2 items-start justify-center gap-10 md:gap-[2rem] container mx-auto my-10'>
+          <div className='h-full lg:w-[420px] rounded-xl p-5 border-2 border-blue-200 shadow-md '>
             <h1 className="font-medium md:font-bold text-xl">
               Price Details
             </h1>
@@ -138,7 +138,7 @@ const Page = () => {
             <FileDropzone onFilesDrop={handleFilesDrop} description={'Uploaded photo is maximum is of 5MB'} />
           </div>
 
-          <div className='sticky top-20 h-fit w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5'>
+          <div className='sticky top-20 h-fit lg:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5'>
             <ul className="list-disc pl-6 text-xl mt-5">
               <li className="mb-2 text-lg">Mention attractive amenities and appealing details of your property.</li>
               <li className="mb-2 text-lg">Add property proximity to transit Shopping, Market Areas, and more...</li>

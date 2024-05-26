@@ -20,9 +20,9 @@ const Page = () => {
   return (
     <section className='mt-12 container mx-auto lg:w-4/5'>
       <NavigationBroker />
-      <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem] container mx-auto my-10 '>
+      <div className='flex flex-col md:flex-row px-2 items-start justify-center gap-10 md:gap-[2rem] container mx-auto my-10 '>
 
-        <div className='h-full md:w-[450px] rounded-xl p-5 border-2 border-blue-200 shadow-md'>
+        <div className='h-full lg:w-[420px] rounded-xl p-4 border-2 border-blue-200 shadow-md'>
           <h1 className="font-medium md:font-bold md:text-2xl text-xl">
             Price Details
           </h1>
@@ -145,7 +145,7 @@ const Page = () => {
           </Link>
         </div>
 
-        <div className='h-fit sticky top-20 w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5 '>
+        <div className='h-fit sticky top-20 lg:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center mt-5 '>
           <h1 className="text-lg mb-4 text-center mt-8">Mention the Expected price of<br /> your property with your<br /> Brokerage Charges.</h1>
           <Image src={'/propertyListing/assets/home_coin.png'} alt='coin' height={120} width={120} className='mt-3 mb-5' />
           <h1 className='font-bold text-xl'>Need Help?</h1>

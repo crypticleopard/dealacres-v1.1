@@ -8,6 +8,7 @@ import Image from "next/image";
 import FlyoutMenuSections from "./FlyoutMenuSections";
 import { BsFillArrowDownSquareFill } from "react-icons/bs";
 import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
+import SignupPopup from "../Homepage/signupPopup";
 
 const Menu = ({ setMenuPosition, setHoveredMenu }) => {
   const handleClick = (menu, event) => {
@@ -55,9 +56,20 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState('Gurugram');
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
+  const [showPopup, setShowPopup] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  
+  const openPopup = () => {
 
+    setShowPopup(true);
+   
+};
+
+  const closePopup = () => {
+   
+    setShowPopup(false);
+};
   const flyoutRef = useRef(null);
 
   const MenuMobile = () => (
@@ -208,7 +220,11 @@ const Navbar = () => {
           >
             Sign In
           </Link>
-          <button type="button">Sign Up</button>
+          <button type="button" onClick={openPopup}>Sign Up</button>
+          {showPopup && (
+                    <SignupPopup onClose={closePopup} />
+                       
+          )}
         </div>
       </div>
       <Link href="/propertylisting">

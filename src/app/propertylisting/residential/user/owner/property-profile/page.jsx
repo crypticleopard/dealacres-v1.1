@@ -50,8 +50,8 @@ const Page = () => {
     return (
         <section className='mt-8 container mx-auto lg:w-4/5'>
             <Navigation />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[3rem] container mx-auto my-8'>
-                <div className='h-fit max-xl:w-[440px] lg:w-[450px] rounded-xl p-5 border-2 border-blue-200 shadow-md'>
+            <div className='flex flex-col md:flex-row px-2 items-start justify-center gap-10 md:gap-[2rem] container mx-auto my-8'>
+                <div className='h-fit lg:w-[420px] rounded-xl p-3 border-2 border-blue-200 shadow-md'>
                     <h1 className="font-medium md:font-bold text-xl">
                         Now, tell us about your property
                     </h1>
@@ -207,7 +207,7 @@ const Page = () => {
                     <h1 className="font-medium md:font-bold text-xl mt-3">
                         Availability Status
                     </h1>
-                    <div className='w-[80%] flex flex-row gap-2 my-2'>
+                    <div className='w-[90%] flex flex-row gap-2 my-2'>
                         <div className={`h-full bg-[#c9e0ee] py-2 px-2 rounded-lg cursor-pointer ${selectedStatus === 'Ready To Move' ? 'shadow-md border-2 border-blue-500' : ''}`} onClick={() => handleStatusSelection('Ready To Move')}>
                             Ready To Move
                         </div>

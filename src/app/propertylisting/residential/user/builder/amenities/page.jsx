@@ -36,9 +36,9 @@ const Page = () => {
             <section className='mt-12 container mx-auto lg:w-4/5'>
 
                 <NavigationBroker />
-                <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[4rem] container mx-auto mt-10 mb-5'>
+                <div className='flex flex-col md:flex-row px-2 items-start justify-center gap-10 md:gap-[2rem] container mx-auto mt-10 mb-5'>
 
-                    <div className='h-full md:w-[450px] rounded-xl p-5 border-2 border-blue-200 shadow-md'>
+                    <div className='h-full lg:w-[420px] rounded-xl p-5 border-2 border-blue-200 shadow-md'>
 
                         <h1 className="font-medium md:font-bold  text-xl mb-4">Add Amenties and Features</h1>
                         <AmenitiesList />

@@ -1,5 +1,5 @@
 'use client'
-import NavigationCOwner from '@/components/propertyListing/Navigation/NavigationCOwner';
+import NavigationBroker from '@/components/propertyListing/Navigation/NavigationBroker';
 import Image from 'next/image';
 
 import Link from 'next/link';
@@ -8,6 +8,8 @@ import { useState } from 'react';
 import PropertyRadioButton from '@/components/propertyListing/PropertyRadioButton';
 import DynamicRadio from '@/components/propertyListing/DynamicRadio';
 import { CiCircleQuestion } from "react-icons/ci";
+import RoomInfo from '@/components/propertyListing/RoomInfo';
+
 
 
 const Page = () => {
@@ -15,7 +17,7 @@ const Page = () => {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1;
-
+    const [officeCount, setOfficeCountt] = useState(null);
     const [isExpanded, setIsExpanded] = useState(false);
     const [isReadyToMoveClicked, setIsReadyToMoveClicked] = useState(false);
     const [isUnderConstructionClicked, setIsUnderConstructionClicked] = useState(false);
@@ -52,7 +54,9 @@ const Page = () => {
 
     const years = Array.from({ length: 10 }, (_, index) => currentYear + index);
 
-
+    const handleOfficeButtonClick = (count) => {
+        setOfficeCountt(count);
+    };
     const handleMonthChange = (event) => {
         setSelectedMonth(parseInt(event.target.value, 10));
     };
@@ -87,26 +91,32 @@ const Page = () => {
 
     return (
         <section className='mt-12 container mx-auto lg:w-4/5'>
-            <NavigationCOwner />
-            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-20 container mx-auto my-10 overflow-auto'>
+            <NavigationBroker />
+            <div className='flex flex-col md:flex-row px-4 items-start justify-center gap-10 md:gap-[2rem] container mx-auto my-10 '>
 
-                <div className='h-full md:w-[450px]  rounded-xl p-5 custom-border'>
-                    <h1 className="font-medium md:font-bold md:text-2xl text-xl mt-2">
+                <div className='h-full md:w-[450px]  rounded-xl p-5 border-2 border-[#dcf0fd] shadow-md'>
+                <h1 className="font-medium md:font-bold text-xl">
                         Now, tell us about your property
                     </h1>
-                    <p className='font-medium md:text-lg text-md ' >Describe Your Property</p>
-                    <p className='w-[85%]'>Write Several Thing which can describe your propety appropriately </p>
+                    <p className='font-medium text-base'>Describe Your Property</p>
+                    <p className='text-sm my-0.5'>Write Several Things which can describe your property appropriately</p>
 
                     <textarea
                         id="myTextArea"
                         name="myTextArea"
-                        rows={10}
+                        rows={6}
                         cols={40}
-                        className='my-6 custom-border-2 rounded-md'
-                        value={propertyDescription}
-                        onChange={(e) => handleInputChange(setPropertyDescription, e.target.value)}
+                        className='my-3 custom-border-2 rounded-md'
                     />
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
+                      <h1 className="font-medium md:font-bold text-xl">
+                       Property Tile
+                    </h1>
+                    <input
+                                type="text"
+                                className="custom-border-2 rounded-xl px-2 py-1 w-[75%]"
+                               
+                            />
+                    <h1 className="font-medium md:font-bold text-xl mt-3">
                         Floor Number
                     </h1>
                     <div className="flex items-center gap-1">
@@ -131,11 +141,11 @@ const Page = () => {
                     </div>
                     {selectedFloor && <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} selectedFloor={selectedFloor} />}
 
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
-                        Number of Floors
+                    <h1 className="font-medium md:font-bold  text-xl mt-3">
+                    Number of Floors
                     </h1>
-
-                    <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} />
+                    <RoundedDiv width={30} height={30} size={5} onClick={handleOfficeButtonClick} dropdown={true} dropdownLength={95} onSelectionChange={handleOfficeButtonClick}/>
+                    {officeCount !== null && <RoomInfo roomCount={officeCount} roomtype={'Office'}  />}
 
                     <h1 className="font-medium md:font-bold text-xl mt-4">
                         Furnished
@@ -164,10 +174,10 @@ const Page = () => {
                             Semifurnished
                         </div>
                     </div>
-                    <h1 className="font-medium md:font-bold text-xl mt-2">
+                    <h1 className="font-medium md:font-bold text-xl mt-3">
                         Wash Room
                     </h1>
-                    <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={15} />
+                    <RoundedDiv width={30} height={30} size={5} dropdown={true} dropdownLength={15} />
 
                     <PropertyRadioButton />
                     <h1 className="font-medium md:font-bold text-xl mt-2">
@@ -293,25 +303,25 @@ const Page = () => {
 
                     <Link href={'photos'}>
                         <button
-                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-10 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
+                            className={`w-full bg-blue-600 rounded-xl px-8 py-3 font-bold text-white mt-5 mb-2 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 ${isContinueDisabled ? 'cursor-not-allowed opacity-50' : ''}`}
                             disabled={isContinueDisabled}
                         >
                             Continue
                         </button>
                     </Link>
                 </div>
-                <div className='flex flex-col gap-5'>
-                    <div className='h-full w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
-                        <h1 className="text-xl mb-4 text-center px-4 mt-20">
+                <div className='h-fit sticky top-20 flex flex-col gap-5'>
+                    <div className='h-full lg:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] p-4 flex flex-col items-center'>
+                        <h1 className="text-base mb-4 text-center px-4 mt-3">
                             Describe your property in brief so the buyer or tenant can easily get to know how your property is what makes your property different from others.</h1>
-                        <Image src={'/propertyListing/assets/store.png'} alt='home' height={150} width={150} className='mt-6 mb-10' />
+                        <Image src={'/propertyListing/assets/store.png'} alt='home' height={120} width={120} className='mb-5' />
                         <h1 className='font-bold text-xl'>Need Help?</h1>
                         <p className='text-lg'>You Can Email Us</p>
-                        <p className='text-lg text-blue-600 mb-20'>Contact@dealacres.com</p>
+                        <p className='text-lg text-blue-600 mb-3'>Contact@dealacres.com</p>
                     </div>
-                    <div className='h-full w-[400px] rounded-xl bg-[#c9e0ee] p-4 flex flex-col items-center'>
-                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={100} width={100} className='mt-3 mb-2' />
-                        <h1 className='text-2xl'>You are Almost There</h1>
+                    <div className='h-full lg:w-[350px] xl:w-[400px] rounded-xl bg-[#e9f6fe] px-4 flex flex-col items-center'>
+                        <Image src={'/propertyListing/assets/smiley.png'} alt='smiley' height={60} width={60} className='mt-3 mb-2' />
+                        <h1 className='text-lg mb-2'>You are Almost There</h1>
                     </div>
                 </div>
             </div>

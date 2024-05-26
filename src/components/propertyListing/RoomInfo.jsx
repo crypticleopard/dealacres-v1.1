@@ -2,9 +2,9 @@ import React from 'react';
 
 const RoomInfo = ({ roomCount, roomtype }) => {
   return (
-    <div className="relative mt-4 custom-border px-4 py-6 w-[85%] rounded-lg">
+    <div className="relative mt-4 custom-border px-4 pt-6 pb-1 w-[85%] rounded-lg">
         <div className='absolute text-xs top-0 w-full h-6 left-0  bg-[#c7e3f6] '>
-            <p className='text-center'>Specify {roomtype} sizes - For example 12x10 ft</p>
+            <p className='text-center mt-0.5'>Specify {roomtype} sizes - For example 12x10 ft</p>
         </div>
       <table className='w-full mt-2'>
         <thead className='px-4'>
