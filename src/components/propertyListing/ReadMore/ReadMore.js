@@ -3,6 +3,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "./swiper-custom.css";
 // import "swiper/css/navigation";
 import Card from "@/components/propertyListing/Card/Card";
 import ArticleCard from "@/components/faq/ArticleCard";
@@ -61,7 +62,7 @@ const ReadMore = ({
 
   return (
     <div className={`${isFullScreen ? '' : 'px-4 sm:px-8 md:px-16 lg:px-32 space-y-8 mt-5 py-5'}} relative`}>
-      <h2 className="text-2xl sm:text-4xl lg:text-3xl font-bold py-2">
+      <h2 className="text-2xl sm:text-4xl lg:text-3xl font-bold pt-2">
         {header ? header : 'Interesting Readings'}
       </h2>
       <Swiper

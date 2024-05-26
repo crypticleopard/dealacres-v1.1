@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebookSquare } from "react-icons/fa";
 
-const SignupPopup = ({handleOpenOtpPopup, onClose }) => {
+const SignupPopup = ({ handleOpenOtpPopup, handleOpenSignInPopup, onClose, tabs }) => {
 
     console.log(onClose)
-    const [tab, setTab] = useState('SignUp');
+    const [tab, setTab] = useState(tabs);
     const [select, setSelect] = useState();
     const [businessOptions, setBusinessOptions] = useState([]);
 
@@ -50,8 +52,14 @@ const SignupPopup = ({handleOpenOtpPopup, onClose }) => {
 
     const handleSignUpSubmit = (e) => {
         e.preventDefault();
-       handleOpenOtpPopup();
+        handleOpenOtpPopup();
     };
+
+    const handleSignInSubmit = (e) => {
+        e.preventDefault();
+        handleOpenSignInPopup();
+    }
+
 
     return (
         <div className="fixed z-10 inset-0">
@@ -75,7 +83,7 @@ const SignupPopup = ({handleOpenOtpPopup, onClose }) => {
                     </div>
                     <div className="p-5">
                         {tab === 'SignIn' && (
-                            <form>
+                            <form onSubmit={handleSignInSubmit}>
                                 <div className="mb-4">
                                     <label className="block text-sm font-medium text-gray-700">Email</label>
                                     <input type="email" className="mt-1 px-2 block w-full rounded-2xl border-2 border-blue-200" />
@@ -142,6 +150,14 @@ const SignupPopup = ({handleOpenOtpPopup, onClose }) => {
                                     <input type="password" className="mt-1 px-2 py-1 text-xs block w-full rounded-2xl border-2 border-blue-200" />
                                 </div>
                                 <button type="submit" className="w-full bg-blue-600 text-white py-2 px-4 rounded-md">Sign Up</button>
+                                <div className='mt-3 flex flex-row items-center gap-2 justify-center'>
+                                    <FcGoogle className='w-6 h-6' />
+                                    <div className='text-xs'>Sign In With Google</div>
+                                </div>
+                                <div className='mt-2 flex flex-row items-center gap-2 justify-center'>
+                                    <FaFacebookSquare className='w-6 h-6' color='blue' />
+                                    <div className='text-xs'>Sign In With Facebook</div>
+                                </div>
                             </form>
                         )}
                     </div>

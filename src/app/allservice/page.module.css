@@ -27,6 +27,11 @@
 
 @media only screen and (max-width: 500px){
     .Layout{
-        margin: 0rem 2rem;
+        margin: 0rem 0.5rem;
+    }
+    .faq{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
     }
 }

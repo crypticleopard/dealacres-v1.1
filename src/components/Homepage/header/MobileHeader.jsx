@@ -2,36 +2,19 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { IoSearch } from 'react-icons/io5';
 import background from '../../../../public/background header.jpg';
-import SignupPopup from '../SignupPopup';
-import OtpPopup from '../OtpPopup';
+import { SearchBarPopup } from '../SerachbarPopup';
 
 const MobileHeader = () => {
     
-    const [isSignupPopupVisible, setIsSignupPopupVisible] = useState(false);
-    const [isOtpPopupVisible, setIsOtpPopupVisible] = useState(false);
-
+ const [isSearchBarPopupVisible, setIsSearchBarPopupVisible] =useState(false);
     const handleSearchIconClick = () => {
-        setIsSignupPopupVisible(true);
+        setIsSearchBarPopupVisible(true);
     };
 
-    const handleCloseSignupPopup = () => {
-        setIsSignupPopupVisible(false);
-    };
+    const handleClose = () =>{
+        setIsSearchBarPopupVisible(false);
+    }
 
-    const handleOpenOtpPopup = () => {
-        console.log("hi from function");
-        setIsSignupPopupVisible(false);
-        setIsOtpPopupVisible(true);
-    };
-    console.log(isOtpPopupVisible)
-
-    const handleCloseOtpPopup = () => {
-        setIsOtpPopupVisible(false);
-    };
-    useEffect(() => {
-        handleOpenOtpPopup();
-        console.log("hi");
-    }, [])
 
     return (
         <div className="flex flex-col relative">
@@ -53,8 +36,7 @@ const MobileHeader = () => {
                 </div>
             </div>
 
-            {isSignupPopupVisible && <SignupPopup onClose={handleCloseSignupPopup} handleOpenOtpPopup={handleOpenOtpPopup} />} 
-            {isOtpPopupVisible && <OtpPopup onClose={handleCloseOtpPopup} />}
+          {isSearchBarPopupVisible && <SearchBarPopup onClose={handleClose} />}
         </div>
     );
 }

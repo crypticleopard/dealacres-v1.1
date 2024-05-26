@@ -7,7 +7,7 @@ const ContactStrip = ({
     isFullScreen
 }) => {
     return (
-        <div className={`${isFullScreen ? 'w-screen': 'w-full'} bg-[#0061df] text-white  grid-cols-1 grid md:grid-cols-3 uppercase text-base`}>
+        <div className={`${isFullScreen ? 'w-screen': 'w-full'} bg-[#0061df] text-white  grid-cols-1 grid md:grid-cols-3 uppercase text-sm md:text-base`}>
             <div className='border-r border-r-black py-2 font-bold  flex  flex-col  justify-center
             text-center
             md:text-left
@@ -22,7 +22,7 @@ const ContactStrip = ({
             </div>
             <div className='border-r border-r-black py-2 font-bold  flex items-center justify-center gap-4 md:border-b-0 border-b border-b-black '>
                 <div className=''>
-                   <Image src={whatsapp} alt='Whatsapp Icon' className='rounded-full w-[50px]' />
+                   <Image src={whatsapp} alt='Whatsapp Icon' className='rounded-full w-[30px] md:w-[50px]' />
                 </div>
                 <div>
 

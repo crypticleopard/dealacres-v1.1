@@ -43,4 +43,7 @@
     .Filter {
         width: 85%;
     }
+    .help{
+        margin-bottom: 40px; 
+    }
 }

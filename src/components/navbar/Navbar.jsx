@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { usePathname } from 'next/navigation';
 import "./navbar.css";
 import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
@@ -8,7 +8,9 @@ import Image from "next/image";
 import FlyoutMenuSections from "./FlyoutMenuSections";
 import { BsFillArrowDownSquareFill } from "react-icons/bs";
 import { buyerMenuContent, sellerMenuContent, serviceMenuContent, blogMenuContent, tenantMenuContent } from "./Menu";
-import SignupPopup from "../Homepage/signupPopup";
+import SignupPopup from "../Homepage/SignupPopup";
+import OtpPopup from "../Homepage/OtpPopup";
+import SigninPopup from "../Homepage/SigninPopup";
 
 const Menu = ({ setMenuPosition, setHoveredMenu }) => {
   const handleClick = (menu, event) => {
@@ -21,29 +23,19 @@ const Menu = ({ setMenuPosition, setHoveredMenu }) => {
 
   return (
     <>
-      <p
-        onClick={(e) => handleClick("buyer", e)}
-      >
+      <p onClick={(e) => handleClick("buyer", e)}>
         <a href="#">Buyer</a>
       </p>
-      <p
-        onClick={(e) => handleClick("seller", e)}
-      >
+      <p onClick={(e) => handleClick("seller", e)}>
         <a href="#">Seller</a>
       </p>
-      <p
-        onClick={(e) => handleClick("tenant", e)}
-      >
+      <p onClick={(e) => handleClick("tenant", e)}>
         <a href="#">Tenant</a>
       </p>
-      <p
-        onClick={(e) => handleClick("blog", e)}
-      >
+      <p onClick={(e) => handleClick("blog", e)}>
         <a href="#">Blog</a>
       </p>
-      <p
-        onClick={(e) => handleClick("services", e)}
-      >
+      <p onClick={(e) => handleClick("services", e)}>
         <a href="#">Services</a>
       </p>
     </>
@@ -56,57 +48,39 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState('Gurugram');
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
-  const [showPopup, setShowPopup] = useState(false);
+  const [showSignupPopup, setShowSignupPopup] = useState(false);
+  const [showOtpPopup, setShowOtpPopup] = useState(false);
+  const [signInPopup, setSignInPopup] = useState(false);
+  const [popupTab, setPopupTab] = useState("signup");
+
   const pathname = usePathname();
   const isHomePage = pathname === '/';
-  
-  const openPopup = () => {
 
-    setShowPopup(true);
-   
-};
+  const openSignupPopup = (tab) => {
+    setPopupTab(tab);
+    setShowSignupPopup(true);
+  };
 
-  const closePopup = () => {
-   
-    setShowPopup(false);
-};
-  const flyoutRef = useRef(null);
+  const closeSignupPopup = () => {
+    setShowSignupPopup(false);
+  };
 
-  const MenuMobile = () => (
-    <>
-      <p className="text-[12px]">
-        <a href="#buyer">Buyer</a>
-      </p>
-      <p>
-        <a href="#seller">Seller</a>
-      </p>
-      <p>
-        <a href="#tenant">Tenant</a>
-      </p>
-      <p>
-        <a href="blog">Blog</a>
-      </p>
-      <p>
-        <a href="#services">Services</a>
-      </p>
-    </>
-  );
+  const closeOtpPopup = () => {
+    setShowOtpPopup(false);
+  };
 
-  const getSections = (menu) => {
-    switch (menu) {
-      case "buyer":
-        return buyerMenuContent.sections;
-      case "seller":
-        return sellerMenuContent.sections;
-      case "tenant":
-        return tenantMenuContent.sections;
-      case "blog":
-        return blogMenuContent.sections;
-      case "services":
-        return serviceMenuContent.sections;
-      default:
-        return [];
-    }
+  const handleOpenOtpPopup = () => {
+    setShowSignupPopup(false);
+    setShowOtpPopup(true);
+  };
+
+  const handleOpenSignInPopup = () => {
+    setShowSignupPopup(false);
+    setSignInPopup(true);
+  };
+
+  const closeSignInPopup = () => {
+    setSignInPopup(false);
   };
 
   const handleScroll = () => {
@@ -124,7 +98,6 @@ const Navbar = () => {
     };
   }, []);
 
-
   const handleLocationChange = (e) => {
     setSelectedLocation(e.target.value);
   };
@@ -137,17 +110,13 @@ const Navbar = () => {
             color="#fff"
             size={45}
             className='close'
-            onClick={() => {
-              setToggleMenu(false);
-            }}
+            onClick={() => setToggleMenu(false)}
           />
         ) : (
           <RiMenu2Line
             color="#fff"
             size={27}
-            onClick={() => {
-              setToggleMenu(true);
-            }}
+            onClick={() => setToggleMenu(true)}
           />
         )}
         {toggleMenu && (
@@ -158,7 +127,7 @@ const Navbar = () => {
                 <p>Sign In</p>
                 <Link href={"/propertylisting"}><h5>Post your Property</h5></Link>
                 <h5>Post For Business</h5>
-                <button type="button">Sign Up</button>
+                <button type="button" onClick={() => openSignupPopup("signup")}>Sign Up</button>
               </div>
             </div>
           </div>
@@ -202,29 +171,35 @@ const Navbar = () => {
         <div className="navbar-sign">
           <Link
             href="#"
-            className=" text-sm sm:text-base md:text-sm text-center mr-5   font-light  text-white sm:font-normal md:font-medium shadow-blue-100 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-md hover:shadow-blue-100"
+            className=" text-sm sm:text-base md:text-sm text-center mr-5 font-light text-white sm:font-normal md:font-medium shadow-blue-100 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-md hover:shadow-blue-100"
           >
             Post For Business
           </Link>
-          <Link 
+          <Link
             href="/propertylisting"
-            className=" text-sm sm:text-base md:text-sm text-center   font-light  text-white sm:font-normal md:font-medium shadow-blue-100 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-md hover:shadow-blue-100"
+            className=" text-sm sm:text-base md:text-sm text-center font-light text-white sm:font-normal md:font-medium shadow-blue-100 shadow-sm bg-blue-500 p-2 sm:p-2 rounded-3xl hover:bg-blue-700 hover:shadow-md hover:shadow-blue-100"
           >
             Post Your Property{" "}
-            <span className="text-yellow-500  sm:text-sm font-bold">Free</span>
+            <span className="text-yellow-500 sm:text-sm font-bold">Free</span>
           </Link>
           <Link
             href="#"
-            className="mx-3 text-base hover:rounded-2xl p-2     bg-gradient-to-r
-           hover:from-blue-700 hover:to-indigo-600 rounded-3xl text-white font-medium hover:font-bold"
+            onClick={() => openSignupPopup("SignIn")}
+            className="mx-3 text-base hover:rounded-2xl p-2 bg-gradient-to-r hover:from-blue-700 hover:to-indigo-600 rounded-3xl text-white font-medium hover:font-bold"
           >
             Sign In
           </Link>
-          <button type="button" onClick={openPopup}>Sign Up</button>
-          {showPopup && (
-                    <SignupPopup onClose={closePopup} />
-                       
+          <button type="button" onClick={() => openSignupPopup("SignUp")}>Sign Up</button>
+          {showSignupPopup && (
+            <SignupPopup
+              onClose={closeSignupPopup}
+              handleOpenOtpPopup={handleOpenOtpPopup}
+              handleOpenSignInPopup={handleOpenSignInPopup}
+              tabs={popupTab} 
+            />
           )}
+          {showOtpPopup && <OtpPopup onClose={closeOtpPopup} />}
+          {signInPopup && <SigninPopup onClose={closeSignInPopup} />}
         </div>
       </div>
       <Link href="/propertylisting">
@@ -232,18 +207,52 @@ const Navbar = () => {
       </Link>
       {hoveredMenu && (
         <div
-        onMouseLeave={() => setHoveredMenu(null)}
+          onMouseLeave={() => setHoveredMenu(null)}
           className="flyout-menu-container mt-6"
           style={{ top: menuPosition.top, left: menuPosition.left }}
-         
         >
- 
           <FlyoutMenuSections sections={getSections(hoveredMenu)} />
-
         </div>
       )}
     </div>
   );
+};
+
+const MenuMobile = () => (
+  <>
+    <p className="text-[12px]">
+      <a href="#buyer">Buyer</a>
+    </p>
+    <p>
+      <a href="#seller">Seller</a>
+    </p>
+    <p>
+      <a href="#tenant">Tenant</a>
+    </p>
+    <p>
+      <a href="blog">Blog</a>
+    </p>
+    <p>
+      <a href="#services">Services</a>
+    </p>
+  </>
+);
+
+const getSections = (menu) => {
+  switch (menu) {
+    case "buyer":
+      return buyerMenuContent.sections;
+    case "seller":
+      return sellerMenuContent.sections;
+    case "tenant":
+      return tenantMenuContent.sections;
+    case "blog":
+      return blogMenuContent.sections;
+    case "services":
+      return serviceMenuContent.sections;
+    default:
+      return [];
+  }
 };
 
 export default Navbar;
