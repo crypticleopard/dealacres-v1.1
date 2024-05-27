@@ -23,7 +23,7 @@ const BusinessWizardFormPage1 = ({ onSaveAndContinue }) => {
 
         <div className="w-full flex justify-end max-md:pr-0 max-md:justify-center pr-2 md:pr-0 mt-3">
           <button
-            className="font-semibold text-lg bg-blue-600 px-4 py-2 text-white rounded-md text-center"
+            className="font-semibold text-base md:text-lg bg-blue-600 px-4 py-2 text-white rounded-md text-center"
             onClick={onSaveAndContinue}
           >
             Save & Continue

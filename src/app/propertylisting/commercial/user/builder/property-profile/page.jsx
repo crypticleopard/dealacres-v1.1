@@ -109,7 +109,7 @@ const Page = () => {
                         className='my-3 custom-border-2 rounded-md'
                     />
                       <h1 className="font-medium md:font-bold text-xl">
-                       Property Tile
+                       Property Title
                     </h1>
                     <input
                                 type="text"
@@ -139,7 +139,7 @@ const Page = () => {
                             Ground
                         </button>
                     </div>
-                    {selectedFloor && <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} selectedFloor={selectedFloor} />}
+                    {selectedFloor && <RoundedDiv width={30} height={30} size={5} dropdown={true} dropdownLength={95} selectedFloor={selectedFloor} />}
 
                     <h1 className="font-medium md:font-bold  text-xl mt-3">
                     Number of Floors

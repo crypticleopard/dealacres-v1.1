@@ -76,13 +76,13 @@ const BusinessCategory = () => {
   const isSaveEnabled = primaryCategory && selectedSecondaryCategories.length > 0;
 
   return (
-    <div className="flex items-center justify-center py-8 max-md:py-8 max-md:px-4">
-      <div className="p-5 w-fit border-2 rounded-lg border-blue-300 pr-10 max-md:pr-0">
-        <h1 className="font-semibold text-3xl mb-3 max-md:text-xl">
+    <div className="flex items-center justify-center py-8 max-md:p-2">
+      <div className="p-2 md:p-5 w-fit md:border-2 rounded-lg md:border-blue-300 md:pr-10 ">
+        <h1 className="font-semibold text-3xl mb-3 max-md:text-lg">
           First Choose your Real Estate <br className="max-md:hidden" />
           Business Category
         </h1>
-        <p className="mb-4 text-gray-500">
+        <p className="mb-4 text-gray-500 text-sm md:text-base">
           This helps customers if they are looking for a service which you are
           providing.
         </p>
@@ -90,7 +90,7 @@ const BusinessCategory = () => {
         <div className="flex items-end justify-start space-x-3 w-full mb-4 max-md:space-x-2">
           <FaSearch className="h-6 w-6 mb-2" color="#747264" />
           <div className="w-full">
-            <label className="text-lg max-md:text-md">
+            <label className="text-lg max-md:text-base">
               Primary Business Category
             </label>
             <Select
@@ -105,7 +105,7 @@ const BusinessCategory = () => {
         <div className="flex items-end justify-start space-x-3 w-full mb-4">
           <FaSearch className="h-6 w-6 mb-2" color="#747264" />
           <div className="w-full">
-            <label className="text-lg max-md:text-md">
+            <label className="text-lg max-md:text-base">
               Secondary Business Category
             </label>
             <Select
@@ -124,8 +124,15 @@ const BusinessCategory = () => {
             />
           </div>
         </div>
+        <div className="flex flex-wrap md:hidden gap-2">
+          <input  className="border border-blue-400 p-0.5 rounded-md w-[45%]"/>
+          <input className="border border-blue-400 p-0.5 rounded-md w-[45%]"/>
+          <input className="border border-blue-400 p-0.5 rounded-md w-[45%]"/>
 
-        <div className="flex flex-wrap items-center">
+        </div>
+        <p className="mt-2 md:hidden text-xs">You can only choose 3 Real estate services not more then that. </p>
+
+        <div className="md:flex flex-wrap items-center hidden ">
           {selectedSecondaryCategories.map((category, index) => (
             <div
               key={index}
@@ -142,7 +149,7 @@ const BusinessCategory = () => {
           ))}
         </div>
         <button
-          className={`bg-blue-600 text-white font-semibold rounded-md p-2 mt-2 ${isSaveEnabled ? "" : "opacity-50 cursor-not-allowed"}`}
+          className={`bg-blue-600 hidden md:block text-white font-semibold rounded-md p-2 mt-2 ${isSaveEnabled ? "" : "opacity-50 cursor-not-allowed"}`}
           disabled={!isSaveEnabled}
         >
           Save and Continue

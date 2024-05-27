@@ -66,7 +66,7 @@ const Registration = () => {
   };
 
   return (
-    <div className="flex items-center justify-center my-16 px-4 sm:px-6 md:px-8 lg:px-[10rem]">
+    <div className="flex items-center justify-center my-4 md:my-16 px-4 sm:px-6 md:px-8 lg:px-[10rem]">
       {!showOtpVerifier && (
         <div className="bg-[#e7effe] p-6 sm:p-8 md:p-10 lg:p-12 w-full rounded-lg">
           <h1 className="text-lg lg:text-4xl mb-2 md:mb-5">

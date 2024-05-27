@@ -27,9 +27,10 @@ const DynamicRadio = () => {
   return (
     <div className='mt-6'>
       <div className='flex flex-row gap-4 mt-3 items-center'>
-        <label className='text-base font-bold mb-2'>
+        <label className='text-base font-bold mb-2  '>
           Currently Leased Out?
         </label>
+        <div className='flex flex-row items-center gap-4 flex-1 justify-center'>
         <input
           type="radio"
           name="monthlyRateOption"
@@ -44,6 +45,7 @@ const DynamicRadio = () => {
           onChange={() => handleNoClick('monthlyRate')}
         />
         No
+        </div>
       </div>
 
       {showMonthlyRate && (
@@ -69,10 +71,12 @@ const DynamicRadio = () => {
         </>
       )}
 
-      <div className='flex flex-row gap-4 mt-3 items-center'>
-        <label className='text-md font-bold mb-2'>
+      <div className='flex flex-row gap-4 mt-3 items-center '>
+       
+        <label className='text-md font-bold mb-2 w-[42.5%]'>
           Assured Returns
         </label>
+        <div className='flex flex-row items-center gap-4 flex-1 justify-center'>
         <input
           type="radio"
           name="assuredReturnOption"
@@ -87,6 +91,7 @@ const DynamicRadio = () => {
           onChange={() => handleNoClick('assuredReturn')}
         />
         No
+</div>
       </div>
 
       {showAssuredReturn && (

@@ -229,7 +229,7 @@ const AreaCalculator = () => {
 
   return (
     <div>
-      <div className="relative p-5 mb-10 max-lg:hidden">
+      <div className="relative px-5 pt-5 max-lg:hidden">
         <Image
           src={headerImage}
           className="h-full w-full"
@@ -328,7 +328,7 @@ const AreaCalculator = () => {
       </div>
 
       <div className="px-[5rem] mb-3 max-sm:px-[2rem]">
-        <p className="text-xl font-semibold">Popular Area Conversions</p>
+        <p className="text-2xl font-semibold">Popular Area Conversions</p>
         <div className="flex flex-wrap gap-4 mt-3">
 
 

@@ -36,10 +36,10 @@ const OtpPopup = ({ onClose }) => {
                 <div className="absolute top-2 right-2 text-gray-600" onClick={onClose}>
                     <IoClose size={24} />
                 </div>
-                <div className="font-medium md:font-bold text-xl mt-2">Welcome back,</div>
-                <div className='text-lg font-medium'>your number is registered with us.</div>
-                <div className='pb-2 text-lg font-medium'>Please login to continue</div>
-                <div className='flex gap-3 items-center mb-2'>
+                <div className="font-medium md:font-bold text-xl mt-2 text-left">Welcome back,</div>
+                <div className='text-lg font-medium text-left'>your number is registered with us.</div>
+                <div className='pb-2 text-lg font-medium text-left'>Please login to continue</div>
+                <div className='flex gap-3 items-center mb-2 text-left'>
                     {isEditing ? (
                         <input
                             type="text"
@@ -56,7 +56,7 @@ const OtpPopup = ({ onClose }) => {
                         <TiPencil size={30} color='blue' onClick={handleEditPhoneNumber} />
                     )}
                 </div>
-                <div className='text-2xl font-light pb-2'>Enter Your OTP</div>
+                <div className='text-2xl font-light pb-2 text-left'>Enter Your OTP</div>
                 <div className="flex">
                     {otp.map((digit, index) => (
                         <input
@@ -70,7 +70,7 @@ const OtpPopup = ({ onClose }) => {
                         />
                     ))}
                 </div>
-                <div className='text-sm text-blue-400 mt-1 pb-6'>Resend OTP</div>
+                <div className='text-sm text-blue-400 mt-1 pb-6 text-left'>Resend OTP</div>
                 <Link href={'/'}>
                     <button
                         className={`w-full bg-blue-600 rounded-md px-8 py-2 font-bold text-white mb-3 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-700 ${isButtonDisabled ? 'cursor-not-allowed opacity-50' : ''}`}

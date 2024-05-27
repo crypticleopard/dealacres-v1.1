@@ -124,12 +124,22 @@ const Navbar = () => {
             <div className="navbar-menu_container-links">
               <MenuMobile />
               <div className="navbar-menu_container-links-sign">
-                <p>Sign In</p>
+                <p onClick={() => openSignupPopup("SignIn")}>Sign In</p>
                 <Link href={"/propertylisting"}><h5>Post your Property</h5></Link>
                 <h5>Post For Business</h5>
-                <button type="button" onClick={() => openSignupPopup("signup")}>Sign Up</button>
+                <button type="button" onClick={() => openSignupPopup("SignUp")}>Sign Up</button>
               </div>
             </div>
+            {showSignupPopup && (
+              <SignupPopup
+                onClose={closeSignupPopup}
+                handleOpenOtpPopup={handleOpenOtpPopup}
+                handleOpenSignInPopup={handleOpenSignInPopup}
+                tabs={popupTab}
+              />
+            )}
+            {showOtpPopup && <OtpPopup onClose={closeOtpPopup} />}
+            {signInPopup && <SigninPopup onClose={closeSignInPopup} />}
           </div>
         )}
       </div>
@@ -195,7 +205,7 @@ const Navbar = () => {
               onClose={closeSignupPopup}
               handleOpenOtpPopup={handleOpenOtpPopup}
               handleOpenSignInPopup={handleOpenSignInPopup}
-              tabs={popupTab} 
+              tabs={popupTab}
             />
           )}
           {showOtpPopup && <OtpPopup onClose={closeOtpPopup} />}

@@ -76,10 +76,10 @@ const BusinessInformationWizardForm = () => {
             onPreviousClick={() => setStep(step - 1)}
             onSaveAndContinue={() => setStep(step + 1)}
           />
-          <BusinessWizardFormPart3Mobile
+          {/* <BusinessWizardFormPart3Mobile
             onPreviousClick={() => setStep(step - 1)}
             onSaveAndContinue={() => setStep(step + 1)}
-          />
+          /> */}
         </div>
       )}
 

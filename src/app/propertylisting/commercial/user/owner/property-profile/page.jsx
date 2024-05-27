@@ -108,7 +108,7 @@ const Page = () => {
                     />
 
                     <h1 className="font-medium md:font-bold text-xl">
-                        Property Tile
+                        Property Title
                     </h1>
                     <input
                         type="text"
@@ -139,7 +139,7 @@ const Page = () => {
                             Ground
                         </button>
                     </div>
-                    {selectedFloor && <RoundedDiv width={35} height={35} size={5} dropdown={true} dropdownLength={95} selectedFloor={selectedFloor} />}
+                    {selectedFloor && <RoundedDiv width={30} height={30} size={5} dropdown={true} dropdownLength={95} selectedFloor={selectedFloor} />}
 
                     <h1 className="font-medium md:font-bold text-xl mt-3">
                         Number of Floors
@@ -295,7 +295,7 @@ const Page = () => {
                         </>
                     )}
                     <DynamicRadio />
-                    <h1 className="font-medium md:font-bold md:text-2xl text-xl mt-3">
+                    <h1 className="font-medium md:font-bold text-xl mt-3">
                         Price Details
                     </h1>
                     <input type="text" className="custom-border-2 px-2 py-2 rounded-xl w-[80%] mt-2" placeholder="Expected Price" />

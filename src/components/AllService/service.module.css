@@ -73,5 +73,12 @@
         margin-bottom: 10px;
         margin-top: 10px;
     }
+    .Services h2{
+        margin-top: 18px;
+        font-size: 20px;
+    }
+    .Services p{
+        font-size: 14px;
+    }
   
 }

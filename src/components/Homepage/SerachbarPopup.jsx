@@ -11,29 +11,29 @@ const BHK_data = ['2BHK', '3BHK', '4BHK', '5BHK', '6BHK'];
 const propertyTypesData = {
   residential: [
     {
-      imgUrl: 'blob:https://www.canva.com/54f5945e-ff89-402f-b7ca-0f5979b39d86',
+      imgUrl: '/popup/home.png',
       desc: 'House / Villa',
     },
     {
-      imgUrl: 'blob:https://www.canva.com/40276178-0e73-49b5-a9be-1ad2e3c9f023',
+      imgUrl: '/popup/2.png',
       desc: 'Flat / Floors',
     },
     {
-      imgUrl: 'blob:https://www.canva.com/5ffddcc8-4b90-438e-bff9-7f651abfc204',
+      imgUrl: '/popup/3.png',
       desc: 'Plot / Land',
     },
   ],
   commercial: [
     {
-      imgUrl: 'blob:https://www.canva.com/0b629edf-7856-405b-88d5-00c19ae65984',
+      imgUrl: '/popup/4.png',
       desc: 'Office Space',
     },
     {
-      imgUrl: 'blob:https://www.canva.com/2266e3d9-ffec-4b28-8b2f-c80257e2eb11',
+      imgUrl: '/popup/5.png',
       desc: 'Showroom',
     },
     {
-      imgUrl: 'blob:https://www.canva.com/db41bd9e-b5e5-43f0-be6a-83cd458e7dfd',
+      imgUrl: '/popup/6.png',
       desc: 'Other Commercial',
     },
   ],
@@ -94,9 +94,9 @@ export const Bage = ({
 export const PropertyCard = ({ img, desc }) => {
     return (
       <>
-        <div className='w-[5.4rem] flex flex-col justify-center items-center gap-2 p-2 bg-blue-300 rounded-md'>
-          <Image src={img} width={15} height={15} alt='img' />
-          <p className='text-[0.7rem] text-center font-semibold'>{desc}</p>
+        <div className='w-[5.4rem]  flex flex-col justify-center items-center gap-1 p-2 bg-[#82b0ec] rounded-md'>
+          <Image src={img} width={30} height={30} alt='img' />
+          <p className='text-[0.7rem] leading-3 text-center font-semibold'>{desc}</p>
         </div>
       </>
     );
@@ -145,19 +145,19 @@ export const SearchBarPopup = ({ onClose }) => {
                       <div className='flex gap-4'>
                           <button
                               onClick={() => setIsResidential(true)}
-                              className={`${isResidential ? 'bg-blue-500 px-2 py-1 rounded-lg text-white' : ''} text-[0.6rem]`}
+                              className={`font-bold ${isResidential ? 'bg-blue-500 px-2 py-1 rounded-lg text-white' : ''} text-[0.6rem]`}
                           >
                               Residential
                           </button>
                           <button
                               onClick={() => setIsResidential(false)}
-                              className={`${!isResidential ? 'bg-blue-500 px-2 py-1 rounded-lg text-white' : ''} text-[0.6rem]`}
+                              className={`font-bold ${!isResidential ? 'bg-blue-500 px-2 py-1 rounded-lg text-white' : ''} text-[0.6rem]`}
                           >
                               Commercial
                           </button>
                       </div>
 
-                      <div className='flex flex-wrap gap-5'>
+                      <div className='flex flex-wrap gap-4'>
                           {isResidential
                               ? propertyTypesData.residential.map((item, index) => (
                                   <PropertyCard
@@ -178,7 +178,7 @@ export const SearchBarPopup = ({ onClose }) => {
                       {isResidential && (
                           <div className='flex flex-col gap-2'>
                               <SubTitle name='BHK' />
-                              <div className='flex flex-wrap gap-4'>
+                              <div className='flex flex-row gap-3'>
                                   {BHK_data.map((item, index) => (
                                       <Bage
                                           key={index}

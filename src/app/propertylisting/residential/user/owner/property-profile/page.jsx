@@ -67,7 +67,7 @@ const Page = () => {
                         onChange={handleInputChange}
                     />
                        <h1 className="font-medium md:font-bold text-xl">
-                       Property Tile
+                       Property Title
                     </h1>
                     <input
                                 type="text"

@@ -23,6 +23,7 @@ const PropertyRadioButton = () => {
         <div className='my-4'>
             <div className='flex flex-row gap-4 '>
                 <p className='font-bold'>Corner Shop</p>
+                <div className='flex flex-row items-center gap-4'>
                 <label>
                     <input
                         type="radio"
@@ -41,9 +42,11 @@ const PropertyRadioButton = () => {
                     />
                     &nbsp;&nbsp;No
                 </label>
+                </div>
             </div>
             <div className='flex flex-row gap-4  mt-3'>
                 <p className='font-bold'>Is Main Road Facing</p>
+                <div className='flex flex-row items-center gap-4'>
                 <label>
                     <input
                         type="radio"
@@ -62,9 +65,11 @@ const PropertyRadioButton = () => {
                     />
                     &nbsp;&nbsp;No
                 </label>
+                </div>
             </div>
             <div className='flex flex-row gap-4 mt-3 items-start'>
             <p className='font-bold'>Personal Washroom</p>
+            <div className='flex flex-row items-center gap-4 ml-0.5'>
                 <label>
                     <input
                         type="radio"
@@ -83,9 +88,11 @@ const PropertyRadioButton = () => {
                     />
                     &nbsp;&nbsp;No
                 </label>
+                </div>
             </div>
             <div className='flex flex-row gap-4 mt-3'>
             <p className='font-bold'>Pantry/ Cafeteria</p>
+            <div className='flex flex-row items-center gap-4 ml-7'>
                 <label>
                     <input
                         type="radio"
@@ -104,6 +111,7 @@ const PropertyRadioButton = () => {
                     />
                     &nbsp;&nbsp;No
                 </label>
+                </div>
             </div>
         </div>
     )
