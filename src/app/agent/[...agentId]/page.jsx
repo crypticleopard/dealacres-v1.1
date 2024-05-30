@@ -48,7 +48,7 @@ const SingleAgentPage = () => {
         <FeaturedService />
       </div>
      
-      <div className='max-w-screen-md  px-2 sm:px-6 flex gap-8 mx-auto   overflow-hidden  py-4 mt-5 mb-4 rounded-[2rem] shadow-md border-2'>
+      <div className='max-w-screen-md mx-2  px-2 sm:px-8 flex gap-8 md:mx-auto   overflow-hidden  py-4 mt-5 mb-4 rounded-[2rem] shadow-md border-2'>
         
         <div className='w-1/2'>
           <AgentContactForm />
@@ -63,7 +63,7 @@ const SingleAgentPage = () => {
         <div className='w-1/2 sm:w-[60%]'>
           <AgentFeedback />
         </div>
-        <div className='h-1/2 order-2  w-1/2 sm:w-[40%] mx-auto md:mx-0 '>
+        <div className='sm:h-1/2 order-2  w-1/2 sm:w-[40%] mx-auto md:mx-0 '>
           <Image src={feedbackBg} alt='feedback' className='w-full h-full' />
         </div>
 

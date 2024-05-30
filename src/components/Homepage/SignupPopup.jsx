@@ -60,7 +60,7 @@ const SignupPopup = ({ handleOpenOtpPopup, handleOpenSignInPopup, onClose, tabs 
     }
 
     return (
-        <div className="fixed z-10 inset-0 bg-black bg-opacity-50 flex items-center justify-center mx-2 md:mx-0">
+        <div className="fixed z-20 inset-1 bg-black bg-opacity-50 flex items-center justify-center mx-2 md:mx-0">
             <div className="relative bg-white w-full max-w-sm mx-auto rounded-lg shadow-lg border-2 border-blue-200 max-h-full overflow-hidden">
                 <div className="flex justify-between border-b border-gray-200">
                     <div className="flex w-[70%]">

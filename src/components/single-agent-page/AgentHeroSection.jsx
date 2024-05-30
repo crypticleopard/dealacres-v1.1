@@ -84,7 +84,7 @@ const AgentHeroSection = ({
             <span className='w-full sm:w-auto py-2 px-4 bg-blue-600 text-white text-center font-bold text-base sm:text-lg md:text-xl cursor-pointer sm:inline-flex ' onClick={() => handleGetIntoTouch()}>
               Get In Touch
             </span>
-            <div className='flex flex-row gap-2 items-center mb-1'>
+            <div className='flex flex-col justify-start sm:flex-row gap-2 items-start sm:items-center whitespace-nowrap  mb-1'>
           <p className='font-bold text-lg'>Follow us {`-`}</p>
           <div className='flex flex-row gap-2 items-center'>
           <FaFacebook className='w-5 h-5'/>

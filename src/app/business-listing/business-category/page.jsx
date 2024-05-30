@@ -125,9 +125,9 @@ const BusinessCategory = () => {
           </div>
         </div>
         <div className="flex flex-wrap md:hidden gap-2">
-          <input  className="border border-blue-400 p-0.5 rounded-md w-[45%]"/>
-          <input className="border border-blue-400 p-0.5 rounded-md w-[45%]"/>
-          <input className="border border-blue-400 p-0.5 rounded-md w-[45%]"/>
+          <input  className="border border-blue-400 p-0.5 rounded-md w-[48%]"/>
+          <input className="border border-blue-400 p-0.5 rounded-md w-[48%]"/>
+          <input className="border border-blue-400 p-0.5 rounded-md w-[48%]"/>
 
         </div>
         <p className="mt-2 md:hidden text-xs">You can only choose 3 Real estate services not more then that. </p>
@@ -149,7 +149,7 @@ const BusinessCategory = () => {
           ))}
         </div>
         <button
-          className={`bg-blue-600 hidden md:block text-white font-semibold rounded-md p-2 mt-2 ${isSaveEnabled ? "" : "opacity-50 cursor-not-allowed"}`}
+          className={`bg-blue-600 text-sm md:text-base text-white font-semibold rounded-md p-2 mt-2 ${isSaveEnabled ? "" : "opacity-50 cursor-not-allowed"}`}
           disabled={!isSaveEnabled}
         >
           Save and Continue

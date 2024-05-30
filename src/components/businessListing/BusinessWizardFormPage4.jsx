@@ -42,7 +42,7 @@ const BusinessWizardFormPage4 = ({ onPreviousClick }) => {
             <input type="file" id="fileInput" className="hidden" />
             <label
               htmlFor="fileInput"
-              className="bg-blue-600 hover:bg-blue-700 text-base text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="bg-blue-600 hover:bg-blue-700 text-sm md:text-base text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               Upload Media
             </label>
@@ -54,7 +54,7 @@ const BusinessWizardFormPage4 = ({ onPreviousClick }) => {
 
         <div className="w-full mt-5 flex items-center justify-center">
           <button
-            className="px-10 sm:px-16 py-2 font-semibold text-white bg-blue-600 rounded-lg text-base md:text-lg w-full"
+            className="px-10 sm:px-16 py-2 font-semibold text-white bg-blue-600 rounded-lg text-sm md:text-lg w-full"
             onClick={handleListYourBusinessClick}
           >
             List Your Business

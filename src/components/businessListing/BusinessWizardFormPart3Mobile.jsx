@@ -97,9 +97,9 @@ const BusinessWizardFormPart3Mobile = ({ onSaveAndContinue, onPreviousClick }) =
   return (
     <div className="flex flex-col items-start justify-start mt-2">
 
-      <h2 className="text-base font-bold">Hours of Operation</h2>
+      <h2 className="text-base font-bold my-3">Hours of Operation</h2>
 
-      <div className="flex flex-row space-x-2 text-[0.77rem] items-center mt-5">
+      <div className="flex flex-row space-x-2 text-[0.77rem] items-center md:mt-5">
         <div className="flex flex-row items-start justify-between">
           <p className="flex items-start space-x-1">
             <input type="checkbox" className="rounded-full mr-2 mt-1" />
@@ -120,7 +120,7 @@ const BusinessWizardFormPart3Mobile = ({ onSaveAndContinue, onPreviousClick }) =
           {daysOfWeek.map((day, index) => (
             <div className="flex flex-col items-start" key={index}>
               <div className="flex flex-row items-center justify-start">
-                <p className="w-[80px] text-[0.8rem]">{day}:</p>
+                <p className="w-[80px] text-[14px]">{day}:</p>
                 <div className="flex flex-row items-center">
                   <TimePicker
                     className="ml-2"
@@ -175,13 +175,13 @@ const BusinessWizardFormPart3Mobile = ({ onSaveAndContinue, onPreviousClick }) =
       </div>
 
       <p
-        className="text-base text-blue-600 mt-5 cursor-pointer"
+        className="text-[14px] text-blue-600 mt-5 cursor-pointer"
         onClick={copyMondayToSunday}
       >
         Copy time from Monday to Saturday
       </p>
       <p
-        className="text-base text-blue-600 mt-3 cursor-pointer"
+        className="text-[14px] text-blue-600 mt-3 cursor-pointer"
         onClick={handleDualChange}
       >
         Click Here For Dual Timings
@@ -194,7 +194,7 @@ const BusinessWizardFormPart3Mobile = ({ onSaveAndContinue, onPreviousClick }) =
       <div className="grid grid-cols-2 gap-3">
         {paymentModes.map((mode, index) => (
           <div key={index} className="flex flex-row items-center justify-between">
-            <p className="flex items-center space-x-2 text-[0.85rem]">
+            <p className="flex items-center space-x-2 text-[14px]">
               <input type="checkbox" className="rounded-full mr-1 -mt-1" />
               {mode}
             </p>
@@ -202,16 +202,16 @@ const BusinessWizardFormPart3Mobile = ({ onSaveAndContinue, onPreviousClick }) =
         ))}
       </div>
 
-      <div className="w-full flex flex-col justify-between gap-3 mt-10">
+      <div className="w-full flex flex-col justify-between gap-3 my-4">
         <button
-          className="font-semibold text-base bg-blue-600 px-4 py-2 text-white rounded-md text-center"
+          className="font-semibold text-sm bg-blue-600 px-4 py-2 text-white rounded-md text-center"
           onClick={onPreviousClick}
         >
           Previous
         </button>
 
         <button
-          className="font-semibold text-base bg-blue-600 px-4 py-2 text-white rounded-md text-center"
+          className="font-semibold text-sm bg-blue-600 px-4 py-2 text-white rounded-md text-center"
           onClick={onSaveAndContinue}
         >
           Save & Continue

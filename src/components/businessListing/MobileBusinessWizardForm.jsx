@@ -35,9 +35,9 @@ const MobileBusinessWizardForm = () => {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold md:mt-0 mt-2">Business Information</h2>
+      <h2 className="text-[20px] font-bold md:mt-0 mt-2">Business Information</h2>
       <div className="flex items-center justify-start w-full border-b-[1px] border-gray-600 mt-5">
-        <ul className="flex items-center space-x-10 text-[0.75rem] text-gray-600 ">
+        <ul className="flex items-center space-x-4  text-[14px] text-gray-600 ">
           <li
             className={`${
               step >= 1 ? "font-semibold border-b-[3px] border-blue-600 text-blue-600" : ""
