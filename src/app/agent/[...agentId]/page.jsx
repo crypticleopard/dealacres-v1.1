@@ -53,7 +53,7 @@ const SingleAgentPage = () => {
         <div className='w-1/2'>
           <AgentContactForm />
         </div>
-        <div className='order-2 w-1/2  my-auto rounded-[2rem]  inline-flex items-center overflow-hidden shadow h-[260px] '>
+        <div className='order-2 w-1/2  my-auto rounded-[2rem]  inline-flex items-center overflow-hidden shadow h-[400px] md:h-[260px] '>
           <Image src={`/about-us/${img}`} alt='abot-agent' className='rounded-[2rem] w-full h-auto object-cover sm:self-start ' width={300} height={300} />
         </div>
      
